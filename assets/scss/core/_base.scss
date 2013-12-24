@@ -78,6 +78,7 @@ html {
 }
 
 body {
+	overflow-x: hidden;
 	@include font-sans;
 	line-height: 1.5;
 	color: $color-text;
@@ -179,5 +180,7 @@ a:hover {
 @charset "UTF-8";
 @include icon-font;
 
-// place icon font classes/codes here
+.icon--right-open:before { content: '\e801'; } /* '' */
+.icon--right-open-mini:before { content: '\e800'; } /* '' */
+.icon--right-open-1:before { content: '\e802'; } /* '' */
 

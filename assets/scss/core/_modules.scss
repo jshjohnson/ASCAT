@@ -91,9 +91,28 @@ img.media__img {
 			&.is-current {
 				margin-left: -4.5em;
 				background-color: #05788a;
-				width: 200%;
+				width: 110%;
 				padding-left: 6em;
+				&:before {
+					font-family: $icon-font-family;
+					@extend .icon--right-open-mini;
+				}
 			}
+		}
+		@include respond-max($bp2) {
+			display: none;
+		}
+	}
+	@include respond-max($bp2) {
+		margin-bottom: 0;
+	}
+	.nav-trigger {
+		color: white;
+		text-align: center;
+		margin-bottom: 0;
+		display: none;
+		@include respond-max($bp2) {
+			display: block;
 		}
 	}
 }
@@ -121,11 +140,27 @@ img.media__img {
 }
 
 .content {
+	overflow-x: hidden;
 	background-color: white;
 	@include respond-min($bp2) {
 		width: 75%;
 		float: right;
 		@include box-sizing(border-box);
+	}
+	h2 {
+		&:after {
+			content: "";
+			width: 110%;
+			margin-top: .25em;
+			margin-bottom: .25em;
+			height: 1px;
+			background-color: #ccc;
+			display: block;
+			position: absolute;
+			@include respond-max($bp2) {
+				position: relative;
+			}
+		}
 	}
 }
 
@@ -138,6 +173,7 @@ img.media__img {
 	bottom: .75em;
 	margin-bottom: 0;
 	color: white;
+	text-shadow: 0 1px 0 #ccc;
 	&:after {
 		content: "";
 		width: 0;
@@ -150,4 +186,9 @@ img.media__img {
 		left: .7em;
 		margin-left: -.75em;
 	}
+}
+
+.logo {
+	max-width: 18em;
+	width: 100%;
 }
