@@ -65,6 +65,10 @@ textarea, .expandingText { min-height: 8em; }
 /*----------------------------------------------------------------------------------------*\
  $.Project Defaults
 \*----------------------------------------------------------------------------------------*/
+body, html {
+  height: 100%;
+}
+
 html {
 	font-size: 100%;
 	
@@ -80,7 +84,7 @@ body {
 	background-color: $color-background; }
 
 /* -- Vertical Rhythm -- */
-h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline; }
+h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline; text-transform: uppercase; font-family: $font-heading;}
 h1, blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
 p, ul, ol, dl, hr, form, table, blockquote, pre { margin-bottom: $baseline; }
 hr { border-top: 1px solid $color-keyline; }
@@ -105,7 +109,7 @@ dd { margin-left: 0; margin-bottom: $baseline / 2; font-style: italic; }
 caption { padding-bottom: .5em; font-style: italic; }
 th, td { padding: .25em .5em; border: 1px solid $color-keyline; }
 tr:nth-child(odd) td { background-color: #F6F6F6; }
-th, legend { font-weight: bold; background: $color-comp; }	
+th, legend { font-weight: bold; background: $color-highlight; }	
 
 /* -- Forms -- */
 label { display: block; padding-bottom: .25em; font-weight: bold; }
@@ -128,7 +132,7 @@ input[type=submit] {
 	border: 0;
 	@include border-radius;
 	color: #FFF;
-	background-color: $color-comp; }
+	background-color: $color-highlight; }
 
 /* -- Blockquotes -- */
 blockquote {

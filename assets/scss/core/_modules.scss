@@ -46,7 +46,7 @@ img.media__img {
 ----------------------------------*/
 .island {
 	padding: $island-padding;
-	background-color:$color-comp;
+	background-color:$color-highlight;
 	margin-bottom:1em;
 
 	> :last-child {
@@ -78,46 +78,42 @@ img.media__img {
 /* Primary Nav
 ----------------------------------*/
 .nav--primary {
-	@include respond-min($bp1) {
-		@include nav-inline; }
-}
-
-/* Tertiary Nav
-----------------------------------*/
-.nav--tertiary {
-	font-size: .875em;
-	
-	@include respond-min($bp2) {
-		margin-bottom: .5em;
-		text-align: center;
-
-		li{
-			border-left-color: #999;
+	margin: 2em 0;
+	ul li {
+		font-size: .9em;
+		padding: .25em 0;
+		a {
+			color: white;
 		}
-		
-		a { 
-			padding: .25em 1em;
-			background-color: transparent;
-		}
-
-		@include nav-inline;
-		@include nav-divided;
 	}
 }
-/* Tertiary Nav
-----------------------------------*/
 
-/* Inserts
-----------------------------------*/
+.is-current {
+	margin-left: 2em;
+}
 
-.flash {
-	display: block;
-	background-color: #F4F5F5;
-	padding: .5em .8em; }
 
 /* Misc
 ----------------------------------*/
 
 .credit{
 	text-align:center;
+}
+
+
+/* Sidebar
+----------------------------------*/
+
+.sidebar {
+	background-color: $color-brand;
+	width: 25%;
+	float: left;
+	padding: 2em;
+	@include box-sizing(border-box);
+}
+
+.content {
+	width: 75%;
+	float: right;
+	@include box-sizing(border-box);
 }
