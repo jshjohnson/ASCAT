@@ -79,17 +79,21 @@ img.media__img {
 ----------------------------------*/
 .nav--primary {
 	margin: 2em 0;
-	ul li {
-		font-size: .9em;
-		padding: .6em 0;
-		a {
-			color: white;
-		}
-		&.is-current {
-			margin-left: -4.5em;
-			background-color: #05788a;
-			width: 200%;
-			padding-left: 6em;
+	ul {
+		margin-left: 0;
+		li {
+			font-size: .9em;
+			padding: .6em 0;
+			a {
+				color: white;
+				font-weight: normal;
+			}
+			&.is-current {
+				margin-left: -4.5em;
+				background-color: #05788a;
+				width: 200%;
+				padding-left: 6em;
+			}
 		}
 	}
 }
@@ -108,10 +112,10 @@ img.media__img {
 ----------------------------------*/
 
 .sidebar {
+	padding: 2em 2.5em;
 	@include respond-min($bp2) {
 		width: 25%;
 		float: left;
-		padding: 2em;
 		@include box-sizing(border-box);
 	}
 }
@@ -134,4 +138,16 @@ img.media__img {
 	bottom: .75em;
 	margin-bottom: 0;
 	color: white;
+	&:after {
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: .55em solid transparent;
+		border-right: .55em solid transparent;
+		border-bottom: 0.55em solid white;
+		position: absolute;
+		bottom: -.8em;
+		left: .7em;
+		margin-left: -.75em;
+	}
 }
