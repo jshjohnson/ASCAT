@@ -81,16 +81,19 @@ img.media__img {
 	margin: 2em 0;
 	ul li {
 		font-size: .9em;
-		padding: .25em 0;
+		padding: .6em 0;
 		a {
 			color: white;
+		}
+		&.is-current {
+			margin-left: -4.5em;
+			background-color: #05788a;
+			width: 200%;
+			padding-left: 6em;
 		}
 	}
 }
 
-.is-current {
-	margin-left: 2em;
-}
 
 
 /* Misc
@@ -105,15 +108,30 @@ img.media__img {
 ----------------------------------*/
 
 .sidebar {
-	background-color: $color-brand;
-	width: 25%;
-	float: left;
-	padding: 2em;
-	@include box-sizing(border-box);
+	@include respond-min($bp2) {
+		width: 25%;
+		float: left;
+		padding: 2em;
+		@include box-sizing(border-box);
+	}
 }
 
 .content {
-	width: 75%;
-	float: right;
-	@include box-sizing(border-box);
+	background-color: white;
+	@include respond-min($bp2) {
+		width: 75%;
+		float: right;
+		@include box-sizing(border-box);
+	}
+}
+
+.header--home {
+	background-image: url("../img/home-bg.jpg");
+}
+
+.page-heading {
+	position: absolute;
+	bottom: .75em;
+	margin-bottom: 0;
+	color: white;
 }

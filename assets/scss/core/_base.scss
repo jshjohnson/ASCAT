@@ -81,7 +81,7 @@ body {
 	@include font-sans;
 	line-height: 1.5;
 	color: $color-text;
-	background-color: $color-background; }
+	background-color: $color-brand; }
 
 /* -- Vertical Rhythm -- */
 h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline; text-transform: uppercase; font-family: $font-heading;}
