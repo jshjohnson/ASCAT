@@ -81,8 +81,9 @@ img.media__img {
 	margin: 2em 0;
 	ul {
 		margin-left: 0;
+		list-style-type: none;
 		li {
-			font-size: .9em;
+			font-size: .8em;
 			padding: .6em 0;
 			a {
 				color: white;
@@ -91,11 +92,17 @@ img.media__img {
 			&.is-current {
 				margin-left: -4.5em;
 				background-color: #05788a;
-				width: 110%;
-				padding-left: 6em;
+				width: 150%;
+				padding-left: 4.5em;
 				&:before {
 					font-family: $icon-font-family;
-					@extend .icon--right-open-mini;
+					content: '\e800';
+					color: white;
+					font-size: 2em;
+					position: relative;
+					margin-right: .4em;
+					float: left;
+					margin-top: -.4em;
 				}
 			}
 		}
@@ -132,20 +139,32 @@ img.media__img {
 
 .sidebar {
 	padding: 2em 2.5em;
+	overflow-x: hidden;
+	background-color: $color-brand;
 	@include respond-min($bp2) {
+		height: 100%;
 		width: 25%;
-		float: left;
+		float: right;
 		@include box-sizing(border-box);
+		position: fixed;
+	}
+	@include respond-min($bp4) {
+		width: 20%;
 	}
 }
 
 .content {
+	opacity: 0; // fade in container on load with jQuery
+	height: 100%;
 	overflow-x: hidden;
 	background-color: white;
 	@include respond-min($bp2) {
 		width: 75%;
 		float: right;
 		@include box-sizing(border-box);
+	}
+	@include respond-min($bp4) {
+		width: 80%;
 	}
 	h2 {
 		&:after {
