@@ -121,7 +121,12 @@ img.media__img {
 		display: none;
 		@include respond-max($bp2) {
 			display: block;
+			margin-top: .9em;
 		}
+	}
+	@include respond-max($bp2) {
+		float: right;
+		margin: 0;
 	}
 }
 
@@ -135,12 +140,17 @@ img.media__img {
 	text-align:center;
 	background-color: $color-background-alt;
 	color: #848484;
-	padding: 1em 0 .8em;
+	padding: 1em 2em .8em;
 	font-size: .7em;
+	@include box-sizing(border-box);
 	a {
 		color: #848484;
 		font-weight: 600;
 	}
+}
+
+.fade-in {
+	opacity: 0; // fade in container on load with jQuery
 }
 
 
@@ -162,10 +172,12 @@ img.media__img {
 	@include respond-min($bp4) {
 		width: 20%;
 	}
+	@include respond-max($bp2) {
+		padding: 1.2em 0;
+	}
 }
 
 .content {
-	opacity: 0; // fade in container on load with jQuery
 	height: 100%;
 	overflow-x: hidden;
 	background-color: white;
@@ -222,4 +234,14 @@ img.media__img {
 	max-width: 18em;
 	width: 75%;
 	padding: 0 1.25em;
+	@include respond-max($bp2) {
+		float: left;
+		max-width: 7em;
+	}
+}
+
+.footer__img {
+	max-height: 3.5em;
+	margin-top: 1.25em;
+	margin-bottom: 1.25em
 }

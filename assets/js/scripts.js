@@ -30,5 +30,5 @@ $(document).ready(function() {
 // Window Load
 $(window).bind("load", function() {
 	// Fade container on load to combat FOUT
-	$(".content").animate({ opacity: 1 }, 'slow');
+	$(".fade-in").animate({ opacity: 1 }, 'slow');
 });

@@ -12,13 +12,13 @@ $color-background: #FFF;
 $color-background-alt: #efefef;
 
 $color-link: $color-highlight;
-$color-link-visited: #316CB2;
-$color-link-hover: #222;
+$color-link-visited: $color-highlight;
+$color-link-hover: darken($color-highlight, 10%);
 
 // Typography
 $baseline: 1.5em;
-$font-heading: "Brandon Grotesque", sans-serif;
-$font-sans: "Proxima Nova", sans-serif;
+$font-heading: "brandon-grotesque", sans-serif;
+$font-sans: "proxima-nova", sans-serif;
 $font-serif: serif;
 
 // Borders
