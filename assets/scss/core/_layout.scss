@@ -1,5 +1,16 @@
 /* Container / Inner
 ----------------------------------*/
+
+.outer {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.footer--push {
+	flex: 1;
+}
+
 .container {
 	margin: 0 auto;
 	width: 85%;
@@ -135,4 +146,12 @@
 	vertical-align: bottom;
 	margin-bottom: 0;
 	padding-top: .4em;
+}
+
+.listing {
+	margin-bottom: $baseline;
+}
+
+.listing-title {
+	margin-top: 0;
 }
