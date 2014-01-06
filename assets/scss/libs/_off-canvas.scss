@@ -4,10 +4,6 @@
 	  height:100%;
 }
 
-.js-nav body, .js-nav .container{
-	 overflow-y: hidden;
-}
-
 #inner-wrap{
 	height:100%;
 	min-height: 28em;
@@ -81,7 +77,47 @@
 
 }
 
-@include respond-max(42em){
+@include respond-max($bp2) {
+
+
+	.js-ready{
+		#nav {
+
+			width: $ofc-width-small;
+			min-height: 46em;
+			left: -$ofc-width-small;
+
+		}
+
+	}
+
+	.js-nav{
+
+		#inner-wrap {
+			left: $ofc-width-small;
+		}
+
+	}
+
+	.csstransforms3d.csstransitions.js-ready {
+		#nav {
+			width:$ofc-width-small;
+		}
+	}
+
+
+	.csstransforms3d.csstransitions.js-nav{
+
+		#inner-wrap {
+			@include transform(translate3d($ofc-width-small, 0, 0));
+		}
+
+	}
+
+}
+
+
+@include respond-max($bp1) {
 
 
 	.js-ready{

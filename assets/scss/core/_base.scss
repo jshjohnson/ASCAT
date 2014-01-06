@@ -181,7 +181,11 @@ a:hover {
 @charset "UTF-8";
 @include icon-font;
 
-.icon--right-open:before { content: '\e801'; } /* '' */
+.icon--menu:before { content: '\e801'; margin: 0;} /* '' */
+.icon--info:before { content: '\e802'; } /* '' */
+.icon--vcard:before { content: '\e803'; } /* '' */
 .icon--right-open-mini:before { content: '\e800'; } /* '' */
-.icon--right-open-1:before { content: '\e802'; } /* '' */
+.icon--close:before { content: '\e805'; margin-right: .5em;} /* '' */
+.icon--cancel-circled:before { content: '\e804'; } /* '' */
+.icon--cancel-circle:before { content: '\e806'; } /* '' */
 
