@@ -16,6 +16,10 @@
 ----------------------------------*/
 @import "../libs/_griddle";
 
+/* Off canvas
+----------------------------------*/
+@import "../libs/_off-canvas";
+
 // Create 2, 3, 6 and 12 column grids
 @include griddle-build(2);
 

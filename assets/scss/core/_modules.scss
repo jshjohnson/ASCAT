@@ -77,10 +77,11 @@ img.media__img {
 
 /* Primary Nav
 ----------------------------------*/
-.nav--primary {
+.nav-container {
 	margin: 2em 0;
 	padding: 0 2em;
-	ul {
+	overflow-x: hidden;
+	.nav--primary {
 		margin-left: 0;
 		list-style-type: none;
 		li {
@@ -103,30 +104,31 @@ img.media__img {
 					position: relative;
 					margin-right: .4em;
 					float: left;
-					margin-top: -.4em;
+					margin-top: -.35em;
 				}
 			}
 		}
-		@include respond-max($bp2) {
-			display: none;
-		}
+		// @include respond-max($bp2) {
+		// 	display: none;
+		// }
 	}
 	@include respond-max($bp2) {
-		margin-bottom: 0;
+		margin: 0;
 	}
-	.nav-trigger {
+	.nav-toggle {
 		color: white;
 		text-align: center;
 		margin-bottom: 0;
-		display: none;
 		@include respond-max($bp2) {
 			display: block;
 			margin-top: .9em;
 		}
+		@include respond-min($bp2){
+			display:none;
+		}
 	}
 	@include respond-max($bp2) {
-		float: right;
-		margin: 0;
+		background-color: #066372;
 	}
 }
 
@@ -159,7 +161,6 @@ img.media__img {
 
 .sidebar {
 	padding: 2em 0;
-	overflow: hidden;
 	position: relative;
 	background-color: $color-brand;
 	@include respond-min($bp2) {
