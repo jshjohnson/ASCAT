@@ -133,7 +133,6 @@ input[type=submit] {
 	display: inline-block;
 	padding: .5em 1em;
 	border: 0;
-	@include border-radius;
 	color: #FFF;
 	background-color: $color-highlight; }
 
