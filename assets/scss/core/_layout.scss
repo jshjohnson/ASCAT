@@ -101,7 +101,7 @@
 	@include respond-min($bp4) {
 		width: 80%;
 	}
-	h2 {
+	h2:not(.listing-title) {
 		&:after {
 			content: "";
 			width: 110%;
@@ -154,4 +154,18 @@
 
 .listing-title {
 	margin-top: 0;
+	&:after {
+		content: "";
+		width: 100%;
+		margin-top: .25em;
+		margin-bottom: .25em;
+		height: 1px;
+		background-color: #ccc;
+		display: block;
+		position: relative;
+	}
+}
+
+.footer-logos {
+	text-align: center;
 }

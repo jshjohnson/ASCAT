@@ -75,7 +75,7 @@ html {
 	font-size: 100%;
 	
 	@include respond-min($bp3) {
-		font-size: 125%; }
+		font-size: 120%; }
 		
 }
 
@@ -89,7 +89,7 @@ body {
 /* -- Vertical Rhythm -- */
 h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline; text-transform: uppercase; font-family: $font-heading;}
 h1, blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
-p, ul, ol, dl, hr, form, table, blockquote, pre { margin-bottom: $baseline; }
+p, ul, ol, dl, hr, form, table, blockquote, pre, address { margin-bottom: $baseline; }
 hr { border-top: 1px solid $color-keyline; }
 blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child { margin-bottom: 0; }
 
@@ -133,6 +133,7 @@ input[type=submit] {
 	display: inline-block;
 	padding: .6em 1em;
 	border: 0;
+	font-size: .8em;
 	color: #FFF;
 	background-color: $color-highlight; }
 

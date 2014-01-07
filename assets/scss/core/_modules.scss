@@ -151,7 +151,7 @@ img.media__img {
 ----------------------------------*/
 
 .credit{
-	margin-top: $baseline*2;
+	margin-top: $baseline;
 	text-align:center;
 	background-color: $color-background-alt;
 	color: #848484;
@@ -253,8 +253,22 @@ form {
 	    overflow: hidden;
 	}
 	input[type="submit"] {
-		@include respond-min($bp2) {
-			float: right;
+		@include respond-min($bp4) {
+			float: left;
+			margin-left: 20%;
 		}
 	}
+}
+
+.blog-title {
+	a {
+		color: $color-brand;
+	}
+}
+
+.content__wrap {
+	background-image: url("../img/shape.svg");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: -7em, -10em;
 }
