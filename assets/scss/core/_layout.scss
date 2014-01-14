@@ -53,7 +53,7 @@
 }
 
 
-h1,h2,h3,h4,h5 {
+h1,h2,h3,h4 {
 	&:first-child:not(.intro-text) {
 		margin-top: 0;
 	}
