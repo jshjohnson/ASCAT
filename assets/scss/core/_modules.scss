@@ -44,10 +44,11 @@ img.media__img {
 	
 /* Island Object - http://goo.gl/1XYHG
 ----------------------------------*/
-.island {
-	padding: $island-padding;
-	background-color:$color-highlight;
+.island, .download {
+	padding: $island-padding/1.2;
+	background-color: $color-background-alt;
 	margin-bottom:1em;
+	border: 1px solid darken($color-background-alt, 4%);
 
 	> :last-child {
 		margin-bottom: 0; }
@@ -56,7 +57,18 @@ img.media__img {
 .islet {
 	padding: $islet-padding; }
 
-	
+.download {
+	&:before {
+		font-family: $icon-font-family;
+		content: '\e806';
+		color: darken($color-background-alt, 10%);
+		font-size: 2em;
+		position: relative;
+		margin-right: .4em;
+		float: left;
+		margin-top: -.35em;
+	}
+}
 /* Nav Objects - http://goo.gl/QjtO6
 ----------------------------------*/
 
@@ -101,7 +113,7 @@ img.media__img {
 				padding-left: 4.5em;
 				&:before {
 					font-family: $icon-font-family;
-					content: '\e800';
+					content: '\e803';
 					color: white;
 					font-size: 2em;
 					position: relative;
@@ -169,9 +181,11 @@ img.media__img {
 }
 
 .credit--fixed {
-	position: fixed;
-	bottom: 0;
-	width: 80%;
+	@include respond-min($bp2) {
+		position: fixed;
+		bottom: 0;
+		width: 80%;
+	}
 }
 
 .fade-in {
@@ -266,6 +280,15 @@ form {
 	}
 }
 
+.blog-date {
+	float: right;
+	margin-top: 0;
+	vertical-align: bottom;
+	margin-bottom: 0;
+	padding-top: .4em;
+}
+
+
 .blog-title {
 	a {
 		color: $color-brand;
@@ -278,4 +301,33 @@ form {
 	background-attachment: scroll;
 	background-position: -7em;
 	min-height: 26em;
+}
+
+
+.bio {
+	background-color: $color-background-alt;
+	border: 1px solid darken($color-background-alt, 4%);
+	position: relative;
+	padding: 1em 1.5em;
+	p {
+		font-size: .9em;
+	}
+	img {
+		float:left;
+		padding-right: 1em;
+		max-width: 8em;
+		@include respond-max($bp1) {
+			float: none;
+			text-align: center;
+		}
+	}
+	.bio__title {
+		margin: .4em 0;
+		font-size: 1.25em;
+		color: $color-highlight;
+	}
+	.bio__subtitle {
+		margin-top: 0;
+		font-size: 1em;
+	}
 }
