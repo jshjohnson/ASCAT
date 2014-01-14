@@ -168,6 +168,12 @@ img.media__img {
 	}
 }
 
+.credit--fixed {
+	position: fixed;
+	bottom: 0;
+	width: 80%;
+}
+
 .fade-in {
 	opacity: 0; // fade in container on load with jQuery
 }

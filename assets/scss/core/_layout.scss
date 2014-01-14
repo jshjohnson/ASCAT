@@ -9,6 +9,8 @@
 
 .footer--push {
 	flex: 1;
+  	/* stupid IE10 tweener syntax */
+	-ms-flex-preferred-size: auto;
 }
 
 .container {
@@ -48,6 +50,12 @@
 }	
 @include respond-min($bp4) {
 	@include griddle-build(2 3 4 5 6 12, "--bp4");
+}
+
+.grid__cell > *:first-child,
+.grid__cell > *:first-child > *:first-child,
+.grid__cell > *:first-child > *:first-child > *:first-child {
+  margin-top: 0;
 }
 
 /* Logo
@@ -101,21 +109,6 @@
 	@include respond-min($bp4) {
 		width: 80%;
 	}
-	h2:not(.listing-title) {
-		&:after {
-			content: "";
-			width: 110%;
-			margin-top: .25em;
-			margin-bottom: .25em;
-			height: 1px;
-			background-color: #ccc;
-			display: block;
-			position: absolute;
-			@include respond-max($bp2) {
-				position: relative;
-			}
-		}
-	}
 }
 
 .content__header {
@@ -138,6 +131,7 @@
 
 .intro-text {
 	margin-bottom: $baseline;
+	font-size: 1.2em;
 }
 
 .blog-date {
@@ -150,10 +144,14 @@
 
 .listing {
 	margin-bottom: $baseline;
+	h3 {
+		margin-top: 0;
+	}
 }
 
 .listing-title {
 	margin-top: 0;
+	margin-bottom: .5em;
 	&:after {
 		content: "";
 		width: 100%;
@@ -163,6 +161,29 @@
 		background-color: #ccc;
 		display: block;
 		position: relative;
+	}
+}
+
+.bio {
+	img {
+		float: left;
+		padding-right: 1em;
+		max-width: 8em;
+	}
+	.bio__title {
+		margin: .4em 0;
+		font-size: 1.25em;
+		color: $color-highlight;
+	}
+	.bio__subtitle {
+		margin-top: 0;
+		font-size: 1em;
+	}
+}
+
+.bio-title {
+	&:after {
+		content: none;
 	}
 }
 
