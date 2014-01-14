@@ -17,12 +17,11 @@ $(document).ready(function() {
 	$("p:empty").remove();
 	$(".wp-caption").removeAttr("style");
 	$(".wp-content img, .wp-post-image, .wp-post-thumb").removeAttr("width").removeAttr("height");
-
-
 });
 
 // Window Load
 $(window).bind("load", function() {
 	// Fade container on load to combat FOUT
 	$(".fade-in").animate({ opacity: 1 }, 'slow');
+	$("#movie-area").load('movie.html');
 });

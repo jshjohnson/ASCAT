@@ -87,7 +87,7 @@ body {
 	background-color: $color-background; }
 
 /* -- Vertical Rhythm -- */
-h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline; text-transform: uppercase; font-family: $font-heading;}
+h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline; text-transform: uppercase; font-family: $font-heading; color: $color-brand-alt;}
 h1, blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
 p, ul, ol, dl, hr, form, table, blockquote, pre, address { margin-bottom: $baseline; }
 hr { border-top: 1px solid $color-keyline; }
