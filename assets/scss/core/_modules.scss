@@ -58,13 +58,16 @@ img.media__img {
 	padding: $islet-padding; }
 
 .download {
+	a {
+		font-weight: normal;
+	}
 	&:before {
 		font-family: $icon-font-family;
 		content: '\e806';
 		color: darken($color-background-alt, 10%);
 		font-size: 2em;
 		position: relative;
-		margin-right: .4em;
+		margin-right: .6em;
 		float: left;
 		margin-top: -.35em;
 	}
@@ -165,6 +168,7 @@ img.media__img {
 .credit{
 	margin-top: $baseline;
 	text-align:center;
+	border: 1px solid darken($color-background-alt, 4%);
 	background-color: $color-background-alt;
 	color: #848484;
 	padding: 1em 2em .8em;
@@ -293,6 +297,7 @@ form {
 	a {
 		color: $color-brand;
 	}
+	@extend %underline;
 }
 
 .content__wrap {
@@ -321,6 +326,10 @@ form {
 			text-align: center;
 		}
 	}
+	.bio__title, .bio__subtitle {
+		text-transform: capitalize;
+		font-weight: normal;
+	}
 	.bio__title {
 		margin: .4em 0;
 		font-size: 1.25em;
@@ -328,6 +337,6 @@ form {
 	}
 	.bio__subtitle {
 		margin-top: 0;
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 }

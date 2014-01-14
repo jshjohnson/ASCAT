@@ -41,7 +41,7 @@
 .headline { border-bottom: 1px solid $color-keyline; padding-bottom: .45em; }
 .highlight { font-size: 1.5em; color: $color-highlight;}
 
-.underline {
+.underline, %underline {
 	margin-bottom: 1em;
 	&:after {
 		content: "";
