@@ -131,8 +131,10 @@ button,
 .btn:link,
 input[type=submit] {
 	display: inline-block;
-	padding: .6em 1em;
+	padding: .75em 1em;
 	border: 0;
+	text-transform: uppercase;
+	font-weight: 500;
 	font-size: .8em;
 	color: #FFF;
 	background-color: $color-highlight; }
