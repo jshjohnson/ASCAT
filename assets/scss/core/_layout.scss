@@ -53,13 +53,6 @@
 }
 
 
-h1,h2,h3,h4 {
-	&:first-child:not(.intro-text) {
-		margin-top: 0;
-	}
-}
-
-
 /* Logo
 ----------------------------------*/
 
@@ -128,41 +121,13 @@ h1,h2,h3,h4 {
 	iframe {
 		height: 20em;
 		width: 100%;
+		@include respond-max($bp1) {
+			height: 11em;
+		}
 	}
 	@include respond-max($bp1) {
 		height: 11em;
 	}
-}
-
-.intro-text {
-	margin-bottom: $baseline;
-	font-size: 1.2em;
-}
-
-.listing {
-	margin-bottom: $baseline;
-	h3 {
-		margin-top: 0;
-	}
-}
-
-.listing-title {
-	margin-top: 0;
-	margin-bottom: .5em;
-	&:after {
-		content: "";
-		width: 100%;
-		margin-top: .25em;
-		margin-bottom: .25em;
-		height: 1px;
-		background-color: #ccc;
-		display: block;
-		position: relative;
-	}
-}
-
-.footer-logos {
-	text-align: center;
 }
 
 .module {

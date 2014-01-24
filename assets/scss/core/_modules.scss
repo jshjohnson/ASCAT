@@ -246,7 +246,7 @@ img.media__img {
 /* Form
 ----------------------------------*/
 
-form {
+.contact-form {
 	font-family: $font-sans;
 	label {
 		display: block;
@@ -260,7 +260,7 @@ form {
 		    width: 100%;
 		} 
 	}
-	input, textarea {
+	input:not([type=submit]), textarea {
 		width: 80%;
 		font-size: .9em;
 		padding: .6em;
@@ -298,23 +298,23 @@ form {
 
 
 .blog-header {
+	.blog-header__date, .blog-header__title {
+		display: inline-block;
+		margin-bottom: 0;
+	}
 	.blog-header__date {
 		float: right;
-		margin-top: 0;
-		vertical-align: bottom;
-		margin-bottom: 0;
-		padding-top: .4em;
+		margin-top: .5em;
 	}
-
 	.blog-header__title {
 		a {
 			color: $color-brand;
 		}
-		@extend %underline;
 	}
+	@extend %underline;
 }
 
-.content__wrap {
+.content__bg {
 	background-image: url("../img/shape.svg");
 	background-repeat: no-repeat;
 	background-attachment: scroll;
@@ -322,15 +322,25 @@ form {
 	min-height: 26em;
 }
 
+.treatment {
+	&:before {
+		font-family: $icon-font-family;
+		content: '\e800';
+		color: darken($color-background-alt, 10%);
+		font-size: 1.8em;
+		position: relative;
+		float: right;
+		margin-top: -.4em;
+		margin-bottom: .1em;
+	}
+}
 
 .bio {
 	background-color: $color-background-alt;
 	border: 1px solid darken($color-background-alt, 4%);
 	position: relative;
 	padding: 1em 1.5em;
-	p {
-		font-size: .9em;
-	}
+	font-size: 90%;
 	img {
 		float:right;
 		padding-left: 1em;
@@ -345,13 +355,11 @@ form {
 	}
 	.bio__title {
 		margin: .4em 0;
-		font-size: 1.25em;
 		color: $color-highlight;
 		clear: left;
-	}
-	.bio__subtitle {
-		margin-top: 0;
-		font-size: 1.1em;
+		a {
+			font-weight: 500;
+		}
 	}
 	&:before {
 		font-family: $icon-font-family;
@@ -362,6 +370,13 @@ form {
 		margin-right: .6em;
 		float: left;
 		margin-top: -.15em;
+	}
+}
+
+.listing-title {
+	margin-bottom: .5em; 
+	a {
+		color: $color-brand;
 	}
 }
 
@@ -381,5 +396,13 @@ form {
 		padding-bottom: 1em;
 		@include transform(rotate(-90deg));
 		text-transform: uppercase;
+		margin-top: $baseline;
 	}
+}
+
+.intro-text {
+	margin-bottom: $baseline;
+	font-size: 1.2em;
+	color: $color-brand;
+	margin-top: $baseline;
 }

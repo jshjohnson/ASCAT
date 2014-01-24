@@ -87,7 +87,7 @@ body {
 	background-color: $color-background; }
 
 /* -- Vertical Rhythm -- */
-h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline; text-transform: uppercase; font-family: $font-heading; color: $color-brand-alt;}
+h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: 0; text-transform: uppercase; font-family: $font-heading; color: $color-brand-alt;}
 h1, blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
 p, ul, ol, dl, hr, form, table, blockquote, pre, address { margin-bottom: $baseline; }
 hr { border-top: 1px solid $color-keyline; }
@@ -96,7 +96,7 @@ blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child {
 /* -- Headings -- */
 h1, .as-h1 { line-height: 1.333; font-size: 2em;  }	
 h2, .as-h2 { line-height: 1.4; font-size: 1.5em;}
-h3, .as-h3 { line-height: 1.5; font-size: 1.25em; }
+h3, .as-h3 { line-height: 1.5; font-size: 1.35em; }
 h4, .as-h4 { line-height: 1.5; font-size: 1.125em; }	
 h5, .as-h5 { line-height: 1.5; font-size: 1em; }
 h6, .as-h6 { line-height: 1.5; font-size: 0.875em; }
