@@ -345,8 +345,12 @@ img.media__img {
 		float:right;
 		padding-left: 1em;
 		max-width: 7em;
-		@include respond-max($bp1) {
-			display: none;
+		@include respond-max($bp2-5) {
+			float: none;
+			text-align: center;
+		}
+		@include respond-max($bp2) {
+			max-width: 10em;
 		}
 	}
 	.bio__title, .bio__subtitle {
@@ -370,6 +374,9 @@ img.media__img {
 		margin-right: .6em;
 		float: left;
 		margin-top: -.15em;
+		@include respond-max($bp2-5) {
+			position: absolute;
+		}
 	}
 }
 
@@ -377,17 +384,46 @@ img.media__img {
 	dt,dd {
 		float: left;
 		margin: 0;
-		padding: .15em 0;
+		padding: $baseline 0;
+		width: 100%;
 	}
 	dt {
+		@extend %h4;
 		font-weight: 600;
-		width: 20%;
 		font-size: 1em;
-		clear: left;
+		clear: left;		
+		@include respond-min($bp2) {
+			width: 20%;
+		}
+		@include respond-max($bp2) {
+			padding: $baseline 0 $baseline/2;
+		}
 	}
 	dd {
-		width: 75%;
-		padding-left: 5%;
+		border-bottom: 1px dashed darken($color-background-alt, 10%);
+		&:last-child {
+			border-bottom: none;
+		}
+		@include respond-min($bp2) {
+			width: 65%;
+		}
+		@include respond-max($bp2) {
+			padding: 0 0 $baseline;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.more-link {
+	&:after {
+		font-family: "tarva";
+		content: '\e803';
+		font-size: 1em;
+		position: relative;
+		margin-left: .4em;
+		top: .05em;
 	}
 }
 

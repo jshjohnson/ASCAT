@@ -162,7 +162,7 @@
 
 .module-1-2 {
 	width: 48.5%;
-	@include respond-max($bp2) {
+	@include respond-max($bp1-5) {
 		width: 100%;
 	}
 	&:nth-of-type(odd) {
