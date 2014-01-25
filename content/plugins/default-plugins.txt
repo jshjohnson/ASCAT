@@ -1,0 +1,27 @@
+Plugins that are already installed in the framwork:
+
+Plugin Central
+Gravity Forms
+Simple Page Ordering
+Admin Menu Editor
+Category Checklist Tree
+Regenerate Thumbnails
+Admin Collapse Subpages
+
+Plugins that *should* be installed with every Mixd site:
+
+Advanced Custom Fields
+WordPress SEO by Yoast
+Secure WordPress
+Broken Link Checker
+
+Plugins that are frequently used on Mixd sites:
+
+Breadcrumb NavXT
+MCE Table Buttons
+Search & Replace
+Gecka Terms Ordering
+WP Page Numbers
+Members
+
+
