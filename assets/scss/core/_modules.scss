@@ -373,6 +373,24 @@ img.media__img {
 	}
 }
 
+.module__split {
+	dt,dd {
+		float: left;
+		margin: 0;
+		padding: .15em 0;
+	}
+	dt {
+		font-weight: 600;
+		width: 20%;
+		font-size: 1em;
+		clear: left;
+	}
+	dd {
+		width: 75%;
+		padding-left: 5%;
+	}
+}
+
 .listing-title {
 	margin-bottom: .5em; 
 	a {
