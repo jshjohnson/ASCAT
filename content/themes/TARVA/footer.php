@@ -10,7 +10,7 @@
 						</div>
 					</div>
 					<div class="credit credit--fixed">
-						&copy; <?php echo date( 'Y' ) ?> <?php bloginfo( 'name' ); ?> | <?php wp_nav_menu( array( 'menu' => 'tertiary', 'items_wrap' => '<ul class="nav-tertiary">%3$s</ul>' ) ); ?> | Website by <a href="">Josh Johnson</a>
+						&copy; <?php echo date( 'Y' ) ?> <?php bloginfo( 'name' ); ?> | <?php wp_nav_menu( array( 'theme_location' => 'tertiary' , 'items_wrap' => '<ul class="nav-tertiary">%3$s</ul>' ) ); ?> | Website by <a href="">Josh Johnson</a>
 					</div>
 				</footer>
 			</main>
