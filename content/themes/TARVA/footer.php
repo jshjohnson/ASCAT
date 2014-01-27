@@ -9,8 +9,8 @@
 							<div class="grid__cell unit-1-5--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ISRCTN.gif" alt="" class="footer__img"></div>
 						</div>
 					</div>
-					<div class="credit credit--fixed">
-						&copy; <?php echo date( 'Y' ) ?> <?php bloginfo( 'name' ); ?> | <?php wp_nav_menu( array( 'theme_location' => 'tertiary' , 'items_wrap' => '<ul class="nav-tertiary">%3$s</ul>' ) ); ?> | Website by <a href="">Josh Johnson</a>
+					<div class="credit">
+						&copy; <?php echo date( 'Y' ) ?> <?php bloginfo( 'name' ); ?> | <?php wp_nav_menu( array( 'theme_location' => 'tertiary' , 'items_wrap' => '<ul class="nav-tertiary nav--inline">%3$s</ul>' ) ); ?> Website by <a href="">Josh Johnson</a>
 					</div>
 				</footer>
 			</main>

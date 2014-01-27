@@ -173,6 +173,19 @@ img.media__img {
 	margin: 0;
 }
 
+/* Tertiary Nav
+----------------------------------*/
+
+.nav-tertiary {
+	display: inline;
+	margin: 0;
+	line-height: 1;
+	li {
+		&:after {
+			content: " | ";
+		}
+	}
+}
 
 /* Misc
 ----------------------------------*/
