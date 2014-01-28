@@ -25,8 +25,10 @@
 		<div id="inner-wrap">
 		<?php get_sidebar(); ?> 
 		<main class="content">
+			<?php if(!is_front_page()) :?>
 			<header class="content__header header--home">
 				<div class="container">
 					<h1 class="page-heading"><?php get_template_part( 'parts/page-title' ); ?></h1>
 				</div>
 			</header>
+			<?php endif; ?>

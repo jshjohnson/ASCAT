@@ -12,8 +12,6 @@ Template Name: Resources
 			<?php endwhile; ?>	
 			<?php endif; ?>
 			</article>
-		</div>
-		<div class="content__container container">
 			<div class="grid">
 				<article class="grid__cell unit-1-2--bp3">
 					<h3>Core Trial Materials</h3>
