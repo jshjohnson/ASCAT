@@ -4,10 +4,8 @@ Template Name: Home
 */
 ?>
 <?php get_header(); ?>
-		<div id="movie-area" class="header-video"></div>
-		<div class="content__bg">
-			<div class="content__container container">
-				<article>
+		<div class="header-video"><iframe width="560" height="315" src="//www.youtube.com/embed/qas5lWp7_R0?&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe></div>
+			<div class="container">
 <?php get_template_part( 'parts/breadcrumb' ); ?>		
 				<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -16,8 +14,6 @@ Template Name: Home
 				<?php else : ?>
 <?php get_template_part( 'parts/not-found' ); ?>		
 				<?php endif; ?>
-				</article>
 			</div>
-		</div>
 <?php get_sidebar(); ?> 
 <?php get_footer(); ?>

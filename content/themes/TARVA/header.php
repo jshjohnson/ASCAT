@@ -25,3 +25,8 @@
 		<div id="inner-wrap">
 		<?php get_sidebar(); ?> 
 		<main class="content">
+			<header class="content__header header--home">
+				<div class="container">
+					<h1 class="page-heading"><?php get_template_part( 'parts/page-title' ); ?></h1>
+				</div>
+			</header>

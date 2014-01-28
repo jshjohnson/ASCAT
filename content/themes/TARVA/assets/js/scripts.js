@@ -23,5 +23,4 @@ $(document).ready(function() {
 $(window).bind("load", function() {
 	// Fade container on load to combat FOUT
 	$(".fade-in").animate({ opacity: 1 }, 'slow');
-	$("#movie-area").load('movie.html');
 });
