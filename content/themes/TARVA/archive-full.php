@@ -22,7 +22,7 @@ Template Name: Full Archive
 							<h5 class="blog-header__date"><?php the_time( 'jS F Y' ); ?></h5>
 							<h2 class="blog-header__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						</header>
-						<p><?php the_category( ', ' ); ?></p>
+						<p class="capitalise"><?php the_category( ', ' ); ?></p>
 						<p><?php the_excerpt(); ?></p>
 					</article>
 					<?php endforeach; ?>

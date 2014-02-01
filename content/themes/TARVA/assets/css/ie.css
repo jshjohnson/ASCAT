@@ -986,7 +986,6 @@ a:hover {
   margin-top: 4em;
   position: relative;
   margin-bottom: 4em;
-  overflow: auto;
   min-height: 10em;
 }
 
@@ -1029,6 +1028,8 @@ a:hover {
 .grid {
   display: block;
   padding: 0;
+  margin: 0 -1em;
+  /* 1 */
   text-align: left;
   /* 2 */
   letter-spacing: -0.31em;
@@ -1290,7 +1291,7 @@ a:hover {
 
 /* Logo
 ----------------------------------*/
-/* line 61, ../scss/core/_layout.scss */
+/* line 60, ../scss/core/_layout.scss */
 .logo {
   max-width: 18em;
   width: 75%;
@@ -1299,7 +1300,7 @@ a:hover {
 
 /* Sidebar
 ----------------------------------*/
-/* line 75, ../scss/core/_layout.scss */
+/* line 74, ../scss/core/_layout.scss */
 .sidebar {
   padding: 2em 0;
   position: relative;
@@ -1315,7 +1316,7 @@ a:hover {
 
 /* Content
 ----------------------------------*/
-/* line 97, ../scss/core/_layout.scss */
+/* line 96, ../scss/core/_layout.scss */
 .content {
   height: 100%;
   overflow-x: hidden;
@@ -1327,7 +1328,7 @@ a:hover {
   box-sizing: border-box;
 }
 
-/* line 111, ../scss/core/_layout.scss */
+/* line 110, ../scss/core/_layout.scss */
 .content__header {
   position: relative;
   height: 17em;
@@ -1338,53 +1339,53 @@ a:hover {
   background-position: center;
 }
 
-/* line 121, ../scss/core/_layout.scss */
+/* line 120, ../scss/core/_layout.scss */
 .header-video {
   height: 20em;
 }
-/* line 123, ../scss/core/_layout.scss */
+/* line 122, ../scss/core/_layout.scss */
 .header-video iframe {
   height: 20em;
   width: 100%;
 }
 
-/* line 135, ../scss/core/_layout.scss */
+/* line 134, ../scss/core/_layout.scss */
 .module {
   margin-bottom: 1.5em;
   padding: 1.5em;
 }
-/* line 138, ../scss/core/_layout.scss */
+/* line 137, ../scss/core/_layout.scss */
 .module .grid__cell:last-of-type p:last-child, .module .grid__cell:last-of-type img:last-child {
   margin: 0;
 }
-/* line 141, ../scss/core/_layout.scss */
+/* line 140, ../scss/core/_layout.scss */
 .module > p:last-child, .module ul:last-child, .module ul li:last-of-type, .module iframe:last-child {
   margin-bottom: 0;
 }
-/* line 144, ../scss/core/_layout.scss */
+/* line 143, ../scss/core/_layout.scss */
 .module:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 149, ../scss/core/_layout.scss */
+/* line 148, ../scss/core/_layout.scss */
 .module-2-3 {
   width: 63.33%;
 }
 
-/* line 156, ../scss/core/_layout.scss */
+/* line 155, ../scss/core/_layout.scss */
 .module-1-3 {
   width: 33.33%;
 }
 
-/* line 165, ../scss/core/_layout.scss */
+/* line 164, ../scss/core/_layout.scss */
 .module-1-2 {
   width: 48.5%;
 }
-/* line 170, ../scss/core/_layout.scss */
+/* line 169, ../scss/core/_layout.scss */
 .module-1-2:nth-of-type(odd) {
   float: left;
 }
-/* line 173, ../scss/core/_layout.scss */
+/* line 172, ../scss/core/_layout.scss */
 .module-1-2:nth-of-type(even) {
   float: right;
 }
@@ -1973,6 +1974,11 @@ img.media__img {
 
 /* Specific text styles
 ----------------------------------*/
+/* line 41, ../scss/core/_overrides.scss */
+.capitalise {
+  text-transform: capitalize;
+}
+
 /* line 42, ../scss/core/_overrides.scss */
 .intro {
   font-size: 1.25em;

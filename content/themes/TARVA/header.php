@@ -28,7 +28,13 @@
 			<?php if(!is_front_page()) :?>
 			<header class="content__header header--home">
 				<div class="container">
-					<h1 class="page-heading"><?php get_template_part( 'parts/page-title' ); ?></h1>
+					<?php 	
+						$title = get_field('alternative_title');
+						if($title == ''):
+							$title = get_the_title();
+						endif; 
+					?>
+					<h1 class="page-heading"><?php echo $title; ?></h1>
 				</div>
 			</header>
 			<?php endif; ?>
