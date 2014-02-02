@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Treatment Archive
+Template Name: Resources index
 */
 ?>
 <?php get_header(); ?>
@@ -14,21 +14,21 @@ Template Name: Treatment Archive
 			<?php endif; ?>
 			<?php
 					$args = array(
-					'post_type' => 'treatment',
+					'post_type' => 'resource',
 					'orderby' => 'title',
-					'order' => 'ASC'
+					'order' => 'ASC',
+					'resource_type' => 'core-trial-materials'
 					);
 				query_posts($args); 
 
 				if ( have_posts() ): ?>
 			<div class="grid">
-				<?php while ( have_posts() ) : the_post();	 ?>
-				<article class="grid__cell unit-1-2--bp2 island module-1-2 treatment">
-					<h3 class="listing-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<p><?php the_excerpt(); ?></p>
-					<a href="<?php the_permalink(); ?>">Read more</a>
+				<article class="grid__cell unit-1-2--bp3">
+					<h3>Core Trial Materials</h3>
+					<?php while ( have_posts() ) : the_post();	 ?>
+					<div class="download"><a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a><div class="ribbon"><h5>New</h5></div></div>
+					<?php endwhile; ?>
 				</article>
-				<?php endwhile; ?>
 			</div>
 			<?php endif; ?>
 		</div>
