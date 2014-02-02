@@ -26,11 +26,10 @@ Template Name: Treatment Archive
 				<article class="grid__cell unit-1-2--bp2 island module-1-2 treatment">
 					<h3 class="listing-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<p><?php the_excerpt(); ?></p>
-					<a href="<?php the_permalink(); ?>">Read more</a>
+					<a class="more-link" href="<?php the_permalink(); ?>">Read more</a>
 				</article>
 				<?php endwhile; ?>
 			</div>
 			<?php endif; ?>
 		</div>
-<?php get_sidebar(); ?> 
 <?php get_footer(); ?>
