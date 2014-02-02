@@ -2,7 +2,7 @@
 	<div class="content__bg">
 		<div class="content__container container">
 			<?php if ( have_posts() ) : ?>
-			<article class="grid__cell bio module">
+			<article class="bio module">
 				<?php while ( have_posts() ) : the_post(); ?>
 				<img src="assets/img/avatar.png" alt="">
 				<dl class="module__split">
@@ -29,8 +29,8 @@
 					<dt>Private appointments:</dt>
 					<dd><?php the_field('private_appointments'); ?></dd>
 				</dl>
+				<?php endwhile; ?>
 			</article>
-			<?php endwhile; ?>
 		</div>
 		<?php endif; ?>
 	</div>

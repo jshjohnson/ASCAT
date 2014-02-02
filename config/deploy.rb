@@ -12,7 +12,7 @@ require 'yaml'
 ############################################
 
 set :stages, %w(production staging)
-set :default_stage, "staging"
+set :default_stage, "production"
 set :keep_releases, 2
 
 after "deploy", "deploy:cleanup"
@@ -21,8 +21,8 @@ after "deploy", "deploy:cleanup"
 # Setup Git
 ############################################
 
-set :application, "APPLICATION NAME HERE"
-set :repository, "git@github.com:Mixd/GITHUB-REPO-HERE.git"
+set :application, "TARVA"
+set :repository, "git@github.com:jshjohnson/TARVA.git"
 set :scm, :git
 set(:git_enable_submodules, true)
 set :deploy_via, :remote_cache
@@ -38,6 +38,11 @@ ssh_options[:forward_agent] = true
 ############################################
 # Recipies
 ############################################
+
+def relative_path(from_str, to_str)
+  require 'pathname'
+  Pathname.new(to_str).relative_path_from(Pathname.new(from_str)).to_s
+end
 
 ### WordPress
 
