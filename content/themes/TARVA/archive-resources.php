@@ -12,25 +12,55 @@ Template Name: Resources index
 			</article>
 			<?php endwhile; ?>	
 			<?php endif; ?>
-			<?php
-					$args = array(
+			<?php 
+				$args = array(
 					'post_type' => 'resource',
 					'orderby' => 'title',
 					'order' => 'ASC',
-					'resource_type' => 'core-trial-materials'
-					);
-				query_posts($args); 
+				);
+				query_posts($args);
 
 				if ( have_posts() ): ?>
 			<div class="grid">
 				<article class="grid__cell unit-1-2--bp3">
 					<h3>Core Trial Materials</h3>
-					<?php while ( have_posts() ) : the_post();	 ?>
+					<?php
+						$args = array(
+							'post_type' => 'resource',
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'resource_type',
+									'field' => 'slug',
+									'terms' => 'core-trial-materials'
+								)
+							)
+						);
+						query_posts($args);
+
+					 	while ( have_posts() ) : the_post(); ?>
+					<div class="download"><a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a><div class="ribbon"><h5>New</h5></div></div>
+					<?php endwhile; ?>
+				</article>
+				<article class="grid__cell unit-1-2--bp3">
+					<h3>Additional Materials</h3>
+					<?php 
+						$args = array(
+							'post_type' => 'resource',
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'resource_type',
+									'field' => 'slug',
+									'terms' => 'additional-materials'
+								)
+							)
+						);
+						query_posts($args);
+
+						while ( have_posts() ) : the_post(); ?>
 					<div class="download"><a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a><div class="ribbon"><h5>New</h5></div></div>
 					<?php endwhile; ?>
 				</article>
 			</div>
 			<?php endif; ?>
 		</div>
-<?php get_sidebar(); ?> 
 <?php get_footer(); ?>
