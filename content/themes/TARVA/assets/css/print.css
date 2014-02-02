@@ -1659,10 +1659,6 @@ a:hover {
 .module > p:last-child, .module ul:last-child, .module ul li:last-of-type, .module iframe:last-child {
   margin-bottom: 0;
 }
-/* line 143, ../scss/core/_layout.scss */
-.module:last-of-type {
-  margin-bottom: 0;
-}
 
 /* line 148, ../scss/core/_layout.scss */
 .module-2-3 {
@@ -2152,42 +2148,43 @@ img.media__img {
   position: relative;
   padding: 1em 1.5em;
   font-size: 90%;
+  overflow: auto;
 }
-/* line 357, ../scss/core/_modules.scss */
+/* line 358, ../scss/core/_modules.scss */
 .bio img {
   float: right;
   padding-left: 1em;
   max-width: 7em;
 }
 @media screen and (max-width: 55em) {
-  /* line 357, ../scss/core/_modules.scss */
+  /* line 358, ../scss/core/_modules.scss */
   .bio img {
     float: none;
     text-align: center;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 357, ../scss/core/_modules.scss */
+  /* line 358, ../scss/core/_modules.scss */
   .bio img {
     max-width: 10em;
   }
 }
-/* line 369, ../scss/core/_modules.scss */
+/* line 370, ../scss/core/_modules.scss */
 .bio .bio__title, .bio .bio__subtitle {
   text-transform: capitalize;
   font-weight: normal;
 }
-/* line 373, ../scss/core/_modules.scss */
+/* line 374, ../scss/core/_modules.scss */
 .bio .bio__title {
   margin: .4em 0;
   color: #ff520d;
   clear: left;
 }
-/* line 377, ../scss/core/_modules.scss */
+/* line 378, ../scss/core/_modules.scss */
 .bio .bio__title a {
   font-weight: 500;
 }
-/* line 381, ../scss/core/_modules.scss */
+/* line 382, ../scss/core/_modules.scss */
 .bio:before {
   font-family: "tarva";
   content: '\e805';
@@ -2199,63 +2196,63 @@ img.media__img {
   margin-top: -.15em;
 }
 @media screen and (max-width: 55em) {
-  /* line 381, ../scss/core/_modules.scss */
+  /* line 382, ../scss/core/_modules.scss */
   .bio:before {
     position: absolute;
   }
 }
 
-/* line 397, ../scss/core/_modules.scss */
+/* line 398, ../scss/core/_modules.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.5em 0;
   width: 100%;
 }
-/* line 403, ../scss/core/_modules.scss */
+/* line 404, ../scss/core/_modules.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
 }
 @media screen and (min-width: 48em) {
-  /* line 403, ../scss/core/_modules.scss */
+  /* line 404, ../scss/core/_modules.scss */
   .module__split dt {
     width: 20%;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 403, ../scss/core/_modules.scss */
+  /* line 404, ../scss/core/_modules.scss */
   .module__split dt {
     padding: 1.5em 0 0.75em;
   }
 }
-/* line 415, ../scss/core/_modules.scss */
+/* line 416, ../scss/core/_modules.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
 }
-/* line 417, ../scss/core/_modules.scss */
+/* line 418, ../scss/core/_modules.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
 @media screen and (min-width: 48em) {
-  /* line 415, ../scss/core/_modules.scss */
+  /* line 416, ../scss/core/_modules.scss */
   .module__split dd {
     width: 65%;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 415, ../scss/core/_modules.scss */
+  /* line 416, ../scss/core/_modules.scss */
   .module__split dd {
     padding: 0 0 1.5em;
   }
 }
-/* line 426, ../scss/core/_modules.scss */
+/* line 427, ../scss/core/_modules.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 
-/* line 433, ../scss/core/_modules.scss */
+/* line 434, ../scss/core/_modules.scss */
 .more-link:after {
   font-family: "tarva";
   content: '\e803';
@@ -2265,16 +2262,16 @@ img.media__img {
   top: .05em;
 }
 
-/* line 443, ../scss/core/_modules.scss */
+/* line 444, ../scss/core/_modules.scss */
 .listing-title {
   margin-bottom: .5em;
 }
-/* line 445, ../scss/core/_modules.scss */
+/* line 446, ../scss/core/_modules.scss */
 .listing-title a {
   color: #02899e;
 }
 
-/* line 450, ../scss/core/_modules.scss */
+/* line 451, ../scss/core/_modules.scss */
 .ribbon {
   position: absolute;
   right: 1em;
@@ -2285,7 +2282,7 @@ img.media__img {
   border-bottom: 0.6em solid #fafafa;
   width: 0;
 }
-/* line 459, ../scss/core/_modules.scss */
+/* line 460, ../scss/core/_modules.scss */
 .ribbon h5 {
   font-size: .6em;
   padding-right: 1em;
@@ -2300,7 +2297,7 @@ img.media__img {
   margin-top: 1.5em;
 }
 
-/* line 470, ../scss/core/_modules.scss */
+/* line 471, ../scss/core/_modules.scss */
 .intro-text {
   margin-bottom: 1.5em;
   font-size: 1.2em;

@@ -4,7 +4,7 @@
 			<?php if ( have_posts() ) : ?>
 			<article class="bio module">
 				<?php while ( have_posts() ) : the_post(); ?>
-				<img src="assets/img/avatar.png" alt="">
+				<img src="<?php the_field('avatar');?>" alt="">
 				<dl class="module__split">
 					<dt>Name:</dt>
 					<dd><?php the_title(); ?></dd>

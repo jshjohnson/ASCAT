@@ -140,9 +140,9 @@
 	> p:last-child, ul:last-child, ul li:last-of-type, iframe:last-child {
 		margin-bottom: 0;
 	}
-	&:last-of-type {
-		margin-bottom: 0;
-	}
+	// &:last-of-type {
+	// 	margin-bottom: 0;
+	// }
 }
 
 .module-2-3 {

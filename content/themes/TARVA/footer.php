@@ -1,4 +1,4 @@
-				<footer>
+				<footer class="footer cf">
 					<div class="container">
 						<hr>
 						<div class="center grid">
