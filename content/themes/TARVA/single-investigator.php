@@ -12,16 +12,28 @@
 					<dd><?php the_field('job_title'); ?></dd>
 					<dt>Role:</dt>
 					<dd><?php the_field('job_role'); ?></dd>
+					<?php 
+					$post_object = get_field('hospital');
+
+					if( $post_object ): 
+
+					// override $post
+					$post = $post_object;
+					setup_postdata( $post ); 
+
+					?>
 					<dt>Hospital:</dt>
-					<dd><?php the_field('hospital'); ?></dd>
+					<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
 					<dt>Address:</dt>
-					<dd><?php the_field('hospital_address'); ?></dd>
+					<dd><?php the_field('address'); ?></dd>
 					<dt>Tel:</dt>
-					<dd><?php the_field('telephone_no'); ?></dd>
+					<dd><?php the_field('telephone'); ?></dd>
 					<dt>Email:</dt>
 					<dd><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></dd>
 					<dt>Website:</dt>
 					<dd><a href="<?php the_field('website'); ?>"><?php the_field('website'); ?></a></dd>
+					<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					<?php endif; ?>
 					<dt>Bio:</dt>
 					<dd><?php the_field('bio'); ?></dd>
 					<dt>Appointments:</dt>
