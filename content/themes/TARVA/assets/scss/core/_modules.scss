@@ -13,7 +13,6 @@ img.media__img {
 		margin-bottom: 0; }	
 }
 
-
 .media__body {	
 	@include respond-min($bp2) {
 		overflow: hidden;
@@ -23,7 +22,6 @@ img.media__img {
 		margin-bottom: 0;
 	}
 }
-
 
 .media__img {
 	@include respond-min($bp2) {
@@ -101,6 +99,33 @@ img.media__img {
 	padding: .5em;
 	background-color: #F5F5F5; 
 }
+
+
+/* Video
+----------------------------------*/
+.fluid-width-video-wrapper {
+	margin-bottom: $baseline;
+	iframe {
+		border-bottom: 5px solid $color-brand;
+	}
+	&:after {
+		content: '';
+		width: 0; 
+		height: 0; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid $color-brand;
+		position: relative;
+		top: 2.5em;
+		left: 2.5em;
+		@include respond-max($bp3) {
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-top: 15px solid $color-brand;
+		}
+	}
+}
+
 
 /* Primary Nav
 ----------------------------------*/

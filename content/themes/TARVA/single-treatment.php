@@ -6,8 +6,11 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php the_content(); ?>
 				<?php endwhile; ?>
-				<?php disqus_embed('myankle'); ?>
 			</article>
+			<div class="grid__cell unit-1-1--bp2 unit-2-3--bp3">
+				<div class="divider"></div>
+				<?php disqus_embed('tarva'); ?>
+			</div>
 		</div>
 		<?php endif; ?>
 	</div>
