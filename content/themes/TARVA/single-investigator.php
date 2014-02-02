@@ -33,12 +33,22 @@
 				<dd><a href="<?php the_field('website'); ?>"><?php the_field('website'); ?></a></dd>
 				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
+
+				<?php if(get_field('bio')) : ?>
 				<dt>Bio:</dt>
 				<dd><?php the_field('bio'); ?></dd>
+				<?php endif; ?>
+
+				<?php if(get_field('appointments')) : ?>
 				<dt>Appointments:</dt>
 				<dd><?php the_field('appointments'); ?></dd>
+				<?php endif; ?>
+
+				<?php if(get_field('private_appointments')) : ?>
 				<dt>Private appointments:</dt>
 				<dd><?php the_field('private_appointments'); ?></dd>
+				<?php endif; ?>
+
 			</dl>
 			<?php endwhile; ?>
 		</article>

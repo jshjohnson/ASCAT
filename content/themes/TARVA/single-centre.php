@@ -18,9 +18,19 @@
 				?>
 				<dt>Primary Investigator:</dt>
 				<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
-				<dt>Co-investigators:</dt>
-				<dd><?php the_field('co-investigators'); ?></dd>
 				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+
+				<?php
+				$post_objects = get_field('co-investigators');
+ 
+				if( $post_objects ): ?>
+				    <dt>Co-Investigators:</dt>
+				    <?php foreach( $post_objects as $post_object): ?>
+				        <dd>
+				            <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
+				        </dd>
+				    <?php endforeach; ?>
 				<?php endif; ?>
 				<dt>Research Coordinator:</dt>
 				<dd><?php the_field('coordinator'); ?></dd>
