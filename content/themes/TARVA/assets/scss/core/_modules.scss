@@ -335,6 +335,12 @@ img.media__img {
 	background-position: -7em;
 }
 
+.content__body {
+	h2 {
+		@extend %underline;
+	}
+}
+
 .treatment {
 	&:before {
 		font-family: $icon-font-family;

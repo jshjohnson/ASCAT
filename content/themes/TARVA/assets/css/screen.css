@@ -2129,7 +2129,7 @@ img.media__img {
   background-position: -7em;
 }
 
-/* line 339, ../scss/core/_modules.scss */
+/* line 345, ../scss/core/_modules.scss */
 .treatment:before {
   font-family: "tarva";
   content: '\e800';
@@ -2141,7 +2141,7 @@ img.media__img {
   margin-bottom: .1em;
 }
 
-/* line 351, ../scss/core/_modules.scss */
+/* line 357, ../scss/core/_modules.scss */
 .bio {
   background-color: #fafafa;
   border: 1px solid #f0f0f0;
@@ -2150,41 +2150,41 @@ img.media__img {
   font-size: 90%;
   overflow: auto;
 }
-/* line 358, ../scss/core/_modules.scss */
+/* line 364, ../scss/core/_modules.scss */
 .bio img {
   float: right;
   padding-left: 1em;
   max-width: 7em;
 }
 @media screen and (max-width: 55em) {
-  /* line 358, ../scss/core/_modules.scss */
+  /* line 364, ../scss/core/_modules.scss */
   .bio img {
     float: none;
     text-align: center;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 358, ../scss/core/_modules.scss */
+  /* line 364, ../scss/core/_modules.scss */
   .bio img {
     max-width: 10em;
   }
 }
-/* line 370, ../scss/core/_modules.scss */
+/* line 376, ../scss/core/_modules.scss */
 .bio .bio__title, .bio .bio__subtitle {
   text-transform: capitalize;
   font-weight: normal;
 }
-/* line 374, ../scss/core/_modules.scss */
+/* line 380, ../scss/core/_modules.scss */
 .bio .bio__title {
   margin: .4em 0;
   color: #ff520d;
   clear: left;
 }
-/* line 378, ../scss/core/_modules.scss */
+/* line 384, ../scss/core/_modules.scss */
 .bio .bio__title a {
   font-weight: 500;
 }
-/* line 382, ../scss/core/_modules.scss */
+/* line 388, ../scss/core/_modules.scss */
 .bio:before {
   font-family: "tarva";
   content: '\e805';
@@ -2196,63 +2196,63 @@ img.media__img {
   margin-top: -.15em;
 }
 @media screen and (max-width: 55em) {
-  /* line 382, ../scss/core/_modules.scss */
+  /* line 388, ../scss/core/_modules.scss */
   .bio:before {
     position: absolute;
   }
 }
 
-/* line 398, ../scss/core/_modules.scss */
+/* line 404, ../scss/core/_modules.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.5em 0;
   width: 100%;
 }
-/* line 404, ../scss/core/_modules.scss */
+/* line 410, ../scss/core/_modules.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
 }
 @media screen and (min-width: 48em) {
-  /* line 404, ../scss/core/_modules.scss */
+  /* line 410, ../scss/core/_modules.scss */
   .module__split dt {
     width: 20%;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 404, ../scss/core/_modules.scss */
+  /* line 410, ../scss/core/_modules.scss */
   .module__split dt {
     padding: 1.5em 0 0.75em;
   }
 }
-/* line 416, ../scss/core/_modules.scss */
+/* line 422, ../scss/core/_modules.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
 }
-/* line 418, ../scss/core/_modules.scss */
+/* line 424, ../scss/core/_modules.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
 @media screen and (min-width: 48em) {
-  /* line 416, ../scss/core/_modules.scss */
+  /* line 422, ../scss/core/_modules.scss */
   .module__split dd {
     width: 65%;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 416, ../scss/core/_modules.scss */
+  /* line 422, ../scss/core/_modules.scss */
   .module__split dd {
     padding: 0 0 1.5em;
   }
 }
-/* line 427, ../scss/core/_modules.scss */
+/* line 433, ../scss/core/_modules.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 
-/* line 434, ../scss/core/_modules.scss */
+/* line 440, ../scss/core/_modules.scss */
 .more-link:after {
   font-family: "tarva";
   content: '\e803';
@@ -2262,16 +2262,16 @@ img.media__img {
   top: .05em;
 }
 
-/* line 444, ../scss/core/_modules.scss */
+/* line 450, ../scss/core/_modules.scss */
 .listing-title {
   margin-bottom: .5em;
 }
-/* line 446, ../scss/core/_modules.scss */
+/* line 452, ../scss/core/_modules.scss */
 .listing-title a {
   color: #02899e;
 }
 
-/* line 451, ../scss/core/_modules.scss */
+/* line 457, ../scss/core/_modules.scss */
 .ribbon {
   position: absolute;
   right: 1em;
@@ -2282,7 +2282,7 @@ img.media__img {
   border-bottom: 0.6em solid #fafafa;
   width: 0;
 }
-/* line 460, ../scss/core/_modules.scss */
+/* line 466, ../scss/core/_modules.scss */
 .ribbon h5 {
   font-size: .6em;
   padding-right: 1em;
@@ -2297,7 +2297,7 @@ img.media__img {
   margin-top: 1.5em;
 }
 
-/* line 471, ../scss/core/_modules.scss */
+/* line 477, ../scss/core/_modules.scss */
 .intro-text {
   margin-bottom: 1.5em;
   font-size: 1.2em;
@@ -2422,11 +2422,11 @@ img.media__img {
 }
 
 /* line 46, ../scss/core/_overrides.scss */
-.underline, .blog-header {
+.underline, .blog-header, .content__body h2 {
   margin-bottom: 1em;
 }
 /* line 48, ../scss/core/_overrides.scss */
-.underline:after, .blog-header:after {
+.underline:after, .blog-header:after, .content__body h2:after {
   content: "";
   width: 110%;
   margin-top: .25em;
@@ -2438,7 +2438,7 @@ img.media__img {
 }
 @media screen and (max-width: 48em) {
   /* line 48, ../scss/core/_overrides.scss */
-  .underline:after, .blog-header:after {
+  .underline:after, .blog-header:after, .content__body h2:after {
     position: relative;
   }
 }
