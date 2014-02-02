@@ -38,7 +38,7 @@ Template Name: Resources index
 						query_posts($args);
 
 					 	while ( have_posts() ) : the_post(); ?>
-					<div class="download"><a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a><div class="ribbon"><h5>New</h5></div></div>
+					<div class="download"><a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a></div>
 					<?php endwhile; ?>
 				</article>
 				<article class="grid__cell unit-1-2--bp3">
@@ -57,7 +57,7 @@ Template Name: Resources index
 						query_posts($args);
 
 						while ( have_posts() ) : the_post(); ?>
-					<div class="download"><a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a><div class="ribbon"><h5>New</h5></div></div>
+					<div class="download"><a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a></div>
 					<?php endwhile; ?>
 				</article>
 			</div>
