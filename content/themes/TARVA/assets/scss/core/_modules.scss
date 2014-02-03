@@ -215,12 +215,15 @@ img.media__img {
 /* Misc
 ----------------------------------*/
 
-.nav--page, .credit {
-	color: #848484;
-	padding: 1em 0 .8em;
+.nav--page {
 	width: 85%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.nav--page, .credit {
+	color: #848484;
+	padding: 1em 0 .8em;
 	font-size: .7em;
 	line-height: 1.7;
 	@include box-sizing(border-box);
@@ -360,6 +363,11 @@ img.media__img {
 		}
 	}
 	@extend %underline;
+}
+
+.blog__category {
+	text-transform: capitalize;
+	margin-bottom: $baseline/2;
 }
 
 .content__bg {

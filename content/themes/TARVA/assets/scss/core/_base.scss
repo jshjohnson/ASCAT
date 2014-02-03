@@ -18,8 +18,6 @@ address { white-space: pre-line; }
 
 /* -- Embedded -- */
 img { display: block; margin: 0 auto; font-style: italic; color: #666; vertical-align: middle; }
-img[width] { width: auto !important; }
-img[height] { height: auto !important; }
 img, audio, canvas, embed, object, video { max-width: 100%; }
 iframe { display: block; }
 // Google maps image bug
@@ -184,12 +182,12 @@ a:hover {
 @charset "UTF-8";
 @include icon-font;
 
+.icon--users:before { content: '\e808'; } /* '' */
 .icon--attach:before { content: '\e802'; } /* '' */
-.icon--info:before { content: '\e800'; } /* '' */
-.icon--info-1:before { content: '\e807'; } /* '' */
+.icon--info-1:before { content: '\e800'; } /* '' */
 .icon--vcard:before { content: '\e805'; } /* '' */
 .icon--right-open-mini:before { content: '\e803'; } /* '' */
-.icon--close:before { content: '\e804'; margin-right: .5em;} /* '' */
-.icon--menu:before { content: '\e801'; margin: 0;} /* '' */
+.icon--cancel:before { content: '\e804'; margin-right: .5em; } /* '' */
+.icon--menu:before { content: '\e807'; } /* '' */
 .icon--install:before { content: '\e806'; } /* '' */
-
+.icon--stethoscope:before { content: '\e801'; } /* '' */
