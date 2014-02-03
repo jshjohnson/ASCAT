@@ -22,7 +22,7 @@ after "deploy", "deploy:cleanup"
 ############################################
 
 set :site,         "156312" # this is your site number, https://kb.mediatemple.net/questions/268/What+is+my+site+number%3F#gs
-set :application,  "anklearthritis.co.uk" # typically the same as the domain
+# set :application,  "anklearthritis.co.uk" # typically the same as the domain
 
 # Shouldn't have to change anything below
 set :domain, "s#{site}.gridserver.com"
