@@ -53,11 +53,11 @@ set :branch, "development"
 
 
 # Path stuff, make sure to symlink html to ./current
-set(:deploy_to) { "/home/#{site}/users/.home/domains/#{application}" }
-set(:current_deploy_dir) { "#{deploy_to}/current" }
+set :deploy_to, "/home/#{site}/users/.home/domains/#{application}"
+set :current_deploy_dir, "#{deploy_to}/current"
 # make sure you have added a tmp directory inside domains/example.com with correct permissions (i.e 755)
-set(:copy_remote_dir) { "#{deploy_to}/tmp" }
-set(:keep_releases) { 2 } # keep this low for larger sites, can be up to 5 if you are really nervous
+set :copy_remote_dir, "#{deploy_to}/tmp"
+set :keep_releases, 2 # keep this low for larger sites, can be up to 5 if you are really nervous
 
 # Roles
 role :web, domain
