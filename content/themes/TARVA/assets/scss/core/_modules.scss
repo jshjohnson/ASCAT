@@ -259,6 +259,25 @@ img.media__img {
 	opacity: 0; // fade in container on load with jQuery
 }
 
+.block-link {
+	background-color: $color-brand;
+	height: 10em;
+	padding: 0 1em;
+	color: white;
+	text-align: center;
+	h5 {
+		@include vertical-align;
+	}
+	a {
+		color: white;
+	}
+	@include respond-max($bp2) {
+		height: 8em;
+	}
+	@include respond-max($bp1) {
+		height: 6em;
+	}
+}
 
 .header--home {
 	background-image: url("../img/home-bg.jpg");

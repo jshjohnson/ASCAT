@@ -20,7 +20,7 @@ Template Name: Committees archive
 			if($myterms) : ?>
 			<div class="grid"> 
 			<?php foreach ($myterms as $term) { ?>
-		    <div class="grid__cell unit-1-3--bp2"><a href="<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></div>
+		    <div class="grid__cell unit-1-3--bp2 block-link module-1-3"><h5><a href="<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></h5></div>
 		    <?php } ?>
 		    </div> 
 			<?php endif; ?>

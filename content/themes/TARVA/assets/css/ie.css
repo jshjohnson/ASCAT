@@ -1371,18 +1371,19 @@ a:hover {
 
 /* line 159, ../scss/core/_layout.scss */
 .module-1-3 {
-  width: 33.33%;
+  width: 30%;
+  margin: 1.5%;
 }
 
-/* line 168, ../scss/core/_layout.scss */
+/* line 169, ../scss/core/_layout.scss */
 .module-1-2 {
   width: 48.5%;
 }
-/* line 173, ../scss/core/_layout.scss */
+/* line 174, ../scss/core/_layout.scss */
 .module-1-2:nth-of-type(odd) {
   float: left;
 }
-/* line 176, ../scss/core/_layout.scss */
+/* line 177, ../scss/core/_layout.scss */
 .module-1-2:nth-of-type(even) {
   float: right;
 }
@@ -1668,12 +1669,33 @@ img.media__img {
   opacity: 0;
 }
 
-/* line 263, ../scss/core/_modules.scss */
+/* line 262, ../scss/core/_modules.scss */
+.block-link {
+  background-color: #02899e;
+  height: 10em;
+  padding: 0 1em;
+  color: white;
+  text-align: center;
+}
+/* line 268, ../scss/core/_modules.scss */
+.block-link h5 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 271, ../scss/core/_modules.scss */
+.block-link a {
+  color: white;
+}
+
+/* line 282, ../scss/core/_modules.scss */
 .header--home {
   background-image: url("../img/home-bg.jpg");
 }
 
-/* line 267, ../scss/core/_modules.scss */
+/* line 286, ../scss/core/_modules.scss */
 .page-heading {
   position: absolute;
   bottom: .75em;
@@ -1681,7 +1703,7 @@ img.media__img {
   color: white;
   text-shadow: 0 -1px 0 #adadad;
 }
-/* line 273, ../scss/core/_modules.scss */
+/* line 292, ../scss/core/_modules.scss */
 .page-heading:after {
   content: "";
   width: 0;
@@ -1697,7 +1719,7 @@ img.media__img {
 
 /* Footer
 ----------------------------------*/
-/* line 291, ../scss/core/_modules.scss */
+/* line 310, ../scss/core/_modules.scss */
 .footer__img {
   max-height: 3.5em;
   margin-top: 1.25em;
@@ -1706,13 +1728,13 @@ img.media__img {
 
 /* Form
 ----------------------------------*/
-/* line 300, ../scss/core/_modules.scss */
+/* line 319, ../scss/core/_modules.scss */
 .contact-form {
   font-family: "proxima-nova", sans-serif;
   width: 100%;
   overflow: hidden;
 }
-/* line 302, ../scss/core/_modules.scss */
+/* line 321, ../scss/core/_modules.scss */
 .contact-form label {
   display: block;
   float: left;
@@ -1723,7 +1745,7 @@ img.media__img {
   text-align: left;
   width: 100%;
 }
-/* line 314, ../scss/core/_modules.scss */
+/* line 333, ../scss/core/_modules.scss */
 .contact-form input:not([type=submit]), .contact-form textarea {
   width: 80%;
   font-size: .9em;
@@ -1742,7 +1764,7 @@ img.media__img {
   outline: none;
   width: 100%;
 }
-/* line 329, ../scss/core/_modules.scss */
+/* line 348, ../scss/core/_modules.scss */
 .contact-form textarea {
   min-height: 10em;
   height: auto;
@@ -1755,28 +1777,28 @@ img.media__img {
   text-indent: 0;
 }
 
-/* line 352, ../scss/core/_modules.scss */
+/* line 371, ../scss/core/_modules.scss */
 .blog-header .blog-header__date, .blog-header .blog-header__title {
   display: inline-block;
   margin-bottom: 0;
 }
-/* line 356, ../scss/core/_modules.scss */
+/* line 375, ../scss/core/_modules.scss */
 .blog-header .blog-header__date {
   float: right;
   margin-top: .5em;
 }
-/* line 361, ../scss/core/_modules.scss */
+/* line 380, ../scss/core/_modules.scss */
 .blog-header .blog-header__title a {
   color: #02899e;
 }
 
-/* line 368, ../scss/core/_modules.scss */
+/* line 387, ../scss/core/_modules.scss */
 .blog__category {
   text-transform: capitalize;
   margin-bottom: 0.75em;
 }
 
-/* line 373, ../scss/core/_modules.scss */
+/* line 392, ../scss/core/_modules.scss */
 .content__bg {
   background-image: url("../img/shape.svg");
   background-repeat: no-repeat;
@@ -1784,7 +1806,7 @@ img.media__img {
   background-position: -7em;
 }
 
-/* line 386, ../scss/core/_modules.scss */
+/* line 405, ../scss/core/_modules.scss */
 .bio {
   background-color: #fafafa;
   border: 1px solid #f0f0f0;
@@ -1793,46 +1815,46 @@ img.media__img {
   font-size: 90%;
   overflow: auto;
 }
-/* line 393, ../scss/core/_modules.scss */
+/* line 412, ../scss/core/_modules.scss */
 .bio img {
   float: right;
   padding-left: 1em;
   max-width: 7em;
 }
 
-/* line 421, ../scss/core/_modules.scss */
+/* line 440, ../scss/core/_modules.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.5em 0;
   width: 100%;
 }
-/* line 427, ../scss/core/_modules.scss */
+/* line 446, ../scss/core/_modules.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
   width: 20%;
 }
-/* line 438, ../scss/core/_modules.scss */
+/* line 457, ../scss/core/_modules.scss */
 .module__split dt:first-child {
   padding-top: 0.75em;
 }
-/* line 442, ../scss/core/_modules.scss */
+/* line 461, ../scss/core/_modules.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
   width: 65%;
 }
-/* line 444, ../scss/core/_modules.scss */
+/* line 463, ../scss/core/_modules.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
-/* line 453, ../scss/core/_modules.scss */
+/* line 472, ../scss/core/_modules.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 
-/* line 460, ../scss/core/_modules.scss */
+/* line 479, ../scss/core/_modules.scss */
 .more-link:after {
   font-family: "tarva";
   content: '\e803';
@@ -1842,29 +1864,29 @@ img.media__img {
   top: .05em;
 }
 
-/* line 470, ../scss/core/_modules.scss */
+/* line 489, ../scss/core/_modules.scss */
 .listing-title {
   margin-bottom: .5em;
 }
-/* line 472, ../scss/core/_modules.scss */
+/* line 491, ../scss/core/_modules.scss */
 .listing-title a {
   font-weight: normal;
 }
 
-/* line 477, ../scss/core/_modules.scss */
+/* line 496, ../scss/core/_modules.scss */
 .listing-title, .listing-subtitle {
   text-transform: capitalize;
   font-weight: normal;
 }
 
-/* line 482, ../scss/core/_modules.scss */
+/* line 501, ../scss/core/_modules.scss */
 .listing-title--bio {
   margin: .4em 0;
   color: #ff520d;
   clear: left;
 }
 
-/* line 488, ../scss/core/_modules.scss */
+/* line 507, ../scss/core/_modules.scss */
 .ribbon {
   position: absolute;
   right: 1em;
@@ -1875,7 +1897,7 @@ img.media__img {
   border-bottom: 0.6em solid #fafafa;
   width: 0;
 }
-/* line 497, ../scss/core/_modules.scss */
+/* line 516, ../scss/core/_modules.scss */
 .ribbon h5 {
   font-size: .6em;
   padding-right: 1em;
@@ -1890,7 +1912,7 @@ img.media__img {
   margin-top: 1.5em;
 }
 
-/* line 508, ../scss/core/_modules.scss */
+/* line 527, ../scss/core/_modules.scss */
 .intro-text {
   margin-bottom: 1.5em;
   font-size: 1.2em;
