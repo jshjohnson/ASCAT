@@ -139,6 +139,7 @@ input[type=submit] {
 
 /* -- Blockquotes -- */
 blockquote {
+	border-left: .3em solid $color-keyline;
 	margin-left: 0;
 	margin-right: 0;
 	
@@ -187,7 +188,7 @@ a:hover {
 .icon--info-1:before { content: '\e800'; } /* '' */
 .icon--vcard:before { content: '\e805'; } /* '' */
 .icon--right-open-mini:before { content: '\e803'; } /* '' */
-.icon--cancel:before { content: '\e804'; margin-right: .5em; } /* '' */
+.icon--close:before { content: '\e804'; margin-right: .5em; } /* '' */
 .icon--menu:before { content: '\e807'; } /* '' */
 .icon--install:before { content: '\e806'; } /* '' */
 .icon--stethoscope:before { content: '\e801'; } /* '' */

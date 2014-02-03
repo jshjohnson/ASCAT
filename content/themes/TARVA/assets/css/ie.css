@@ -790,30 +790,31 @@ input[type=submit] {
 /* -- Blockquotes -- */
 /* line 141, ../scss/core/_base.scss */
 blockquote {
+  border-left: 0.3em solid #f0f0f0;
   margin-left: 0;
   margin-right: 0;
   padding-left: 2em;
   padding-right: 2em;
 }
 
-/* line 149, ../scss/core/_base.scss */
+/* line 150, ../scss/core/_base.scss */
 blockquote {
   font-family: "ff-meta-serif-web-pro", serif;
   font-style: italic;
   clear: both;
 }
 
-/* line 150, ../scss/core/_base.scss */
+/* line 151, ../scss/core/_base.scss */
 blockquote p {
   font-size: 1.35em;
 }
 
-/* line 151, ../scss/core/_base.scss */
+/* line 152, ../scss/core/_base.scss */
 blockquote p + .source {
   margin-top: -1.5em;
 }
 
-/* line 152, ../scss/core/_base.scss */
+/* line 153, ../scss/core/_base.scss */
 .source {
   display: block;
   font-family: "proxima-nova", sans-serif;
@@ -822,12 +823,12 @@ blockquote p + .source {
   font-style: normal;
 }
 
-/* line 153, ../scss/core/_base.scss */
+/* line 154, ../scss/core/_base.scss */
 .source:before {
   content: "\2013\0020";
 }
 
-/* line 155, ../scss/core/_base.scss */
+/* line 156, ../scss/core/_base.scss */
 a:active, a:focus {
   position: relative;
   top: 1px;
@@ -835,7 +836,7 @@ a:active, a:focus {
 
 /* Links
 ----------------------------------*/
-/* line 160, ../scss/core/_base.scss */
+/* line 161, ../scss/core/_base.scss */
 a {
   font-weight: 600;
   text-decoration: none;
@@ -843,13 +844,13 @@ a {
 }
 
 /* -- visited -- */
-/* line 166, ../scss/core/_base.scss */
+/* line 167, ../scss/core/_base.scss */
 a:visited {
   color: #ff520d;
 }
 
 /* -- hovers -- */
-/* line 173, ../scss/core/_base.scss */
+/* line 174, ../scss/core/_base.scss */
 a:hover {
   color: #d93e00;
 }
@@ -894,56 +895,56 @@ a:hover {
   padding-right: .3em;
 }
 
-/* line 185, ../scss/core/_base.scss */
+/* line 186, ../scss/core/_base.scss */
 .icon--users:before {
   content: '\e808';
 }
 
 /* '' */
-/* line 186, ../scss/core/_base.scss */
+/* line 187, ../scss/core/_base.scss */
 .icon--attach:before {
   content: '\e802';
 }
 
 /* '' */
-/* line 187, ../scss/core/_base.scss */
+/* line 188, ../scss/core/_base.scss */
 .icon--info-1:before {
   content: '\e800';
 }
 
 /* '' */
-/* line 188, ../scss/core/_base.scss */
+/* line 189, ../scss/core/_base.scss */
 .icon--vcard:before {
   content: '\e805';
 }
 
 /* '' */
-/* line 189, ../scss/core/_base.scss */
+/* line 190, ../scss/core/_base.scss */
 .icon--right-open-mini:before {
   content: '\e803';
 }
 
 /* '' */
-/* line 190, ../scss/core/_base.scss */
-.icon--cancel:before {
+/* line 191, ../scss/core/_base.scss */
+.icon--close:before {
   content: '\e804';
   margin-right: .5em;
 }
 
 /* '' */
-/* line 191, ../scss/core/_base.scss */
+/* line 192, ../scss/core/_base.scss */
 .icon--menu:before {
   content: '\e807';
 }
 
 /* '' */
-/* line 192, ../scss/core/_base.scss */
+/* line 193, ../scss/core/_base.scss */
 .icon--install:before {
   content: '\e806';
 }
 
 /* '' */
-/* line 193, ../scss/core/_base.scss */
+/* line 194, ../scss/core/_base.scss */
 .icon--stethoscope:before {
   content: '\e801';
 }
