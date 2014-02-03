@@ -188,6 +188,27 @@ if ( function_exists('register_sidebar') ) :
 	
 endif;
 
+// custom excerpt length
+function themify_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'themify_custom_excerpt_length', 999 );
+
+// add more link to excerpt
+function themify_custom_excerpt_more($more) {
+    global $post;
+    return '&hellip;';
+}
+add_filter('excerpt_more', 'themify_custom_excerpt_more');
+
+add_filter( 'request', 'my_request_filter' );
+function my_request_filter( $query_vars ) {
+    if( isset( $_GET['s'] ) && empty( $_GET['s'] ) ) {
+        $query_vars['s'] = " ";
+    }
+    return $query_vars;
+}
+
 /* Disqus */
 
 function disqus_embed($disqus_shortname) {
@@ -200,4 +221,38 @@ function disqus_embed($disqus_shortname) {
         var disqus_url = "'.get_permalink($post->ID).'";
         var disqus_identifier = "'.$disqus_shortname.'-'.$post->ID.'";
     </script>';
+}
+
+// Remove WP adding attributes to images
+
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
+
+// Set custom YouTube Parameters for oEmbed videos
+
+function remove_youtube_controls($code){
+if(strpos($code, 'youtu.be') !== false || strpos($code, 'youtube.com') !== false){
+$return = preg_replace("@src=(['\"])?([^'\">\s]*)@", "src=$1$2&showinfo=0&rel=0&modestbranding=1&controls=0", $code);
+return $return;
+}
+return $code;
+}
+
+add_filter('embed_handler_html', 'remove_youtube_controls');
+add_filter('embed_oembed_html', 'remove_youtube_controls');
+
+// Add active class to custom post type child
+
+add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2 );
+function current_type_nav_class($classes, $item) {
+    $post_type = get_query_var('post_type');
+    if ($item->attr_title != '' && $item->attr_title == $post_type) {
+        array_push($classes, 'is-root-parent');
+    };
+    return $classes;
 }

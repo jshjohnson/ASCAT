@@ -146,7 +146,7 @@ img.media__img {
 				color: white;
 				font-weight: normal;
 			}
-			&.is-current {
+			&.is-current, &.is-root-parent {
 				margin-left: -4.5em;
 				background-color: #05788a;
 				width: 150%;
@@ -366,19 +366,6 @@ img.media__img {
 	}
 }
 
-.treatment {
-	&:before {
-		font-family: $icon-font-family;
-		content: '\e800';
-		color: darken($color-background-alt, 10%);
-		font-size: 1.8em;
-		position: relative;
-		float: right;
-		margin-top: -.4em;
-		margin-bottom: .1em;
-	}
-}
-
 .bio {
 	background-color: $color-background-alt;
 	border: 1px solid darken($color-background-alt, 4%);
@@ -419,9 +406,9 @@ img.media__img {
 		margin-right: .6em;
 		float: left;
 		margin-top: -.15em;
-		@include respond-max($bp2-5) {
-			position: absolute;
-		}
+		// @include respond-max($bp2-5) {
+		// 	position: absolute;
+		// }
 	}
 }
 
@@ -437,11 +424,14 @@ img.media__img {
 		font-weight: 600;
 		font-size: 1em;
 		clear: left;		
-		@include respond-min($bp2) {
+		@include respond-min($bp3) {
 			width: 20%;
 		}
-		@include respond-max($bp2) {
+		@include respond-max($bp3) {
 			padding: $baseline 0 $baseline/2;
+		}
+		&:first-child {
+			padding-top: $baseline/2;
 		}
 	}
 	dd {
@@ -449,10 +439,10 @@ img.media__img {
 		&:last-child {
 			border-bottom: none;
 		}
-		@include respond-min($bp2) {
+		@include respond-min($bp3) {
 			width: 65%;
 		}
-		@include respond-max($bp2) {
+		@include respond-max($bp3) {
 			padding: 0 0 $baseline;
 		}
 		p:last-child {
