@@ -13,36 +13,70 @@ require 'yaml'
 
 set :stages, %w(production staging)
 set :default_stage, "production"
-set :keep_releases, 2
 
 after "deploy", "deploy:cleanup"
 
+
 ############################################
-# Setup Git
+# Setup Media Temple
 ############################################
 
-set :application, "TARVA"
-set :repository, "git@github.com:jshjohnson/TARVA.git"
-set :scm, :git
-set(:git_enable_submodules, true)
-set :deploy_via, :remote_cache
-set :copy_exclude, [".git", ".DS_Store", ".gitignore", ".gitmodules", "capfile", "config/"]
+set :site,         "156312" # this is your site number, https://kb.mediatemple.net/questions/268/What+is+my+site+number%3F#gs
+set :application,  "anklearthritis.co.uk" # typically the same as the domain
+
+# Shouldn't have to change anything below
+set :domain, "s#{site}.gridserver.com"
+set :user, "serveradmin@#{application}"
+
 
 ############################################
 # Setup Server
 ############################################
 
 set :use_sudo, false
+default_run_options[:pty] = true
+default_run_options[:shell] = false
+
 ssh_options[:forward_agent] = true
 
+
 ############################################
-# Recipies
+# Setup Git
 ############################################
 
+set :repository, "git@github.com:jshjohnson/TARVA.git"
+set :scm, :git
+set(:git_enable_submodules, true)
+set :deploy_via, :remote_cache
+set :copy_exclude, [".git", ".DS_Store", ".gitignore", ".gitmodules", "capfile", "config/"] 
+set :branch, "development"
+
+
+# Path stuff, make sure to symlink html to ./current
+set(:deploy_to) { "/home/#{site}/users/.home/domains/#{application}" }
+set(:current_deploy_dir) { "#{deploy_to}/current" }
+# make sure you have added a tmp directory inside domains/example.com with correct permissions (i.e 755)
+set(:copy_remote_dir) { "#{deploy_to}/tmp" }
+set(:keep_releases) { 2 } # keep this low for larger sites, can be up to 5 if you are really nervous
+
+# Roles
+role :web, domain
+role :app, domain
+role :db,  domain, :primary => true
+
+# we need a relative path for the current symlink, without this
+# current is set to link to the release starting from the /home directory
+# which has a directory that is not owned by the serveradmin and apache
+# won't have access
 def relative_path(from_str, to_str)
   require 'pathname'
   Pathname.new(to_str).relative_path_from(Pathname.new(from_str)).to_s
 end
+
+
+############################################
+# Recipies
+############################################
 
 ### WordPress
 
