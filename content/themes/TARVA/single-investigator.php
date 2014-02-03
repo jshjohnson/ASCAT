@@ -12,7 +12,7 @@
 				<dt>Role:</dt>
 				<dd><?php the_field('job_role'); ?></dd>
 
-
+				<?php if (has_term('committee_types')) : ?>
 				<dt>Committee:</dt>
 				<dd>
 					<ul class="list-unset">
@@ -26,8 +26,11 @@
 		                ?>
 		            </ul>
 		        </dd>
-
-
+				<?php endif; ?>
+				<?php if(get_field('bio')) : ?>
+				<dt>Bio:</dt>
+				<dd><?php the_field('bio'); ?></dd>
+				<?php endif; ?>
 				<?php 
 				$post_object = get_field('hospital');
 
@@ -50,12 +53,6 @@
 				<dd><a href="<?php the_field('website'); ?>"><?php the_field('website'); ?></a></dd>
 				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
-
-				<?php if(get_field('bio')) : ?>
-				<dt>Bio:</dt>
-				<dd><?php the_field('bio'); ?></dd>
-				<?php endif; ?>
-
 				<?php if(get_field('appointments')) : ?>
 				<dt>Appointments:</dt>
 				<dd><?php the_field('appointments'); ?></dd>
