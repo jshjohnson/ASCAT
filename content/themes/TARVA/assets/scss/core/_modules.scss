@@ -215,13 +215,12 @@ img.media__img {
 /* Misc
 ----------------------------------*/
 
-.credit{
-	margin-top: $baseline;
-	text-align:center;
-	border: 1px solid darken($color-background-alt, 4%);
-	background-color: $color-background-alt;
+.nav--page, .credit {
 	color: #848484;
-	padding: 1em 4em .8em;
+	padding: 1em 0 .8em;
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
 	font-size: .7em;
 	line-height: 1.7;
 	@include box-sizing(border-box);
@@ -230,8 +229,18 @@ img.media__img {
 		font-weight: 600;
 	}
 	@include respond-max($bp2) {
-		padding: 1em 3em .8em;
 		line-height: 2;
+	}
+}
+
+.credit {
+	padding: 1em 4em .8em;
+	border: 1px solid darken($color-background-alt, 4%);
+	background-color: $color-background-alt;
+	margin-top: $baseline;
+	text-align:center;
+	@include respond-max($bp2) {
+		padding: 1em 3em .8em;
 	}
 }
 
