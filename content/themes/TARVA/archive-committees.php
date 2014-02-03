@@ -12,32 +12,19 @@ Template Name: Committees archive
 			</article>
 			<?php endwhile; ?>	
 			<?php endif; ?>
-			<?php
-				$args = array(
-				'post_type' => 'committee',
-				'orderby' => 'title',
-				'order' => 'ASC'
-				);
-			query_posts($args); 
+	
 
-			if ( have_posts() ): ?>
-			<div class="grid grid--no-gutter">
-				<?php 
-					while ( have_posts() ) : the_post();				
-						$title = get_field('alternative_title');
-						if($title == ''):
-							$title = get_the_title();
-						endif;  
-				?>
-					<article class="grid__cell bio module module-1-2">
-						<img src="<?php the_field('avatar');?>" alt="">
-						<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-						<h3 class="listing-subtitle">Independent Chair</h3>
-						<p>Professor Rangan is a Consultant Orthopaedic Surgeon at South Tees Hospital NHS Foundation Trust, and an expert in Shoulder &amp; Elbow Surgery. He is the Chief Investigator of the ProFHER Trial (PROximal Fractures of The Humerus: Evaluation by Randomisation).  He is a Member of the British Elbow and Shoulder Society; an Honorary Lecturer at the University of Teesside; and a Member of the Court of Examiners, Royal College of Surgeons of England.</p>
-						<a class="more-link" href="<?php the_permalink(); ?>">More</a>
-					</article>
-				<?php endwhile; ?>
-			</div>
+			<?php 
+			$myterms = get_terms('committee_types', 'orderby=none&hide_empty');  
+
+			if($myterms) : ?>
+			<div class="grid"> 
+			<?php foreach ($myterms as $term) { ?>
+		    <div class="grid__cell unit-1-3--bp2"><a href="<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></div>
+		    <?php } ?>
+		    </div> 
 			<?php endif; ?>
+	
+	
 		</div>
 <?php get_footer(); ?>

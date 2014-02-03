@@ -402,19 +402,19 @@ img.media__img {
 			max-width: 10em;
 		}
 	}
-	&:before {
-		font-family: $icon-font-family;
-		content: '\e805';
-		color: darken($color-background-alt, 10%);
-		font-size: 2em;
-		position: relative;
-		margin-right: .6em;
-		float: left;
-		margin-top: -.15em;
-		// @include respond-max($bp2-5) {
-		// 	position: absolute;
-		// }
-	}
+	// &:before {
+	// 	font-family: $icon-font-family;
+	// 	content: '\e805';
+	// 	color: darken($color-background-alt, 10%);
+	// 	font-size: 2em;
+	// 	position: relative;
+	// 	margin-right: .6em;
+	// 	float: left;
+	// 	margin-top: -.15em;
+	// 	// @include respond-max($bp2-5) {
+	// 	// 	position: absolute;
+	// 	// }
+	// }
 }
 
 .module__split {

@@ -2212,17 +2212,6 @@ img.media__img {
     max-width: 10em;
   }
 }
-/* line 405, ../scss/core/_modules.scss */
-.bio:before {
-  font-family: "tarva";
-  content: '\e805';
-  color: #e1e1e1;
-  font-size: 2em;
-  position: relative;
-  margin-right: .6em;
-  float: left;
-  margin-top: -.15em;
-}
 
 /* line 421, ../scss/core/_modules.scss */
 .module__split dt, .module__split dd {

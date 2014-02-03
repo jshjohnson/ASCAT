@@ -27,6 +27,8 @@ Template Name: Resources index
 					<?php
 						$args = array(
 							'post_type' => 'resource',
+							'orderby' => 'date',
+							'order' => DESC,
 							'tax_query' => array(
 								array(
 									'taxonomy' => 'resource_type',
@@ -38,7 +40,16 @@ Template Name: Resources index
 						query_posts($args);
 
 					 	while ( have_posts() ) : the_post(); ?>
-					<div class="download"><a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a></div>
+					<div class="download">
+						<a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a>
+							<?php $ageunix = get_the_time('U');
+								$days_old_in_seconds = ((time() - $ageunix));
+								$days_old = (($days_old_in_seconds/86400));
+							?>
+							<?php if ($days_old < 3) : ?>
+							<div class="ribbon"><h5>New</h5></div>
+							<?php endif; ?>
+					</div>
 					<?php endwhile; ?>
 				</article>
 				<article class="grid__cell unit-1-2--bp3">
@@ -46,6 +57,8 @@ Template Name: Resources index
 					<?php 
 						$args = array(
 							'post_type' => 'resource',
+							'orderby' => 'date',
+							'order' => DESC,
 							'tax_query' => array(
 								array(
 									'taxonomy' => 'resource_type',
@@ -57,7 +70,16 @@ Template Name: Resources index
 						query_posts($args);
 
 						while ( have_posts() ) : the_post(); ?>
-					<div class="download"><a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a></div>
+					<div class="download">
+						<a href="<?php the_field('resource_upload'); ?>"><?php the_title(); ?></a>
+							<?php $ageunix = get_the_time('U');
+								$days_old_in_seconds = ((time() - $ageunix));
+								$days_old = (($days_old_in_seconds/86400));
+							?>
+							<?php if ($days_old < 3) : ?>
+							<div class="ribbon"><h5>New</h5></div>
+							<?php endif; ?>
+					</div>
 					<?php endwhile; ?>
 				</article>
 			</div>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<div class="content__container container">
 		<?php if ( have_posts() ) : ?>
-		<article class="bio module">
+		<article class="bio module hospital">
 			<?php while ( have_posts() ) : the_post(); ?>
 			<dl class="module__split">
 				<dt>Name:</dt>
