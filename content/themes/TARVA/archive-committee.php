@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Trial Oversight
+Template Name: Committee archive
 */
 ?>
 <?php get_header(); ?>

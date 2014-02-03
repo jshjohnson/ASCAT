@@ -11,6 +11,23 @@
 				<dd><?php the_field('job_title'); ?></dd>
 				<dt>Role:</dt>
 				<dd><?php the_field('job_role'); ?></dd>
+
+
+				<dt>Committee:</dt>
+				<dd>
+					<ul class="list-unset">
+						<?php $terms = get_the_terms( $post->ID , 'committee_types' ); 
+		                    foreach ( $terms as $term ) {
+		                        $term_link = get_term_link( $term, 'committee_types' );
+		                        if( is_wp_error( $term_link ) )
+		                        continue;
+		                    echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
+		                    } 
+		                ?>
+		            </ul>
+		        </dd>
+
+
 				<?php 
 				$post_object = get_field('hospital');
 

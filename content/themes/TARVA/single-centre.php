@@ -26,11 +26,15 @@
  
 				if( $post_objects ): ?>
 				    <dt>Co-Investigators:</dt>
+				    <dd>
+				    	<ul class="list-unset">
 				    <?php foreach( $post_objects as $post_object): ?>
-				        <dd>
-				            <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
-				        </dd>
+					        <li>
+					            <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
+					        </li>
 				    <?php endforeach; ?>
+						</ul>
+					</dd>
 				<?php endif; ?>
 				<dt>Research Coordinator:</dt>
 				<dd><?php the_field('coordinator'); ?></dd>
