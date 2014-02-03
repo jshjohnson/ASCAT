@@ -1630,7 +1630,7 @@ img.media__img {
   border: 1px solid #f0f0f0;
   background-color: #fafafa;
   color: #848484;
-  padding: 1em 2em .8em;
+  padding: 1em 4em .8em;
   font-size: .7em;
   line-height: 1.7;
   -webkit-box-sizing: border-box;
@@ -1900,117 +1900,127 @@ img.media__img {
   text-align: center;
 }
 
+/* line 5, ../scss/core/_overrides.scss */
+.right {
+  text-align: right;
+}
+
 /* line 6, ../scss/core/_overrides.scss */
+.left {
+  text-align: left;
+}
+
+/* line 8, ../scss/core/_overrides.scss */
 .push-top {
   margin-top: 1.5em;
 }
 
-/* line 7, ../scss/core/_overrides.scss */
+/* line 9, ../scss/core/_overrides.scss */
 .push-bottom {
   margin-bottom: 1.5em;
 }
 
-/* line 9, ../scss/core/_overrides.scss */
+/* line 11, ../scss/core/_overrides.scss */
 .zero-top {
   margin-top: 0 !important;
 }
 
-/* line 10, ../scss/core/_overrides.scss */
+/* line 12, ../scss/core/_overrides.scss */
 .zero-bottom {
   margin-bottom: 0 !important;
 }
 
-/* line 12, ../scss/core/_overrides.scss */
+/* line 14, ../scss/core/_overrides.scss */
 .weight-light {
   font-weight: 300 !important;
 }
 
-/* line 13, ../scss/core/_overrides.scss */
+/* line 15, ../scss/core/_overrides.scss */
 .weight-normal {
   font-weight: 400 !important;
 }
 
-/* line 14, ../scss/core/_overrides.scss */
+/* line 16, ../scss/core/_overrides.scss */
 .weight-semibold {
   font-weight: 600 !important;
 }
 
-/* line 16, ../scss/core/_overrides.scss */
+/* line 18, ../scss/core/_overrides.scss */
 .list-unset, .nav {
   list-style: none !important;
   margin-left: 0 !important;
 }
 
-/* line 17, ../scss/core/_overrides.scss */
+/* line 19, ../scss/core/_overrides.scss */
 .list-numbers {
   list-style: decimal !important;
 }
 
-/* line 18, ../scss/core/_overrides.scss */
+/* line 20, ../scss/core/_overrides.scss */
 .list-bullets {
   list-style: disc !important;
 }
 
-/* line 20, ../scss/core/_overrides.scss */
+/* line 22, ../scss/core/_overrides.scss */
 .block {
   display: block;
 }
 
 /* Theme Classes */
-/* line 24, ../scss/core/_overrides.scss */
+/* line 26, ../scss/core/_overrides.scss */
 .brand-text {
   color: #02899e;
 }
 
-/* line 27, ../scss/core/_overrides.scss */
+/* line 29, ../scss/core/_overrides.scss */
 .brand-bg {
   background-color: #02899e;
 }
 
 /* Micro Clearfix - http://goo.gl/5Fvrh */
-/* line 32, ../scss/core/_overrides.scss */
+/* line 34, ../scss/core/_overrides.scss */
 .cf, .media, .nav {
   zoom: 1;
 }
-/* line 35, ../scss/core/_overrides.scss */
+/* line 37, ../scss/core/_overrides.scss */
 .cf:before, .media:before, .nav:before, .cf:after, .media:after, .nav:after {
   content: "";
   display: table;
 }
-/* line 36, ../scss/core/_overrides.scss */
+/* line 38, ../scss/core/_overrides.scss */
 .cf:after, .media:after, .nav:after {
   clear: both;
 }
 
 /* Specific text styles
 ----------------------------------*/
-/* line 41, ../scss/core/_overrides.scss */
+/* line 43, ../scss/core/_overrides.scss */
 .capitalise {
   text-transform: capitalize;
 }
 
-/* line 42, ../scss/core/_overrides.scss */
+/* line 44, ../scss/core/_overrides.scss */
 .intro {
   font-size: 1.25em;
 }
 
-/* line 43, ../scss/core/_overrides.scss */
+/* line 45, ../scss/core/_overrides.scss */
 .headline {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: .45em;
 }
 
-/* line 44, ../scss/core/_overrides.scss */
+/* line 46, ../scss/core/_overrides.scss */
 .highlight {
   font-size: 1.5em;
   color: #ff520d;
 }
 
-/* line 46, ../scss/core/_overrides.scss */
+/* line 48, ../scss/core/_overrides.scss */
 .underline, .blog-header, .content__body h2 {
   margin-bottom: 1em;
 }
-/* line 48, ../scss/core/_overrides.scss */
+/* line 50, ../scss/core/_overrides.scss */
 .underline:after, .blog-header:after, .content__body h2:after {
   content: "";
   width: 110%;
@@ -2024,13 +2034,13 @@ img.media__img {
 
 /* Style trumps (error states etc.)
 ----------------------------------*/
-/* line 67, ../scss/core/_overrides.scss */
+/* line 69, ../scss/core/_overrides.scss */
 .is-hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 68, ../scss/core/_overrides.scss */
+/* line 70, ../scss/core/_overrides.scss */
 .is-vhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2042,7 +2052,7 @@ img.media__img {
   width: 1px;
 }
 
-/* line 79, ../scss/core/_overrides.scss */
+/* line 81, ../scss/core/_overrides.scss */
 .info:before {
   font-family: "tarva";
   content: '\e800';
@@ -2056,19 +2066,19 @@ img.media__img {
   margin-left: .2em;
 }
 
-/* line 93, ../scss/core/_overrides.scss */
+/* line 95, ../scss/core/_overrides.scss */
 .warning, .validation_message {
   color: #900;
 }
 
-/* line 95, ../scss/core/_overrides.scss */
+/* line 97, ../scss/core/_overrides.scss */
 .alert {
   color: #009;
 }
 
 /* Debuggin'
 ----------------------------------*/
-/* line 119, ../scss/core/_overrides.scss */
+/* line 121, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2083,7 +2093,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 0";
 }
-/* line 122, ../scss/core/_overrides.scss */
+/* line 124, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2098,7 +2108,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 1";
 }
-/* line 125, ../scss/core/_overrides.scss */
+/* line 127, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2113,7 +2123,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 2";
 }
-/* line 128, ../scss/core/_overrides.scss */
+/* line 130, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
