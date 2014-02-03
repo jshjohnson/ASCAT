@@ -12,7 +12,7 @@ require 'yaml'
 ############################################
 
 set :stages, %w(production staging)
-set :default_stage, "production"
+set :default_stage, "staging"
 
 after "deploy", "deploy:cleanup"
 
