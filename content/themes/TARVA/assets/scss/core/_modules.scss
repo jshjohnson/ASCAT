@@ -385,18 +385,6 @@ img.media__img {
 			max-width: 10em;
 		}
 	}
-	.bio__title, .bio__subtitle {
-		text-transform: capitalize;
-		font-weight: normal;
-	}
-	.bio__title {
-		margin: .4em 0;
-		color: $color-highlight;
-		clear: left;
-		a {
-			font-weight: 500;
-		}
-	}
 	&:before {
 		font-family: $icon-font-family;
 		content: '\e805';
@@ -465,8 +453,19 @@ img.media__img {
 .listing-title {
 	margin-bottom: .5em; 
 	a {
-		color: $color-brand;
+		font-weight: normal;
 	}
+}
+
+.listing-title, .listing-subtitle {
+	text-transform: capitalize;
+	font-weight: normal;
+}
+
+.listing-title--bio {
+	margin: .4em 0;
+	color: $color-highlight;
+	clear: left;
 }
 
 .ribbon {

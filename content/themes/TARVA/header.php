@@ -26,7 +26,16 @@
 		<?php get_sidebar(); ?> 
 		<main class="content">
 			<?php if(!is_front_page()) :?>
-			<header class="content__header header--home">
+
+		<?php if (has_post_thumbnail( $post->post_parent ) ): ?>
+		<?php $parentimage = wp_get_attachment_image_src( get_post_thumbnail_id( $post->post_parent ), 'single-post-thumbnail' ); ?>
+			<header class="content__header" style="background-image: url('<?php echo $parentimage[0]; ?>');">
+		<?php elseif (has_post_thumbnail( $post->ID ) ): ?>
+		<?php $pageimage = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+			<header class="content__header" style="background-image: url('<?php echo $pageimage[0]; ?>');">
+		<?php else : ?>
+			<header class="content__header" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bg-fallback.jpg');">
+		<?php endif; ?>
 				<div class="container">
 					<?php 	
 						$title = get_field('alternative_title');

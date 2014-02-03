@@ -4,7 +4,6 @@ Template Name: Centre archive
 */
 ?>
 <?php get_header(); ?>
-		<div class="content__bg">
 			<div class="content__container container">
 				<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -32,8 +31,8 @@ Template Name: Centre archive
 					?>
 						<article class="grid__cell bio module module-1-2 info">
 							<img src="<?php the_field('avatar');?>" alt="">
-							<h2 class="bio__title"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-							<h3 class="bio__subtitle"><?php the_field('telephone'); ?></h3>
+							<h2 class="listing-title"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
+							<h3 class="listing-subtitle"><?php the_field('telephone'); ?></h3>
 							<a class="more-link" href="<?php the_permalink(); ?>">More</a>
 						</article>
 					<?php endwhile; ?>

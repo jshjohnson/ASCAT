@@ -1781,21 +1781,6 @@ img.media__img {
   max-width: 7em;
 }
 /* line 388, ../scss/core/_modules.scss */
-.bio .bio__title, .bio .bio__subtitle {
-  text-transform: capitalize;
-  font-weight: normal;
-}
-/* line 392, ../scss/core/_modules.scss */
-.bio .bio__title {
-  margin: .4em 0;
-  color: #ff520d;
-  clear: left;
-}
-/* line 396, ../scss/core/_modules.scss */
-.bio .bio__title a {
-  font-weight: 500;
-}
-/* line 400, ../scss/core/_modules.scss */
 .bio:before {
   font-family: "tarva";
   content: '\e805';
@@ -1807,39 +1792,39 @@ img.media__img {
   margin-top: -.15em;
 }
 
-/* line 416, ../scss/core/_modules.scss */
+/* line 404, ../scss/core/_modules.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.5em 0;
   width: 100%;
 }
-/* line 422, ../scss/core/_modules.scss */
+/* line 410, ../scss/core/_modules.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
   width: 20%;
 }
-/* line 433, ../scss/core/_modules.scss */
+/* line 421, ../scss/core/_modules.scss */
 .module__split dt:first-child {
   padding-top: 0.75em;
 }
-/* line 437, ../scss/core/_modules.scss */
+/* line 425, ../scss/core/_modules.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
   width: 65%;
 }
-/* line 439, ../scss/core/_modules.scss */
+/* line 427, ../scss/core/_modules.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
-/* line 448, ../scss/core/_modules.scss */
+/* line 436, ../scss/core/_modules.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 
-/* line 455, ../scss/core/_modules.scss */
+/* line 443, ../scss/core/_modules.scss */
 .more-link:after {
   font-family: "tarva";
   content: '\e803';
@@ -1849,16 +1834,29 @@ img.media__img {
   top: .05em;
 }
 
-/* line 465, ../scss/core/_modules.scss */
+/* line 453, ../scss/core/_modules.scss */
 .listing-title {
   margin-bottom: .5em;
 }
-/* line 467, ../scss/core/_modules.scss */
+/* line 455, ../scss/core/_modules.scss */
 .listing-title a {
-  color: #02899e;
+  font-weight: normal;
 }
 
-/* line 472, ../scss/core/_modules.scss */
+/* line 460, ../scss/core/_modules.scss */
+.listing-title, .listing-subtitle {
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+/* line 465, ../scss/core/_modules.scss */
+.listing-title--bio {
+  margin: .4em 0;
+  color: #ff520d;
+  clear: left;
+}
+
+/* line 471, ../scss/core/_modules.scss */
 .ribbon {
   position: absolute;
   right: 1em;
@@ -1869,7 +1867,7 @@ img.media__img {
   border-bottom: 0.6em solid #fafafa;
   width: 0;
 }
-/* line 481, ../scss/core/_modules.scss */
+/* line 480, ../scss/core/_modules.scss */
 .ribbon h5 {
   font-size: .6em;
   padding-right: 1em;
@@ -1884,7 +1882,7 @@ img.media__img {
   margin-top: 1.5em;
 }
 
-/* line 492, ../scss/core/_modules.scss */
+/* line 491, ../scss/core/_modules.scss */
 .intro-text {
   margin-bottom: 1.5em;
   font-size: 1.2em;
@@ -2055,21 +2053,22 @@ img.media__img {
   margin-right: 0;
   margin-top: -.4em;
   margin-bottom: .1em;
+  margin-left: .2em;
 }
 
-/* line 92, ../scss/core/_overrides.scss */
+/* line 93, ../scss/core/_overrides.scss */
 .warning, .validation_message {
   color: #900;
 }
 
-/* line 94, ../scss/core/_overrides.scss */
+/* line 95, ../scss/core/_overrides.scss */
 .alert {
   color: #009;
 }
 
 /* Debuggin'
 ----------------------------------*/
-/* line 118, ../scss/core/_overrides.scss */
+/* line 119, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2084,7 +2083,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 0";
 }
-/* line 121, ../scss/core/_overrides.scss */
+/* line 122, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2099,7 +2098,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 1";
 }
-/* line 124, ../scss/core/_overrides.scss */
+/* line 125, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2114,7 +2113,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 2";
 }
-/* line 127, ../scss/core/_overrides.scss */
+/* line 128, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
