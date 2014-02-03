@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Single committee archive
+Template Name: Committees archive
 */
 ?>
 <?php get_header(); ?>

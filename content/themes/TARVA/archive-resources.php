@@ -7,7 +7,7 @@ Template Name: Resources index
 		<div class="content__container container">
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-			<article>
+			<article class="content__body">
 				<?php the_content(); ?>	
 			</article>
 			<?php endwhile; ?>	
