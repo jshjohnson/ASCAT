@@ -6,7 +6,9 @@ Template Name: Single committee archive
 <?php get_header(); ?>
 		<div class="content__container container">
 			<?php if ( have_posts() ) : ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php 
+			while ( have_posts() ) : the_post(); ?>
+
 			<article class="content__body">
 				<?php the_content(); ?>	
 			</article>
@@ -27,14 +29,18 @@ Template Name: Single committee archive
 				if ( have_posts() ): ?>
 				<div class="grid grid--no-gutter">
 					<?php 
-						while ( have_posts() ) : the_post();				
+						while ( have_posts() ) : the_post();	
+
+							$image = get_field('avatar');
+							$url = $image['sizes']['medium'];
+						    $alt = $image['alt'];			
 							$title = get_field('alternative_title');
 							if($title == ''):
 								$title = get_the_title();
 							endif;  
 					?>
 						<article class="grid__cell bio module module-1-2">
-							<img src="<?php the_field('avatar');?>" alt="">
+							<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
 							<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
 							<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
 							<p><?php the_field('bio'); ?></p>
@@ -59,13 +65,16 @@ Template Name: Single committee archive
 				<div class="grid grid--no-gutter">
 					<?php 
 						while ( have_posts() ) : the_post();				
+							$image = get_field('avatar');
+							$url = $image['sizes']['medium'];
+						    $alt = $image['alt'];			
 							$title = get_field('alternative_title');
 							if($title == ''):
 								$title = get_the_title();
 							endif;  
 					?>
 						<article class="grid__cell bio module module-1-2">
-							<img src="<?php the_field('avatar');?>" alt="">
+							<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
 							<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
 							<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
 							<p><?php the_field('bio'); ?></p>
@@ -89,13 +98,16 @@ Template Name: Single committee archive
 				<div class="grid grid--no-gutter">
 					<?php 
 						while ( have_posts() ) : the_post();				
+							$image = get_field('avatar');
+							$url = $image['sizes']['medium'];
+						    $alt = $image['alt'];			
 							$title = get_field('alternative_title');
 							if($title == ''):
 								$title = get_the_title();
 							endif;  
 					?>
 						<article class="grid__cell bio module module-1-2">
-							<img src="<?php the_field('avatar');?>" alt="">
+							<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
 							<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
 							<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
 							<p><?php the_field('bio'); ?></p>

@@ -2,8 +2,13 @@
 	<div class="content__container container">
 		<?php if ( have_posts() ) : ?>
 		<article class="bio module">
-			<?php while ( have_posts() ) : the_post(); ?>
-			<img src="<?php the_field('avatar');?>" alt="">
+			<?php
+				while ( have_posts() ) : the_post(); 
+				$image = get_field('avatar');
+				$url = $image['sizes']['medium'];
+			    $alt = $image['alt'];	
+			?>
+			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
 			<dl class="module__split">
 				<dt>Name:</dt>
 				<dd><?php the_title(); ?></dd>
