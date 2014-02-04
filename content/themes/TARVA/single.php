@@ -6,6 +6,7 @@
 				<h5><?php the_time( 'jS F Y' ); ?></h5>
 				<h5><?php the_category( ', ' ); ?></h5>
 				<?php the_content(); ?>
+				<?php disqus_embed('tarva'); ?>
 			</article>	
 			<?php endwhile; ?>
 			<?php else : ?>

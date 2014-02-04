@@ -188,26 +188,14 @@ if ( function_exists('register_sidebar') ) :
 	
 endif;
 
-// custom excerpt length
-function themify_custom_excerpt_length( $length ) {
-    return 50;
-}
-add_filter( 'excerpt_length', 'themify_custom_excerpt_length', 999 );
 
-// add more link to excerpt
-function themify_custom_excerpt_more($more) {
-    global $post;
-    return '&hellip;';
+// Replaces the excerpt "more" text by a link
+function new_excerpt_more($more) {
+       global $post;
+    return '...<a class="moretag" href="'. get_permalink($post->ID) . '"> More</a>';
 }
-add_filter('excerpt_more', 'themify_custom_excerpt_more');
+add_filter('excerpt_more', 'new_excerpt_more');
 
-add_filter( 'request', 'my_request_filter' );
-function my_request_filter( $query_vars ) {
-    if( isset( $_GET['s'] ) && empty( $_GET['s'] ) ) {
-        $query_vars['s'] = " ";
-    }
-    return $query_vars;
-}
 
 /* Disqus */
 
