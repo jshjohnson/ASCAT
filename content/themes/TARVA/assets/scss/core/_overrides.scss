@@ -77,33 +77,38 @@
 	position: absolute;
 	width: 1px; }
 
-.info {
+.info, .hospital {
 	&:before {
 		font-family: $icon-font-family;
-		content: '\e800';
 		color: darken($color-background-alt, 10%);
-		font-size: 1.6em;
+		float: right;
+		margin-bottom: .1em;
+		margin-left: .2em;
 		position: relative;
+	}
+}
+
+.info {
+	&:before {
+		content: '\e800';
+		font-size: 1.6em;
 		float: right;
 		margin-right: 0;
 		margin-top: -.5em;
-		margin-bottom: .1em;
-		margin-left: .2em;
+		@include respond-max($bp1) {
+			position: absolute;
+			right: 0;
+			margin-right: .7em;
+		}
 	}
 }
 
 .hospital {
 	&:before {
-		font-family: $icon-font-family;
 		content: '\e801';
-		color: darken($color-background-alt, 10%);
 		font-size: 1.8em;
-		position: relative;
-		float: right;
 		margin-right: -.2em;
 		margin-top: -.4em;
-		margin-bottom: .1em;
-		margin-left: .2em;
 	}
 }
 

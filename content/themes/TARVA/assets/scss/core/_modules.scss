@@ -138,7 +138,7 @@ img.media__img {
 		list-style-type: none;
 		li {
 			font-size: .8em;
-			padding: .6em 0;
+			padding: .6em 0 .55em;
 			@include respond-max($bp2) {
 				font-size: .9em;
 			}
@@ -159,7 +159,7 @@ img.media__img {
 					position: relative;
 					margin-right: .4em;
 					float: left;
-					margin-top: -.35em;
+					margin-top: -.41em;
 				}
 			}
 		}
@@ -429,58 +429,6 @@ img.media__img {
 		}
 		@include respond-max($bp2) {
 			max-width: 10em;
-		}
-	}
-	// &:before {
-	// 	font-family: $icon-font-family;
-	// 	content: '\e805';
-	// 	color: darken($color-background-alt, 10%);
-	// 	font-size: 2em;
-	// 	position: relative;
-	// 	margin-right: .6em;
-	// 	float: left;
-	// 	margin-top: -.15em;
-	// 	// @include respond-max($bp2-5) {
-	// 	// 	position: absolute;
-	// 	// }
-	// }
-}
-
-.module__split {
-	dt,dd {
-		float: left;
-		margin: 0;
-		padding: $baseline 0;
-		width: 100%;
-	}
-	dt {
-		@extend %h4;
-		font-weight: 600;
-		font-size: 1em;
-		clear: left;		
-		@include respond-min($bp3) {
-			width: 20%;
-		}
-		@include respond-max($bp3) {
-			padding: $baseline 0 $baseline/2;
-		}
-		&:first-child {
-			padding-top: $baseline/2;
-		}
-	}
-	dd {
-		border-bottom: 1px dashed darken($color-background-alt, 10%);
-		&:last-child {
-			border-bottom: none;
-		}
-		@include respond-min($bp3) {
-			width: 65%;
-		}
-		@include respond-max($bp3) {
-			padding: 0 0 $baseline;
-		}
-		p:last-child {
-			margin-bottom: 0;
 		}
 	}
 }

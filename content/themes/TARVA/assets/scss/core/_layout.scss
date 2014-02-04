@@ -144,9 +144,9 @@
 	> p:last-child, ul:last-child, ul li:last-of-type, iframe:last-child {
 		margin-bottom: 0;
 	}
-	// &:last-of-type {
-	// 	margin-bottom: 0;
-	// }
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 }
 
 .module-2-3 {
@@ -176,5 +176,44 @@
 	}
 	&:nth-of-type(even) {
 		float:right;
+	}
+}
+
+.module__split {
+	dt,dd {
+		float: left;
+		margin: 0;
+		padding: $baseline 0;
+		width: 100%;
+	}
+	dt {
+		@extend %h4;
+		font-weight: 600;
+		font-size: 1em;
+		clear: left;		
+		@include respond-min($bp3) {
+			width: 20%;
+		}
+		@include respond-max($bp3) {
+			padding: $baseline 0 $baseline/2;
+		}
+		&:first-child {
+			padding-top: $baseline/2;
+		}
+	}
+	dd {
+		border-bottom: 1px dashed darken($color-background-alt, 10%);
+		&:last-child {
+			border-bottom: none;
+		}
+		@include respond-min($bp3) {
+			width: 65%;
+		}
+		@include respond-max($bp3) {
+			padding: 0 0 $baseline;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
