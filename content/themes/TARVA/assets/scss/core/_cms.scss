@@ -15,14 +15,14 @@
 
 /* -- WP images -- */
 .alignleft {
-	@include respond-min($bp1) {
+	@include respond-min($bp4) {
 		float: left;
 		margin-right: $media-img-gutter;
 		margin-bottom: $baseline; }
 }	
 	
 .alignright {
-	@include respond-min($bp1) {
+	@include respond-min($bp4) {
 		float: right;
 		margin-left: $media-img-gutter;
 		margin-bottom: $baseline; }	
