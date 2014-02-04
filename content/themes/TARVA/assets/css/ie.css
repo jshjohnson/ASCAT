@@ -1919,11 +1919,22 @@ img.media__img {
 }
 
 /* line 485, ../scss/core/_modules.scss */
+.intro {
+  overflow: auto;
+  background-color: #ff520d;
+}
+
+/* line 490, ../scss/core/_modules.scss */
 .intro-text {
-  margin-bottom: 1.7em;
+  padding: 1.25em 0;
   font-size: 1.2em;
-  color: #02899e;
-  margin-top: 1.7em;
+  color: white;
+  font-weight: 400;
+}
+/* line 495, ../scss/core/_modules.scss */
+.intro-text .highlight {
+  color: white;
+  font-weight: bolder;
 }
 
 /*----------------------------------------------------------------------------------------*\
