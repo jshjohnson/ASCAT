@@ -21,7 +21,7 @@ Template Name: Treatment Archive
 				query_posts($args); 
 
 				if ( have_posts() ): ?>
-			<div class="grid">
+			<div class="grid grid--no-gutter">
 				<?php while ( have_posts() ) : the_post();	 ?>
 				<article class="grid__cell unit-1-2--bp2 island module-1-2 info">
 					<h3 class="listing-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

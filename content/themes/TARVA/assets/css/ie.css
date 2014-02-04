@@ -1104,6 +1104,7 @@ a:hover {
 /* line 182, ../scss/libs/_griddle.scss */
 .grid--no-gutter {
   margin: 0;
+  overflow: auto;
 }
 
 /**
@@ -1111,7 +1112,7 @@ a:hover {
  * Allows for automatic unit centering irrespective of the number of
  * units in the grid.
  */
-/* line 192, ../scss/libs/_griddle.scss */
+/* line 193, ../scss/libs/_griddle.scss */
 .grid--center {
   text-align: center;
 }
@@ -1121,7 +1122,7 @@ a:hover {
  * Set a specific unit to be horizontally centered. Doesn't affect
  * any other units. Can still contain a child `grid` object.
  */
-/* line 202, ../scss/libs/_griddle.scss */
+/* line 203, ../scss/libs/_griddle.scss */
 .grid__cell--center {
   display: block;
   margin: 0 auto;

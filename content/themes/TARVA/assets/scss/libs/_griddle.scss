@@ -181,6 +181,7 @@ $grid-gutter: 2em !default; // can be px, em, or %
 
 .grid--no-gutter {
     margin: 0;
+    overflow: auto;
 }
 
 /**
