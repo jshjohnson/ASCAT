@@ -2380,16 +2380,17 @@ img.media__img {
 .intro {
   overflow: auto;
   background-color: #ff520d;
+  background-image: url("../img/shape-bg.svg");
 }
 
-/* line 490, ../scss/core/_modules.scss */
+/* line 491, ../scss/core/_modules.scss */
 .intro-text {
   padding: 1.25em 0;
   font-size: 1.2em;
   color: white;
   font-weight: 400;
 }
-/* line 495, ../scss/core/_modules.scss */
+/* line 496, ../scss/core/_modules.scss */
 .intro-text .highlight {
   color: white;
   font-weight: bolder;
