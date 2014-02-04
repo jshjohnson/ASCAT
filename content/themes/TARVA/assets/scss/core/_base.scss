@@ -72,14 +72,14 @@ html {
 	font-size: 100%;
 	
 	@include respond-min($bp3) {
-		font-size: 115%; }
+		font-size: 120%; }
 		
 }
 
 body {
 	overflow-x: hidden;
 	@include font-sans;
-	line-height: 1.5;
+	line-height: 1.7;
 	color: $color-text;
 	background-color: $color-background; }
 
@@ -141,7 +141,7 @@ blockquote {
 	border-left: .3em solid $color-keyline;
 	margin-left: 0;
 	margin-right: 0;
-	
+	padding-left: 1.5em;
 	@include respond-min($bp2) {
 		padding-left: 2em;
 		padding-right: 2em; }

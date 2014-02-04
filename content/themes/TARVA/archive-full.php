@@ -24,6 +24,7 @@ Template Name: Full Archive
 						</header>
 						<p class="blog__category"><?php the_category( ', ' ); ?></p>
 						<p><?php the_excerpt(); ?></p>
+						<a class="more-link" href="<?php the_permalink(); ?>">Read more</a>
 					</article>
 					<?php endforeach; ?>
 				</section>

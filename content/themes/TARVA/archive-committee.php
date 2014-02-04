@@ -36,8 +36,8 @@ Template Name: Single committee archive
 						<article class="grid__cell bio module module-1-2">
 							<img src="<?php the_field('avatar');?>" alt="">
 							<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-							<h3 class="listing-subtitle">Independent Chair</h3>
-							<p>Professor Rangan is a Consultant Orthopaedic Surgeon at South Tees Hospital NHS Foundation Trust, and an expert in Shoulder &amp; Elbow Surgery. He is the Chief Investigator of the ProFHER Trial (PROximal Fractures of The Humerus: Evaluation by Randomisation).  He is a Member of the British Elbow and Shoulder Society; an Honorary Lecturer at the University of Teesside; and a Member of the Court of Examiners, Royal College of Surgeons of England.</p>
+							<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
+							<p><?php the_field('bio'); ?></p>
 							<a class="more-link" href="<?php the_permalink(); ?>">More</a>
 						</article>
 					<?php endwhile; ?>
@@ -67,8 +67,8 @@ Template Name: Single committee archive
 						<article class="grid__cell bio module module-1-2">
 							<img src="<?php the_field('avatar');?>" alt="">
 							<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-							<h3 class="listing-subtitle">Independent Chair</h3>
-							<p>Professor Rangan is a Consultant Orthopaedic Surgeon at South Tees Hospital NHS Foundation Trust, and an expert in Shoulder &amp; Elbow Surgery. He is the Chief Investigator of the ProFHER Trial (PROximal Fractures of The Humerus: Evaluation by Randomisation).  He is a Member of the British Elbow and Shoulder Society; an Honorary Lecturer at the University of Teesside; and a Member of the Court of Examiners, Royal College of Surgeons of England.</p>
+							<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
+							<p><?php the_field('bio'); ?></p>
 							<a class="more-link" href="<?php the_permalink(); ?>">More</a>
 						</article>
 					<?php endwhile; ?>
@@ -97,8 +97,8 @@ Template Name: Single committee archive
 						<article class="grid__cell bio module module-1-2">
 							<img src="<?php the_field('avatar');?>" alt="">
 							<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-							<h3 class="listing-subtitle">Independent Chair</h3>
-							<p>Professor Rangan is a Consultant Orthopaedic Surgeon at South Tees Hospital NHS Foundation Trust, and an expert in Shoulder &amp; Elbow Surgery. He is the Chief Investigator of the ProFHER Trial (PROximal Fractures of The Humerus: Evaluation by Randomisation).  He is a Member of the British Elbow and Shoulder Society; an Honorary Lecturer at the University of Teesside; and a Member of the Court of Examiners, Royal College of Surgeons of England.</p>
+							<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
+							<p><?php the_field('bio'); ?></p>
 							<a class="more-link" href="<?php the_permalink(); ?>">More</a>
 						</article>
 					<?php endwhile; ?>

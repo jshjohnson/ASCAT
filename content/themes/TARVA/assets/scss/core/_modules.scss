@@ -166,6 +166,16 @@ img.media__img {
 	}
 	@include respond-max($bp2) {
 		margin: 0;
+		&:after {
+			content: "";
+			background-image: url("../img/logo-inverted.png");
+			background-repeat: no-repeat;
+			height: 6em;
+			background-size: 100%;
+			width: 90%;
+			margin: auto;
+			display: block;
+		}
 	}
 }
 
@@ -262,7 +272,7 @@ img.media__img {
 .block-link {
 	background-color: $color-brand;
 	height: 10em;
-	padding: 0 1em;
+	padding: 0 1.5em;
 	color: white;
 	text-align: center;
 	h5 {
