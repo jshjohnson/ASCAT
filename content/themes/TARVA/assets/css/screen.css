@@ -2381,17 +2381,33 @@ img.media__img {
   overflow: auto;
   background-color: #ff520d;
   background-image: url("../img/shape-bg.svg");
+  position: relative;
+}
+/* line 490, ../scss/core/_modules.scss */
+.intro:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: .75em solid transparent;
+  border-right: .75em solid transparent;
+  border-bottom: 0.75em solid white;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  left: 50%;
+  margin-left: -.75em;
 }
 
-/* line 491, ../scss/core/_modules.scss */
+/* line 505, ../scss/core/_modules.scss */
 .intro-text {
-  padding: 1.25em 0;
-  font-size: 1.2em;
+  padding: 1.5em 0;
+  font-size: 1.4em;
   color: white;
   font-weight: 400;
 }
-/* line 496, ../scss/core/_modules.scss */
-.intro-text .highlight {
+/* line 510, ../scss/core/_modules.scss */
+.intro-text .intro-text__highlight {
+  font-size: 1.7em;
   color: white;
   font-weight: bolder;
 }
@@ -2506,27 +2522,22 @@ img.media__img {
 }
 
 /* line 44, ../scss/core/_overrides.scss */
-.intro {
-  font-size: 1.25em;
-}
-
-/* line 45, ../scss/core/_overrides.scss */
 .headline {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: .45em;
 }
 
-/* line 46, ../scss/core/_overrides.scss */
+/* line 45, ../scss/core/_overrides.scss */
 .highlight {
   font-size: 1.5em;
   color: #ff520d;
 }
 
-/* line 48, ../scss/core/_overrides.scss */
+/* line 47, ../scss/core/_overrides.scss */
 .underline, .blog-header, .content__body h2 {
   margin-bottom: 1em;
 }
-/* line 50, ../scss/core/_overrides.scss */
+/* line 49, ../scss/core/_overrides.scss */
 .underline:after, .blog-header:after, .content__body h2:after {
   content: "";
   width: 110%;
@@ -2538,7 +2549,7 @@ img.media__img {
   position: absolute;
 }
 @media screen and (max-width: 48em) {
-  /* line 50, ../scss/core/_overrides.scss */
+  /* line 49, ../scss/core/_overrides.scss */
   .underline:after, .blog-header:after, .content__body h2:after {
     position: relative;
   }
@@ -2546,13 +2557,13 @@ img.media__img {
 
 /* Style trumps (error states etc.)
 ----------------------------------*/
-/* line 69, ../scss/core/_overrides.scss */
+/* line 68, ../scss/core/_overrides.scss */
 .is-hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 70, ../scss/core/_overrides.scss */
+/* line 69, ../scss/core/_overrides.scss */
 .is-vhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2564,7 +2575,7 @@ img.media__img {
   width: 1px;
 }
 
-/* line 81, ../scss/core/_overrides.scss */
+/* line 80, ../scss/core/_overrides.scss */
 .info:before, .hospital:before {
   font-family: "tarva";
   color: #e1e1e1;
@@ -2574,7 +2585,7 @@ img.media__img {
   position: relative;
 }
 
-/* line 92, ../scss/core/_overrides.scss */
+/* line 91, ../scss/core/_overrides.scss */
 .info:before {
   content: '\e800';
   font-size: 1.6em;
@@ -2583,7 +2594,7 @@ img.media__img {
   margin-top: -.5em;
 }
 @media screen and (max-width: 30em) {
-  /* line 92, ../scss/core/_overrides.scss */
+  /* line 91, ../scss/core/_overrides.scss */
   .info:before {
     position: absolute;
     right: 0;
@@ -2591,7 +2602,7 @@ img.media__img {
   }
 }
 
-/* line 107, ../scss/core/_overrides.scss */
+/* line 106, ../scss/core/_overrides.scss */
 .hospital:before {
   content: '\e801';
   font-size: 1.8em;
@@ -2599,19 +2610,19 @@ img.media__img {
   margin-top: -.4em;
 }
 
-/* line 115, ../scss/core/_overrides.scss */
+/* line 114, ../scss/core/_overrides.scss */
 .warning, .validation_message {
   color: #900;
 }
 
-/* line 117, ../scss/core/_overrides.scss */
+/* line 116, ../scss/core/_overrides.scss */
 .alert {
   color: #009;
 }
 
 /* Debuggin'
 ----------------------------------*/
-/* line 141, ../scss/core/_overrides.scss */
+/* line 140, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2627,7 +2638,7 @@ body.debug:before {
   content: "Breakpoint 0";
 }
 @media screen and (min-width: 30em) {
-  /* line 144, ../scss/core/_overrides.scss */
+  /* line 143, ../scss/core/_overrides.scss */
   body.debug:before {
     display: inline-block;
     color: #FFF;
@@ -2644,7 +2655,7 @@ body.debug:before {
   }
 }
 @media screen and (min-width: 48em) {
-  /* line 147, ../scss/core/_overrides.scss */
+  /* line 146, ../scss/core/_overrides.scss */
   body.debug:before {
     display: inline-block;
     color: #FFF;
@@ -2661,7 +2672,7 @@ body.debug:before {
   }
 }
 @media screen and (min-width: 62em) {
-  /* line 150, ../scss/core/_overrides.scss */
+  /* line 149, ../scss/core/_overrides.scss */
   body.debug:before {
     display: inline-block;
     color: #FFF;
@@ -2678,7 +2689,7 @@ body.debug:before {
   }
 }
 @media screen and (min-width: 78em) {
-  /* line 153, ../scss/core/_overrides.scss */
+  /* line 152, ../scss/core/_overrides.scss */
   body.debug:before {
     display: inline-block;
     color: #FFF;
