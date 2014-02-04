@@ -416,9 +416,9 @@ img.media__img {
 	background-color: $color-background-alt;
 	border: 1px solid darken($color-background-alt, 4%);
 	position: relative;
-	padding: 1em 1.5em;
 	font-size: 90%;
 	overflow: auto;
+	margin-bottom: 1.5em;
 	img {
 		float:right;
 		padding-left: 1em;

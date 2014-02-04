@@ -167,15 +167,9 @@
 }
 
 .module-1-2 {
-	width: 48.5%;
+	width: 50%;
 	@include respond-max($bp1-5) {
 		width: 100%;
-	}
-	&:nth-of-type(odd) {
-		float:left;
-	}
-	&:nth-of-type(even) {
-		float:right;
 	}
 }
 

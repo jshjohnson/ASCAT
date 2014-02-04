@@ -21,7 +21,7 @@ Template Name: Centre archive
 			query_posts($args); 
 
 			if ( have_posts() ): ?>
-			<div class="grid grid--no-gutter">
+			<div class="grid">
 				<?php 
 					while ( have_posts() ) : the_post();				
 						$title = get_field('alternative_title');
@@ -29,11 +29,13 @@ Template Name: Centre archive
 							$title = get_the_title();
 						endif;  
 				?>
-					<article class="grid__cell bio module module-1-2 hospital">
-						<img src="<?php the_field('avatar');?>" alt="">
-						<h2 class="listing-title"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-						<h3 class="listing-subtitle"><?php the_field('telephone'); ?></h3>
-						<a class="more-link" href="<?php the_permalink(); ?>">More</a>
+					<article class="grid__cell unit-1-2--bp2">
+						<div class="bio hospital island">
+							<img src="<?php the_field('avatar');?>" alt="">
+							<h2 class="listing-title"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
+							<h3 class="listing-subtitle"><?php the_field('telephone'); ?></h3>
+							<a class="more-link" href="<?php the_permalink(); ?>">More</a>
+						</div>
 					</article>
 				<?php endwhile; ?>
 			</div>

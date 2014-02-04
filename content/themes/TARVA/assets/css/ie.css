@@ -1383,45 +1383,37 @@ a:hover {
 
 /* line 169, ../scss/core/_layout.scss */
 .module-1-2 {
-  width: 48.5%;
-}
-/* line 174, ../scss/core/_layout.scss */
-.module-1-2:nth-of-type(odd) {
-  float: left;
-}
-/* line 177, ../scss/core/_layout.scss */
-.module-1-2:nth-of-type(even) {
-  float: right;
+  width: 50%;
 }
 
-/* line 183, ../scss/core/_layout.scss */
+/* line 177, ../scss/core/_layout.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.7em 0;
   width: 100%;
 }
-/* line 189, ../scss/core/_layout.scss */
+/* line 183, ../scss/core/_layout.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
   width: 20%;
 }
-/* line 200, ../scss/core/_layout.scss */
+/* line 194, ../scss/core/_layout.scss */
 .module__split dt:first-child {
   padding-top: 0.85em;
 }
-/* line 204, ../scss/core/_layout.scss */
+/* line 198, ../scss/core/_layout.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
   width: 65%;
 }
-/* line 206, ../scss/core/_layout.scss */
+/* line 200, ../scss/core/_layout.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
-/* line 215, ../scss/core/_layout.scss */
+/* line 209, ../scss/core/_layout.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
@@ -1849,9 +1841,9 @@ img.media__img {
   background-color: #fafafa;
   border: 1px solid #f0f0f0;
   position: relative;
-  padding: 1em 1.5em;
   font-size: 90%;
   overflow: auto;
+  margin-bottom: 1.5em;
 }
 /* line 422, ../scss/core/_modules.scss */
 .bio img {
