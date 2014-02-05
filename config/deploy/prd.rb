@@ -1,2 +1,2 @@
-# Add me in config/deploy/production.rb
+# Add me in config/deploy/prd.rb
 set :application, "anklearthritis.co.uk"

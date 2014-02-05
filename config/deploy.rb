@@ -1,7 +1,7 @@
 require 'capistrano-deploytags'
  
-set :stages, %w(production staging)
-set :default_stage, 'production'
+set :stages, %w(prd dev)
+set :default_stage, 'dev'
  
 require 'capistrano/ext/multistage'
  
@@ -33,7 +33,7 @@ set :repository, "git@github.com:jshjohnson/TARVA.git"
 set :deploy_via, :remote_cache
 set :copy_cache, true
 set :copy_exclude, [".git", "bin/", "config/", "Capfile"]  # no need to include the git config directory
-set(:branch) { "development" } # you can change this if you would like to use another branch
+set(:branch) { "master" } # you can change this if you would like to use another branch
  
 # Path stuff, make sure to symlink html to ./current
 set(:deploy_to) { "/home/#{site}/users/.home/domains/#{application}" }
@@ -75,7 +75,7 @@ after "deploy:finalize_update" do
 end
  
 # My own application namespace for deploy tasks.
-namespace :tarva do
+namespace :redmonster do
     # Symlink shared path for image uploads so each release can reference image uploads.
     task :symlinks do
       shared_images = relative_path("#{release_path}/htdocs/wp-content", "#{shared_path}/uploads/")
