@@ -61,24 +61,24 @@ namespace :deploy do
   desc "Relative symlinks for current, so we don't use full path"
   task :create_symlink, :except => { :no_release => true } do
     if releases[-2] # not the first release
-      previous_release_relative = relative_path(deploy_to, previous_release + '/htdocs')
+      previous_release_relative = relative_path(deploy_to, previous_release + '/content')
       on_rollback { run "rm -f #{current_path}; ln -s #{previous_release_relative} #{current_path}; true" }
     end
-    latest_release_relative = relative_path(deploy_to, latest_release + '/htdocs')
+    latest_release_relative = relative_path(deploy_to, latest_release + '/content')
     run "rm -f #{current_path} && ln -s #{latest_release_relative} #{current_path}"
   end
 end
  
 after "deploy:finalize_update" do
   redmonster.symlinks
-  run "cp #{current_release}/htdocs/wp-config-#{stage}.php #{current_release}/htdocs/wp-config.php"
+  run "cp #{current_release}/content/wp-config-#{stage}.php #{current_release}/content/wp-config.php"
 end
  
 # My own application namespace for deploy tasks.
 namespace :redmonster do
     # Symlink shared path for image uploads so each release can reference image uploads.
     task :symlinks do
-      shared_images = relative_path("#{release_path}/htdocs/wp-content", "#{shared_path}/uploads/")
-      run "ln -nfs #{shared_images} #{release_path}/htdocs/wp-content/uploads"
+      shared_images = relative_path("#{release_path}/content/wp-content", "#{shared_path}/uploads/")
+      run "ln -nfs #{shared_images} #{release_path}/content/wp-content/uploads"
     end
 end
