@@ -11,18 +11,27 @@ require 'yaml'
 # Setup Stages
 ############################################
 
-set :stages, %w(production staging)
-set :default_stage, "staging"
+set :stages, %w(prd dev)
+set :default_stage, "dev"
 set :keep_releases, 2
 
 after "deploy", "deploy:cleanup"
 
 ############################################
+# Setup Site
+############################################
+
+set :site,         "156312" # this is your site number, https://kb.mediatemple.net/questions/268/What+is+my+site+number%3F#gs
+set :application, "anklearthritis.co.uk" # typically the same as the domain
+
+set(:domain) { "s#{site}.gridserver.com" }
+set(:user) { "serveradmin@#{application}" }
+
+############################################
 # Setup Git
 ############################################
 
-set :application, "APPLICATION NAME HERE"
-set :repository, "git@github.com:Mixd/GITHUB-REPO-HERE.git"
+set :repository, "git@github.com:jshjohnson/TARVA.git"
 set :scm, :git
 set(:git_enable_submodules, true)
 set :deploy_via, :remote_cache
