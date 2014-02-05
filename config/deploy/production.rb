@@ -1,6 +1,2 @@
-############################################
-# Setup Server
-############################################
-
-set :application, 'anklearthritis.co.uk'
-set :branch, 'master'
+# Add me in config/deploy/production.rb
+set :application, "anklearthritis.co.uk"
