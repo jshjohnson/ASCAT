@@ -27,7 +27,7 @@ Template Name: Single committee archive
 				query_posts($args); 
 
 				if ( have_posts() ): ?>
-				<div class="grid grid--no-gutter">
+				<div class="grid">
 					<?php 
 						while ( have_posts() ) : the_post();	
 
@@ -39,12 +39,14 @@ Template Name: Single committee archive
 								$title = get_the_title();
 							endif;  
 					?>
-						<article class="grid__cell bio module module-1-2">
-							<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
-							<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-							<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
-							<p><?php the_field('bio'); ?></p>
-							<a class="more-link" href="<?php the_permalink(); ?>">More</a>
+						<article class="grid__cell unit-1-2--bp2">
+							<div class="bio island">
+								<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
+								<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
+								<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
+								<p><?php the_field('bio'); ?></p>
+								<a class="more-link" href="<?php the_permalink(); ?>">More</a>
+							</div>
 						</article>
 					<?php endwhile; ?>
 				</div>
@@ -62,7 +64,7 @@ Template Name: Single committee archive
 				query_posts($args); 
 
 				if ( have_posts() ): ?>
-				<div class="grid grid--no-gutter">
+				<div class="grid">
 					<?php 
 						while ( have_posts() ) : the_post();				
 							$image = get_field('avatar');
@@ -73,12 +75,14 @@ Template Name: Single committee archive
 								$title = get_the_title();
 							endif;  
 					?>
-						<article class="grid__cell bio module module-1-2">
-							<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
-							<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-							<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
-							<p><?php the_field('bio'); ?></p>
-							<a class="more-link" href="<?php the_permalink(); ?>">More</a>
+						<article class="grid__cell unit-1-2--bp2">
+							<div class="bio island">
+								<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
+								<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
+								<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
+								<p><?php the_field('bio'); ?></p>
+								<a class="more-link" href="<?php the_permalink(); ?>">More</a>
+							</div>
 						</article>
 					<?php endwhile; ?>
 				</div>
@@ -95,7 +99,7 @@ Template Name: Single committee archive
 				query_posts($args); 
 
 				if ( have_posts() ): ?>
-				<div class="grid grid--no-gutter">
+				<div class="grid">
 					<?php 
 						while ( have_posts() ) : the_post();				
 							$image = get_field('avatar');
@@ -106,12 +110,14 @@ Template Name: Single committee archive
 								$title = get_the_title();
 							endif;  
 					?>
-						<article class="grid__cell bio module module-1-2">
-							<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
-							<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-							<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
-							<p><?php the_field('bio'); ?></p>
-							<a class="more-link" href="<?php the_permalink(); ?>">More</a>
+						<article class="grid__cell unit-1-2--bp2">
+							<div class="bio island">
+								<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
+								<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
+								<h3 class="listing-subtitle"><?php the_field('job_role'); ?></h3>
+								<p><?php the_field('bio'); ?></p>
+								<a class="more-link" href="<?php the_permalink(); ?>">More</a>
+							</div>
 						</article>
 					<?php endwhile; ?>
 				</div>

@@ -166,16 +166,8 @@ img.media__img {
 	}
 	@include respond-max($bp2) {
 		margin: 0;
-		&:after {
-			content: "";
-			background-image: url("../img/logo-inverted.png");
-			background-repeat: no-repeat;
-			height: 6em;
-			background-size: 100%;
-			width: 90%;
-			margin: auto;
-			display: block;
-		}
+		background-image: url('../img/shape-bg--alt.svg');
+		@include background-size(cover);
 	}
 }
 
