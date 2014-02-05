@@ -28,7 +28,7 @@ set :use_sudo, false # MediaTemple doesn't allow sudo command
 set :ssh_options, { :forward_agent => true }
 set :scm, :git
 #set :repository, "." # assumes you are running cap deploy while your current working directory is the repo
-set :repository, "git@bitbucket.org:myname/myproject.git"
+set :repository, "git@github.com:jshjohnson/TARVA.git"
 # set :deploy_via, :copy
 set :deploy_via, :remote_cache
 set :copy_cache, true
