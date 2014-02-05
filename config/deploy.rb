@@ -33,7 +33,7 @@ set :repository, "git@github.com:jshjohnson/TARVA.git"
 set :deploy_via, :remote_cache
 set :copy_cache, true
 set :copy_exclude, [".git", "bin/", "config/", "Capfile"]  # no need to include the git config directory
-set(:branch) { "master" } # you can change this if you would like to use another branch
+set(:branch) { "development" } # you can change this if you would like to use another branch
  
 # Path stuff, make sure to symlink html to ./current
 set(:deploy_to) { "/home/#{site}/users/.home/domains/#{application}" }
