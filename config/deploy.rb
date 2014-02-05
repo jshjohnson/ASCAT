@@ -78,7 +78,7 @@ end
 namespace :redmonster do
     # Symlink shared path for image uploads so each release can reference image uploads.
     task :symlinks do
-      shared_images = relative_path("#{release_path}/content/wp-content", "#{shared_path}/uploads/")
-      run "ln -nfs #{shared_images} #{release_path}/content/wp-content/uploads"
+      shared_images = relative_path("#{release_path}/content", "#{shared_path}/uploads/")
+      run "ln -nfs #{shared_images} #{release_path}/content/uploads"
     end
 end
