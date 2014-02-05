@@ -163,7 +163,7 @@ namespace :db do
         puts "Removing local backup..."
         system("rm /tmp/#{application}.sql")
         puts "Importing into remote database..."
-        database = YAML::load_file('config/database.yml')[stage.to_s]
+        database = YAML::load_file('../config/database.yml')[stage.to_s]
         run "mysql -h #{database['host']} -u #{database['username']} -p#{database['password']} #{database['database']} < #{backup_file}"
         puts "Removing remote backup..."
         run "rm #{backup_file}"
