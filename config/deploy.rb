@@ -71,7 +71,7 @@ end
  
 after "deploy:finalize_update" do
   redmonster.symlinks
-  run "cp #{current_release}/content/wp-config-#{stage}.php #{current_release}/content/wp-config.php"
+  run "cp #{current_release}/content/wp-config-#{stage}.php #{current_release}/wp-config.php"
 end
  
 # My own application namespace for deploy tasks.
