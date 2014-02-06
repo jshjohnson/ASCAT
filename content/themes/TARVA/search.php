@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 		<div class="content__container container">
 			<?php if ( have_posts() ) : ?>     
-			<article class="content__body">		           
-				<h2>You searched for &lsquo;<b><?php echo get_search_query(); ?></b>&rsquo;</h2>
+			<article class="content__body">
 				<?php get_template_part( 'parts/search-form' ); ?>	
 				<h2>Results:</h2>
 			</article> 
