@@ -46,7 +46,7 @@ Template Name: Resources index
 								$days_old_in_seconds = ((time() - $ageunix));
 								$days_old = (($days_old_in_seconds/86400));
 							?>
-							<?php if ($days_old < 3) : ?>
+							<?php if ($days_old < 10) : ?>
 							<div class="ribbon"><h5>New</h5></div>
 							<?php endif; ?>
 					</div>
