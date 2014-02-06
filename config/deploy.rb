@@ -4,6 +4,7 @@
 
 set :stages, %w(prd dev)
 set :default_stage, "dev"
+set :keep_releases, 2
 require 'capistrano/ext/multistage'
 require 'yaml'
 
