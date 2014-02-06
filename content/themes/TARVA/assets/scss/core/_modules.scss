@@ -159,7 +159,8 @@ img.media__img {
 					position: relative;
 					margin-right: .4em;
 					float: left;
-					margin-top: -.41em;
+					line-height: 1.2;
+					margin-top: -.18em;
 				}
 			}
 		}
@@ -305,6 +306,13 @@ img.media__img {
 	}
 }
 
+.archive-entry {
+	margin-bottom: $baseline;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 
 /* Footer
 ----------------------------------*/
@@ -382,6 +390,7 @@ img.media__img {
 		display: none;
 		@include respond-max($bp1) {
 			display: inline-block;
+			width: 20%;
 		}
 	}
 	.blog-header__date--desktop {
@@ -390,8 +399,12 @@ img.media__img {
 		}
 	}
 	.blog-header__title {
+		overflow: hidden;
 		a {
 			color: $color-brand;
+		}
+		@include respond-max($bp1) {
+			width: 80%;
 		}
 	}
 	@extend %underline;
