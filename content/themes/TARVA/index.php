@@ -10,5 +10,4 @@
 <?php get_template_part( 'parts/not-found' ); ?>		
 			<?php endif; ?>
 		</div>
-<?php get_sidebar(); ?> 
 <?php get_footer(); ?>

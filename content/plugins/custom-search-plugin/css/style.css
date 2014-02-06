@@ -1,0 +1,44 @@
+#adminmenu #toplevel_page_bws_plugins div.wp-menu-image,
+.admin-color-classic #adminmenu #toplevel_page_bws_plugins div.wp-menu-image,
+#adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image,
+#adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image {
+    background: url("../images/icon_16_single.png") no-repeat scroll center center transparent;
+}
+#toplevel_page_bws_plugins .wp-submenu .wp-first-item {
+	display:none;
+}
+.bws_system_info_meta_box {
+    max-width: 850px;
+}
+.bws_system_info_meta_box .hndle {
+    cursor: pointer !important;
+}
+.bws_system_info {
+    float: left;
+    margin-right: 10px;
+    max-width: 400px;
+}
+.bws_system_info th {
+    padding: 10px 0;
+    text-align: left;
+    width: 50%;
+}
+.bws_system_info tbody td {
+	border-bottom: 1px solid #DFDFDF;
+}
+/*
+* styles for rate-support div on the settings page
+*/
+.bws-plugin-reviews {
+    background: none repeat scroll 0 0 #BEE1F1;
+    border: 1px solid #70A8C2;
+    border-radius: 3px;
+    max-width: 400px;
+}
+.bws-plugin-reviews-rate {
+    padding: 10px;
+    border-bottom: 1px dashed #70A8C2;
+}
+.bws-plugin-reviews-support {
+    padding: 10px;
+}
