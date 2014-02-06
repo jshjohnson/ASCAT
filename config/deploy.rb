@@ -2,20 +2,13 @@
 # Requirements
 ############################################
 
-require 'rubygems' 
-require 'bundler/setup'
+set :stages, %w(prd dev)
+set :default_stage, "dev"
 require 'capistrano/ext/multistage'
 require 'yaml'
 
-############################################
-# Setup Stages
-############################################
-
-set :stages, %w(prd dev)
-set :default_stage, "dev"
-set :keep_releases, 2
-
 after "deploy", "deploy:cleanup"
+
 
 ############################################
 # Setup Site
