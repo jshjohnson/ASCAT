@@ -148,7 +148,7 @@ blockquote {
 		padding-right: 2em; }
 }
 blockquote { @include font-serif; font-style: italic; clear: both; }
-blockquote p { font-size: 1.35em; }
+blockquote p { font-size: 1.35em; @include respond-max($bp2) {font-size: 1.1em;}}
 blockquote p + .source { margin-top: -$baseline; }
 .source { display: block; @include font-sans; font-size: 1em; font-weight: bold; font-style: normal; }
 .source:before { content:"\2013\0020"; }

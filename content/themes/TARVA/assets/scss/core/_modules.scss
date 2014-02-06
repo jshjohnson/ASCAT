@@ -503,5 +503,11 @@ img.media__img {
 		font-size: 1.7em;
 		color: white;
 		font-weight: bolder;
+		@include respond-max($bp2) {
+			font-size: 1.55em;
+		}
+	}
+	@include respond-max($bp2) {
+		font-size: 1.25em;
 	}
 }

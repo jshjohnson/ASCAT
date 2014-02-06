@@ -821,6 +821,12 @@ blockquote {
 blockquote p {
   font-size: 1.35em;
 }
+@media screen and (max-width: 48em) {
+  /* line 151, ../scss/core/_base.scss */
+  blockquote p {
+    font-size: 1.1em;
+  }
+}
 
 /* line 152, ../scss/core/_base.scss */
 blockquote p + .source {
@@ -2396,6 +2402,18 @@ img.media__img {
   font-size: 1.7em;
   color: white;
   font-weight: bolder;
+}
+@media screen and (max-width: 48em) {
+  /* line 502, ../scss/core/_modules.scss */
+  .intro-text .intro-text__highlight {
+    font-size: 1.55em;
+  }
+}
+@media screen and (max-width: 48em) {
+  /* line 497, ../scss/core/_modules.scss */
+  .intro-text {
+    font-size: 1.25em;
+  }
 }
 
 /*----------------------------------------------------------------------------------------*\
