@@ -378,6 +378,17 @@ img.media__img {
 		float: right;
 		margin-top: .5em;
 	}
+	.blog-header__date--mobile {
+		display: none;
+		@include respond-max($bp1) {
+			display: inline-block;
+		}
+	}
+	.blog-header__date--desktop {
+		@include respond-max($bp1) {
+			display: none;
+		}
+	}
 	.blog-header__title {
 		a {
 			color: $color-brand;

@@ -119,11 +119,10 @@ input,
 select,
 textarea {
 	padding: .5em;
-	border: 1px solid;
-	@include box-shadow(0, 0, 3px, 0.1);
+	border: 1px solid $color-keyline;
 	color: #666;
 	background-color: #FFF;
-	border-color: #666 #CCC #CCC #666; }
+}
 
 button,
 .btn:link,

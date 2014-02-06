@@ -211,3 +211,20 @@
 		}
 	}
 }
+
+.search {
+	input[type='search'] {
+		width: 80%;
+		float: left;
+		@include respond-max($bp2) {
+			width: 75%;
+		}
+	}
+	input[type='submit'] {
+		width: 20%;
+		float: left;
+		@include respond-max($bp2) {
+			width: 25%;
+		}
+	}
+}
