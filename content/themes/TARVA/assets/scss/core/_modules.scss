@@ -385,12 +385,13 @@ img.media__img {
 	.blog-header__date {
 		float: right;
 		margin-top: .5em;
+		text-align: right;
 	}
 	.blog-header__date--mobile {
 		display: none;
 		@include respond-max($bp1) {
 			display: inline-block;
-			width: 20%;
+			width: 30%;
 		}
 	}
 	.blog-header__date--desktop {
@@ -399,12 +400,16 @@ img.media__img {
 		}
 	}
 	.blog-header__title {
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		overflow: hidden;
+		color: $color-brand;
+		@include respond-max($bp1) {
+			max-width: 10em;
+			width: 70%;
+		}
 		a {
 			color: $color-brand;
-		}
-		@include respond-max($bp1) {
-			width: 80%;
 		}
 	}
 	@extend %underline;
