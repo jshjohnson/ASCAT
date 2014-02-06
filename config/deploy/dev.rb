@@ -2,10 +2,8 @@
 # Setup Server
 ############################################
 
-set :user, "joshuajohnson.co.uk"
-set :host, "s156312.gridserver.com"
+set :application, "dev.anklearthritis.co.uk" # typically the same as the domain
 server "#{host}", :app
-set :deploy_to, "/home/156312/users/.home/domains/dev.anklearthritis.co.uk"
 
 ############################################
 # Setup Git

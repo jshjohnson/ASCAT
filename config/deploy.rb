@@ -21,9 +21,9 @@ after "deploy", "deploy:cleanup"
 # Setup Site
 ############################################
 
-set :site,         "156312" # this is your site number, https://kb.mediatemple.net/questions/268/What+is+my+site+number%3F#gs
-set :application, "anklearthritis.co.uk" # typically the same as the domain
-
+set :site, "156312" # this is your site number, https://kb.mediatemple.net/questions/268/What+is+my+site+number%3F#gs
+set :user, "joshuajohnson.co.uk"
+set(:host) { "s#{site}.gridserver.com" }
 set(:domain) { "s#{site}.gridserver.com" }
 set(:user) { "serveradmin@#{application}" }
 
