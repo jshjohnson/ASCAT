@@ -44,6 +44,10 @@ set :copy_exclude, [".git", ".DS_Store", ".gitignore", ".gitmodules", "capfile",
 set :use_sudo, false
 ssh_options[:forward_agent] = true
 
+# Path stuff, make sure to symlink html to ./current
+set(:deploy_to) { "/home/#{site}/users/.home/domains/#{application}" }
+set(:current_deploy_dir) { "#{deploy_to}/current" }
+
 # we need a relative path for the current symlink, without this
 # current is set to link to the release starting from the /home directory
 # which has a directory that is not owned by the serveradmin and apache
