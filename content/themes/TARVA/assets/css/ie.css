@@ -763,24 +763,29 @@ label {
 input[type='search'] {
   -webkit-appearance: none;
   outline: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
 }
 
-/* line 125, ../scss/core/_base.scss */
+/* line 126, ../scss/core/_base.scss */
 input,
 select,
 textarea {
-  padding: .5em;
+  padding: .51em;
   border: 1px solid #f0f0f0;
   color: #666;
   background-color: #FFF;
 }
 
-/* line 134, ../scss/core/_base.scss */
+/* line 135, ../scss/core/_base.scss */
 button,
 .btn:link,
 input[type=submit] {
   display: inline-block;
-  padding: .75em 1em;
+  padding: .85em;
   border: 0;
   text-transform: uppercase;
   font-weight: 500;
@@ -790,7 +795,7 @@ input[type=submit] {
 }
 
 /* -- Blockquotes -- */
-/* line 145, ../scss/core/_base.scss */
+/* line 146, ../scss/core/_base.scss */
 blockquote {
   border-left: 0.3em solid #f0f0f0;
   margin-left: 0;
@@ -800,24 +805,24 @@ blockquote {
   padding-right: 2em;
 }
 
-/* line 154, ../scss/core/_base.scss */
+/* line 155, ../scss/core/_base.scss */
 blockquote {
   font-family: "ff-meta-serif-web-pro", serif;
   font-style: italic;
   clear: both;
 }
 
-/* line 155, ../scss/core/_base.scss */
+/* line 156, ../scss/core/_base.scss */
 blockquote p {
   font-size: 1.35em;
 }
 
-/* line 156, ../scss/core/_base.scss */
+/* line 157, ../scss/core/_base.scss */
 blockquote p + .source {
   margin-top: -1.7em;
 }
 
-/* line 157, ../scss/core/_base.scss */
+/* line 158, ../scss/core/_base.scss */
 .source {
   display: block;
   font-family: "proxima-nova", sans-serif;
@@ -826,12 +831,12 @@ blockquote p + .source {
   font-style: normal;
 }
 
-/* line 158, ../scss/core/_base.scss */
+/* line 159, ../scss/core/_base.scss */
 .source:before {
   content: "\2013\0020";
 }
 
-/* line 160, ../scss/core/_base.scss */
+/* line 161, ../scss/core/_base.scss */
 a:active, a:focus {
   position: relative;
   top: 1px;
@@ -839,7 +844,7 @@ a:active, a:focus {
 
 /* Links
 ----------------------------------*/
-/* line 165, ../scss/core/_base.scss */
+/* line 166, ../scss/core/_base.scss */
 a {
   font-weight: 600;
   text-decoration: none;
@@ -847,13 +852,13 @@ a {
 }
 
 /* -- visited -- */
-/* line 171, ../scss/core/_base.scss */
+/* line 172, ../scss/core/_base.scss */
 a:visited {
   color: #ff520d;
 }
 
 /* -- hovers -- */
-/* line 178, ../scss/core/_base.scss */
+/* line 179, ../scss/core/_base.scss */
 a:hover {
   color: #d93e00;
 }
@@ -898,56 +903,56 @@ a:hover {
   padding-right: .3em;
 }
 
-/* line 190, ../scss/core/_base.scss */
+/* line 191, ../scss/core/_base.scss */
 .icon--users:before {
   content: '\e808';
 }
 
 /* '' */
-/* line 191, ../scss/core/_base.scss */
+/* line 192, ../scss/core/_base.scss */
 .icon--attach:before {
   content: '\e802';
 }
 
 /* '' */
-/* line 192, ../scss/core/_base.scss */
+/* line 193, ../scss/core/_base.scss */
 .icon--info-1:before {
   content: '\e800';
 }
 
 /* '' */
-/* line 193, ../scss/core/_base.scss */
+/* line 194, ../scss/core/_base.scss */
 .icon--vcard:before {
   content: '\e805';
 }
 
 /* '' */
-/* line 194, ../scss/core/_base.scss */
+/* line 195, ../scss/core/_base.scss */
 .icon--right-open-mini:before {
   content: '\e803';
 }
 
 /* '' */
-/* line 195, ../scss/core/_base.scss */
+/* line 196, ../scss/core/_base.scss */
 .icon--close:before {
   content: '\e804';
   margin-right: .5em;
 }
 
 /* '' */
-/* line 196, ../scss/core/_base.scss */
+/* line 197, ../scss/core/_base.scss */
 .icon--menu:before {
   content: '\e807';
 }
 
 /* '' */
-/* line 197, ../scss/core/_base.scss */
+/* line 198, ../scss/core/_base.scss */
 .icon--install:before {
   content: '\e806';
 }
 
 /* '' */
-/* line 198, ../scss/core/_base.scss */
+/* line 199, ../scss/core/_base.scss */
 .icon--stethoscope:before {
   content: '\e801';
 }

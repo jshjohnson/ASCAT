@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Centre archive
+Template Name: Search Centres
 */
 ?>
 <?php get_header(); ?>

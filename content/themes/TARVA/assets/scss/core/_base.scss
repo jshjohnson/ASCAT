@@ -117,13 +117,14 @@ label { display: block; padding-bottom: .25em; font-weight: bold; }
 
 input[type='search'] {
 	-webkit-appearance: none;
-	 outline: none;
+	outline: none;
+	@include border-radius(0);
 }
 
 input,
 select,
 textarea {
-	padding: .5em;
+	padding: .51em;
 	border: 1px solid $color-keyline;
 	color: #666;
 	background-color: #FFF;
@@ -133,7 +134,7 @@ button,
 .btn:link,
 input[type=submit] {
 	display: inline-block;
-	padding: .75em 1em;
+	padding: .85em;
 	border: 0;
 	text-transform: uppercase;
 	font-weight: 500;
