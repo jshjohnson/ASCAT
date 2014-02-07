@@ -12,8 +12,10 @@
 			<dl class="module__split">
 				<dt>Name:</dt>
 				<dd><?php the_title(); ?></dd>
+				<?php if(get_field('job_title')) : ?>
 				<dt>Job title:</dt>
 				<dd><?php the_field('job_title'); ?></dd>
+				<?php endif; ?>
 				<dt>Role:</dt>
 				<dd><?php the_field('job_role'); ?></dd>
 
@@ -37,7 +39,7 @@
 				<dd><?php the_field('bio'); ?></dd>
 				<?php endif; ?>
 				<?php 
-				$post_object = get_field('hospital');
+				$post_object = get_field('centre');
 
 				if( $post_object ): 
 
@@ -46,7 +48,7 @@
 				setup_postdata( $post ); 
 
 				?>
-				<dt>Hospital:</dt>
+				<dt>Centre:</dt>
 				<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
 				<dt>Address:</dt>
 				<dd><?php the_field('address'); ?></dd>
