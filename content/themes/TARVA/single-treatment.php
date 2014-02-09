@@ -5,7 +5,7 @@
 	<?php if(get_previous_post_link()) : ?>
 	<div class="nav--page left"><?php previous_post_link('Previous treatment: <strong>%link</strong>'); ?></div>
 	<?php endif; ?>
-	<div class="content__container content__container--less-marg container">
+	<div class="content__container container">
 		<?php if ( have_posts() ) : ?>
 		<article class="content__body">
 			<?php while ( have_posts() ) : the_post(); ?>

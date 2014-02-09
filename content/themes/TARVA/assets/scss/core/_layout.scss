@@ -30,7 +30,7 @@
 } 
 
 .content__container--less-marg {
-	margin-top: 1.5em;
+	margin-top: 2em;
 }
 
 /* Grids (Griddle - http://goo.gl/P1JKB)
@@ -114,8 +114,13 @@
 .content__header {
 	position: relative;
 	height: 17em;
-	@include background-size(cover);
-	background-position: center;
+	@include background-size(100%);
+	background-position: top;
+	background-attachment: fixed;
+	@include respond-max($bp4) {
+		background-attachment: scroll;
+		@include background-size(cover);
+	}
 	@include respond-max($bp2) {
 		height: 12em;
 	}

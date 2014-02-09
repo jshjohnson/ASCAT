@@ -25,7 +25,7 @@
 		<div id="inner-wrap">
 		<?php get_sidebar(); ?> 
 		<main class="content">
-			<?php if(!is_front_page()) :?>
+	<?php if(!is_front_page()) :?>
 
 		<?php if (has_post_thumbnail( $post->post_parent ) ): ?>
 		<?php $parentimage = wp_get_attachment_image_src( get_post_thumbnail_id( $post->post_parent ), 'single-post-thumbnail' ); ?>
@@ -46,4 +46,4 @@
 					<h1 class="page-heading"><?php echo $title; ?></h1>
 				</div>
 			</header>
-			<?php endif; ?>
+	<?php endif; ?>
