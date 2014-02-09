@@ -443,9 +443,11 @@ img.media__img {
 			float: none;
 			text-align: center;
 		}
-		@include respond-max($bp2) {
-			max-width: 10em;
-		}
+	}
+	.bio__avatar--small {
+		float:right;
+		padding-left: 1em;
+		max-width: 7em;
 	}
 }
 

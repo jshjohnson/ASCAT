@@ -1883,8 +1883,14 @@ img.media__img {
   float: none;
   text-align: center;
 }
+/* line 447, ../scss/core/_modules.scss */
+.bio .bio__avatar--small {
+  float: right;
+  padding-left: 1em;
+  max-width: 7em;
+}
 
-/* line 453, ../scss/core/_modules.scss */
+/* line 455, ../scss/core/_modules.scss */
 .more-link:after {
   font-family: "tarva";
   content: '\e803';
@@ -1894,29 +1900,29 @@ img.media__img {
   top: .05em;
 }
 
-/* line 463, ../scss/core/_modules.scss */
+/* line 465, ../scss/core/_modules.scss */
 .listing-title {
   margin-bottom: .5em;
 }
-/* line 465, ../scss/core/_modules.scss */
+/* line 467, ../scss/core/_modules.scss */
 .listing-title a {
   font-weight: normal;
 }
 
-/* line 470, ../scss/core/_modules.scss */
+/* line 472, ../scss/core/_modules.scss */
 .listing-title, .listing-subtitle {
   text-transform: capitalize;
   font-weight: normal;
 }
 
-/* line 475, ../scss/core/_modules.scss */
+/* line 477, ../scss/core/_modules.scss */
 .listing-title--bio {
   margin: .4em 0;
   color: #ff520d;
   clear: left;
 }
 
-/* line 481, ../scss/core/_modules.scss */
+/* line 483, ../scss/core/_modules.scss */
 .ribbon {
   position: absolute;
   right: 1em;
@@ -1927,7 +1933,7 @@ img.media__img {
   border-bottom: 0.6em solid #fafafa;
   width: 0;
 }
-/* line 490, ../scss/core/_modules.scss */
+/* line 492, ../scss/core/_modules.scss */
 .ribbon h5 {
   font-size: .6em;
   padding-right: 1em;
@@ -1942,14 +1948,14 @@ img.media__img {
   margin-top: 1.7em;
 }
 
-/* line 501, ../scss/core/_modules.scss */
+/* line 503, ../scss/core/_modules.scss */
 .intro {
   overflow: auto;
   background-color: #ff520d;
   background-image: url("../img/shape-bg.svg");
   position: relative;
 }
-/* line 506, ../scss/core/_modules.scss */
+/* line 508, ../scss/core/_modules.scss */
 .intro:after {
   content: "";
   width: 0;
@@ -1964,14 +1970,14 @@ img.media__img {
   margin-left: -.75em;
 }
 
-/* line 521, ../scss/core/_modules.scss */
+/* line 523, ../scss/core/_modules.scss */
 .intro-text {
   padding: 1.5em 0;
   font-size: 1.4em;
   color: white;
   font-weight: 400;
 }
-/* line 526, ../scss/core/_modules.scss */
+/* line 528, ../scss/core/_modules.scss */
 .intro-text .intro-text__highlight {
   font-size: 1.7em;
   color: white;
