@@ -23,6 +23,12 @@ Template Name: Search Specialists
 				'post_type' => 'investigator',
 				'orderby' => 'title',
 				'order' => 'ASC',
+				'meta_query' => array(
+							array(
+								'key' => 'specialist',
+								'value' => true,
+							),
+						),
 				);
 				query_posts($args); 
 
