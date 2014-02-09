@@ -1402,32 +1402,28 @@ a:hover {
   font-weight: 600;
   font-size: 1em;
   clear: left;
-  width: 20%;
+  width: 25%;
 }
-/* line 194, ../scss/core/_layout.scss */
-.module__split dt:first-child {
-  padding-top: 0.85em;
-}
-/* line 198, ../scss/core/_layout.scss */
+/* line 202, ../scss/core/_layout.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
-  width: 65%;
+  width: 75%;
 }
-/* line 200, ../scss/core/_layout.scss */
+/* line 204, ../scss/core/_layout.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
-/* line 209, ../scss/core/_layout.scss */
+/* line 207, ../scss/core/_layout.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 
-/* line 216, ../scss/core/_layout.scss */
+/* line 227, ../scss/core/_layout.scss */
 .search input[type='search'] {
   width: 80%;
   float: left;
 }
-/* line 223, ../scss/core/_layout.scss */
+/* line 234, ../scss/core/_layout.scss */
 .search input[type='submit'] {
   width: 20%;
   float: left;
@@ -1880,10 +1876,12 @@ img.media__img {
   margin-bottom: 1.5em;
 }
 /* line 438, ../scss/core/_modules.scss */
-.bio img {
+.bio .bio__avatar {
   float: right;
   padding-left: 1em;
   max-width: 7em;
+  float: none;
+  text-align: center;
 }
 
 /* line 453, ../scss/core/_modules.scss */

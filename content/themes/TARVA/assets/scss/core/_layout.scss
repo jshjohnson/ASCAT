@@ -184,15 +184,19 @@
 		@extend %h4;
 		font-weight: 600;
 		font-size: 1em;
-		clear: left;		
-		@include respond-min($bp3) {
+		clear: left;	
+		@include respond-min($bp4) {
 			width: 20%;
+			&:first-child {
+				padding-top: $baseline/2;
+			}	
 		}
-		@include respond-max($bp3) {
-			padding: $baseline 0 $baseline/2;
+		@include respond-max($bp4) {
+			width: 25%;
 		}
-		&:first-child {
-			padding-top: $baseline/2;
+		@include respond-max($bp2) {
+			width: 100%;
+			padding: $baseline 0 0;
 		}
 	}
 	dd {
@@ -200,14 +204,21 @@
 		&:last-child {
 			border-bottom: none;
 		}
-		@include respond-min($bp3) {
-			width: 65%;
-		}
-		@include respond-max($bp3) {
-			padding: 0 0 $baseline;
-		}
 		p:last-child {
 			margin-bottom: 0;
+		}
+		@include respond-min($bp4) {
+			width: 65%;
+			&:first-of-type {
+				padding-top: $baseline/2;
+			}
+		}
+		@include respond-max($bp4) {
+			width: 75%;
+		}
+		@include respond-max($bp2) {
+			width: 100%;
+			padding: 0 0 $baseline/2;
 		}
 	}
 }

@@ -435,11 +435,11 @@ img.media__img {
 	font-size: 90%;
 	overflow: auto;
 	margin-bottom: 1.5em;
-	img {
+	.bio__avatar {
 		float:right;
 		padding-left: 1em;
 		max-width: 7em;
-		@include respond-max($bp2-5) {
+		@include respond-max($bp4) {
 			float: none;
 			text-align: center;
 		}
