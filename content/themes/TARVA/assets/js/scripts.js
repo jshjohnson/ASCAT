@@ -17,6 +17,12 @@ $(document).ready(function() {
 	$("p:empty").remove();
 	$(".wp-caption").removeAttr("style");
 	$(".wp-content img, .wp-post-image, .wp-post-thumb").removeAttr("width").removeAttr("height");
+
+
+	if ($('.nav--page').length > 0) { 
+    	$('.page-heading').addClass('page-heading--alt');
+	}
+
 });
 
 // Window Load
