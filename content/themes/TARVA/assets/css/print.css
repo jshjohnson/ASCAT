@@ -2717,7 +2717,7 @@ img.media__img {
 }
 
 /* line 114, ../scss/core/_overrides.scss */
-.warning, .validation_message {
+.warning {
   color: #900;
 }
 
@@ -2853,39 +2853,38 @@ body.debug:before {
   }
 }
 
-/* Gravity Forms
-----------------------------------*/
+/* line 31, ../scss/core/_cms.scss */
+.pagination {
+  margin-top: 1.7em;
+  text-align: center;
+}
+
 /* line 36, ../scss/core/_cms.scss */
-.gfield_required {
-  font-weight: normal;
-  font-size: 80%;
-  color: #666;
-  margin-left: .5em;
+.page-numbers {
+  padding: .25em .6em;
+  background: #02899e;
+  color: white;
+  font-weight: 500;
+  line-height: 1;
+}
+/* line 42, ../scss/core/_cms.scss */
+.page-numbers:visited {
+  color: white;
 }
 
-/* line 43, ../scss/core/_cms.scss */
-.gfield_error input,
-.gfield_error textarea {
-  border-bottom-color: #900;
+/* line 47, ../scss/core/_cms.scss */
+.current {
+  background: #ff520d;
 }
 
-/* line 46, ../scss/core/_cms.scss */
-.gfield_description {
-  padding-top: .35em;
+/* line 51, ../scss/core/_cms.scss */
+.prev, .next {
+  background: none;
+  color: #ff520d;
 }
-
-/* line 49, ../scss/core/_cms.scss */
-.gfield.checkbox {
-  padding-left: 0;
-}
-/* line 52, ../scss/core/_cms.scss */
-.gfield.checkbox .gfield_checkbox {
-  margin-top: 0;
-}
-/* line 55, ../scss/core/_cms.scss */
-.gfield.checkbox .gfield_checkbox label {
-  font-weight: normal;
-  padding-bottom: 0;
+/* line 54, ../scss/core/_cms.scss */
+.prev:visited, .next:visited {
+  color: #ff520d;
 }
 
 /*----------------------------------------------------------------------------------------*\

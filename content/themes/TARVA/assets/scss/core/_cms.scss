@@ -27,33 +27,31 @@
 		margin-left: $media-img-gutter;
 		margin-bottom: $baseline; }	
 }
-	
-/* Gravity Forms
-----------------------------------*/
-.validation_message	{
-	@extend .warning; }
 
-.gfield_required {
-	font-weight: normal;
-	font-size: 80%;
-	color: #666;
-	margin-left: .5em; }
+.pagination {
+	margin-top: $baseline;
+	text-align: center;
+}
 
-.gfield_error input,
-.gfield_error textarea {
-	border-bottom-color: #900; }
+.page-numbers {
+	padding: .25em .6em;
+	background: $color-brand;
+	color: white;
+	font-weight: 500;
+	line-height: 1;
+	&:visited {
+		color: white;
+	}
+}
 
-.gfield_description{
-	padding-top: .35em; }
-	
-.gfield.checkbox {
-	padding-left: 0;
-		
-	.gfield_checkbox {
-		margin-top: 0;	
-		
-		label {
-			font-weight: normal;
-			padding-bottom: 0; }	
+.current {
+	background: $color-highlight;
+}
+
+.prev, .next {
+	background: none;
+	color: $color-highlight;
+	&:visited {
+		color: $color-highlight;
 	}
 }

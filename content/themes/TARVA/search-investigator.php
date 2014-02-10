@@ -7,10 +7,10 @@ Template Name: Search Specialists
 		<div class="content__container container">
 			<form class="search cf" method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 				<label for="s"><?php _e('Find a specialist'); ?></label>
-				<input type="hidden" name="post_type" value="investigator">
+				<input type="hidden" name="post_type" value="investigator" />
 				<input type="search" value="<?php echo trim( get_search_query() ); ?>" name="s" id="s" placeholder="Search the site" required>
 				<input class="submit" name="submit" type="submit" value='Search'>	
-			</form>   		
+			</form>
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article class="content__body">
@@ -20,12 +20,13 @@ Template Name: Search Specialists
 			<?php endif; ?>
 			<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 				$args = array(
 				'post_type' => 'investigator',
 				'orderby' => 'title',
 				'order' => 'ASC',
-				'posts_per_page' => 6,
 				'paged' => $paged,
+				'posts_per_page' => 4, //Limits the amount of posts on each page
 				'meta_query' => array(
 							array(
 								'key' => 'specialist',
@@ -33,13 +34,14 @@ Template Name: Search Specialists
 							),
 						),
 				);
-				query_posts($args); 
+				
+				$the_query = new WP_Query( $args );
 
-				if ( have_posts() ): ?>
-
+				if ( $the_query->have_posts() ): ?>
+				<h2>Investigator archive</h2>
 				<div class="grid">
 					<?php 
-						while ( have_posts() ) : the_post();	
+						while ( $the_query->have_posts() ) : $the_query->the_post();	
 
 							$image = get_field('avatar');
 							$url = $image['sizes']['medium'];
@@ -63,7 +65,18 @@ Template Name: Search Specialists
 						</article>
 					<?php endwhile; ?>
 				</div>
+				<footer class="pagination">
+				<?php
+					$big = 999999999; // need an unlikely integer
 
-			<?php endif; ?>
+					echo paginate_links( array(
+						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('paged') ),
+						'total' => $the_query->max_num_pages
+					) );
+				?>
+				<?php endif; ?>
+				</footer>
 		</div>
 <?php get_footer(); ?>

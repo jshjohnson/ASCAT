@@ -7,10 +7,13 @@ Template Name: Search Centres
 		<div class="content__container container">
 			<form class="search cf" method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 				<label for="s"><?php _e('Find a centre'); ?></label>
-				<input type="hidden" name="post_type" value="centre">
+				<input type="hidden" name="post_type" value="centre" />
 				<input type="search" value="<?php echo trim( get_search_query() ); ?>" name="s" id="s" placeholder="Search the site" required>
 				<input class="submit" name="submit" type="submit" value='Search'>	
-			</form>    
+			</form>
+
+
+
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article class="content__body">
@@ -19,17 +22,22 @@ Template Name: Search Centres
 			<?php endwhile; ?>	
 			<?php endif; ?>
 			<?php
-				$args = array(
-				'post_type' => 'centre',
-				'orderby' => 'title',
-				'order' => 'ASC'
-				);
-			query_posts($args); 
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-			if ( have_posts() ): ?>
+				$args = array(
+					'post_type' => 'centre',
+					'orderby' => 'title',
+					'order' => 'ASC',
+					'paged' => $paged, //Pulls the paged function into the query
+					'posts_per_page' => 4, //Limits the amount of posts on each page
+				);
+
+			$the_query = new WP_Query( $args );
+
+			if ( $the_query->have_posts() ): ?>
 			<div class="grid">
 				<?php 
-					while ( have_posts() ) : the_post();
+					while ( $the_query->have_posts() ) : $the_query->the_post();
 						$image = get_field('avatar');
 						$url = $image['sizes']['medium'];
 					    $alt = $image['alt'];					
@@ -42,12 +50,24 @@ Template Name: Search Centres
 						<div class="bio hospital island">
 							<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
 							<h2 class="listing-title"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-							<h3 class="listing-subtitle"><?php the_field('telephone'); ?></h3>
+							<h3 class="listing-subtitle"><?php the_field('location'); ?></h3>
 							<a class="more-link" href="<?php the_permalink(); ?>">More</a>
 						</div>
 					</article>
 				<?php endwhile; ?>
 			</div>
+			<footer class="pagination">
+			<?php
+				$big = 999999999; // need an unlikely integer
+
+				echo paginate_links( array(
+					'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					'format' => '?paged=%#%',
+					'current' => max( 1, get_query_var('paged') ),
+					'total' => $the_query->max_num_pages
+				) );
+			?>
 			<?php endif; ?>
+			</footer>
 		</div>
 <?php get_footer(); ?>
