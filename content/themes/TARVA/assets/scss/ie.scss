@@ -5,5 +5,19 @@ $mqs-up-to: 65em;
 /*----------------------------------------------------------------------------------------*\
  $.IE SPECIFIC STYLES
 \*----------------------------------------------------------------------------------------*/
-.lt-ie9 .container, {
-	width: 960px; }
+.lt-ie9 {
+	.content {
+		overflow-y: scroll;
+	}
+	.ribbon {
+		display: none;
+	}
+	li {
+		&.is-current, &.is-root-parent {
+			&:before {
+				font-size: 2.5em;
+				line-height: 2.5;
+			}
+		}
+	}
+}

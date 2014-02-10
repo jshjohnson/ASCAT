@@ -25,6 +25,14 @@ $(document).ready(function() {
 
 });
 
+// SVG fallback
+if (!Modernizr.svg) {
+    $('img[src$=".svg"]').each(function()
+    {
+        $(this).attr('src', $(this).attr('src').replace('.svg', '.png'));
+    });
+}
+
 // Window Load
 $(window).bind("load", function() {
 	// Fade container on load to combat FOUT

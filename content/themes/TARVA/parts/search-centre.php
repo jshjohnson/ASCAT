@@ -19,7 +19,7 @@
 			</form> 
 			<?php if ( $loop->have_posts() ) : ?>    
 			<article class="content__body">
-				<h2>Search Result for <?php _e($s); ?></h2>
+				<h2>Search Result for <?php echo "\"$s\"" ?></h2>
 			</article> 
 			<article>
 				<div class="grid">

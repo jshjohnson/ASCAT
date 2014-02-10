@@ -39,7 +39,7 @@ Template Name: Single committee archive
 								$title = get_the_title();
 							endif;  
 					?>
-						<article class="grid__cell unit-1-2--bp2">
+						<article class="grid__cell unit-1-2--bp3">
 							<div class="bio island">
 								<?php if($url) : ?>
 								<img class="bio__avatar" src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
@@ -78,7 +78,7 @@ Template Name: Single committee archive
 								$title = get_the_title();
 							endif;  
 					?>
-						<article class="grid__cell unit-1-2--bp2">
+						<article class="grid__cell unit-1-2--bp3">
 							<div class="bio island">
 								<?php if($url) : ?>
 								<img class="bio__avatar" src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
@@ -116,7 +116,7 @@ Template Name: Single committee archive
 								$title = get_the_title();
 							endif;  
 					?>
-						<article class="grid__cell unit-1-2--bp2">
+						<article class="grid__cell unit-1-2--bp3">
 							<div class="bio island">
 								<?php if($url) : ?>
 								<img class="bio__avatar" src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">

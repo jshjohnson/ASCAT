@@ -45,7 +45,7 @@ img.media__img {
 .island, .download {
 	padding: $island-padding/1.2;
 	background-color: $color-background-alt;
-	margin-bottom:1em;
+	margin-bottom: $baseline;
 	border: 1px solid darken($color-background-alt, 4%);
 
 	> :last-child {
@@ -58,6 +58,7 @@ img.media__img {
 .download {
 	position: relative;
 	white-space: nowrap;
+	margin-bottom: 1em;
 	a {
 		font-weight: normal;
 		@include respond-max($bp1) {
@@ -156,6 +157,7 @@ img.media__img {
 					content: '\e803';
 					color: white;
 					font-size: 2em;
+					font-size: 1.65rem;
 					position: relative;
 					margin-right: .4em;
 					float: left;
@@ -475,6 +477,9 @@ img.media__img {
 		position: relative;
 		margin-left: .4em;
 		top: .05em;
+		@include respond-max($bp2) {
+			top: .1em;
+		}
 	}
 }
 
