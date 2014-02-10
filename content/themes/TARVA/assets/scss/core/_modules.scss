@@ -136,7 +136,7 @@ img.media__img {
 	.nav--primary {
 		margin-left: 0;
 		list-style-type: none;
-		li {
+		> li {
 			font-size: .8em;
 			padding: .6em 0 .55em;
 			@include respond-max($bp2) {

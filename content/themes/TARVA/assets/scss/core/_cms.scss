@@ -28,6 +28,7 @@
 		margin-bottom: $baseline; }	
 }
 
+/* -- Pagination -- */
 .pagination {
 	margin-top: $baseline;
 	text-align: center;
@@ -54,4 +55,37 @@
 	&:visited {
 		color: $color-highlight;
 	}
+}
+
+/* -- Better anchor links -- */
+
+.mwm-aal-container {
+	background-color: $color-highlight;
+	padding: 1em 1.5em;
+	margin-bottom: 1.5em;
+	color: white;
+	a {
+		color: white;
+	}
+	ul { margin-bottom: 0; }
+	li {
+		width: 50%;
+		display: inline-block;
+		&:before {
+			font-family: "tarva";
+			content: '\e803';
+			color: white;
+			font-size: 2em;
+			position: relative;
+			margin-right: .4em;
+			float: left;
+			line-height: 1.2;
+			margin-top: -.18em;
+		}
+	}
+}
+
+.mwm-aal-title {
+	@extend %h2;
+	color: white;
 }

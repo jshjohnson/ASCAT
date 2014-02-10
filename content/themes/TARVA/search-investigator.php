@@ -26,7 +26,7 @@ Template Name: Search Specialists
 				'orderby' => 'title',
 				'order' => 'ASC',
 				'paged' => $paged,
-				'posts_per_page' => 4, //Limits the amount of posts on each page
+				'posts_per_page' => 6, //Limits the amount of posts on each page
 				'meta_query' => array(
 							array(
 								'key' => 'specialist',
@@ -38,7 +38,7 @@ Template Name: Search Specialists
 				$the_query = new WP_Query( $args );
 
 				if ( $the_query->have_posts() ): ?>
-				<h2>Investigator archive</h2>
+				<h3>Investigator archive</h3>
 				<div class="grid">
 					<?php 
 						while ( $the_query->have_posts() ) : $the_query->the_post();	

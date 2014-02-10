@@ -12,8 +12,6 @@ Template Name: Search Centres
 				<input class="submit" name="submit" type="submit" value='Search'>	
 			</form>
 
-
-
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article class="content__body">
@@ -29,12 +27,13 @@ Template Name: Search Centres
 					'orderby' => 'title',
 					'order' => 'ASC',
 					'paged' => $paged, //Pulls the paged function into the query
-					'posts_per_page' => 4, //Limits the amount of posts on each page
+					'posts_per_page' => 6, //Limits the amount of posts on each page
 				);
 
 			$the_query = new WP_Query( $args );
 
 			if ( $the_query->have_posts() ): ?>
+			<h3>Centre archive</h3>
 			<div class="grid">
 				<?php 
 					while ( $the_query->have_posts() ) : $the_query->the_post();

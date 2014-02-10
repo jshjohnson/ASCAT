@@ -89,8 +89,12 @@
 	@include respond-min($bp4) {
 		width: 20%;
 	}
+	@include respond-max($bp4) {
+		overflow-y: scroll;
+	}
 	@include respond-max($bp2) {
 		padding: 0;
+		overflow-y: visible;
 	}
 }
 
