@@ -60,10 +60,10 @@ namespace :deploy do
   desc "Relative symlinks for current, so we don't use full path"
   task :create_symlink, :except => { :no_release => true } do
     if releases[-2] # not the first release
-      previous_release_relative = relative_path(deploy_to, previous_release + '/current/')
+      previous_release_relative = relative_path(deploy_to, previous_release + '/')
       on_rollback { run "rm -f #{current_path}; ln -s #{previous_release_relative} #{current_path}; true" }
     end
-    latest_release_relative = relative_path(deploy_to, latest_release + '/current/')
+    latest_release_relative = relative_path(deploy_to, latest_release + '/')
     run "rm -f #{current_path} && ln -s #{latest_release_relative} #{current_path}"
   end
 end
