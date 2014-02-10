@@ -72,3 +72,14 @@ function my_shortcode_inc_panel() {
 }
 
 add_shortcode( 'inc-panel', 'my_shortcode_inc_panel' );
+
+// Jumplinks
+// -------------------------------------------------------------
+
+function my_shortcode_jumplinks( $atts, $content = null ) {
+	global $mwm_aal;
+	$output_string = $mwm_aal->output_content_links();
+	
+	return force_balance_tags( $output_string );
+}
+add_shortcode( 'jumplinks', 'my_shortcode_jumplinks' );
