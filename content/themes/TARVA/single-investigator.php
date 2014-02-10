@@ -54,16 +54,29 @@
 				?>
 				<dt>Centre:</dt>
 				<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+				
+				<?php if(get_field('address')) : ?>
 				<dt>Address:</dt>
 				<dd><?php the_field('address'); ?></dd>
+				<?php endif; ?>
+
+				<?php if(get_field('telephone')) : ?>
 				<dt>Tel:</dt>
 				<dd><?php the_field('telephone'); ?></dd>
+				<?php endif; ?>
+
+				<?php if(get_field('email')) : ?>
 				<dt>Email:</dt>
 				<dd><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></dd>
+				<?php endif; ?>
+				
+				<?php if(get_field('website')) : ?>
 				<dt>Website:</dt>
 				<dd><a href="<?php the_field('website'); ?>"><?php the_field('website'); ?></a></dd>
+				<?php endif; ?>
 				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
+				
 				<?php if(get_field('appointments')) : ?>
 				<dt>Appointments:</dt>
 				<dd><?php the_field('appointments'); ?></dd>

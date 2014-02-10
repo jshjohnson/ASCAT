@@ -36,14 +36,26 @@
 						</ul>
 					</dd>
 				<?php endif; ?>
+
+				<?php if(get_field('coordinator')) : ?>
 				<dt>Research Coordinator:</dt>
 				<dd><?php the_field('coordinator'); ?></dd>
+				<?php endif; ?>
+
+				<?php if(get_field('telephone')) : ?>
 				<dt>Tel:</dt>
 				<dd><?php the_field('telephone'); ?></dd>
+				<?php endif; ?>
+
+				<?php if(get_field('email')) : ?>
 				<dt>Email:</dt>
 				<dd><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></dd>
+				<?php endif; ?>
+				
+				<?php if(get_field('website')) : ?>
 				<dt>Website:</dt>
 				<dd><a href="<?php the_field('website'); ?>"><?php the_field('website'); ?></a></dd>
+				<?php endif; ?>
 			</dl>
 			<?php endwhile; ?>
 		</article>
