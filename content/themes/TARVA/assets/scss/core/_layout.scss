@@ -114,13 +114,8 @@
 .content__header {
 	position: relative;
 	height: 17em;
-	@include background-size(100%);
+	@include background-size(cover);
 	background-position: top;
-	background-attachment: fixed;
-	@include respond-max($bp4) {
-		background-attachment: scroll;
-		@include background-size(cover);
-	}
 	@include respond-max($bp2) {
 		height: 12em;
 	}

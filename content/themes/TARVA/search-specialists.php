@@ -19,10 +19,13 @@ Template Name: Search Specialists
 			<?php endwhile; ?>
 			<?php endif; ?>
 			<?php
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				$args = array(
 				'post_type' => 'investigator',
 				'orderby' => 'title',
 				'order' => 'ASC',
+				'posts_per_page' => 6,
+				'paged' => $paged,
 				'meta_query' => array(
 							array(
 								'key' => 'specialist',

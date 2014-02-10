@@ -458,10 +458,12 @@ img.media__img {
 			padding-left: 0;
 		}
 	}
-	.bio__avatar--small {
-		float:right;
-		padding-left: 1em;
-		max-width: 7em;
+	.bio__avatar--alt {
+		@include respond-max($bp4) {
+			float: none;
+			text-align: center;
+			padding-left: 0;
+		}
 	}
 }
 

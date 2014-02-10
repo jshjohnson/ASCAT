@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: custom-fields-search\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-25 19:03+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: BestWebSoft <http://support.bestwebsoft.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: custom-fields-search.php:34
+msgid "Custom fields search settings"
+msgstr "Настройки поиска по кастомным полям"
+
+#: custom-fields-search.php:34
+msgid "Custom fields search"
+msgstr "Поиск по кастомным полям"
+
+#: custom-fields-search.php:82
+msgid "requires"
+msgstr "требует"
+
+#: custom-fields-search.php:82
+msgid ""
+"or higher, that is why it has been deactivated! Please upgrade WordPress and "
+"try again."
+msgstr ""
+"или выше, поэтому он был деактивирован! Пожалуйста обновите WordPress и "
+"попробуйте еще раз."
+
+#: custom-fields-search.php:82
+msgid "Back to the WordPress"
+msgstr "Вернуться к WordPress на"
+
+#: custom-fields-search.php:82
+msgid "Plugins page"
+msgstr "Страницу плагинов"
+
+#: custom-fields-search.php:153
+msgid "Settings saved"
+msgstr "Настройки сохранены"
+
+#: custom-fields-search.php:164
+msgid "Notice:"
+msgstr "Внимание:"
+
+#: custom-fields-search.php:164
+msgid ""
+"The plugin's settings have been changed. In order to save them please don't "
+"forget to click the 'Save Changes' button."
+msgstr ""
+"Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, "
+"не забудьте нажать кнопку \"Сохранить\"."
+
+#: custom-fields-search.php:169
+msgid "Enable search for the custom field:"
+msgstr "Отображать поиск по кастомных полям для:"
+
+#: custom-fields-search.php:194
+msgid "custom post type"
+msgstr "кастомный тип постов"
+
+#: custom-fields-search.php:199
+msgid "You need to"
+msgstr "Вам нужно"
+
+#: custom-fields-search.php:199
+msgid "activate plugin Custom Search"
+msgstr "активировать плагин Кастомного Поиска"
+
+#: custom-fields-search.php:201
+msgid ""
+"If the type of the post is not default - you need to install and activate "
+"the plugin"
+msgstr ""
+"Если тип записи не стандартный - вам необходимо установить и активировать "
+"плагин"
+
+#: custom-fields-search.php:201
+msgid "Custom Search"
+msgstr "Кастомный Поиск"
+
+#: custom-fields-search.php:210
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: custom-fields-search.php:216
+msgid "Custom fields not found."
+msgstr "Кастомные поля не найдены."
+
+#: custom-fields-search.php:221
+msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+msgstr " Если вам понравился плагин то поставте нам 5 звезд на WordPress"
+
+#: custom-fields-search.php:222
+msgid "Rate the plugin"
+msgstr "Оценить плагин"
+
+#: custom-fields-search.php:225
+msgid "If there is something wrong about it, please contact us"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь"
+
+#: custom-fields-search.php:238 custom-fields-search.php:250
+msgid "Settings"
+msgstr "Настройки"
+
+#: custom-fields-search.php:251
+msgid "FAQ"
+msgstr "Часто задаваемые вопросы"
+
+#: custom-fields-search.php:252
+msgid "Support"
+msgstr "Тех.поддержка"

@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: custom-fields-search\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-25 19:03+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: BestWebSoft <http://support.bestwebsoft.com>\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: custom-fields-search.php:34
+msgid "Custom fields search settings"
+msgstr "Установки пошуку за кастомними полями"
+
+#: custom-fields-search.php:34
+msgid "Custom fields search"
+msgstr "Пошук за кастомними полями"
+
+#: custom-fields-search.php:82
+msgid "requires"
+msgstr "потребує"
+
+#: custom-fields-search.php:82
+msgid ""
+"or higher, that is why it has been deactivated! Please upgrade WordPress and "
+"try again."
+msgstr ""
+"або вище, тому він був деактивований! Будь ласка оновіть WordPress та "
+"спробуйте ще раз."
+
+#: custom-fields-search.php:82
+msgid "Back to the WordPress"
+msgstr "Повернутися до WordPress на"
+
+#: custom-fields-search.php:82
+msgid "Plugins page"
+msgstr "Сторінку плагинів"
+
+#: custom-fields-search.php:153
+msgid "Settings saved"
+msgstr "Установки збережено"
+
+#: custom-fields-search.php:164
+msgid "Notice:"
+msgstr ""
+
+#: custom-fields-search.php:164
+msgid ""
+"The plugin's settings have been changed. In order to save them please don't "
+"forget to click the 'Save Changes' button."
+msgstr ""
+
+#: custom-fields-search.php:169
+msgid "Enable search for the custom field:"
+msgstr "Дозволити пошук для кастомного поля"
+
+#: custom-fields-search.php:194
+msgid "custom post type"
+msgstr "тип кастомного запису"
+
+#: custom-fields-search.php:199
+msgid "You need to"
+msgstr "Вам необхідно"
+
+#: custom-fields-search.php:199
+msgid "activate plugin Custom Search"
+msgstr "активувати плагін Кастомного Пошуку"
+
+#: custom-fields-search.php:201
+msgid ""
+"If the type of the post is not default - you need to install and activate "
+"the plugin"
+msgstr ""
+"Якщо тип запису не стандартний, вам необхідно всановити та активувати плагін"
+
+#: custom-fields-search.php:201
+msgid "Custom Search"
+msgstr "Кастомний Пошук"
+
+#: custom-fields-search.php:210
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+#: custom-fields-search.php:216
+msgid "Custom fields not found."
+msgstr "Кастомні поля не знайдено."
+
+#: custom-fields-search.php:221
+msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+msgstr ""
+
+#: custom-fields-search.php:222
+msgid "Rate the plugin"
+msgstr ""
+
+#: custom-fields-search.php:225
+msgid "If there is something wrong about it, please contact us"
+msgstr ""
+
+#: custom-fields-search.php:238 custom-fields-search.php:250
+msgid "Settings"
+msgstr "Установки"
+
+#: custom-fields-search.php:251
+msgid "FAQ"
+msgstr "Часті питання"
+
+#: custom-fields-search.php:252
+msgid "Support"
+msgstr "Тех. підтримка"

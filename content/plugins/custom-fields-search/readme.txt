@@ -1,0 +1,112 @@
+=== Custom Fields Search ===
+Contributors: bestwebsoft
+Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
+Tags: custom, field, search, custom search, custom field, custom search plugin, custom fields search, search by custom fields.
+Requires at least: 3.0
+Tested up to: 3.8
+Stable tag: 1.1.5
+License: GPLv2 or later
+
+This plugin allows you to add website search any existing custom fields.
+
+== Description ==
+
+This plugin allows you to add website search any existing custom fields in default post types. On the plugin page displays a list of all of custom fields that allow you to choose what kind of custom fields will be included in search.
+
+<a href="http://wordpress.org/plugins/custom-fields-search/faq/" target="_blank">FAQ</a>
+<a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+
+= Features =
+
+* Actions: Add selected custom fields to the search.
+
+= Recommended Plugins =
+
+The author of the Custom Fields Search also recommends the following plugins:
+
+* <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=591bf97cadc3e21606c79b37e04e4543">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+
+= Translation =
+
+* Russian (ru_RU)
+* Ukrainian (uk)
+ 
+If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+
+= Technical support =
+
+Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in another languages won't be accepted.
+
+If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
+Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then. 
+We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
+
+== Installation ==
+
+1. Upload the folder `custom-fields-search` to the directory `/wp-content/plugins/`.
+2. Activate the plugin via the 'Plugins' menu in WordPress.
+3. Plugin settings are available in "BWS Plugins"->"Custom fields search".
+
+== Frequently Asked Questions ==
+
+= Search does not work. What's the problem? =
+
+You need to check the type of the post for which you include the search for custom fields. If the type of the post is not default - you need to search by the Custom post (you can do this using the plugin from bestwebsoft "Custom Search").
+
+= Usage =
+
+Go to the Settings page and select custom fields that you would like to add to the search.
+
+== Screenshots ==
+
+1. Custom fields search Settings page.
+
+== Changelog ==
+
+= V1.1.5 - 26.12.2013 =
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 3.8.
+
+= V1.1.4 - 13.11.2013 =
+* Bugfix : The bug of search results is fixed.
+
+= V1.1.3 - 31.10.2013 =
+* Bugfix : The error causing the warning message of boolean for "array_key_exists" was fixed.
+
+= V1.1.2 - 30.10.2013 =
+* Update : We updated all functionality for wordpress 3.7.1.
+* Bugfix : Fixed problem with Custom Search plugin network activation.
+
+= V1.1.1 - 02.10.2013 =
+* Update : We updated all functionality for wordpress 3.6.1.
+* NEW : The Ukrainian language file is added to the plugin.
+
+= V1.1 - 04.09.2013 =
+* Update : Function for displaying BWS plugins section placed in a separate file and has own language files.
+
+= V1.0 - 15.08.2013 =
+* Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
+
+== Upgrade Notice ==
+
+= V1.1.5 =
+BWS plugins section is updated. We updated all functionality for wordpress 3.8.
+
+= V1.1.4 =
+The bug of search results is fixed.
+
+= V1.1.3 =
+The error causing the warning message of boolean for "array_key_exists" was fixed.
+
+= V1.1.2 =
+We updated all functionality for wordpress 3.7.1. Fixed problem with Custom Search plugin network activation.
+
+= V1.1.1 =
+We updated all functionality for wordpress 3.6.1. The Ukrainian language file is added to the plugin.
+
+= V1.1 =
+Function for displaying BWS plugins section placed in a separate file and has own language files.
+
+= V1.0 =
+Updated all functionality for wordpress 3.0, 3.1, 3.2.
