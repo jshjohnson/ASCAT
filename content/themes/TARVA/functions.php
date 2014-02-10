@@ -29,13 +29,6 @@ require_once( 'inc/default-pages.php' );
 require_once( 'inc/shortcodes.php' );
 
 /**
- * GRAVITY FORMS
- *
- * Function and configuration for Gravity Forms plugin
- */
-require_once( 'inc/gravity-forms.php' );
-
-/**
  * MIXD PLUGINS
  *
  * Plugins/functions written by Mixd (not on WordPress.org)
