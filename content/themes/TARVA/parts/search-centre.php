@@ -4,7 +4,7 @@
 	$args = array( 
 		'post_type' => 'centre', 
 		'paged' => $paged,
-		'posts_per_page' => 4, //Limits the amount of posts on each page
+		'posts_per_page' => 6, //Limits the amount of posts on each page
 		'post_title' => 'LIKE %'.$_POST['s'].'%' 
 	);
 	$loop = new WP_Query( $args ); 
