@@ -61,6 +61,8 @@ Template Name: Search Centres
 				echo paginate_links( array(
 					'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 					'format' => '?paged=%#%',
+					'prev_text'    => __(''),
+					'next_text'    => __(''),
 					'current' => max( 1, get_query_var('paged') ),
 					'total' => $the_query->max_num_pages
 				) );

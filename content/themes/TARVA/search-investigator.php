@@ -73,6 +73,8 @@ Template Name: Search Specialists
 						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 						'format' => '?paged=%#%',
 						'current' => max( 1, get_query_var('paged') ),
+						'prev_text'    => __(''),
+						'next_text'    => __(''),
 						'total' => $the_query->max_num_pages
 					) );
 				?>
