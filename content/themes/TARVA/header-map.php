@@ -18,74 +18,8 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/modernizr-2.5.3.min.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/kwu8vfx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<script type="text/javascript"
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACDnzNTtrrrmVodkeqsgWROfyzc5xrMRA&sensor=true">
-	</script>
-	<script type="text/javascript">
-		function initialize() {
-
-		var styles = [
-			{
-				featureType: "road",
-				elementType: "geometry",
-				stylers: [
-					{ lightness: 100 },
-					{ visibility: "simplified" }
-				]
-			},{
-				featureType: "all",
-				elementType: "labels",
-				stylers: [
-					{ visibility: "off" }
-				]
-			},{
-				featureType: 'water',  
-		        elementType: 'geometry.fill',  
-		        stylers: [  
-		            { color: '#066372' }  
-		        ]  
-			},{ 
-				featureType: "landscape", 
-				elementType: "geometry", 
-				stylers: [ 
-					{ hue: "#066372" }, 
-					{ saturation: 85 }, 
-					{ lightness: -65 } 
-				] 
-			} 
-		];
-
-		var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
-
-		var myLatLng = new google.maps.LatLng(53.98084, -4.88617);
-
-		var mapOptions = {
-			center: myLatLng,
-			zoom: 6,
-			draggable: true,
-		    scrollwheel: false,
-		    mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-			}
-		};
-
-		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-		var image = new google.maps.MarkerImage("../content/themes/TARVA/assets/img/marker.png", null, null, null, new google.maps.Size(25,43.5));
-
-		var beachMarker = new google.maps.Marker({
-			position: myLatLng,
-			map: map,
-			icon: image
-		});
-
-		map.mapTypes.set('map_style', styledMap);
- 		map.setMapTypeId('map_style');
-
-		
-		}
-
-		google.maps.event.addDomListener(window, 'load', initialize);
-	</script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACDnzNTtrrrmVodkeqsgWROfyzc5xrMRA&sensor=true"></script>
+	<script>var templateUrl = '<?= get_stylesheet_directory_uri(); ?>';</script>
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -93,7 +27,7 @@
 		<div id="inner-wrap">
 		<?php get_sidebar(); ?> 
 		<div class="content">
-		<header class="content__header" id="map-canvas">
+		<header class="content__header content__header--tall" id="map-canvas">
 				<div class="container">
 					<?php 	
 						$title = get_field('alternative_title');

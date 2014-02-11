@@ -1345,83 +1345,88 @@ a:hover {
 }
 
 /* line 128, ../scss/core/_layout.scss */
+.content__header--tall {
+  height: 25em;
+}
+
+/* line 132, ../scss/core/_layout.scss */
 .header-video {
   height: 20em;
 }
-/* line 130, ../scss/core/_layout.scss */
+/* line 134, ../scss/core/_layout.scss */
 .header-video iframe {
   height: 20em;
   width: 100%;
 }
 
-/* line 142, ../scss/core/_layout.scss */
+/* line 146, ../scss/core/_layout.scss */
 .module {
   margin-bottom: 1.7em;
   padding: 1.5em;
 }
-/* line 145, ../scss/core/_layout.scss */
+/* line 149, ../scss/core/_layout.scss */
 .module .grid__cell:last-of-type p:last-child, .module .grid__cell:last-of-type img:last-child {
   margin: 0;
 }
-/* line 148, ../scss/core/_layout.scss */
+/* line 152, ../scss/core/_layout.scss */
 .module > p:last-child, .module ul:last-child, .module ul li:last-of-type, .module iframe:last-child {
   margin-bottom: 0;
 }
-/* line 151, ../scss/core/_layout.scss */
+/* line 155, ../scss/core/_layout.scss */
 .module:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 156, ../scss/core/_layout.scss */
+/* line 160, ../scss/core/_layout.scss */
 .module-2-3 {
   width: 63.33%;
 }
 
-/* line 163, ../scss/core/_layout.scss */
+/* line 167, ../scss/core/_layout.scss */
 .module-1-3 {
   width: 30%;
   margin: 1.5%;
 }
 
-/* line 173, ../scss/core/_layout.scss */
+/* line 177, ../scss/core/_layout.scss */
 .module-1-2 {
   width: 50%;
 }
 
-/* line 181, ../scss/core/_layout.scss */
+/* line 185, ../scss/core/_layout.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.7em 0;
   width: 100%;
 }
-/* line 187, ../scss/core/_layout.scss */
+/* line 191, ../scss/core/_layout.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
   width: 25%;
 }
-/* line 206, ../scss/core/_layout.scss */
+/* line 210, ../scss/core/_layout.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
   width: 75%;
 }
-/* line 208, ../scss/core/_layout.scss */
+/* line 212, ../scss/core/_layout.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
-/* line 211, ../scss/core/_layout.scss */
+/* line 215, ../scss/core/_layout.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 
-/* line 231, ../scss/core/_layout.scss */
+/* line 235, ../scss/core/_layout.scss */
 .search input[type='search'] {
   width: 80%;
   float: left;
 }
-/* line 238, ../scss/core/_layout.scss */
+/* line 242, ../scss/core/_layout.scss */
 .search input[type='submit'] {
   width: 20%;
   float: left;
@@ -2089,30 +2094,40 @@ img.media__img {
   clear: both;
 }
 
+/* line 41, ../scss/core/_overrides.scss */
+#map-canvas img {
+  max-width: none;
+}
+
+/* line 45, ../scss/core/_overrides.scss */
+.gm-style {
+  font-family: "proxima-nova", "Proxima Nova", sans-serif;
+}
+
 /* Specific text styles
 ----------------------------------*/
-/* line 43, ../scss/core/_overrides.scss */
+/* line 51, ../scss/core/_overrides.scss */
 .capitalise {
   text-transform: capitalize;
 }
 
-/* line 44, ../scss/core/_overrides.scss */
+/* line 52, ../scss/core/_overrides.scss */
 .headline {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: .45em;
 }
 
-/* line 45, ../scss/core/_overrides.scss */
+/* line 53, ../scss/core/_overrides.scss */
 .highlight {
   font-size: 1.5em;
   color: #ff520d;
 }
 
-/* line 47, ../scss/core/_overrides.scss */
+/* line 55, ../scss/core/_overrides.scss */
 .underline, .blog-header, .content__body h2 {
   margin-bottom: 1em;
 }
-/* line 49, ../scss/core/_overrides.scss */
+/* line 57, ../scss/core/_overrides.scss */
 .underline:after, .blog-header:after, .content__body h2:after {
   content: "";
   width: 110%;
@@ -2126,13 +2141,13 @@ img.media__img {
 
 /* Style trumps (error states etc.)
 ----------------------------------*/
-/* line 68, ../scss/core/_overrides.scss */
+/* line 76, ../scss/core/_overrides.scss */
 .is-hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 69, ../scss/core/_overrides.scss */
+/* line 77, ../scss/core/_overrides.scss */
 .is-vhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2144,7 +2159,7 @@ img.media__img {
   width: 1px;
 }
 
-/* line 80, ../scss/core/_overrides.scss */
+/* line 88, ../scss/core/_overrides.scss */
 .info:before, .hospital:before {
   font-family: "tarva";
   color: #e1e1e1;
@@ -2154,7 +2169,7 @@ img.media__img {
   position: relative;
 }
 
-/* line 91, ../scss/core/_overrides.scss */
+/* line 99, ../scss/core/_overrides.scss */
 .info:before {
   content: '\e800';
   font-size: 1.6em;
@@ -2163,7 +2178,7 @@ img.media__img {
   margin-top: -.5em;
 }
 
-/* line 106, ../scss/core/_overrides.scss */
+/* line 114, ../scss/core/_overrides.scss */
 .hospital:before {
   content: '\e801';
   font-size: 1.8em;
@@ -2171,19 +2186,19 @@ img.media__img {
   margin-top: -.4em;
 }
 
-/* line 114, ../scss/core/_overrides.scss */
+/* line 122, ../scss/core/_overrides.scss */
 .warning {
   color: #900;
 }
 
-/* line 116, ../scss/core/_overrides.scss */
+/* line 124, ../scss/core/_overrides.scss */
 .alert {
   color: #009;
 }
 
 /* Debuggin'
 ----------------------------------*/
-/* line 140, ../scss/core/_overrides.scss */
+/* line 148, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2198,7 +2213,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 0";
 }
-/* line 143, ../scss/core/_overrides.scss */
+/* line 151, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2213,7 +2228,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 1";
 }
-/* line 146, ../scss/core/_overrides.scss */
+/* line 154, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2228,7 +2243,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 2";
 }
-/* line 149, ../scss/core/_overrides.scss */
+/* line 157, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
