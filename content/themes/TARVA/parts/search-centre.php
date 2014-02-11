@@ -4,6 +4,8 @@
 	$args = array( 
 		'post_type' => 'centre', 
 		'paged' => $paged,
+		'orderby' => 'title',
+		'order' => 'ASC',
 		'posts_per_page' => 6, //Limits the amount of posts on each page
 		'post_title' => 'LIKE %'.$_POST['s'].'%' 
 	);
