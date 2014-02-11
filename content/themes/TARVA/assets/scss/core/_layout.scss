@@ -16,9 +16,11 @@
 .footer--credit {
 	position: relative;
 	bottom: 0;
-	width: 80%;
 	float: right;
 	clear: both;
+	@include respond-min($bp4) {
+		width: 80%;
+	}
 }
 
 .container {
@@ -32,6 +34,7 @@
 	position: relative;
 	margin-bottom: 4em;
 	min-height: 10em;
+	overflow: auto;
 	@include respond-max($bp2) {
 		margin-top: 10%;
 	}
@@ -112,8 +115,9 @@
 .content {
 	// height: 100%;
 	// overflow-x: hidden;
-	min-height: 100vh;
+	min-height: 93.2vh;
 	background-color: white;
+	overflow: auto;
 	@include respond-min($bp2) {
 		width: 75%;
 		float: right;

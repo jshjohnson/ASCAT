@@ -18,7 +18,6 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/modernizr-2.5.3.min.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/kwu8vfx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACDnzNTtrrrmVodkeqsgWROfyzc5xrMRA&sensor=true"></script>
 	<script>var templateUrl = '<?= get_stylesheet_directory_uri(); ?>';</script>
 	<?php wp_head(); ?>
 </head>

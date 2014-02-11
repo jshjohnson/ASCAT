@@ -976,12 +976,11 @@ a:hover {
 .footer--credit {
   position: relative;
   bottom: 0;
-  width: 80%;
   float: right;
   clear: both;
 }
 
-/* line 24, ../scss/core/_layout.scss */
+/* line 26, ../scss/core/_layout.scss */
 .container {
   margin: 0 auto;
   width: 85%;
@@ -989,15 +988,16 @@ a:hover {
   max-width: 68.5em;
 }
 
-/* line 30, ../scss/core/_layout.scss */
+/* line 32, ../scss/core/_layout.scss */
 .content__container {
   margin-top: 4em;
   position: relative;
   margin-bottom: 4em;
   min-height: 10em;
+  overflow: auto;
 }
 
-/* line 40, ../scss/core/_layout.scss */
+/* line 43, ../scss/core/_layout.scss */
 .content__container--less-marg {
   margin-top: 2em;
 }
@@ -1305,7 +1305,7 @@ a:hover {
 
 /* Logo
 ----------------------------------*/
-/* line 72, ../scss/core/_layout.scss */
+/* line 75, ../scss/core/_layout.scss */
 .logo {
   max-width: 18em;
   width: 75%;
@@ -1314,7 +1314,7 @@ a:hover {
 
 /* Sidebar
 ----------------------------------*/
-/* line 86, ../scss/core/_layout.scss */
+/* line 89, ../scss/core/_layout.scss */
 .sidebar {
   padding: 2em 0;
   position: relative;
@@ -1331,10 +1331,11 @@ a:hover {
 
 /* Content
 ----------------------------------*/
-/* line 112, ../scss/core/_layout.scss */
+/* line 115, ../scss/core/_layout.scss */
 .content {
-  min-height: 100vh;
+  min-height: 93.2vh;
   background-color: white;
+  overflow: auto;
   width: 75%;
   float: right;
   -webkit-box-sizing: border-box;
@@ -1342,7 +1343,7 @@ a:hover {
   box-sizing: border-box;
 }
 
-/* line 127, ../scss/core/_layout.scss */
+/* line 131, ../scss/core/_layout.scss */
 .content__header {
   position: relative;
   height: 17em;
@@ -1353,89 +1354,89 @@ a:hover {
   background-position: top;
 }
 
-/* line 137, ../scss/core/_layout.scss */
+/* line 141, ../scss/core/_layout.scss */
 .content__header--tall {
   height: 25em;
 }
 
-/* line 141, ../scss/core/_layout.scss */
+/* line 145, ../scss/core/_layout.scss */
 .header-video {
   height: 20em;
 }
-/* line 143, ../scss/core/_layout.scss */
+/* line 147, ../scss/core/_layout.scss */
 .header-video iframe {
   height: 20em;
   width: 100%;
 }
 
-/* line 155, ../scss/core/_layout.scss */
+/* line 159, ../scss/core/_layout.scss */
 .module {
   margin-bottom: 1.7em;
   padding: 1.5em;
 }
-/* line 158, ../scss/core/_layout.scss */
+/* line 162, ../scss/core/_layout.scss */
 .module .grid__cell:last-of-type p:last-child, .module .grid__cell:last-of-type img:last-child {
   margin: 0;
 }
-/* line 161, ../scss/core/_layout.scss */
+/* line 165, ../scss/core/_layout.scss */
 .module > p:last-child, .module ul:last-child, .module ul li:last-of-type, .module iframe:last-child {
   margin-bottom: 0;
 }
-/* line 164, ../scss/core/_layout.scss */
+/* line 168, ../scss/core/_layout.scss */
 .module:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 169, ../scss/core/_layout.scss */
+/* line 173, ../scss/core/_layout.scss */
 .module-2-3 {
   width: 63.33%;
 }
 
-/* line 176, ../scss/core/_layout.scss */
+/* line 180, ../scss/core/_layout.scss */
 .module-1-3 {
   width: 30%;
   margin: 1.5%;
 }
 
-/* line 186, ../scss/core/_layout.scss */
+/* line 190, ../scss/core/_layout.scss */
 .module-1-2 {
   width: 50%;
 }
 
-/* line 194, ../scss/core/_layout.scss */
+/* line 198, ../scss/core/_layout.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.7em 0;
   width: 100%;
 }
-/* line 200, ../scss/core/_layout.scss */
+/* line 204, ../scss/core/_layout.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
   width: 25%;
 }
-/* line 219, ../scss/core/_layout.scss */
+/* line 223, ../scss/core/_layout.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
   width: 75%;
 }
-/* line 221, ../scss/core/_layout.scss */
+/* line 225, ../scss/core/_layout.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
-/* line 224, ../scss/core/_layout.scss */
+/* line 228, ../scss/core/_layout.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 
-/* line 244, ../scss/core/_layout.scss */
+/* line 248, ../scss/core/_layout.scss */
 .search input[type='search'] {
   width: 80%;
   float: left;
 }
-/* line 251, ../scss/core/_layout.scss */
+/* line 255, ../scss/core/_layout.scss */
 .search input[type='submit'] {
   width: 20%;
   float: left;
