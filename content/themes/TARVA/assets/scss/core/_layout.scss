@@ -13,6 +13,14 @@
 	-ms-flex-preferred-size: auto;
 }
 
+.footer--credit {
+	position: relative;
+	bottom: 0;
+	width: 80%;
+	float: right;
+	clear: both;
+}
+
 .container {
 	margin: 0 auto;
 	width: 85%;
@@ -102,8 +110,9 @@
 ----------------------------------*/
 
 .content {
-	height: 100%;
-	overflow-x: hidden;
+	// height: 100%;
+	// overflow-x: hidden;
+	min-height: 100vh;
 	background-color: white;
 	@include respond-min($bp2) {
 		width: 75%;

@@ -248,7 +248,6 @@ img.media__img {
 	padding: 1em 4em .8em;
 	border: 1px solid darken($color-background-alt, 4%);
 	background-color: $color-background-alt;
-	margin-top: $baseline;
 	text-align:center;
 	@include respond-max($bp2) {
 		padding: 1em 3em .8em;
@@ -322,6 +321,11 @@ img.media__img {
 
 /* Footer
 ----------------------------------*/
+
+.footer {
+	background: white;
+	padding-bottom: $baseline;
+}
 
 .footer__img {
 	max-height: 3.5em;

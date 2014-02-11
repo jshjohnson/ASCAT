@@ -24,7 +24,7 @@
 	<div class="outer">
 		<div id="inner-wrap">
 		<?php get_sidebar(); ?> 
-		<div class="content">
+		<div class="content footer--push">
 	<?php if(!is_front_page()) :?>
 
 		<?php if (has_post_thumbnail( $post->post_parent ) ): ?>
