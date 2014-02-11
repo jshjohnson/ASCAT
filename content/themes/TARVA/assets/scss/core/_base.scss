@@ -126,6 +126,9 @@ textarea {
 	border: 1px solid $color-keyline;
 	color: #666;
 	background-color: #FFF;
+	@include respond-min($bp1) {
+		padding: .54em;
+	}
 }
 
 button,

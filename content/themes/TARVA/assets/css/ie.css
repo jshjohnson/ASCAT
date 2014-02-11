@@ -772,9 +772,10 @@ textarea {
   border: 1px solid #f0f0f0;
   color: #666;
   background-color: #FFF;
+  padding: .54em;
 }
 
-/* line 133, ../scss/core/_base.scss */
+/* line 136, ../scss/core/_base.scss */
 button,
 .btn:link,
 input[type=submit] {
@@ -789,7 +790,7 @@ input[type=submit] {
 }
 
 /* -- Blockquotes -- */
-/* line 144, ../scss/core/_base.scss */
+/* line 147, ../scss/core/_base.scss */
 blockquote {
   border-left: 0.3em solid #f0f0f0;
   margin-left: 0;
@@ -799,24 +800,24 @@ blockquote {
   padding-right: 2em;
 }
 
-/* line 153, ../scss/core/_base.scss */
+/* line 156, ../scss/core/_base.scss */
 blockquote {
   font-family: "ff-meta-serif-web-pro", serif;
   font-style: italic;
   clear: both;
 }
 
-/* line 154, ../scss/core/_base.scss */
+/* line 157, ../scss/core/_base.scss */
 blockquote p {
   font-size: 1.35em;
 }
 
-/* line 155, ../scss/core/_base.scss */
+/* line 158, ../scss/core/_base.scss */
 blockquote p + .source {
   margin-top: -1.7em;
 }
 
-/* line 156, ../scss/core/_base.scss */
+/* line 159, ../scss/core/_base.scss */
 .source {
   display: block;
   font-family: "proxima-nova", "Proxima Nova", sans-serif;
@@ -825,12 +826,12 @@ blockquote p + .source {
   font-style: normal;
 }
 
-/* line 157, ../scss/core/_base.scss */
+/* line 160, ../scss/core/_base.scss */
 .source:before {
   content: "\2013\0020";
 }
 
-/* line 159, ../scss/core/_base.scss */
+/* line 162, ../scss/core/_base.scss */
 a:active, a:focus {
   position: relative;
   top: 1px;
@@ -838,7 +839,7 @@ a:active, a:focus {
 
 /* Links
 ----------------------------------*/
-/* line 164, ../scss/core/_base.scss */
+/* line 167, ../scss/core/_base.scss */
 a {
   font-weight: 600;
   text-decoration: none;
@@ -846,13 +847,13 @@ a {
 }
 
 /* -- visited -- */
-/* line 170, ../scss/core/_base.scss */
+/* line 173, ../scss/core/_base.scss */
 a:visited {
   color: #ff520d;
 }
 
 /* -- hovers -- */
-/* line 177, ../scss/core/_base.scss */
+/* line 180, ../scss/core/_base.scss */
 a:hover {
   color: #d93e00;
 }
@@ -897,56 +898,56 @@ a:hover {
   padding-right: .3em;
 }
 
-/* line 189, ../scss/core/_base.scss */
+/* line 192, ../scss/core/_base.scss */
 .icon--users:before {
   content: '\e808';
 }
 
 /* '' */
-/* line 190, ../scss/core/_base.scss */
+/* line 193, ../scss/core/_base.scss */
 .icon--attach:before {
   content: '\e802';
 }
 
 /* '' */
-/* line 191, ../scss/core/_base.scss */
+/* line 194, ../scss/core/_base.scss */
 .icon--info-1:before {
   content: '\e800';
 }
 
 /* '' */
-/* line 192, ../scss/core/_base.scss */
+/* line 195, ../scss/core/_base.scss */
 .icon--vcard:before {
   content: '\e805';
 }
 
 /* '' */
-/* line 193, ../scss/core/_base.scss */
+/* line 196, ../scss/core/_base.scss */
 .icon--right-open-mini:before {
   content: '\e803';
 }
 
 /* '' */
-/* line 194, ../scss/core/_base.scss */
+/* line 197, ../scss/core/_base.scss */
 .icon--close:before {
   content: '\e804';
   margin-right: .5em;
 }
 
 /* '' */
-/* line 195, ../scss/core/_base.scss */
+/* line 198, ../scss/core/_base.scss */
 .icon--menu:before {
   content: '\e807';
 }
 
 /* '' */
-/* line 196, ../scss/core/_base.scss */
+/* line 199, ../scss/core/_base.scss */
 .icon--install:before {
   content: '\e806';
 }
 
 /* '' */
-/* line 197, ../scss/core/_base.scss */
+/* line 200, ../scss/core/_base.scss */
 .icon--stethoscope:before {
   content: '\e801';
 }

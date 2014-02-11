@@ -48,8 +48,12 @@ function initialize() {
 				stylers: [ 
 					{ visibility: "off" } 
 				] 
-			},
-			{
+			},{
+				featureType: "administrative",
+				stylers: [
+					{ visibility: "off" }
+				]
+			},{
 				featureType: "poi",
 				stylers: [
 					{ visibility: "off" }
