@@ -40,7 +40,7 @@
 	color: white;
 	font-weight: 500;
 	line-height: 1;
-	&:visited {
+	&:visited, &:hover {
 		color: white;
 	}
 }
@@ -52,7 +52,7 @@
 .prev, .next {
 	background: none;
 	color: $color-highlight;
-	&:visited {
+	&:visited, &:hover {
 		color: $color-highlight;
 	}
 }
@@ -67,20 +67,22 @@
 	a {
 		color: white;
 	}
-	ul { margin-bottom: 0; }
-	li {
-		width: 50%;
-		display: inline-block;
-		&:before {
-			font-family: "tarva";
-			content: '\e803';
-			color: white;
-			font-size: 2em;
-			position: relative;
-			margin-right: .4em;
-			float: left;
-			line-height: 1.2;
-			margin-top: -.18em;
+	ul { 
+		margin-bottom: 0;
+		li {
+			width: 50%;
+			display: inline-block;
+			&:before {
+				font-family: "tarva";
+				content: '\e803';
+				color: white;
+				font-size: 2em;
+				position: relative;
+				margin-right: .4em;
+				float: left;
+				line-height: 1.2;
+				margin-top: -.18em;
+			}
 		}
 	}
 }

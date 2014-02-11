@@ -2283,7 +2283,7 @@ body.debug:before {
   line-height: 1;
 }
 /* line 43, ../scss/core/_cms.scss */
-.page-numbers:visited {
+.page-numbers:visited, .page-numbers:hover {
   color: white;
 }
 
@@ -2298,7 +2298,7 @@ body.debug:before {
   color: #ff520d;
 }
 /* line 55, ../scss/core/_cms.scss */
-.prev:visited, .next:visited {
+.prev:visited, .prev:hover, .next:visited, .next:hover {
   color: #ff520d;
 }
 
@@ -2318,13 +2318,13 @@ body.debug:before {
 .mwm-aal-container ul {
   margin-bottom: 0;
 }
-/* line 71, ../scss/core/_cms.scss */
-.mwm-aal-container li {
+/* line 72, ../scss/core/_cms.scss */
+.mwm-aal-container ul li {
   width: 50%;
   display: inline-block;
 }
-/* line 74, ../scss/core/_cms.scss */
-.mwm-aal-container li:before {
+/* line 75, ../scss/core/_cms.scss */
+.mwm-aal-container ul li:before {
   font-family: "tarva";
   content: '\e803';
   color: white;
@@ -2336,7 +2336,7 @@ body.debug:before {
   margin-top: -.18em;
 }
 
-/* line 88, ../scss/core/_cms.scss */
+/* line 90, ../scss/core/_cms.scss */
 .mwm-aal-title {
   color: white;
 }
