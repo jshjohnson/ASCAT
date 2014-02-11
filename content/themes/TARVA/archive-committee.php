@@ -6,9 +6,7 @@ Template Name: Single committee archive
 <?php get_header(); ?>
 		<div class="content__container container">
 			<?php if ( have_posts() ) : ?>
-			<?php 
-			while ( have_posts() ) : the_post(); ?>
-
+			<?php while ( have_posts() ) : the_post(); ?>
 			<article class="content__body">
 				<?php the_content(); ?>	
 			</article>
@@ -18,18 +16,23 @@ Template Name: Single committee archive
 			<?php if(get_field('committee_select') == 9) : ?>
 
 				<?php
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 					$args = array(
 					'post_type' => 'investigator',
+					'paged' => $paged,
+					'posts_per_page' => 6, 
 					'orderby' => 'title',
 					'order' => 'ASC',
 					'committee_types' => 'data-monitoring-committee'
 					);
-				query_posts($args); 
+					
+					$the_query = new WP_Query( $args );
 
-				if ( have_posts() ): ?>
+				if ( $the_query->have_posts() ): ?>
 				<div class="grid">
 					<?php 
-						while ( have_posts() ) : the_post();	
+						while ( $the_query->have_posts() ) : $the_query->the_post();	
 
 							$image = get_field('avatar');
 							$url = $image['sizes']['medium'];
@@ -53,23 +56,42 @@ Template Name: Single committee archive
 						</article>
 					<?php endwhile; ?>
 				</div>
+				<footer class="pagination">
+				<?php
+					$big = 999999999; // need an unlikely integer
+
+					echo paginate_links( array(
+						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('paged') ),
+						'prev_text'    => __(''),
+						'next_text'    => __(''),
+						'total' => $the_query->max_num_pages
+					) );
+				?>
+				</footer>
 				<?php endif; ?>
 
 			<?php elseif(get_field('committee_select') == 8) : ?>
 
 				<?php
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 					$args = array(
 					'post_type' => 'investigator',
+					'paged' => $paged,
+					'posts_per_page' => 6,
 					'orderby' => 'title',
 					'order' => 'ASC',
 					'committee_types' => 'trial-steering-committee'
 					);
-				query_posts($args); 
 
-				if ( have_posts() ): ?>
+					$the_query = new WP_Query( $args );
+
+				if ( $the_query->have_posts() ): ?>
 				<div class="grid">
 					<?php 
-						while ( have_posts() ) : the_post();				
+						while ( $the_query->have_posts() ) : $the_query->the_post();				
 							$image = get_field('avatar');
 							$url = $image['sizes']['medium'];
 						    $alt = $image['alt'];			
@@ -92,22 +114,42 @@ Template Name: Single committee archive
 						</article>
 					<?php endwhile; ?>
 				</div>
+				<footer class="pagination">
+				<?php
+					$big = 999999999; // need an unlikely integer
+
+					echo paginate_links( array(
+						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('paged') ),
+						'prev_text'    => __(''),
+						'next_text'    => __(''),
+						'total' => $the_query->max_num_pages
+					) );
+				?>
+				</footer>
 				<?php endif; ?>
 
 			<?php elseif(get_field('committee_select') == 7) : ?>
+
 				<?php
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 					$args = array(
 					'post_type' => 'investigator',
+					'paged' => $paged,
+					'posts_per_page' => 6,
 					'orderby' => 'title',
 					'order' => 'ASC',
 					'committee_types' => 'trial-management-group'
 					);
-				query_posts($args); 
 
-				if ( have_posts() ): ?>
+					$the_query = new WP_Query( $args );
+
+				if ( $the_query->have_posts() ): ?>
 				<div class="grid">
 					<?php 
-						while ( have_posts() ) : the_post();				
+						while ( $the_query->have_posts() ) : $the_query->the_post();				
 							$image = get_field('avatar');
 							$url = $image['sizes']['medium'];
 						    $alt = $image['alt'];			
@@ -130,7 +172,20 @@ Template Name: Single committee archive
 						</article>
 					<?php endwhile; ?>
 				</div>
-				<?php endif; ?>
-			<?php endif; ?>
+				<footer class="pagination">
+				<?php
+					$big = 999999999; // need an unlikely integer
+
+					echo paginate_links( array(
+						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('paged') ),
+						'prev_text'    => __(''),
+						'next_text'    => __(''),
+						'total' => $the_query->max_num_pages
+					) );
+				?>
+				</footer>
+				<?php endif; endif; ?>
 		</div>
 <?php get_footer(); ?>
