@@ -2094,40 +2094,40 @@ img.media__img {
   clear: both;
 }
 
-/* line 41, ../scss/core/_overrides.scss */
+/* line 45, ../scss/core/_overrides.scss */
 #map-canvas img {
   max-width: none;
 }
 
-/* line 45, ../scss/core/_overrides.scss */
+/* line 50, ../scss/core/_overrides.scss */
 .gm-style {
   font-family: "proxima-nova", "Proxima Nova", sans-serif;
 }
 
 /* Specific text styles
 ----------------------------------*/
-/* line 51, ../scss/core/_overrides.scss */
+/* line 56, ../scss/core/_overrides.scss */
 .capitalise {
   text-transform: capitalize;
 }
 
-/* line 52, ../scss/core/_overrides.scss */
+/* line 57, ../scss/core/_overrides.scss */
 .headline {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: .45em;
 }
 
-/* line 53, ../scss/core/_overrides.scss */
+/* line 58, ../scss/core/_overrides.scss */
 .highlight {
   font-size: 1.5em;
   color: #ff520d;
 }
 
-/* line 55, ../scss/core/_overrides.scss */
+/* line 60, ../scss/core/_overrides.scss */
 .underline, .blog-header, .content__body h2 {
   margin-bottom: 1em;
 }
-/* line 57, ../scss/core/_overrides.scss */
+/* line 62, ../scss/core/_overrides.scss */
 .underline:after, .blog-header:after, .content__body h2:after {
   content: "";
   width: 110%;
@@ -2141,13 +2141,13 @@ img.media__img {
 
 /* Style trumps (error states etc.)
 ----------------------------------*/
-/* line 76, ../scss/core/_overrides.scss */
+/* line 81, ../scss/core/_overrides.scss */
 .is-hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 77, ../scss/core/_overrides.scss */
+/* line 82, ../scss/core/_overrides.scss */
 .is-vhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2159,7 +2159,7 @@ img.media__img {
   width: 1px;
 }
 
-/* line 88, ../scss/core/_overrides.scss */
+/* line 93, ../scss/core/_overrides.scss */
 .info:before, .hospital:before {
   font-family: "tarva";
   color: #e1e1e1;
@@ -2169,7 +2169,7 @@ img.media__img {
   position: relative;
 }
 
-/* line 99, ../scss/core/_overrides.scss */
+/* line 104, ../scss/core/_overrides.scss */
 .info:before {
   content: '\e800';
   font-size: 1.6em;
@@ -2178,7 +2178,7 @@ img.media__img {
   margin-top: -.5em;
 }
 
-/* line 114, ../scss/core/_overrides.scss */
+/* line 119, ../scss/core/_overrides.scss */
 .hospital:before {
   content: '\e801';
   font-size: 1.8em;
@@ -2186,19 +2186,19 @@ img.media__img {
   margin-top: -.4em;
 }
 
-/* line 122, ../scss/core/_overrides.scss */
+/* line 127, ../scss/core/_overrides.scss */
 .warning {
   color: #900;
 }
 
-/* line 124, ../scss/core/_overrides.scss */
+/* line 129, ../scss/core/_overrides.scss */
 .alert {
   color: #009;
 }
 
 /* Debuggin'
 ----------------------------------*/
-/* line 148, ../scss/core/_overrides.scss */
+/* line 153, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2213,7 +2213,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 0";
 }
-/* line 151, ../scss/core/_overrides.scss */
+/* line 156, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2228,7 +2228,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 1";
 }
-/* line 154, ../scss/core/_overrides.scss */
+/* line 159, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2243,7 +2243,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 2";
 }
-/* line 157, ../scss/core/_overrides.scss */
+/* line 162, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;

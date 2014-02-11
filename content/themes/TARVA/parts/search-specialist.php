@@ -14,7 +14,7 @@
 			),
 		);
 	$loop = new WP_Query( $args ); 
-	get_header(); ?>
+	get_header(search); ?>
 		<div class="content__container container">
 			<form class="search cf" method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 				<label for="s"><?php _e('Find a specialist'); ?></label>
