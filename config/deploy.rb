@@ -71,12 +71,12 @@ end
 ### WordPress
 
 namespace :wp do
-	desc "Setup symlinks for a WordPress project"
-    task :create_symlinks, :roles => :app do
-        run "ln -nfs #{shared_path}/uploads #{release_path}/content/uploads"
-        run "ln -nfs #{shared_path}/wp-config.php #{release_path}/wp-config.php"
-        # run "ln -nfs #{shared_path}/.htaccess-master #{release_path}/.htaccess"
-    end
+	# desc "Setup symlinks for a WordPress project"
+ #    task :create_symlinks, :roles => :app do
+ #        run "ln -nfs #{shared_path}/uploads #{release_path}/content/uploads"
+ #        run "ln -nfs #{shared_path}/wp-config.php #{release_path}/wp-config.php"
+ #        # run "ln -nfs #{shared_path}/.htaccess-master #{release_path}/.htaccess"
+ #    end
 
     desc "Create files and directories for WordPress environment"
     task :setup, :roles => :app do
@@ -87,10 +87,10 @@ namespace :wp do
         database = YAML::load_file('config/database.yml')[stage.to_s]
 
         db_config = ERB.new(File.read('./config/templates/wp-config.php.erb')).result(binding)
-        # accessfile = ERB.new(File.read('./config/templates/.htaccess.erb')).result(binding)
+        accessfile = ERB.new(File.read('./config/templates/.htaccess.erb')).result(binding)
 
-        put db_config, "#{shared_path}/wp-config.php"
-        # put accessfile, "#{shared_path}/.htaccess-master"
+        put db_config, "#{release_path}/wp-config.php"
+        put accessfile, "#{release}/.htaccess"
     end
 
     desc "Sets up WordPress wpconfig and .htaccess for your local environment"
@@ -120,7 +120,6 @@ namespace :wp do
 
 end
 
-after "deploy:create_symlink", "wp:create_symlinks"
 after "deploy:setup", "wp:setup"
 
 ### Git
