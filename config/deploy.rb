@@ -40,6 +40,7 @@ ssh_options[:forward_agent] = true
 
 # Path stuff, make sure to symlink html to ./current
 set(:deploy_to) { "/home/#{site}/users/.home/domains/#{application}" }
+set :current_dir, "html"
 set(:current_deploy_dir) { "#{deploy_to}/html" }
 
 # we need a relative path for the current symlink, without this
