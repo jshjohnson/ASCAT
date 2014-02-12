@@ -40,7 +40,7 @@ ssh_options[:forward_agent] = true
 
 # Path stuff, make sure to symlink html to ./current
 set(:deploy_to) { "/home/#{site}/users/.home/domains/#{application}" }
-set(:current_deploy_dir) { "#{deploy_to}/current" }
+set(:current_deploy_dir) { "#{deploy_to}/html" }
 
 # we need a relative path for the current symlink, without this
 # current is set to link to the release starting from the /home directory
