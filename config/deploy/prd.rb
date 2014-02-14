@@ -3,6 +3,7 @@
 ############################################
 
 set :application, "anklearthritis.co.uk"
+server "#{host}", :app
 
 ############################################
 # Setup Git
