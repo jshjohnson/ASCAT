@@ -19,7 +19,7 @@ set :site, "156312" # this is your site number, https://kb.mediatemple.net/quest
 set :user, "joshuajohnson.co.uk"
 set(:host) { "s#{site}.gridserver.com" }
 set(:domain) { "s#{site}.gridserver.com" }
-set(:user) { "serveradmin@#{application}" }
+set(:user) { "serveradmin%#{application}@#{application}" }
 
 ############################################
 # Setup Git
