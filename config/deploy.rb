@@ -2,11 +2,18 @@
 # Requirements
 ############################################
 
+require 'rubygems' 
+require 'bundler/setup'
+require 'capistrano/ext/multistage'
+require 'yaml'
+
+############################################
+# Setup Stages
+############################################
+
 set :stages, %w(prd dev)
 set :default_stage, "dev"
 set :keep_releases, 2
-require 'capistrano/ext/multistage'
-require 'yaml'
 
 after "deploy", "deploy:cleanup"
 
@@ -16,10 +23,9 @@ after "deploy", "deploy:cleanup"
 ############################################
 
 set :site, "156312" # this is your site number, https://kb.mediatemple.net/questions/268/What+is+my+site+number%3F#gs
-set :user, "joshuajohnson.co.uk"
 set(:host) { "s#{site}.gridserver.com" }
 set(:domain) { "s#{site}.gridserver.com" }
-set(:user) { "serveradmin%#{application}@#{application}" }
+set(:user) { "joshuajohnson.co.uk" }
 
 ############################################
 # Setup Git
@@ -40,8 +46,7 @@ ssh_options[:forward_agent] = true
 
 # Path stuff, make sure to symlink html to ./current
 set(:deploy_to) { "/home/#{site}/users/.home/domains/#{application}" }
-set :current_dir, "html"
-set(:current_deploy_dir) { "#{deploy_to}/html" }
+set :current_dir, "current"
 
 # we need a relative path for the current symlink, without this
 # current is set to link to the release starting from the /home directory
@@ -52,9 +57,9 @@ def relative_path(from_str, to_str)
   Pathname.new(to_str).relative_path_from(Pathname.new(from_str)).to_s
 end
 
-############################################
+###########################################
 # Recipies
-############################################
+###########################################
 
 # overwrite the symlink method to use the relative path method above
 namespace :deploy do
@@ -72,11 +77,11 @@ end
 ### WordPress
 
 namespace :wp do
-	desc "Setup symlinks for a WordPress project"
+    desc "Setup symlinks for a WordPress project"
     task :create_symlinks, :roles => :app do
-        run "ln -nfs #{shared_path}/uploads #{release_path}/content/uploads"
-        run "ln -nfs #{shared_path}/wp-config.php #{release_path}/wp-config.php"
-        run "ln -nfs #{shared_path}/.htaccess-master #{release_path}/.htaccess"
+        run "ln -nfs #{shared_path}/uploads #{current_path}/content/uploads"
+        run "ln -nfs #{shared_path}/wp-config.php #{current_path}/wp-config.php"
+        run "ln -nfs #{shared_path}/.htaccess-master #{current_path}/.htaccess"
     end
 
     desc "Create files and directories for WordPress environment"

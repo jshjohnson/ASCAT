@@ -2,7 +2,7 @@
 # Setup Server
 ############################################
 
-set :application, "anklearthritis.co.uk"
+set :application, "dev.anklearthritis.co.uk" # typically the same as the domain
 server "#{host}", :app
 
 ############################################
