@@ -16,10 +16,9 @@ after "deploy", "deploy:cleanup"
 ############################################
 
 set :site, "156312" # this is your site number, https://kb.mediatemple.net/questions/268/What+is+my+site+number%3F#gs
-set :user, "joshuajohnson.co.uk"
 set(:host) { "s#{site}.gridserver.com" }
 set(:domain) { "s#{site}.gridserver.com" }
-set(:user) { "serveradmin@#{application}" }
+set(:user) { "joshuajohnson.co.uk@#{host}" }
 
 ############################################
 # Setup Git
