@@ -1332,9 +1332,9 @@ a:hover {
 ----------------------------------*/
 /* line 115, ../scss/core/_layout.scss */
 .content {
+  overflow-x: hidden;
   min-height: 93.2vh;
   background-color: white;
-  overflow: auto;
   width: 75%;
   float: right;
   -webkit-box-sizing: border-box;
