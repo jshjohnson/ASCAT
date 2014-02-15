@@ -1025,7 +1025,6 @@ a:hover {
   position: relative;
   margin-bottom: 4em;
   min-height: 10em;
-  overflow: auto;
 }
 @media screen and (max-width: 48em) {
   /* line 32, ../scss/core/_layout.scss */

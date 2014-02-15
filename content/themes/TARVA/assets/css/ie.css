@@ -994,7 +994,6 @@ a:hover {
   position: relative;
   margin-bottom: 4em;
   min-height: 10em;
-  overflow: auto;
 }
 
 /* line 43, ../scss/core/_layout.scss */

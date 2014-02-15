@@ -34,7 +34,7 @@
 	position: relative;
 	margin-bottom: 4em;
 	min-height: 10em;
-	overflow: auto;
+	// overflow: auto;
 	@include respond-max($bp2) {
 		margin-top: 10%;
 	}
