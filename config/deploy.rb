@@ -48,40 +48,40 @@ ssh_options[:forward_agent] = true
 set(:deploy_to) { "/home/#{site}/users/.home/domains/#{application}" }
 set :current_dir, "current"
 
-# we need a relative path for the current symlink, without this
-# current is set to link to the release starting from the /home directory
-# which has a directory that is not owned by the serveradmin and apache
-# won't have access
-def relative_path(from_str, to_str)
-  require 'pathname'
-  Pathname.new(to_str).relative_path_from(Pathname.new(from_str)).to_s
-end
+# # we need a relative path for the current symlink, without this
+# # current is set to link to the release starting from the /home directory
+# # which has a directory that is not owned by the serveradmin and apache
+# # won't have access
+# def relative_path(from_str, to_str)
+#   require 'pathname'
+#   Pathname.new(to_str).relative_path_from(Pathname.new(from_str)).to_s
+# end
 
-###########################################
-# Recipies
-###########################################
+# ###########################################
+# # Recipies
+# ###########################################
 
-# overwrite the symlink method to use the relative path method above
-namespace :deploy do
-  desc "Relative symlinks for current, so we don't use full path"
-  task :create_symlink, :except => { :no_release => true } do
-    if releases[-2] # not the first release
-      previous_release_relative = relative_path(deploy_to, previous_release + '/')
-      on_rollback { run "rm -f #{current_path}; ln -s #{previous_release_relative} #{current_path}; true" }
-    end
-    latest_release_relative = relative_path(deploy_to, latest_release + '/')
-    run "rm -f #{current_path} && ln -s #{latest_release_relative} #{current_path}"
-  end
-end
+# # overwrite the symlink method to use the relative path method above
+# namespace :deploy do
+#   desc "Relative symlinks for current, so we don't use full path"
+#   task :create_symlink, :except => { :no_release => true } do
+#     if releases[-2] # not the first release
+#       previous_release_relative = relative_path(deploy_to, previous_release + '/')
+#       on_rollback { run "rm -f #{current_path}; ln -s #{previous_release_relative} #{current_path}; true" }
+#     end
+#     latest_release_relative = relative_path(deploy_to, latest_release + '/')
+#     run "rm -f #{current_path} && ln -s #{latest_release_relative} #{current_path}"
+#   end
+# end
 
 ### WordPress
 
 namespace :wp do
     desc "Setup symlinks for a WordPress project"
     task :create_symlinks, :roles => :app do
-        run "ln -nfs #{shared_path}/uploads #{current_path}/content/uploads"
-        run "ln -nfs #{shared_path}/wp-config.php #{current_path}/wp-config.php"
-        run "ln -nfs #{shared_path}/.htaccess-master #{current_path}/.htaccess"
+        run "ln -nfs /home/#{site}/domains/#{application}/shared/uploads #{current_path}/content/uploads"
+        run "ln -nfs /home/#{site}/domains/#{application}/shared/wp-config.php #{current_path}/wp-config.php"
+        run "ln -nfs /home/#{site}/domains/#{application}/shared/.htaccess-master #{current_path}/.htaccess"
     end
 
     desc "Create files and directories for WordPress environment"
