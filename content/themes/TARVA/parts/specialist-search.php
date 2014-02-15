@@ -7,14 +7,8 @@
 		'orderby' => 'title',
 		'order' => 'ASC',
 		'posts_per_page' => 6, //Limits the amount of posts on each page
-		'post_title' => 'LIKE %'.$_POST['s'].'%',
-		'meta_query' => array(
-				array(
-					'key' => 'specialist',
-					'value' => true,
-				),
-			),
-		);
+		'post_title' => 'LIKE %'.$_POST['s'].'%' 
+	);
 	$loop = new WP_Query( $args ); 
 	get_header(search); ?>
 		<div class="content__container container">
