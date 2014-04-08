@@ -4,12 +4,12 @@ Plugin Name: Custom Fields Search
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.1.5
+Version: 1.1.6
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  Copyright 2013  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  Copyright 2014  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -65,7 +65,6 @@ if ( ! function_exists( 'cstmfldssrch_register_options' ) ) {
 if ( ! function_exists ( 'cstmfldssrch_translate' ) ) {
 	function cstmfldssrch_translate(){
 		load_plugin_textdomain( 'custom-fields-search', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-		load_plugin_textdomain( 'bestwebsoft', false, dirname( plugin_basename( __FILE__ ) ) . '/bws_menu/languages/' );
 	}
 }
 
@@ -93,8 +92,6 @@ if ( ! function_exists ( 'cstmfldssrch_admin_head' ) ) {
 			wp_enqueue_style( 'cstmfldssrch_style', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
 		else
 			wp_enqueue_style( 'cstmfldssrch_style', plugins_url( 'css/style.css', __FILE__ ) );
-		if ( isset( $_GET['page'] ) && "bws_plugins" == $_GET['page'] )
-			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js', __FILE__ ) );
 	}
 }
 
@@ -218,11 +215,11 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 			<br />
 			<div class="bws-plugin-reviews">
 				<div class="bws-plugin-reviews-rate">
-				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-fields-search' ); ?>:<br/>
+				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-fields-search' ); ?>: 
 				<a href="http://wordpress.org/support/view/plugin-reviews/custom-fields-search" target="_blank" title="Custom Fields Search reviews"><?php _e( 'Rate the plugin', 'custom-fields-search' ); ?></a><br/>
 				</div>
 				<div class="bws-plugin-reviews-support">
-				<?php _e( 'If there is something wrong about it, please contact us', 'custom-fields-search' ); ?>:<br/>
+				<?php _e( 'If there is something wrong about it, please contact us', 'custom-fields-search' ); ?>: 
 				<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
 				</div>
 			</div>

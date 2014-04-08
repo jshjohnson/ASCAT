@@ -1,24 +1,32 @@
 === Admin Collapse Subpages ===
-Contributors: lupka
+Contributors: lupka , bravokeyl
 Donate link: http://alexchalupka.com/donate
-Tags: random, posts, widget, categories, date, date range, timeframe, excerpt, randomize, sidebar, category
+Tags: page, post, links,pages, admin , link ,plugin, random, posts, widget, categories, date, date range, timeframe, excerpt, randomize, sidebar, category
 Requires at least: 3.0
-Tested up to: 3.2.1
+Tested up to: 3.8.1
 Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-jQuery-powered plugin that allows expansion/collapse of subpages within pages admin (/edit.php?post_type=page) menu.
+Using this plugin one can easily collapse/expand pages with children and grand children.
 
 == Description ==
 
-Simple plugin that allows you to collapse subpages in the Pages admin list. Especially helpful if you have a ton of pages. It uses a cookie to save the expand/collapse status of your pages.
+Simple plugin that allows you to collapse subpages in the Pages admin list also for custom post types that are heirarchial. Especially helpful if you have a ton of pages /cpt's with heiararchial set to true. It uses a cookie to save the expand/collapse status of your pages.
 
-This is loosely based on Collapse Sub-Pages by Dan Dietz (http://wordpress.org/extend/plugins/collapse-sub-pages/), which broke with the 3.0 upgrade due to UI changes and hasn't been updated. I've had to rewrite the jQuery to make it work with 3.x versions. 
+This is loosely based on Collapse Sub-Pages by Dan Dietz, which broke with the 3.0 upgrade due to UI changes and hasn't been updated. I've had to rewrite the jQuery to make it work with 3.x versions. 
 
 Because this is a jQuery, it's possible that they could make additional changes that would break it. I'll do my best to stay on top of it, but let me know if it stops working.
 
+What's new in Version 2.0 ?
+
+1)Fix en-queuing of scripts .
+2)Expand all , Collapse all links appear only on the pages list not on every list (like plugins ,posts etc.,)
+3)Updated jQuery.cookie.js to 1.4.0
+
 == Installation ==
 
-1. Download, unzip, and upload the `random-posts-within-date-range-widget` folder along with all its files to the `/wp-content/plugins/` directory.
+1. Download, unzip, and upload the 'admin-collapse-subpages' folder along with all its files to the '/wp-content/plugins/'' directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Visit your Pages admin page and notice the lovely +/- buttons.
 
@@ -41,7 +49,19 @@ I'd recommend not using Quick Edit to change parent/child pages at all. It often
 = 1.0 =
 * Initial version of the plugin
 
+= 2.0 =
+* Fixed bug - Adding expand/collapse links to all list tables
+* Updated jquery.cookie.js to 1.4.0
+* Enhanced loading of scripts and styles 
+= 2.1 =
+* Added support custom post types which are hieararchial
 == Upgrade Notice ==
 
 = 1.0 =
 * N/A
+= 2.0 =
+* Enjoy !!
+= 2.1 =
+* Added support custom post types which are hieararchial
+= 2.1 =
+* Added support custom post types which are hieararchial

@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, field, search, custom search, custom field, custom search plugin, custom fields search, search by custom fields.
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.1.5
+Tested up to: 3.8.1
+Stable tag: 1.1.6
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -54,6 +54,14 @@ We can fix some things for free for the users who provide translation of our plu
 
 You need to check the type of the post for which you include the search for custom fields. If the type of the post is not default - you need to search by the Custom post (you can do this using the plugin from bestwebsoft "Custom Search").
 
+= I have some problems with the plugin's work. What Information should I provide to receive proper support? =
+
+Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+1. the link to the page where the problem occurs
+2. the name of the plugin and its version. If you are using a pro version - your order number.
+3. the version of your WordPress installation
+4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
+
 = Usage =
 
 Go to the Settings page and select custom fields that you would like to add to the search.
@@ -63,6 +71,11 @@ Go to the Settings page and select custom fields that you would like to add to t
 1. Custom fields search Settings page.
 
 == Changelog ==
+
+= V1.1.6 - 11.02.2014 =
+* Update : Screenshots are updated.
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 3.8.1.
 
 = V1.1.5 - 26.12.2013 =
 * Update : BWS plugins section is updated.
@@ -89,6 +102,9 @@ Go to the Settings page and select custom fields that you would like to add to t
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.1.6 =
+Screenshots are updated. BWS plugins section is updated. We updated all functionality for wordpress 3.8.1.
 
 = V1.1.5 =
 BWS plugins section is updated. We updated all functionality for wordpress 3.8.
