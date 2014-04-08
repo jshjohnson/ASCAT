@@ -11,6 +11,41 @@ Template Name: Search Specialists
 				<input type="search" value="<?php echo trim( get_search_query() ); ?>" name="s" id="s" placeholder="Search the site" required>
 				<input class="submit" name="submit" type="submit" value='Search'>	
 			</form>
+			<?php
+			    $args = array(
+			        'post_type' => 'investigator',
+			        'orderby' => 'title',
+			        'order' => 'ASC',
+			        'posts_per_page' => -1
+			    );
+
+			    $query = new WP_Query($args);
+
+			    $dl = '';
+			    $glossary_letter = '';
+			    $active_letters = array();
+
+			    while ( $query->have_posts() ) {
+			        $query->next_post();
+			        $term_letter = strtoupper( substr( $query->post->post_title, 0, 1 ) );
+			        if ( $glossary_letter != $term_letter ) {
+			            $dl .= (count( $active_letters ) ? '</dl>' : '') . '<li id="' . $term_letter . '"><span class="subheading">' . $term_letter . '</span><dl>';
+			            $glossary_letter = $term_letter;
+			            $active_letters[] = $term_letter;
+			        }
+			        $dl .= '<dt><a href="' . get_permalink($query->post->ID) . '">' . $query->post->post_title . '</a></dt>';
+			        $dl .= '<dd>' . $query->post->post_content . '</dd>';
+			    }
+			    $dl .= '</dl></li>';
+
+			    $ul = '<ul class="block-letters">';
+			    foreach ( array( 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ) as $letter ) {
+			        $ul .= '<li><a href="?letter=' . $letter . '">' . $letter . '</a></li>';
+			    }
+			    $ul .= '</ul>';
+
+			    echo '<div id="glossary">' . $ul . '<ul class="definitions">' . $dl . '</ul></div>';
+			?>
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article class="content__body">
