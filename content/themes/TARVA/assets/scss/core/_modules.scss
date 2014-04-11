@@ -464,6 +464,13 @@ img.media__img {
 	width: 100%;
 }
 
+.content__img {
+	@include respond-min($bp1) {
+		margin-top: -1.5em;	
+	}
+	margin-bottom: 2em;	
+}
+
 .content__body {
 	h2 {
 		@extend %underline;

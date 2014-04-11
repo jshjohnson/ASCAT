@@ -1,8 +1,14 @@
 <?php get_header(); ?>
 	<div class="content__container container">
 		<?php if ( have_posts() ) : ?>
-		<article class="bio module hospital">
 			<?php while ( have_posts() ) : the_post(); ?>
+			<?php 
+				$imageID = get_field('logo');
+				$image = wp_get_attachment_image_src($imageID, 'full');
+				$alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true); 
+			?>
+			<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" class="content__img">
+		<article class="bio module hospital">
 			<dl class="module__split">
 				<dt>Name:</dt>
 				<dd><?php the_title(); ?></dd>

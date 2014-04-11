@@ -1934,7 +1934,13 @@ img.media__img {
   width: 100%;
 }
 
-/* line 473, ../scss/core/_modules.scss */
+/* line 467, ../scss/core/_modules.scss */
+.content__img {
+  margin-top: -1.5em;
+  margin-bottom: 2em;
+}
+
+/* line 480, ../scss/core/_modules.scss */
 .bio {
   background-color: #fafafa;
   border: 1px solid #f0f0f0;
@@ -1943,7 +1949,7 @@ img.media__img {
   overflow: auto;
   margin-bottom: 1.5em;
 }
-/* line 480, ../scss/core/_modules.scss */
+/* line 487, ../scss/core/_modules.scss */
 .bio .bio__avatar {
   float: right;
   padding-left: 1em;
@@ -1952,14 +1958,14 @@ img.media__img {
   text-align: center;
   padding-left: 0;
 }
-/* line 499, ../scss/core/_modules.scss */
+/* line 506, ../scss/core/_modules.scss */
 .bio .bio__avatar--alt {
   float: none;
   text-align: center;
   padding-left: 0;
 }
 
-/* line 509, ../scss/core/_modules.scss */
+/* line 516, ../scss/core/_modules.scss */
 .more-link:after {
   font-family: "tarva";
   content: '\e803';
@@ -1969,29 +1975,29 @@ img.media__img {
   top: .05em;
 }
 
-/* line 522, ../scss/core/_modules.scss */
+/* line 529, ../scss/core/_modules.scss */
 .listing-title {
   margin-bottom: .5em;
 }
-/* line 524, ../scss/core/_modules.scss */
+/* line 531, ../scss/core/_modules.scss */
 .listing-title a {
   font-weight: normal;
 }
 
-/* line 529, ../scss/core/_modules.scss */
+/* line 536, ../scss/core/_modules.scss */
 .listing-title, .listing-subtitle {
   text-transform: capitalize;
   font-weight: normal;
 }
 
-/* line 534, ../scss/core/_modules.scss */
+/* line 541, ../scss/core/_modules.scss */
 .listing-title--bio {
   margin: .4em 0;
   color: #ff520d;
   clear: left;
 }
 
-/* line 540, ../scss/core/_modules.scss */
+/* line 547, ../scss/core/_modules.scss */
 .ribbon {
   position: absolute;
   right: 1em;
@@ -2002,7 +2008,7 @@ img.media__img {
   border-bottom: 0.6em solid #fafafa;
   width: 0;
 }
-/* line 549, ../scss/core/_modules.scss */
+/* line 556, ../scss/core/_modules.scss */
 .ribbon h5 {
   font-size: .6em;
   padding-right: 1em;
@@ -2017,14 +2023,14 @@ img.media__img {
   margin-top: 1.7em;
 }
 
-/* line 560, ../scss/core/_modules.scss */
+/* line 567, ../scss/core/_modules.scss */
 .intro {
   overflow: auto;
   background-color: #ff520d;
   background-image: url("../img/shape-bg.svg");
   position: relative;
 }
-/* line 565, ../scss/core/_modules.scss */
+/* line 572, ../scss/core/_modules.scss */
 .intro:after {
   content: "";
   width: 0;
@@ -2039,14 +2045,14 @@ img.media__img {
   margin-left: -.75em;
 }
 
-/* line 580, ../scss/core/_modules.scss */
+/* line 587, ../scss/core/_modules.scss */
 .intro-text {
   padding: 1.5em 0;
   font-size: 1.4em;
   color: white;
   font-weight: 400;
 }
-/* line 585, ../scss/core/_modules.scss */
+/* line 592, ../scss/core/_modules.scss */
 .intro-text .intro-text__highlight {
   font-size: 1.7em;
   color: white;
