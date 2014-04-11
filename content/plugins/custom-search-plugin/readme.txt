@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 1.19
+Tested up to: 3.8.2
+Stable tag: 1.20
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,7 +58,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
 
 = Usage =
 
@@ -69,6 +69,13 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.20 - 08.04.2014 =
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 3.8.1.
+* Bugfix : Plugin optimization is done.
+* Bugfix : Problem with including nav_menu types to the search results is fixed.
+* Bugfix : Bug with displaying of custom types of deactiveted plugins is fixed.
 
 = V1.19 - 07.02.2014 =
 * Update : Screenshots are updated.
@@ -142,6 +149,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.20 =
+BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Plugin optimization is done. Problem with including nav_menu types to the search results is fixed. Bug with displaying of custom types of deactiveted plugins is fixed. 
 
 = V1.19 =
 Screenshots are updated. BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Problem with search results in back-end is fixed.
