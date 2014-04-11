@@ -457,6 +457,13 @@ img.media__img {
 	background-position: -7em;
 }
 
+.content__overlay {
+ 	@include background-image(linear-gradient(transparent, rgba(black,.6)));
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
 .content__body {
 	h2 {
 		@extend %underline;

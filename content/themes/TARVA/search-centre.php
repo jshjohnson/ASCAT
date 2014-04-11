@@ -4,7 +4,6 @@ Template Name: Search Centres
 */
 ?>
 <?php get_header(map); ?>
-
 		<div class="content__container container">
 			<form class="search cf" method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 				<label for="s"><?php _e('Find a centre'); ?></label>

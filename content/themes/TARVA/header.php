@@ -36,14 +36,16 @@
 		<?php else : ?>
 			<header class="content__header" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bg-fallback.jpg');">
 		<?php endif; ?>
-				<div class="container">
-					<?php 	
-						$title = get_field('alternative_title');
-						if($title == ''):
-							$title = get_the_title();
-						endif; 
-					?>
-					<h1 class="page-heading"><?php echo $title; ?></h1>
+				<div class="content__overlay">
+					<div class="container">
+						<?php 	
+							$title = get_field('alternative_title');
+							if($title == ''):
+								$title = get_the_title();
+							endif; 
+						?>
+						<h1 class="page-heading"><?php echo $title; ?></h1>
+					</div>
 				</div>
 			</header>
 	<?php endif; ?>

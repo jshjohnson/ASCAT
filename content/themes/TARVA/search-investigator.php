@@ -16,7 +16,14 @@ Template Name: Search Specialists
 			        'post_type' => 'investigator',
 			        'orderby' => 'title',
 			        'order' => 'ASC',
-			        'posts_per_page' => -1
+					'paged' => $paged,
+					'posts_per_page' => -1, //Limits the amount of posts on each page
+					'meta_query' => array(
+								array(
+									'key' => 'specialist',
+									'value' => true,
+								),
+							),
 			    );
 
 			    $query = new WP_Query($args);
@@ -44,7 +51,8 @@ Template Name: Search Specialists
 			    }
 			    $ul .= '</ul>';
 
-			    echo '<div id="glossary">' . $ul . '<ul class="definitions">' . $dl . '</ul></div>';
+			    // echo '<div id="glossary">' . $ul . '<ul class="definitions">' . $dl . '</ul></div>';
+			    echo '<div id="glossary">' . $ul . '</div>';
 			?>
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
