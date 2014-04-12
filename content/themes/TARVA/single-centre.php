@@ -7,7 +7,7 @@
 				$image = wp_get_attachment_image_src($imageID, 'full');
 				$alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true); 
 			?>
-			<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" class="content__img">
+		<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" class="content__img">
 		<article class="bio module hospital">
 			<dl class="module__split">
 				<dt>Name:</dt>

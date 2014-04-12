@@ -27,7 +27,7 @@ Template Name: Search Centres
 					'orderby' => 'title',
 					'order' => 'ASC',
 					'paged' => $paged, //Pulls the paged function into the query
-					'posts_per_page' => 6, //Limits the amount of posts on each page
+					'posts_per_page' => 10, //Limits the amount of posts on each page
 				);
 
 			$the_query = new WP_Query( $args );
