@@ -95,8 +95,9 @@ Template Name: Search Specialists
 				
 				$query = new WP_Query($args);
 			?>
-				<h1><?php echo $firstLetter; ?></h1>
-				<hr>
+				<div class="heading-divide">
+					<h1 class="heading-divide__title"><?php echo $firstLetter; ?></h1>
+				</div>
 				<?php if ( $query->have_posts() ): ?>
 				<div class="grid">
 					<?php 

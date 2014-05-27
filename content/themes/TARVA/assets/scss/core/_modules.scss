@@ -88,19 +88,25 @@ img.media__img {
 	margin-left: 0;
 	li {
 		display: inline-block;
-		margin: 0 .5em .5em;
+		margin: .5em;
 		color: white;
 		text-align: center;
 		a {
 			display: block;
 			width: 1.5em;
-			padding: 0 .5em;
-			color: white;
-			background-color: $color-brand;
-			@include transition(background-color, .3s);
+			padding: .5em;
+			font-size: 1.2em;
+			width: .8em;
+			border-radius: 2em;
+			font-weight: 500;
+			line-height: .8em;
+			color: darken(white, 30%);
+			background-color: $color-background-alt;
+			@include transition(background-color, .5s);
 			&:hover {
-				background-color: $color-highlight;
-				@include transition(background-color, .3s);
+				color: white;
+				background-color: $color-brand;
+				@include transition(background-color, .5s);
 			}
 		}
 	}
@@ -333,6 +339,33 @@ img.media__img {
 .page-heading--alt {
 	&:after {
 		border-bottom: 0.55em solid #ff520d;
+	}
+}
+
+.heading-divide {
+	position: relative;
+	width: 100%;
+	.heading-divide__title {
+		width: 5%;
+		@include respond-max($bp1) {
+			width: 10%;
+		}
+	}
+	&:after {
+		top: .6em;
+		content: "";
+		height: 1px;
+		width: 95%;
+		float: right;
+		position: relative;
+		text-align: right;
+		padding-left: .5em;
+		@include box-sizing(border-box);
+		background: darken($color-background-alt, 20%);
+		margin-top: -3.2em;
+		@include respond-max($bp1) {
+			width: 90%;
+		}
 	}
 }
 
