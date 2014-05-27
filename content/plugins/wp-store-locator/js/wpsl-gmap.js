@@ -1088,7 +1088,7 @@ function storeHtml( response, url ) {
 		    store = "<a " + url.target + " href=" + response.url + ">" + store + "</a>";
 		}
 		
-		html = "<li data-store-id='" + id + "'><div><p>" + storeImg + "<strong>" + store + "</strong><span class='wpsl-street'>" + address + "</span>" + address2 + city + " " + state + " " + zip + "<span class='wpsl-country'>" + country + "</p>" + moreInfo + "</div>" + distance + "<a class='wpsl-directions' " + url.target + " href='" + url.src + "'>" + wpslLabels.directions + "</a></li>";
+		html = "<li data-store-id='" + id + "'><div><p>" + storeImg + "<strong>" + store + "</strong><span class='wpsl-street'>" + address + "</span>" + address2 + city + " " + state + " " + zip + "<span class='wpsl-country'>" + country + "</p>" + moreInfo + "</div>Distance: " + distance + "<a class='wpsl-directions' " + url.target + " href='" + url.src + "'>" + wpslLabels.directions + "</a></li>";
 
 	return html;
 }
