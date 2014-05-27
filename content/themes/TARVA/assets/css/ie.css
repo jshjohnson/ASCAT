@@ -2059,6 +2059,589 @@ img.media__img {
   font-weight: bolder;
 }
 
+/* The map container */
+/* line 2, ../scss/libs/_store-locator.scss */
+.wpsl-gmap-wrap {
+  position: relative;
+}
+
+/* line 5, ../scss/libs/_store-locator.scss */
+#wpsl-gmap {
+  height: 400px;
+}
+
+/* line 9, ../scss/libs/_store-locator.scss */
+.wpsl-store-below #wpsl-gmap {
+  float: none;
+  width: 100%;
+  margin-bottom: 1.7em;
+}
+
+/* Map reset button */
+/* line 16, ../scss/libs/_store-locator.scss */
+#wpsl-reset-map {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 6px 14px;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 3;
+  display: none;
+}
+
+/* line 26, ../scss/libs/_store-locator.scss */
+#wpsl-reset-map:hover {
+  cursor: pointer;
+}
+
+/* line 30, ../scss/libs/_store-locator.scss */
+#wpsl-reset-map.wpsl-right-controls {
+  right: 42px;
+}
+
+/* 
+Some themes set a box-shadow or max-width for all image / 
+div elements, we disable it to prevent it from messing up the map
+*/
+/* line 39, ../scss/libs/_store-locator.scss */
+#wpsl-gmap div,
+#wpsl-gmap img {
+  box-shadow: none;
+  max-width: none;
+  background: none;
+}
+
+/* line 45, ../scss/libs/_store-locator.scss */
+#wpsl-wrap {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+/* Possible fix for vertical text issue in IE9? */
+/* line 53, ../scss/libs/_store-locator.scss */
+.gm-style-cc {
+  word-wrap: normal;
+}
+
+/* line 62, ../scss/libs/_store-locator.scss */
+#wpsl-search-wrap .wpsl-input label,
+#wpsl-search-wrap .wpsl-input input,
+#wpsl-search-wrap .wpsl-select-wrap #wpsl-radius,
+#wpsl-search-wrap .wpsl-select-wrap #wpsl-results,
+#wpsl-search-btn {
+  display: inline-block;
+}
+
+/* line 66, ../scss/libs/_store-locator.scss */
+#wpsl-search-wrap label {
+  margin-bottom: 0;
+}
+
+/* line 69, ../scss/libs/_store-locator.scss */
+.wpsl-search {
+  background: #ff520d;
+  color: white;
+  font-size: .8em;
+  line-height: 1.5em;
+  padding: 1em;
+}
+
+/* line 77, ../scss/libs/_store-locator.scss */
+#wpsl-search-wrap .wpsl-input input {
+  border: 0;
+  line-height: 1.5em;
+}
+
+/* Result list */
+/* line 86, ../scss/libs/_store-locator.scss */
+.wpsl-back {
+  display: block;
+}
+
+/* line 90, ../scss/libs/_store-locator.scss */
+#wpsl-result-list {
+  float: left;
+  width: 33%;
+  margin-right: 0.5%;
+}
+
+/* line 95, ../scss/libs/_store-locator.scss */
+.wpsl-store-below #wpsl-result-list {
+  float: none;
+  width: 100%;
+  margin: 12px 0 0 0;
+}
+
+/* line 102, ../scss/libs/_store-locator.scss */
+#wpsl-stores,
+#wpsl-direction-details {
+  overflow-y: auto;
+}
+
+/* line 105, ../scss/libs/_store-locator.scss */
+#wpsl-direction-details {
+  display: none;
+}
+
+/* line 107, ../scss/libs/_store-locator.scss */
+#wpsl-result-list p {
+  padding-left: 10px;
+}
+
+/* line 110, ../scss/libs/_store-locator.scss */
+.wpsl-store-below #wpsl-result-list p {
+  padding-left: 0;
+}
+
+/* line 114, ../scss/libs/_store-locator.scss */
+#wpsl-result-list p a {
+  margin-bottom: 10px;
+}
+
+/* line 118, ../scss/libs/_store-locator.scss */
+#wpsl-result-list a {
+  outline: none;
+}
+
+/* line 122, ../scss/libs/_store-locator.scss */
+#wpsl-result-list li {
+  padding: 10px;
+  border-bottom: 1px dotted #ccc;
+  margin-left: 0;
+  overflow: hidden;
+  list-style: none outside none !important;
+}
+/* line 128, ../scss/libs/_store-locator.scss */
+#wpsl-result-list li:last-child {
+  border-bottom: 0;
+}
+
+/* line 132, ../scss/libs/_store-locator.scss */
+.wpsl-store-below #wpsl-result-list li {
+  padding: 10px 10px 10px 0;
+}
+
+/* line 136, ../scss/libs/_store-locator.scss */
+#wpsl-result-list li p {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+/* line 141, ../scss/libs/_store-locator.scss */
+.wpsl-store-details.wpsl-store-listing {
+  position: relative;
+  padding-right: 20px;
+}
+
+/* line 146, ../scss/libs/_store-locator.scss */
+.wpsl-store-details.wpsl-store-listing:before,
+.wpsl-store-details.wpsl-store-listing.wpsl-active-details:before {
+  position: absolute;
+  content: '';
+  bottom: 6px;
+  right: 0;
+  border-top: 5px solid #000000;
+  border-left: 6px solid rgba(0, 0, 0, 0);
+  border-right: 6px solid rgba(0, 0, 0, 0);
+}
+
+/* line 156, ../scss/libs/_store-locator.scss */
+.wpsl-store-details.wpsl-store-listing.wpsl-active-details:before {
+  border-bottom: 5px solid #000000;
+  border-top: none;
+  border-left: 6px solid rgba(0, 0, 0, 0);
+  border-right: 6px solid rgba(0, 0, 0, 0);
+}
+
+/* line 163, ../scss/libs/_store-locator.scss */
+#wpsl-stores .wpsl-store-thumb {
+  float: right;
+  border-radius: 3px;
+  margin: 7px 0 0 10px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+}
+
+/* line 172, ../scss/libs/_store-locator.scss */
+.wpsl-direction-index {
+  float: left;
+  width: 8%;
+  margin: 0 5% 0 0;
+}
+
+/* line 177, ../scss/libs/_store-locator.scss */
+.wpsl-direction-txt {
+  float: left;
+  width: 62%;
+}
+
+/* line 181, ../scss/libs/_store-locator.scss */
+.wpsl-direction-distance {
+  float: left;
+  width: 20%;
+  margin: 0 0 0 5%;
+}
+
+/* line 186, ../scss/libs/_store-locator.scss */
+.wpsl-direction-txt span {
+  display: block;
+  margin-top: 10px;
+}
+
+/* line 193, ../scss/libs/_store-locator.scss */
+.wpsl-street,
+.wpsl-country,
+.wpsl-directions {
+  display: block;
+  border-bottom: none !important;
+}
+
+/* Preloader */
+/* line 199, ../scss/libs/_store-locator.scss */
+#wpsl-result-list li.wpsl-preloader {
+  border-bottom: none;
+}
+
+/* line 202, ../scss/libs/_store-locator.scss */
+.wpsl-preloader img {
+  float: left;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* line 208, ../scss/libs/_store-locator.scss */
+.wpsl-preloader span {
+  float: left;
+  margin: -5px 0 0 11px;
+}
+
+/* line 213, ../scss/libs/_store-locator.scss */
+#wpsl-search-wrap .wpsl-input label {
+  margin-right: 0;
+}
+
+/* line 217, ../scss/libs/_store-locator.scss */
+#wpsl-search-btn {
+  float: right;
+  line-height: 4em;
+  vertical-align: middle;
+}
+
+/* line 223, ../scss/libs/_store-locator.scss */
+#wpsl-inbtn:hover {
+  cursor: pointer;
+}
+
+/* line 228, ../scss/libs/_store-locator.scss */
+#wpsl-search-wrap select,
+#wpsl-search select {
+  display: none;
+}
+
+/* line 233, ../scss/libs/_store-locator.scss */
+#wpsl-result-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 238, ../scss/libs/_store-locator.scss */
+.wpsl-direction-details {
+  display: none;
+}
+
+/* Infowindow */
+/* line 243, ../scss/libs/_store-locator.scss */
+#wpsl-gmap .wpsl-info-window {
+  max-width: 225px;
+}
+
+/* line 248, ../scss/libs/_store-locator.scss */
+.wpsl-more-info-listings span,
+.wpsl-info-window span {
+  display: block;
+}
+
+/* More info details in the store listings */
+/* line 253, ../scss/libs/_store-locator.scss */
+.wpsl-more-info-listings {
+  display: none;
+}
+
+/* Fix for Google Voice breaking the phone numbers */
+/* line 258, ../scss/libs/_store-locator.scss */
+.wpsl-info-window span span {
+  display: inline !important;
+}
+
+/* line 261, ../scss/libs/_store-locator.scss */
+.wpsl-info-window p {
+  margin-bottom: 10px;
+}
+
+/* line 264, ../scss/libs/_store-locator.scss */
+.wpsl-store-hours {
+  margin-top: 10px;
+}
+
+/* line 267, ../scss/libs/_store-locator.scss */
+.wpsl-store-hours strong {
+  display: block;
+}
+
+/* line 271, ../scss/libs/_store-locator.scss */
+.wpsl-info-actions {
+  display: block;
+  margin: 10px 0;
+}
+
+/* line 275, ../scss/libs/_store-locator.scss */
+.wpsl-info-actions a {
+  float: left;
+  margin-right: 7px;
+}
+
+/* line 280, ../scss/libs/_store-locator.scss */
+.wpsl-zoom-here {
+  margin-right: 0;
+}
+
+/* --- EASYDROPDOWN DEFAULT THEME --- */
+/* line 288, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown,
+.wpsl-dropdown div,
+.wpsl-dropdown li,
+.wpsl-dropdown div::after {
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+/* line 296, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown .selected::after,
+.wpsl-dropdown.scrollable div::after {
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  -ms-pointer-events: none;
+  pointer-events: none;
+}
+
+/* WRAPPER */
+/* line 304, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  background: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  margin-right: 0 !important;
+}
+
+/* line 316, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.open {
+  z-index: 2;
+}
+
+/* CARAT */
+/* line 321, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown .carat {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  margin-top: -4px;
+  border: 6px solid transparent;
+  border-top: 8px solid #000;
+}
+
+/* line 330, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.open .carat {
+  margin-top: -10px;
+  border-top: 6px solid transparent;
+  border-bottom: 8px solid #000;
+}
+
+/* line 336, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.disabled .carat {
+  border-top-color: #999;
+}
+
+/* OLD SELECT (HIDDEN) */
+/* line 341, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown .old {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* line 350, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown select {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 356, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.touch .old {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 361, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.touch select {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/* SELECTED FEEDBACK ITEM */
+/*select.wpsl-dropdown {display:none;}*/
+/* line 370, ../scss/libs/_store-locator.scss */
+#wpsl-search-wrap .wpsl-dropdown div {
+  margin-right: 0;
+}
+
+/* line 374, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown .selected,
+.wpsl-dropdown li {
+  display: block;
+  line-height: 1.5em;
+  color: #666;
+  padding: .54em;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* line 387, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.disabled .selected {
+  color: #999;
+}
+
+/* line 391, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown .selected::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  border-radius: 0 2px 2px 0;
+}
+
+/* DROP DOWN WRAPPER */
+/* line 402, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown div {
+  position: absolute;
+  height: 0;
+  left: -1px;
+  right: -1px;
+  top: 100%;
+  margin-top: -1px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: 1px solid #eee;
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* Height is adjusted by JS on open */
+/* line 419, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.open div {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* FADE OVERLAY FOR SCROLLING LISTS */
+/* line 426, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.scrollable div::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  box-shadow: inset 0 -50px 30px -35px #fff;
+}
+
+/* line 436, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.scrollable.bottom div::after {
+  opacity: 0;
+}
+
+/* DROP DOWN LIST */
+/* line 442, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 454, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown.scrollable.open ul {
+  overflow-y: auto;
+}
+
+/* DROP DOWN LIST ITEMS */
+/* line 459, ../scss/libs/_store-locator.scss */
+#wpsl-wrap .wpsl-dropdown li {
+  list-style: none;
+  padding: 8px 12px !important;
+  margin: 0 !important;
+}
+
+/* .focus class is also added on hover */
+/* line 466, ../scss/libs/_store-locator.scss */
+.wpsl-dropdown li.focus {
+  background: #f8f9f8;
+  position: relative;
+  z-index: 3;
+  color: #000;
+}
+
+/* line 473, ../scss/libs/_store-locator.scss */
+#wpsl-wrap .wpsl-dropdown li.active {
+  font-weight: 700;
+  background: none !important;
+}
+
+/* line 479, ../scss/libs/_store-locator.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 483, ../scss/libs/_store-locator.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 487, ../scss/libs/_store-locator.scss */
+#wpsl-results .wpsl-dropdown {
+  width: 70px;
+}
+
 /*----------------------------------------------------------------------------------------*\
  $.OVERRIDES
 \*----------------------------------------------------------------------------------------*/
