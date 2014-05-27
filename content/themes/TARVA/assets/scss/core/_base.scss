@@ -22,6 +22,7 @@ img[height] { height: auto !important; }
 iframe { display: block; }
 // Google maps image bug
 iframe[src*="maps.google"] img { max-width: auto; margin: auto; }
+.map { height: 25em;}
 
 /* -- Tables -- */
 table { width: 100%; }
