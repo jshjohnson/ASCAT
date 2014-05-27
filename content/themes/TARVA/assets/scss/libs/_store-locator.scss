@@ -63,9 +63,11 @@ div elements, we disable it to prevent it from messing up the map
     display:inline-block;
 }
 
-#wpsl-search-wrap label {
-    margin-bottom:0;
+.wpsl-input label {
+    margin-bottom: 0;
+    padding-bottom: .5em;
 }
+
 .wpsl-search {
     background: #ff520d;
     color: white;
@@ -212,6 +214,7 @@ div elements, we disable it to prevent it from messing up the map
 
 #wpsl-search-wrap .wpsl-input label {
     margin-right:0;
+    padding-bottom: .3em;
 }
 
 #wpsl-search-btn {

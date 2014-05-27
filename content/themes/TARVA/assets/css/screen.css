@@ -2702,11 +2702,12 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* line 66, ../scss/libs/_store-locator.scss */
-#wpsl-search-wrap label {
+.wpsl-input label {
   margin-bottom: 0;
+  padding-bottom: .5em;
 }
 
-/* line 69, ../scss/libs/_store-locator.scss */
+/* line 71, ../scss/libs/_store-locator.scss */
 .wpsl-search {
   background: #ff520d;
   color: white;
@@ -2715,70 +2716,70 @@ div elements, we disable it to prevent it from messing up the map
   padding: 1em;
 }
 
-/* line 77, ../scss/libs/_store-locator.scss */
+/* line 79, ../scss/libs/_store-locator.scss */
 #wpsl-search-wrap .wpsl-input input {
   border: 0;
   line-height: 1.5em;
 }
 @media screen and (max-width: 48em) {
-  /* line 77, ../scss/libs/_store-locator.scss */
+  /* line 79, ../scss/libs/_store-locator.scss */
   #wpsl-search-wrap .wpsl-input input {
     margin-bottom: 1.7em;
   }
 }
 
 /* Result list */
-/* line 86, ../scss/libs/_store-locator.scss */
+/* line 88, ../scss/libs/_store-locator.scss */
 .wpsl-back {
   display: block;
 }
 
-/* line 90, ../scss/libs/_store-locator.scss */
+/* line 92, ../scss/libs/_store-locator.scss */
 #wpsl-result-list {
   float: left;
   width: 33%;
   margin-right: 0.5%;
 }
 
-/* line 95, ../scss/libs/_store-locator.scss */
+/* line 97, ../scss/libs/_store-locator.scss */
 .wpsl-store-below #wpsl-result-list {
   float: none;
   width: 100%;
   margin: 12px 0 0 0;
 }
 
-/* line 102, ../scss/libs/_store-locator.scss */
+/* line 104, ../scss/libs/_store-locator.scss */
 #wpsl-stores,
 #wpsl-direction-details {
   overflow-y: auto;
 }
 
-/* line 105, ../scss/libs/_store-locator.scss */
+/* line 107, ../scss/libs/_store-locator.scss */
 #wpsl-direction-details {
   display: none;
 }
 
-/* line 107, ../scss/libs/_store-locator.scss */
+/* line 109, ../scss/libs/_store-locator.scss */
 #wpsl-result-list p {
   padding-left: 10px;
 }
 
-/* line 110, ../scss/libs/_store-locator.scss */
+/* line 112, ../scss/libs/_store-locator.scss */
 .wpsl-store-below #wpsl-result-list p {
   padding-left: 0;
 }
 
-/* line 114, ../scss/libs/_store-locator.scss */
+/* line 116, ../scss/libs/_store-locator.scss */
 #wpsl-result-list p a {
   margin-bottom: 10px;
 }
 
-/* line 118, ../scss/libs/_store-locator.scss */
+/* line 120, ../scss/libs/_store-locator.scss */
 #wpsl-result-list a {
   outline: none;
 }
 
-/* line 122, ../scss/libs/_store-locator.scss */
+/* line 124, ../scss/libs/_store-locator.scss */
 #wpsl-result-list li {
   padding: 10px;
   border-bottom: 1px dotted #ccc;
@@ -2786,29 +2787,29 @@ div elements, we disable it to prevent it from messing up the map
   overflow: hidden;
   list-style: none outside none !important;
 }
-/* line 128, ../scss/libs/_store-locator.scss */
+/* line 130, ../scss/libs/_store-locator.scss */
 #wpsl-result-list li:last-child {
   border-bottom: 0;
 }
 
-/* line 132, ../scss/libs/_store-locator.scss */
+/* line 134, ../scss/libs/_store-locator.scss */
 .wpsl-store-below #wpsl-result-list li {
   padding: 10px 10px 10px 0;
 }
 
-/* line 136, ../scss/libs/_store-locator.scss */
+/* line 138, ../scss/libs/_store-locator.scss */
 #wpsl-result-list li p {
   padding-left: 0;
   margin-bottom: 20px;
 }
 
-/* line 141, ../scss/libs/_store-locator.scss */
+/* line 143, ../scss/libs/_store-locator.scss */
 .wpsl-store-details.wpsl-store-listing {
   position: relative;
   padding-right: 20px;
 }
 
-/* line 146, ../scss/libs/_store-locator.scss */
+/* line 148, ../scss/libs/_store-locator.scss */
 .wpsl-store-details.wpsl-store-listing:before,
 .wpsl-store-details.wpsl-store-listing.wpsl-active-details:before {
   position: absolute;
@@ -2820,7 +2821,7 @@ div elements, we disable it to prevent it from messing up the map
   border-right: 6px solid rgba(0, 0, 0, 0);
 }
 
-/* line 156, ../scss/libs/_store-locator.scss */
+/* line 158, ../scss/libs/_store-locator.scss */
 .wpsl-store-details.wpsl-store-listing.wpsl-active-details:before {
   border-bottom: 5px solid #000000;
   border-top: none;
@@ -2828,7 +2829,7 @@ div elements, we disable it to prevent it from messing up the map
   border-right: 6px solid rgba(0, 0, 0, 0);
 }
 
-/* line 163, ../scss/libs/_store-locator.scss */
+/* line 165, ../scss/libs/_store-locator.scss */
 #wpsl-stores .wpsl-store-thumb {
   float: right;
   border-radius: 3px;
@@ -2839,33 +2840,33 @@ div elements, we disable it to prevent it from messing up the map
   border: none;
 }
 
-/* line 172, ../scss/libs/_store-locator.scss */
+/* line 174, ../scss/libs/_store-locator.scss */
 .wpsl-direction-index {
   float: left;
   width: 8%;
   margin: 0 5% 0 0;
 }
 
-/* line 177, ../scss/libs/_store-locator.scss */
+/* line 179, ../scss/libs/_store-locator.scss */
 .wpsl-direction-txt {
   float: left;
   width: 62%;
 }
 
-/* line 181, ../scss/libs/_store-locator.scss */
+/* line 183, ../scss/libs/_store-locator.scss */
 .wpsl-direction-distance {
   float: left;
   width: 20%;
   margin: 0 0 0 5%;
 }
 
-/* line 186, ../scss/libs/_store-locator.scss */
+/* line 188, ../scss/libs/_store-locator.scss */
 .wpsl-direction-txt span {
   display: block;
   margin-top: 10px;
 }
 
-/* line 193, ../scss/libs/_store-locator.scss */
+/* line 195, ../scss/libs/_store-locator.scss */
 .wpsl-street,
 .wpsl-country,
 .wpsl-directions {
@@ -2874,117 +2875,118 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* Preloader */
-/* line 199, ../scss/libs/_store-locator.scss */
+/* line 201, ../scss/libs/_store-locator.scss */
 #wpsl-result-list li.wpsl-preloader {
   border-bottom: none;
 }
 
-/* line 202, ../scss/libs/_store-locator.scss */
+/* line 204, ../scss/libs/_store-locator.scss */
 .wpsl-preloader img {
   float: left;
   box-shadow: none !important;
   border: none !important;
 }
 
-/* line 208, ../scss/libs/_store-locator.scss */
+/* line 210, ../scss/libs/_store-locator.scss */
 .wpsl-preloader span {
   float: left;
   margin: -5px 0 0 11px;
 }
 
-/* line 213, ../scss/libs/_store-locator.scss */
+/* line 215, ../scss/libs/_store-locator.scss */
 #wpsl-search-wrap .wpsl-input label {
   margin-right: 0;
+  padding-bottom: .3em;
 }
 
-/* line 217, ../scss/libs/_store-locator.scss */
+/* line 220, ../scss/libs/_store-locator.scss */
 #wpsl-search-btn {
   float: right;
   line-height: 4em;
   vertical-align: middle;
 }
 
-/* line 223, ../scss/libs/_store-locator.scss */
+/* line 226, ../scss/libs/_store-locator.scss */
 #wpsl-inbtn:hover {
   cursor: pointer;
 }
 
-/* line 228, ../scss/libs/_store-locator.scss */
+/* line 231, ../scss/libs/_store-locator.scss */
 #wpsl-search-wrap select,
 #wpsl-search select {
   display: none;
 }
 
-/* line 233, ../scss/libs/_store-locator.scss */
+/* line 236, ../scss/libs/_store-locator.scss */
 #wpsl-result-list ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 238, ../scss/libs/_store-locator.scss */
+/* line 241, ../scss/libs/_store-locator.scss */
 .wpsl-direction-details {
   display: none;
 }
 
 /* Infowindow */
-/* line 243, ../scss/libs/_store-locator.scss */
+/* line 246, ../scss/libs/_store-locator.scss */
 #wpsl-gmap .wpsl-info-window {
   max-width: 225px;
 }
 
-/* line 248, ../scss/libs/_store-locator.scss */
+/* line 251, ../scss/libs/_store-locator.scss */
 .wpsl-more-info-listings span,
 .wpsl-info-window span {
   display: block;
 }
 
 /* More info details in the store listings */
-/* line 253, ../scss/libs/_store-locator.scss */
+/* line 256, ../scss/libs/_store-locator.scss */
 .wpsl-more-info-listings {
   display: none;
 }
 
 /* Fix for Google Voice breaking the phone numbers */
-/* line 258, ../scss/libs/_store-locator.scss */
+/* line 261, ../scss/libs/_store-locator.scss */
 .wpsl-info-window span span {
   display: inline !important;
 }
 
-/* line 261, ../scss/libs/_store-locator.scss */
+/* line 264, ../scss/libs/_store-locator.scss */
 .wpsl-info-window p {
   margin-bottom: 10px;
 }
 
-/* line 264, ../scss/libs/_store-locator.scss */
+/* line 267, ../scss/libs/_store-locator.scss */
 .wpsl-store-hours {
   margin-top: 10px;
 }
 
-/* line 267, ../scss/libs/_store-locator.scss */
+/* line 270, ../scss/libs/_store-locator.scss */
 .wpsl-store-hours strong {
   display: block;
 }
 
-/* line 271, ../scss/libs/_store-locator.scss */
+/* line 274, ../scss/libs/_store-locator.scss */
 .wpsl-info-actions {
   display: block;
   margin: 10px 0;
 }
 
-/* line 275, ../scss/libs/_store-locator.scss */
+/* line 278, ../scss/libs/_store-locator.scss */
 .wpsl-info-actions a {
   float: left;
   margin-right: 7px;
 }
 
-/* line 280, ../scss/libs/_store-locator.scss */
+/* line 283, ../scss/libs/_store-locator.scss */
 .wpsl-zoom-here {
   margin-right: 0;
 }
 
 /* --- EASYDROPDOWN DEFAULT THEME --- */
-/* line 288, ../scss/libs/_store-locator.scss */
+/* line 291, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown,
 .wpsl-dropdown div,
 .wpsl-dropdown li,
@@ -2995,7 +2997,7 @@ div elements, we disable it to prevent it from messing up the map
   transition: all 150ms ease-in-out;
 }
 
-/* line 296, ../scss/libs/_store-locator.scss */
+/* line 299, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .selected::after,
 .wpsl-dropdown.scrollable div::after {
   -webkit-pointer-events: none;
@@ -3005,7 +3007,7 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* WRAPPER */
-/* line 304, ../scss/libs/_store-locator.scss */
+/* line 307, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown {
   position: relative;
   width: 100%;
@@ -3017,13 +3019,13 @@ div elements, we disable it to prevent it from messing up the map
   margin-right: 0 !important;
 }
 
-/* line 316, ../scss/libs/_store-locator.scss */
+/* line 319, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.open {
   z-index: 2;
 }
 
 /* CARAT */
-/* line 321, ../scss/libs/_store-locator.scss */
+/* line 324, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .carat {
   position: absolute;
   right: 12px;
@@ -3033,20 +3035,20 @@ div elements, we disable it to prevent it from messing up the map
   border-top: 8px solid #000;
 }
 
-/* line 330, ../scss/libs/_store-locator.scss */
+/* line 333, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.open .carat {
   margin-top: -10px;
   border-top: 6px solid transparent;
   border-bottom: 8px solid #000;
 }
 
-/* line 336, ../scss/libs/_store-locator.scss */
+/* line 339, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.disabled .carat {
   border-top-color: #999;
 }
 
 /* OLD SELECT (HIDDEN) */
-/* line 341, ../scss/libs/_store-locator.scss */
+/* line 344, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .old {
   position: absolute;
   left: 0;
@@ -3056,20 +3058,20 @@ div elements, we disable it to prevent it from messing up the map
   overflow: hidden;
 }
 
-/* line 350, ../scss/libs/_store-locator.scss */
+/* line 353, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown select {
   position: absolute;
   left: 0px;
   top: 0px;
 }
 
-/* line 356, ../scss/libs/_store-locator.scss */
+/* line 359, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.touch .old {
   width: 100%;
   height: 100%;
 }
 
-/* line 361, ../scss/libs/_store-locator.scss */
+/* line 364, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.touch select {
   width: 100%;
   height: 100%;
@@ -3078,12 +3080,12 @@ div elements, we disable it to prevent it from messing up the map
 
 /* SELECTED FEEDBACK ITEM */
 /*select.wpsl-dropdown {display:none;}*/
-/* line 370, ../scss/libs/_store-locator.scss */
+/* line 373, ../scss/libs/_store-locator.scss */
 #wpsl-search-wrap .wpsl-dropdown div {
   margin-right: 0;
 }
 
-/* line 374, ../scss/libs/_store-locator.scss */
+/* line 377, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .selected,
 .wpsl-dropdown li {
   display: block;
@@ -3098,12 +3100,12 @@ div elements, we disable it to prevent it from messing up the map
   -moz-box-sizing: border-box;
 }
 
-/* line 387, ../scss/libs/_store-locator.scss */
+/* line 390, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.disabled .selected {
   color: #999;
 }
 
-/* line 391, ../scss/libs/_store-locator.scss */
+/* line 394, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .selected::after {
   content: '';
   position: absolute;
@@ -3115,7 +3117,7 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* DROP DOWN WRAPPER */
-/* line 402, ../scss/libs/_store-locator.scss */
+/* line 405, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown div {
   position: absolute;
   height: 0;
@@ -3132,14 +3134,14 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* Height is adjusted by JS on open */
-/* line 419, ../scss/libs/_store-locator.scss */
+/* line 422, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.open div {
   opacity: 1;
   z-index: 2;
 }
 
 /* FADE OVERLAY FOR SCROLLING LISTS */
-/* line 426, ../scss/libs/_store-locator.scss */
+/* line 429, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.scrollable div::after {
   content: '';
   position: absolute;
@@ -3150,13 +3152,13 @@ div elements, we disable it to prevent it from messing up the map
   box-shadow: inset 0 -50px 30px -35px #fff;
 }
 
-/* line 436, ../scss/libs/_store-locator.scss */
+/* line 439, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.scrollable.bottom div::after {
   opacity: 0;
 }
 
 /* DROP DOWN LIST */
-/* line 442, ../scss/libs/_store-locator.scss */
+/* line 445, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown ul {
   position: absolute;
   left: 0;
@@ -3169,13 +3171,13 @@ div elements, we disable it to prevent it from messing up the map
   margin: 0;
 }
 
-/* line 454, ../scss/libs/_store-locator.scss */
+/* line 457, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.scrollable.open ul {
   overflow-y: auto;
 }
 
 /* DROP DOWN LIST ITEMS */
-/* line 459, ../scss/libs/_store-locator.scss */
+/* line 462, ../scss/libs/_store-locator.scss */
 #wpsl-wrap .wpsl-dropdown li {
   list-style: none;
   padding: 8px 12px !important;
@@ -3183,7 +3185,7 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* .focus class is also added on hover */
-/* line 466, ../scss/libs/_store-locator.scss */
+/* line 469, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown li.focus {
   background: #f8f9f8;
   position: relative;
@@ -3191,25 +3193,25 @@ div elements, we disable it to prevent it from messing up the map
   color: #000;
 }
 
-/* line 473, ../scss/libs/_store-locator.scss */
+/* line 476, ../scss/libs/_store-locator.scss */
 #wpsl-wrap .wpsl-dropdown li.active {
   font-weight: 700;
   background: none !important;
 }
 
-/* line 479, ../scss/libs/_store-locator.scss */
+/* line 482, ../scss/libs/_store-locator.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 483, ../scss/libs/_store-locator.scss */
+/* line 486, ../scss/libs/_store-locator.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 487, ../scss/libs/_store-locator.scss */
+/* line 490, ../scss/libs/_store-locator.scss */
 #wpsl-results .wpsl-dropdown {
   width: 70px;
 }
@@ -3316,46 +3318,40 @@ div elements, we disable it to prevent it from messing up the map
   clear: both;
 }
 
-@media screen and (max-width: 30em) {
-  /* line 41, ../scss/core/_overrides.scss */
-  #map-canvas {
-    display: none;
-  }
-}
-/* line 45, ../scss/core/_overrides.scss */
+/* line 42, ../scss/core/_overrides.scss */
 #map-canvas img {
   max-width: none;
 }
 
-/* line 50, ../scss/core/_overrides.scss */
+/* line 47, ../scss/core/_overrides.scss */
 .gm-style {
   font-family: "proxima-nova", "Proxima Nova", sans-serif;
 }
 
 /* Specific text styles
 ----------------------------------*/
-/* line 56, ../scss/core/_overrides.scss */
+/* line 53, ../scss/core/_overrides.scss */
 .capitalise {
   text-transform: capitalize;
 }
 
-/* line 57, ../scss/core/_overrides.scss */
+/* line 54, ../scss/core/_overrides.scss */
 .headline {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: .45em;
 }
 
-/* line 58, ../scss/core/_overrides.scss */
+/* line 55, ../scss/core/_overrides.scss */
 .highlight {
   font-size: 1.5em;
   color: #ff520d;
 }
 
-/* line 60, ../scss/core/_overrides.scss */
+/* line 57, ../scss/core/_overrides.scss */
 .underline, .blog-header, .content__body h2 {
   margin-bottom: 1em;
 }
-/* line 62, ../scss/core/_overrides.scss */
+/* line 59, ../scss/core/_overrides.scss */
 .underline:after, .blog-header:after, .content__body h2:after {
   content: "";
   width: 110%;
@@ -3367,7 +3363,7 @@ div elements, we disable it to prevent it from messing up the map
   position: absolute;
 }
 @media screen and (max-width: 48em) {
-  /* line 62, ../scss/core/_overrides.scss */
+  /* line 59, ../scss/core/_overrides.scss */
   .underline:after, .blog-header:after, .content__body h2:after {
     position: relative;
   }
@@ -3375,13 +3371,13 @@ div elements, we disable it to prevent it from messing up the map
 
 /* Style trumps (error states etc.)
 ----------------------------------*/
-/* line 81, ../scss/core/_overrides.scss */
+/* line 78, ../scss/core/_overrides.scss */
 .is-hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 82, ../scss/core/_overrides.scss */
+/* line 79, ../scss/core/_overrides.scss */
 .is-vhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -3393,7 +3389,7 @@ div elements, we disable it to prevent it from messing up the map
   width: 1px;
 }
 
-/* line 93, ../scss/core/_overrides.scss */
+/* line 90, ../scss/core/_overrides.scss */
 .info:before, .hospital:before {
   font-family: "tarva";
   color: #e1e1e1;
@@ -3403,7 +3399,7 @@ div elements, we disable it to prevent it from messing up the map
   position: relative;
 }
 
-/* line 104, ../scss/core/_overrides.scss */
+/* line 101, ../scss/core/_overrides.scss */
 .info:before {
   content: '\e800';
   font-size: 1.6em;
@@ -3412,7 +3408,7 @@ div elements, we disable it to prevent it from messing up the map
   margin-top: -.5em;
 }
 @media screen and (max-width: 30em) {
-  /* line 104, ../scss/core/_overrides.scss */
+  /* line 101, ../scss/core/_overrides.scss */
   .info:before {
     position: absolute;
     right: 0;
@@ -3420,7 +3416,7 @@ div elements, we disable it to prevent it from messing up the map
   }
 }
 
-/* line 119, ../scss/core/_overrides.scss */
+/* line 116, ../scss/core/_overrides.scss */
 .hospital:before {
   content: '\e801';
   font-size: 1.8em;
@@ -3428,19 +3424,19 @@ div elements, we disable it to prevent it from messing up the map
   margin-top: -.4em;
 }
 
-/* line 127, ../scss/core/_overrides.scss */
+/* line 124, ../scss/core/_overrides.scss */
 .warning {
   color: #900;
 }
 
-/* line 129, ../scss/core/_overrides.scss */
+/* line 126, ../scss/core/_overrides.scss */
 .alert {
   color: #009;
 }
 
 /* Debuggin'
 ----------------------------------*/
-/* line 153, ../scss/core/_overrides.scss */
+/* line 150, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -3456,7 +3452,7 @@ body.debug:before {
   content: "Breakpoint 0";
 }
 @media screen and (min-width: 30em) {
-  /* line 156, ../scss/core/_overrides.scss */
+  /* line 153, ../scss/core/_overrides.scss */
   body.debug:before {
     display: inline-block;
     color: #FFF;
@@ -3473,7 +3469,7 @@ body.debug:before {
   }
 }
 @media screen and (min-width: 48em) {
-  /* line 159, ../scss/core/_overrides.scss */
+  /* line 156, ../scss/core/_overrides.scss */
   body.debug:before {
     display: inline-block;
     color: #FFF;
@@ -3490,7 +3486,7 @@ body.debug:before {
   }
 }
 @media screen and (min-width: 62em) {
-  /* line 162, ../scss/core/_overrides.scss */
+  /* line 159, ../scss/core/_overrides.scss */
   body.debug:before {
     display: inline-block;
     color: #FFF;
@@ -3507,7 +3503,7 @@ body.debug:before {
   }
 }
 @media screen and (min-width: 78em) {
-  /* line 165, ../scss/core/_overrides.scss */
+  /* line 162, ../scss/core/_overrides.scss */
   body.debug:before {
     display: inline-block;
     color: #FFF;

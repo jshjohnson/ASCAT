@@ -39,9 +39,6 @@
 }	
 
 #map-canvas {
-	@include respond-max($bp1) {
-		display: none;
-	}
 	img {
 		max-width: none;
 	}
