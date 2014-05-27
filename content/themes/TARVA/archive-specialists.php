@@ -5,12 +5,6 @@ Template Name: Search Specialists
 ?>
 <?php get_header(); ?>
 		<div class="content__container container">
-			<form class="search cf" method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
-				<label for="s"><?php _e('Find a specialist'); ?></label>
-				<input type="hidden" name="post_type" value="investigator" />
-				<input type="search" value="<?php echo trim( get_search_query() ); ?>" name="s" id="s" placeholder="Search the site" required>
-				<input class="submit" name="submit" type="submit" value='Search'>	
-			</form>
 			<?php
 			    $args = array(
 			        'post_type' => 'investigator',
@@ -100,9 +94,10 @@ Template Name: Search Specialists
 				);
 				
 				$query = new WP_Query($args);
-
-				if ( $query->have_posts() ): ?>
-				<h3>Investigator archive</h3>
+			?>
+				<h1><?php echo $firstLetter; ?></h1>
+				<hr>
+				<?php if ( $query->have_posts() ): ?>
 				<div class="grid">
 					<?php 
 						while ( $query->have_posts() ) : $query->the_post();	
