@@ -864,7 +864,7 @@ function createInfoWindowHtml( infoWindowData, storeId, streetViewAvailable ) {
     }
 
     if ( ( typeof( infoWindowData.email ) !== "undefined" ) && ( infoWindowData.email !== "" ) ) {
-		windowContent += "<span><strong>Email</strong>: " + infoWindowData.email + "</span>";
+		windowContent += "<span><strong>Email</strong>: <a href='mailto:" + infoWindowData.email + "'>" + infoWindowData.email + "</a></span>";
     }
 	
 	if ( ( typeof( infoWindowData.hours ) !== "undefined" ) && ( infoWindowData.hours !== "" ) ) {
@@ -945,7 +945,7 @@ function createMoreInfoListing( storeData ) {
     }
 
     if ( ( typeof( storeData.email ) !== "undefined" ) && ( storeData.email !== "" ) ) {
-		moreInfoContent += "<span><strong>Email</strong>: " + storeData.email + "</span>";
+		moreInfoContent += "<span><strong>Email</strong>: <a href='mailto:" + infoWindowData.email + "'>" + infoWindowData.email + "</a></span>";
     }
 	
 	if ( ( typeof( storeData.url ) !== "undefined" ) && ( storeData.url !== "" ) ) {
