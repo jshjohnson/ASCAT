@@ -24,6 +24,13 @@ Template Name: Search Specialists
 									'value' => true,
 								),
 							),
+					'tax_query' => array(
+							array(
+								'taxonomy' => 'letters',
+								'field' => 'name',
+								'terms' => $firstLetter,
+							)
+					),
 			    );
 
 			    $query = new WP_Query($args);
@@ -86,7 +93,8 @@ Template Name: Search Specialists
 					'tax_query' => array(
 							array(
 								'taxonomy' => 'letters',
-								'field' => $firstLetter,
+								'field' => 'name',
+								'terms' => $firstLetter,
 							)
 					),
 				);
@@ -122,20 +130,5 @@ Template Name: Search Specialists
 					<?php endwhile; ?>
 				</div>
 				<?php endif; ?>
-
-				<footer class="pagination">
-				<?php
-					$big = 999999999; // need an unlikely integer
-
-					echo paginate_links( array(
-						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-						'format' => '?paged=%#%',
-						'current' => max( 1, get_query_var('paged') ),
-						'prev_text'    => __(''),
-						'next_text'    => __(''),
-						'total' => $the_query->max_num_pages
-					) );
-				?>
-				</footer>
 		</div>
 <?php get_footer(); ?>
