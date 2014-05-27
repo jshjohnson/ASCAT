@@ -4,7 +4,7 @@ Plugin Name: Custom Search
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.20
+Version: 1.21
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -29,7 +29,8 @@ License: GPLv2 or later
 if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 	function add_cstmsrch_admin_menu() {
 		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_version = '1.2.4';
+		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
+		$bws_menu_version = $bws_menu_info["Version"];
 		$base = plugin_basename( __FILE__ );
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
@@ -202,6 +203,10 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 	<div class="wrap">
 		<div class="icon32 icon32-bws" id="icon-options-general"></div>
 		<h2><?php _e( 'Custom Search Settings', 'custom-search' ); ?></h2>
+		<h2 class="nav-tab-wrapper">
+			<a class="nav-tab nav-tab-active" href="admin.php?page=custom_search.php"><?php _e( 'Settings', 'custom-search' ); ?></a>
+			<a class="nav-tab" href="http://bestwebsoft.com/plugin/custom-search-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'custom-search' ); ?></a>
+		</h2>
 		<div class="updated fade" <?php if ( ! isset( $_REQUEST['cstmsrch_submit'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 		<div id="cstmsrch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'custom-search' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'custom-search' ); ?></p></div>
 		<?php if ( 0 < count( $cstmsrch_result ) ) { ?>
@@ -223,9 +228,9 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 				</p>
 				<?php wp_nonce_field( plugin_basename( __FILE__ ), 'cstmsrch_nonce_name' ); ?>
 			</form>
-		<?php } else {
-			_e( 'No custom post type found.', 'custom-search' );
-		} ?>
+		<?php } else { ?>
+			<p><?php _e( 'No custom post type found.', 'custom-search' ); ?></p>
+		<?php } ?>
 		<div class="bws-plugin-reviews">
 			<div class="bws-plugin-reviews-rate">
 			<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-search' ); ?>: 
@@ -283,6 +288,8 @@ if ( ! function_exists( 'delete_cstmsrch_settings' ) ) {
 		delete_site_option( 'cstmsrch_options' );
 	}
 }
+
+register_activation_hook( __FILE__, 'register_cstmsrch_settings');
 
 add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
 add_action( 'init', 'cstmsrch_init' );

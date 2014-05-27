@@ -53,6 +53,7 @@ Template Name: Search Specialists
 
 			    // echo '<div id="glossary">' . $ul . '<ul class="definitions">' . $dl . '</ul></div>';
 			    echo '<div id="glossary">' . $ul . '</div>';
+			    wp_reset_query();
 			?>
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -64,27 +65,39 @@ Template Name: Search Specialists
 			<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+				if(isset($_GET['letter'])) {
+					$firstLetter = $_GET['letter'];			
+				}else{
+					$firstLetter = "A";
+				}
+
 				$args = array(
-				'post_type' => 'investigator',
-				'orderby' => 'title',
-				'order' => 'ASC',
-				'paged' => $paged,
-				'posts_per_page' => 6, //Limits the amount of posts on each page
-				'meta_query' => array(
-							array(
-								'key' => 'specialist',
-								'value' => true,
+					'post_type' => 'investigator',
+					'orderby' => 'title',
+					'order' => 'ASC',
+					'paged' => $paged,
+					'posts_per_page' => -1, //Limits the amount of posts on each page
+					'meta_query' => array(
+								array(
+									'key' => 'specialist',
+									'value' => true,
+								),
 							),
-						),
+					'tax_query' => array(
+							array(
+								'taxonomy' => 'letters',
+								'field' => $firstLetter,
+							)
+					),
 				);
 				
-				$the_query = new WP_Query( $args );
+				$query = new WP_Query($args);
 
-				if ( $the_query->have_posts() ): ?>
+				if ( $query->have_posts() ): ?>
 				<h3>Investigator archive</h3>
 				<div class="grid">
 					<?php 
-						while ( $the_query->have_posts() ) : $the_query->the_post();	
+						while ( $query->have_posts() ) : $query->the_post();	
 
 							$image = get_field('avatar');
 							$url = $image['sizes']['medium'];
@@ -108,6 +121,8 @@ Template Name: Search Specialists
 						</article>
 					<?php endwhile; ?>
 				</div>
+				<?php endif; ?>
+
 				<footer class="pagination">
 				<?php
 					$big = 999999999; // need an unlikely integer
@@ -121,7 +136,6 @@ Template Name: Search Specialists
 						'total' => $the_query->max_num_pages
 					) );
 				?>
-				<?php endif; ?>
 				</footer>
 		</div>
 <?php get_footer(); ?>

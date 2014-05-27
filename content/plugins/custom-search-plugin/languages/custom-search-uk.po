@@ -1,28 +1,28 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: custom-search\n"
+"Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-12-25 18:33+0300\n"
-"PO-Revision-Date: 2013-12-25 18:33+0300\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2014-05-23 15:53+0300\n"
+"Last-Translator: BestWebSoft <support@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
-"Language: ru_RU\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: custom-search-plugin.php:34 custom-search-plugin.php:150
 msgid "Custom Search Settings"
-msgstr "Установки Кастомного Пошуку"
+msgstr "Установки Custom Search"
 
 #: custom-search-plugin.php:34
 msgid "Custom search"
-msgstr "Кастомний пошук"
+msgstr "Custom Search"
 
 #: custom-search-plugin.php:85
 msgid "requires"
@@ -50,13 +50,15 @@ msgstr "Установки збережено"
 
 #: custom-search-plugin.php:152
 msgid "Notice:"
-msgstr ""
+msgstr "Попередження:"
 
 #: custom-search-plugin.php:152
 msgid ""
 "The plugin's settings have been changed. In order to save them please don't "
 "forget to click the 'Save Changes' button."
 msgstr ""
+"Налаштування плагіну було змінено. Щоб зберегти їх, не забудьте натиснути "
+"кнопку \"Зберегти зміни\""
 
 #: custom-search-plugin.php:157
 msgid "Enable Custom search for:"
@@ -73,16 +75,16 @@ msgstr "Не знайдено жодного типу кастомного по�
 #: custom-search-plugin.php:178
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
 msgstr ""
+"Якщо вам сподобався наш плагін, будь ласка, оцініть його у п’ять зірочок на "
+"WordPress"
 
 #: custom-search-plugin.php:179
-#, fuzzy
 msgid "Rate the plugin"
-msgstr "Бесплатные плагины"
+msgstr "Оцінити плагін"
 
 #: custom-search-plugin.php:182
-#, fuzzy
 msgid "If there is something wrong about it, please contact us"
-msgstr "Если у вас есть какие-то вопросы, обращайтесь на"
+msgstr "Якщо у вас виникли певні проблеми, будь ласка, зв’яжіться з нами"
 
 #: custom-search-plugin.php:199 custom-search-plugin.php:211
 msgid "Settings"

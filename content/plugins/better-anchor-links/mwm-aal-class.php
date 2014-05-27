@@ -79,7 +79,7 @@ if (!class_exists('mwm_aal')) {
 		function add_anchors_to_content($content){
 			if(count($this->links) >= 1){
 				foreach ($this->links as $val) {
-					$rtext='<a name="'.urlencode($this->toAscii(strip_tags($val[2]))).'"></a>';
+					$rtext='<a class="mwm-aal-item" name="'.urlencode($this->toAscii(strip_tags($val[2]))).'"></a>';
 					$pos = strpos($content, $val[0]);
 					$content = substr_replace($content, $rtext, $pos, 0);
 				}
@@ -119,7 +119,7 @@ if (!class_exists('mwm_aal')) {
 			if(count($this->links) >= 1){
 				$title = __($this->options['displayTitle'],'mwmall');
 				$info = '<div class="mwm-aal-container">';
-				$info.= "<a name='Content-bal-title'></a><div class='mwm-aal-title'>$title</div><$seznam>";
+				$info.= "<a class='mwm-aal-item' name='Content-bal-title'></a><div class='mwm-aal-title'>$title</div><$seznam>";
 				foreach ($this->links as $val) {
 					if ($this->options['is_indent']) {
 						if(empty($minule)) {

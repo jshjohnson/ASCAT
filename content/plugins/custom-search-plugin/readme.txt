@@ -1,10 +1,10 @@
 === Custom Search ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
-Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
+Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Tags: add custom posts to search, better search, custom, custom content types, custom post, custom post types, custom post types search, castom search, castom serch, castom serach, custom search, cutom search, custom serach, custom surch, custom search plugin, custom type, extra search options, improved search, post type, search, search by custom posts, type
 Requires at least: 3.0
-Tested up to: 3.8.2
-Stable tag: 1.20
+Tested up to: 3.9.1
+Stable tag: 1.21
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,8 @@ This plugin allows searching by custom post types on your website.
 == Description ==
 
 This plugin allows you to extend search functionality of your website by adding a custom post type.
+
+http://www.youtube.com/watch?v=qF2-pFM_ESw
 
 <a href="http://wordpress.org/plugins/custom-search-plugin/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
@@ -69,6 +71,10 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.21 - 23.05.2014 =
+* Update : We updated all functionality for wordpress 3.9.1.
+* Update : The Ukrainian language is updated in the plugin.
 
 = V1.20 - 08.04.2014 =
 * Update : BWS plugins section is updated.
@@ -149,6 +155,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.21 =
+We updated all functionality for wordpress 3.9.1. The Ukrainian language is updated in the plugin.
 
 = V1.20 =
 BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Plugin optimization is done. Problem with including nav_menu types to the search results is fixed. Bug with displaying of custom types of deactiveted plugins is fixed. 

@@ -3,8 +3,8 @@ Contributors: Luděk Melichar
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=48CZMVXER28PE&lc=CZ&item_name=Plugin%20development&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: anchor, anchor links, content links, content, sidebar, links, widget, better anchor links, bal, lm-bal, anchor list, auto anchor list
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.6.2
+Tested up to: 3.9
+Stable tag: 1.7
 
 Creates anchor links to heading tags in the content and displays automatically at the top of the content, or allows for custom placement with tags.
 
@@ -72,6 +72,9 @@ Put qTranslate string to List Output Title for example for EN and CZ language:
 3. Auto indent
 
 == Changelog ==
+= 1.7 =
+* Added margin when navbar is used (height can be set in CSS)
+
 = 1.6.2 =
 * Fixed stylesheet
 
@@ -133,4 +136,4 @@ Put qTranslate string to List Output Title for example for EN and CZ language:
 * For upgrade from Auto Anchor List 1.0 uninstall old AAL and remove addon. Install Better Anchor Links 1.1. If you used manual tags to contents, they are compatible.
 
 == Known issues ==
-* Heading is hidden under bar if admin bar is ON
+

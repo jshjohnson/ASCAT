@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.1.6
+Version: 1.1.8
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -25,35 +25,105 @@ License: GPLv2 or later
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
-
 /* Function are using to add on admin-panel Wordpress page 'bws_plugins' and sub-page of this plugin */
 if ( ! function_exists( 'cstmfldssrch_add_to_admin_menu' ) ) {
 	function cstmfldssrch_add_to_admin_menu() {
+		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
+		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
+		$bws_menu_version = $bws_menu_info["Version"];
+		$base = plugin_basename( __FILE__ );
+
+		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
+			if ( 1 == $wpmu ) {
+				if ( ! get_site_option( 'bstwbsftwppdtplgns_options' ) )
+					add_site_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
+				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
+			} else {
+				if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
+					add_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
+				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
+			}
+		}
+
+		if ( isset( $bstwbsftwppdtplgns_options['bws_menu_version'] ) ) {
+			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
+			unset( $bstwbsftwppdtplgns_options['bws_menu_version'] );
+			update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
+			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+		} else if ( ! isset( $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] ) || $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] < $bws_menu_version ) {
+			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
+			update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
+			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+		} else if ( ! isset( $bstwbsftwppdtplgns_added_menu ) ) {
+			$plugin_with_newer_menu = $base;
+			foreach ( $bstwbsftwppdtplgns_options['bws_menu']['version'] as $key => $value ) {
+				if ( $bws_menu_version < $value && is_plugin_active( $base ) ) {
+					$plugin_with_newer_menu = $key;
+				}
+			}
+			$plugin_with_newer_menu = explode( '/', $plugin_with_newer_menu );
+			$wp_content_dir = defined( 'WP_CONTENT_DIR' ) ? basename( WP_CONTENT_DIR ) : 'wp-content';
+			if ( file_exists( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' ) )
+				require_once( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' );
+			else
+				require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+			$bstwbsftwppdtplgns_added_menu = true;
+		}
+
 		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 );
-		add_submenu_page( 'bws_plugins', __( 'Custom fields search settings', 'custom-fields-search' ), __( 'Custom fields search', 'custom-fields-search' ), 'manage_options', "custom_fields_search.php", 'cstmfldssrch_page_of_settings' );
+		add_submenu_page( 'bws_plugins', __( 'Custom fields search settings', 'custom-fields-search' ), __( 'Custom fields search', 'custom-fields-search' ), 'manage_options', "custom-fields-search.php", 'cstmfldssrch_page_of_settings' );
+	}
+}
+
+if ( ! function_exists( 'cstmfldssrch_admin_init' ) ) {
+	function cstmfldssrch_init() {
+		/* Adding translations in this plugin */
+		load_plugin_textdomain( 'custom-fields-search', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		
+		/* Call register settings function */
+		if ( ! is_admin() || ( isset( $_GET['page'] ) && "custom-fields-search.php" == $_GET['page'] ) )
+			cstmfldssrch_register_options();
+	}
+}
+
+if ( ! function_exists( 'cstmfldssrch_admin_init' ) ) {
+	function cstmfldssrch_admin_init() {
+		global $bws_plugin_info, $cstmfldssrch_plugin_info;
+
+		if ( ! $cstmfldssrch_plugin_info )
+			$cstmfldssrch_plugin_info = get_plugin_data( __FILE__ );
+
+		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )
+			$bws_plugin_info = array( 'id' => '85', 'version' => $cstmfldssrch_plugin_info["Version"] );
+
+		/* Function check if plugin is compatible with current WP version  */
+		cstmfldssrch_version_check();
 	}
 }
 
 /* Function create column in table wp_options for option of this plugin. If this column exists - save value in variable. */
 if ( ! function_exists( 'cstmfldssrch_register_options' ) ) {
 	function cstmfldssrch_register_options() {
-		global $wpmu, $cstmfldssrch_array_options, $bws_plugin_info;
+		global $wpmu, $cstmfldssrch_array_options, $cstmfldssrch_plugin_info;
 
-		if ( function_exists( 'get_plugin_data' ) && ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) ) ) {
-			$plugin_info = get_plugin_data( __FILE__ );	
-			$bws_plugin_info = array( 'id' => '85', 'version' => $plugin_info["Version"] );
-		};
+		if ( ! $cstmfldssrch_plugin_info ) {
+			if ( ! function_exists( 'get_plugin_data' ) )
+				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			$cstmfldssrch_plugin_info = get_plugin_data( __FILE__ );	
+		}
 
-		$search_cusfields_defaults = array();
+		$search_cusfields_defaults = array(
+			'plugin_option_version'	=>	$cstmfldssrch_plugin_info["Version"]
+		);
+
 		if ( 1 == $wpmu ) {
-			if( ! get_site_option( 'cstmfldssrch_options' ) ) {
+			if ( ! get_site_option( 'cstmfldssrch_options' ) )
 				add_site_option( 'cstmfldssrch_options', $search_cusfields_defaults );
-			}
 		} else {
-			if( ! get_option( 'cstmfldssrch_options' ) )
+			if ( ! get_option( 'cstmfldssrch_options' ) )
 				add_option( 'cstmfldssrch_options', $search_cusfields_defaults );
 		}
+
 		if ( 1 == $wpmu )
 			$cstmfldssrch_array_options = get_site_option( 'cstmfldssrch_options' );
 		else
@@ -61,37 +131,28 @@ if ( ! function_exists( 'cstmfldssrch_register_options' ) ) {
 	}
 }
 
-/* Function adds translations in this plugin */
-if ( ! function_exists ( 'cstmfldssrch_translate' ) ) {
-	function cstmfldssrch_translate(){
-		load_plugin_textdomain( 'custom-fields-search', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-	}
-}
-
 /* Function check if plugin is compatible with current WP version  */
 if ( ! function_exists ( 'cstmfldssrch_version_check' ) ) {
 	function cstmfldssrch_version_check() {
-		global $wp_version;
-		$plugin_data	=	get_plugin_data( __FILE__, false );
+		global $wp_version, $cstmfldssrch_plugin_info;
 		$require_wp		=	"3.0"; /* Wordpress at least requires version */
 		$plugin			=	plugin_basename( __FILE__ );
 	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
 			if( is_plugin_active( $plugin ) ) {
 				deactivate_plugins( $plugin );
-				wp_die( "<strong>" . $plugin_data['Name'] . " </strong> " . __( 'requires', 'custom-fields-search' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'custom-fields-search') . "<br /><br />" . __( 'Back to the WordPress', 'custom-fields-search') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'custom-fields-search') . "</a>." );
+				wp_die( "<strong>" . $cstmfldssrch_plugin_info['Name'] . " </strong> " . __( 'requires', 'custom-fields-search' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'custom-fields-search') . "<br /><br />" . __( 'Back to the WordPress', 'custom-fields-search') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'custom-fields-search') . "</a>." );
 			}
 		}
 	}
 }
 
-/* Function are using to register script jQuery */
+/* Function are using to register script and styles for plugin settings page */
 if ( ! function_exists ( 'cstmfldssrch_admin_head' ) ) {
 	function cstmfldssrch_admin_head() {
-		global $wp_version;
-		if ( $wp_version < 3.8 )
-			wp_enqueue_style( 'cstmfldssrch_style', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
-		else
+		if ( isset( $_GET['page'] ) && "custom-fields-search.php" == $_GET['page'] ) {
 			wp_enqueue_style( 'cstmfldssrch_style', plugins_url( 'css/style.css', __FILE__ ) );
+			wp_enqueue_script( 'cstmfldssrch_script', plugins_url( 'js/script.js' , __FILE__ ) );
+		}
 	}
 }
 
@@ -141,25 +202,31 @@ if ( ! function_exists( 'cstmfldssrch_request' ) ) {
 /* Function is forming page of the settings of this plugin */
 if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 	function  cstmfldssrch_page_of_settings() {
-		global $wpdb, $cstmfldssrch_array_options, $wpmu;
+		global $wpdb, $wpmu, $cstmfldssrch_array_options, $cstmfldssrch_plugin_info;
+		$message = "";
 		if ( ! function_exists( 'is_plugin_active_for_network' ) )
 			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 		if ( isset( $_REQUEST['cstmfldssrch_submit_nonce'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'cstmfldssrch_nonce_name' ) ) {
-			$cstmfldssrch_array_options = isset( $_REQUEST['cstmfldssrch_array_options'] ) ? $_REQUEST['cstmfldssrch_array_options'] : array() ;
+			$cstmfldssrch_array_options = isset( $_REQUEST['cstmfldssrch_array_options'] ) ? $_REQUEST['cstmfldssrch_array_options'] : array();
+			$cstmfldssrch_array_options['plugin_option_version'] = $cstmfldssrch_plugin_info["Version"];
 			update_option( 'cstmfldssrch_options', $cstmfldssrch_array_options );
 			$message = __( "Settings saved" , 'custom-fields-search' );
 		} /* Retrieve all the values ​​of custom fields from the database - the keys */
 		$meta_key_custom_posts	=	$wpdb->get_col( "SELECT DISTINCT(meta_key) FROM " . $wpdb->postmeta . " JOIN " . $wpdb->posts . " ON " . $wpdb->posts . ".id = " . $wpdb->postmeta . ".post_id WHERE  " . $wpdb->posts . ".post_type NOT IN ('revision', 'page', 'post', 'attachment', 'nav_menu_item') AND meta_key NOT REGEXP '^_'" );
-		$meta_key_result		=	$wpdb->get_col( "SELECT DISTINCT(meta_key) FROM " . $wpdb->postmeta . " WHERE meta_key NOT REGEXP '^_'" );//select all user's meta_key from table `wp_postmeta`
+		$meta_key_result		=	$wpdb->get_col( "SELECT DISTINCT(meta_key) FROM " . $wpdb->postmeta . " WHERE meta_key NOT REGEXP '^_'" ); /* select all user's meta_key from table `wp_postmeta` */
 		$active_plugins			=	get_option( 'active_plugins' );
 		$install_plugins		=	get_plugins();
-		$path_plugin			=	'custom-search-plugin/custom-search-plugin.php';?>
+		$path_plugin			=	'custom-search-plugin/custom-search-plugin.php'; ?>
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php echo get_admin_page_title(); ?></h2>
-			<div class="updated fade" <?php if( ! isset( $_REQUEST['cstmfldssrch_submit_nonce'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
+			<h2 class="nav-tab-wrapper">
+				<a class="nav-tab nav-tab-active" href="admin.php?page=custom-fields-search.php"><?php _e( 'Settings', 'custom-fields-search' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/plugin/custom-fields-search/#faq" target="_blank"><?php _e( 'FAQ', 'custom-fields-search' ); ?></a>
+			</h2>			
+			<div class="updated fade" <?php if ( ! isset( $_REQUEST['cstmfldssrch_submit_nonce'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 			<div id="cstmfldssrch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'custom-fields-search' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'custom-fields-search' ); ?></p></div>
-			<?php if( 0 < count( $meta_key_result ) ) { ?>
+			<?php if ( 0 < count( $meta_key_result ) ) { ?>
 				<form method="post" action="" style="margin-top: 10px;" id="cstmfldssrch_settings_form">
 					<table class="form-table">
 						<tr valign="top">
@@ -167,8 +234,8 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 							<?php if ( in_array( $path_plugin, $active_plugins ) || is_plugin_active_for_network( $path_plugin ) ) { /* If Custom Search is activated for site or network */ ?>
 								<td>
 									<?php foreach ( $meta_key_result as $value ) { ?>
-										<label><input type="checkbox" <?php echo ( in_array( $value, $cstmfldssrch_array_options ) ?  'checked="checked"' : "" ); ?> name="cstmfldssrch_array_options[]" value="<?php echo $value; ?>"/><span class="value_of_metakey"><?php echo $value; ?></span></label><br />
-									<?php } ?>
+										<label><input type="checkbox" <?php echo ( in_array( $value, $cstmfldssrch_array_options ) ?  'checked="checked"' : "" ); ?> name="cstmfldssrch_array_options[]" value="<?php echo $value; ?>" /><span class="value_of_metakey"><?php echo $value; ?></span></label><br />
+									<?php }	?>
 								</td>
 							<?php } else {
 								$i = 1; ?>
@@ -178,18 +245,16 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 											$list_custom_key[$i] = $value;
 											$i++;
 										} else { ?>
-											<label><input type="checkbox" <?php echo ( in_array( $value, $cstmfldssrch_array_options ) ?  'checked="checked"' : "" ); ?> name="cstmfldssrch_array_options[]" value="<?php echo $value; ?>"/><span class="value_of_metakey"><?php echo $value; ?></span></label><br />
+											<label><input type="checkbox" <?php echo ( in_array( $value, $cstmfldssrch_array_options ) ?  'checked="checked"' : "" ); ?> name="cstmfldssrch_array_options[]" value="<?php echo $value; ?>" /><span class="value_of_metakey"><?php echo $value; ?></span></label><br />
 										<?php }
 									}
 									echo "<br />";
 									if ( isset( $list_custom_key ) ) {
 										foreach ( $list_custom_key as $value ) {
 											$post_type_of_mkey = $wpdb->get_col( "SELECT DISTINCT(post_type) FROM " . $wpdb->posts . " JOIN " . $wpdb->postmeta . " ON " . $wpdb->posts . ".id = " . $wpdb->postmeta . ".post_id WHERE  " . $wpdb->postmeta . ".meta_key LIKE ('" . $value . "')" ); ?>
-											<label><input type="checkbox" disabled="disabled" name="cstmfldssrch_array_options[]" value="<?php echo ' ' . $value; ?>"/>
+											<label><input type="checkbox" disabled="disabled" name="cstmfldssrch_array_options[]" value="<?php echo ' ' . $value; ?>" />
 											<span class="disable_key">
-												<?php echo $value . " (" . $post_type_of_mkey[0] . " ";
-												_e( 'custom post type', 'custom-fields-search');
-												echo ")"; ?>
+												<?php echo $value . " (" . $post_type_of_mkey[0] . " " . __( 'custom post type', 'custom-fields-search') . ")"; ?>
 											</span></label><br />
 										<?php }
 										if ( array_key_exists( $path_plugin, $install_plugins ) ) { ?>
@@ -215,12 +280,12 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 			<br />
 			<div class="bws-plugin-reviews">
 				<div class="bws-plugin-reviews-rate">
-				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-fields-search' ); ?>: 
-				<a href="http://wordpress.org/support/view/plugin-reviews/custom-fields-search" target="_blank" title="Custom Fields Search reviews"><?php _e( 'Rate the plugin', 'custom-fields-search' ); ?></a><br/>
+					<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-fields-search' ); ?>: 
+					<a href="http://wordpress.org/support/view/plugin-reviews/custom-fields-search" target="_blank" title="Custom Fields Search reviews"><?php _e( 'Rate the plugin', 'custom-fields-search' ); ?></a><br/>
 				</div>
 				<div class="bws-plugin-reviews-support">
-				<?php _e( 'If there is something wrong about it, please contact us', 'custom-fields-search' ); ?>: 
-				<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
+					<?php _e( 'If there is something wrong about it, please contact us', 'custom-fields-search' ); ?>: 
+					<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
 				</div>
 			</div>
 		</div>
@@ -232,7 +297,7 @@ if ( ! function_exists( 'cstmfldssrch_action_links' ) ) {
 	function cstmfldssrch_action_links( $links, $file ) {
 		$base = plugin_basename( __FILE__ );
 		if ( $file == $base ) {
-			$settings_link = '<a href="admin.php?page=custom_fields_search.php">' . __( 'Settings', 'custom-fields-search' ) . '</a>';
+			$settings_link = '<a href="admin.php?page=custom-fields-search.php">' . __( 'Settings', 'custom-fields-search' ) . '</a>';
 			array_unshift( $links, $settings_link );
 		}
 		return $links;
@@ -244,32 +309,11 @@ if ( ! function_exists ( 'cstmfldssrch_links' ) ) {
 	function cstmfldssrch_links( $links, $file ) {
 		$base = plugin_basename( __FILE__ );
 		if ( $file == $base ) {
-			$links[]	=	'<a href="admin.php?page=custom_fields_search.php">' . __( 'Settings','custom-fields-search' ) . '</a>';
+			$links[]	=	'<a href="admin.php?page=custom-fields-search.php">' . __( 'Settings','custom-fields-search' ) . '</a>';
 			$links[]	=	'<a href="http://wordpress.org/plugins/custom-fields-search/faq/">' . __('FAQ','custom-fields-search') . '</a>';
 			$links[]	=	'<a href="http://support.bestwebsoft.com">' . __('Support','custom-fields-search') . '</a>';
 		}
 		return $links;
-	}
-}
-
-if ( ! function_exists('cstmfldssrch_admin_js') ) {
-	function cstmfldssrch_admin_js() {
-		if ( isset( $_GET['page'] ) && "custom_fields_search.php" == $_GET['page'] ) {
-			/* add notice about changing in the settings page */
-			?>
-			<script type="text/javascript">
-				(function($) {
-					$(document).ready( function() {
-						$( '#cstmfldssrch_settings_form input' ).bind( "change click select", function() {
-							if ( $( this ).attr( 'type' ) != 'submit' ) {
-								$( '.updated.fade' ).css( 'display', 'none' );
-								$( '#cstmfldssrch_settings_notice' ).css( 'display', 'block' );
-							};
-						});
-					});
-				})(jQuery);
-			</script>
-		<?php }
 	}
 }
 
@@ -281,14 +325,12 @@ if ( ! function_exists( 'cstmfldssrch_delete_options' ) ) {
 	}
 }
 
+register_activation_hook( __FILE__, 'cstmfldssrch_register_options' );
+
 add_action( 'admin_menu', 'cstmfldssrch_add_to_admin_menu' );
-add_action( 'init', 'cstmfldssrch_register_options' );
-add_action( 'admin_init', 'cstmfldssrch_register_options' );
-add_action( 'admin_init', 'cstmfldssrch_translate' );
-add_action( 'admin_init', 'cstmfldssrch_version_check' );
+add_action( 'init', 'cstmfldssrch_init' );
+add_action( 'admin_init', 'cstmfldssrch_admin_init' );
 add_action( 'admin_enqueue_scripts', 'cstmfldssrch_admin_head' );
-add_action( 'wp_enqueue_scripts', 'cstmfldssrch_admin_head' );
-add_action( 'admin_head', 'cstmfldssrch_admin_js' );
 
 add_filter( 'posts_distinct', 'cstmfldssrch_distinct' );
 add_filter( 'posts_join', 'cstmfldssrch_join' );
