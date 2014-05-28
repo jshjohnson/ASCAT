@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP Store Locator
 Plugin URI: 
-Description: **CUSTOMISED BY JOSH JOHNSON - DO NOT UPDATE** An easy to use location management system that enables users to search for nearby physical stores
+Description: <strong>CUSTOMISED BY JOSH JOHNSON - DO NOT UPDATE</strong> An easy to use location management system that enables users to search for nearby physical stores
 Author: Tijmen Smit - Customised by Josh Johnson
 Author URI: http://tijmensmit.com/
 Version: 9999

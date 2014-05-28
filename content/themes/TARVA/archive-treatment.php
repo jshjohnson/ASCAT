@@ -5,14 +5,13 @@ Template Name: Treatment Archive
 ?>
 <?php get_header(); ?>
 		<div class="content__container container">
-			<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article class="content__body">
 				<?php the_content(); ?>	
 			</article>
 			<?php endwhile; ?>	
-			<?php endif; ?>
-
+		<?php endif; ?>
 			<?php
 					$args = array(
 					'post_type' => 'treatment',

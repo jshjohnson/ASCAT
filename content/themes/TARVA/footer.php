@@ -6,11 +6,12 @@
 						<?php else : ?>
 						<div class="center grid push-top">
 						<?php endif; ?>
-							<div class="grid__cell unit-1-5--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/UCL.jpg" alt="" class="footer__img"></div>
-							<div class="grid__cell unit-1-5--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img//NIHR.jpg" alt="" class="footer__img"></div>
-							<div class="grid__cell unit-1-5--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ARTHRITIS-CARE.jpg" alt="" class="footer__img"></div>
-							<div class="grid__cell unit-1-5--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/BOFAS.jpg" alt="" class="footer__img"></div>
-							<div class="grid__cell unit-1-5--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ISRCTN.gif" alt="" class="footer__img"></div>
+							<div class="grid__cell unit-1-6--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/UCL.jpg" alt="" class="footer__img"></div>
+							<div class="grid__cell unit-1-6--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img//NIHR.jpg" alt="" class="footer__img"></div>
+							<div class="grid__cell unit-1-6--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ARTHRITIS-CARE.jpg" alt="" class="footer__img"></div>
+							<div class="grid__cell unit-1-6--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/BOFAS.jpg" alt="" class="footer__img"></div>
+							<div class="grid__cell unit-1-6--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ISRCTN.gif" alt="" class="footer__img"></div>
+							<div class="grid__cell unit-1-6--bp3 unit-1-3--bp2 unit-1-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/RNOH.jpg" alt="" class="footer__img"></div>
 						</div>
 					</div>
 				</footer>
