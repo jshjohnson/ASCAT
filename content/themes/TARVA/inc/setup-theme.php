@@ -5,7 +5,7 @@
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'index-thumb', 150, 150, true ); // section index
 add_image_size( 'slideshow', 800, 300, true ); // slideshow
-add_image_size( 'panel-thumb', 300, 150, true ); // panels
+add_image_size( 'panel-thumb', 600, 300, true ); // panels
 
 // Register wp_nav_menu()s
 // -------------------------------------------------------------
@@ -234,4 +234,25 @@ function current_type_nav_class($classes, $item) {
         array_push($classes, 'is-root-parent');
     };
     return $classes;
+}
+
+// custom excerpt length
+function themify_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'themify_custom_excerpt_length', 999 );
+
+// add ellipsis link to excerpt
+function themify_custom_excerpt_more($more) {
+    global $post;
+    return '&hellip;';
+}
+add_filter('excerpt_more', 'themify_custom_excerpt_more');
+
+add_filter( 'request', 'my_request_filter' );
+function my_request_filter( $query_vars ) {
+    if( isset( $_GET['s'] ) && empty( $_GET['s'] ) ) {
+        $query_vars['s'] = " ";
+    }
+    return $query_vars;
 }
