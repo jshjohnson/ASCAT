@@ -38,12 +38,6 @@
 	&:after { clear : both; }
 }	
 
-#map-canvas {
-	img {
-		max-width: none;
-	}
-}
-
 .gm-style {
 	font-family: $font-sans;
 }
@@ -74,7 +68,6 @@
 
 /* Style trumps (error states etc.)
 ----------------------------------*/
-
 .is-hidden { display: none; visibility: hidden; }
 .is-vhidden {
 	border: 0;

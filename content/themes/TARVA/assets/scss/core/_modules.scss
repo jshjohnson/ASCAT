@@ -64,7 +64,7 @@ img.media__img {
 		@include respond-max($bp1) {
 			text-overflow: ellipsis;
 			overflow: hidden;
-			width: 9em;
+			width: 12em;
 			display: inline-block;
 			vertical-align: top;
 		}
@@ -103,7 +103,7 @@ img.media__img {
 			color: darken(white, 30%);
 			background-color: $color-background-alt;
 			@include transition(background-color, .5s);
-			&:hover {
+			&:hover, &.is-active {
 				color: white;
 				background-color: $color-brand;
 				@include transition(background-color, .5s);

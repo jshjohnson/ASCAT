@@ -29,6 +29,12 @@ Template Name: Search Specialists
 
 			    $query = new WP_Query($args);
 
+				if(isset($_GET['letter'])) {
+					$firstLetter = $_GET['letter'];			
+				}else{
+					$firstLetter = "A";
+				}
+
 			    $dl = '';
 			    $glossary_letter = '';
 			    $active_letters = array();
@@ -48,7 +54,11 @@ Template Name: Search Specialists
 
 			    $ul = '<ul class="block-letters">';
 			    foreach ( array( 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ) as $letter ) {
-			        $ul .= '<li><a href="?letter=' . $letter . '">' . $letter . '</a></li>';
+			    	if($letter == $firstLetter) {
+			    		$ul .= '<li><a class="is-active" href="?letter=' . $letter . '">' . $letter . '</a></li>';
+			    	}else {
+			    		$ul .= '<li><a href="?letter=' . $letter . '">' . $letter . '</a></li>';
+			    	}  
 			    }
 			    $ul .= '</ul>';
 
@@ -65,12 +75,6 @@ Template Name: Search Specialists
 			<?php endif; ?>
 			<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-				if(isset($_GET['letter'])) {
-					$firstLetter = $_GET['letter'];			
-				}else{
-					$firstLetter = "A";
-				}
 
 				$args = array(
 					'post_type' => 'investigator',
