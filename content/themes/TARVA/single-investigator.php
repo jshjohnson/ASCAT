@@ -8,11 +8,6 @@
 				$url = $image['sizes']['medium'];
 			    $alt = $image['alt'];	
 			?>
-			<?php if($url) : ?>
-			<img class="bio__avatar bio__avatar--alt" src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
-			<?php else : ?>
-			<img class="bio__avatar bio__avatar--alt" src="http://localhost:8888/TARVA/content/uploads/2014/02/avatar-fallback-256x300.png" alt="Avatar">
-			<?php endif; ?>
 			<dl class="module__split">
 				<dt>Name:</dt>
 				<dd><?php the_title(); ?></dd>
