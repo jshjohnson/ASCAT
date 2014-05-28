@@ -2,9 +2,6 @@
 .wpsl-gmap-wrap {
     position:relative;
 }
-#wpsl-gmap {
-    height:400px;
-}
 
 .wpsl-store-below #wpsl-gmap {
     float:none;
@@ -72,8 +69,8 @@ div elements, we disable it to prevent it from messing up the map
     background: #ff520d;
     color: white;
     font-size: .8em;
-    line-height: 1.5em;
-    padding: 1em;
+    line-height: $baseline;
+    padding: 1.5em 0;
 }
 
 #wpsl-search-wrap .wpsl-input input {
@@ -89,40 +86,14 @@ div elements, we disable it to prevent it from messing up the map
     display:block;
 }
 
-#wpsl-result-list {
-    float:left; 
-    width:33%;
-    margin-right:0.5%;
-}
-.wpsl-store-below #wpsl-result-list {
-    float:none;
-    width:100%;
-    margin:12px 0 0 0;
-}
-
 #wpsl-stores, 
 #wpsl-direction-details {
     overflow-y:auto;
 }
 #wpsl-direction-details {display:none;}
 
-#wpsl-result-list p {
-    padding-left:10px;
-}
-.wpsl-store-below #wpsl-result-list p {
-    padding-left: 0;
-}
-
-#wpsl-result-list p a {
-    margin-bottom:10px;
-}
-
-#wpsl-result-list a {
-    outline:none;
-}
-
 #wpsl-result-list li {
-    padding: 10px;
+    padding: 10px 10px 10px 0;
     border-bottom: 1px dotted #ccc;
     margin-left: 0;
     overflow: hidden;
@@ -130,14 +101,6 @@ div elements, we disable it to prevent it from messing up the map
     &:last-child {
         border-bottom: 0;
     }
-}
-.wpsl-store-below #wpsl-result-list li {
-    padding: 10px 10px 10px 0;
-}
-
-#wpsl-result-list li p {
-    padding-left:0;
-    margin-bottom:20px;
 }
 
 .wpsl-store-details.wpsl-store-listing {

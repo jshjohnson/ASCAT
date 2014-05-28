@@ -993,7 +993,7 @@ a:hover {
   max-width: 68.5em;
 }
 
-/* line 32, ../scss/core/_layout.scss */
+/* line 33, ../scss/core/_layout.scss */
 .content__container {
   margin-top: 4em;
   position: relative;
@@ -1001,7 +1001,7 @@ a:hover {
   min-height: 10em;
 }
 
-/* line 43, ../scss/core/_layout.scss */
+/* line 44, ../scss/core/_layout.scss */
 .content__container--less-marg {
   margin-top: 2em;
 }
@@ -1309,7 +1309,7 @@ a:hover {
 
 /* Logo
 ----------------------------------*/
-/* line 75, ../scss/core/_layout.scss */
+/* line 76, ../scss/core/_layout.scss */
 .logo {
   max-width: 18em;
   width: 75%;
@@ -1318,7 +1318,7 @@ a:hover {
 
 /* Sidebar
 ----------------------------------*/
-/* line 89, ../scss/core/_layout.scss */
+/* line 90, ../scss/core/_layout.scss */
 .sidebar {
   padding: 2em 0;
   position: relative;
@@ -1335,7 +1335,7 @@ a:hover {
 
 /* Content
 ----------------------------------*/
-/* line 115, ../scss/core/_layout.scss */
+/* line 116, ../scss/core/_layout.scss */
 .content {
   overflow-x: hidden;
   min-height: 93.2vh;
@@ -1347,7 +1347,7 @@ a:hover {
   box-sizing: border-box;
 }
 
-/* line 131, ../scss/core/_layout.scss */
+/* line 132, ../scss/core/_layout.scss */
 .content__header {
   position: relative;
   height: 17em;
@@ -1358,89 +1358,89 @@ a:hover {
   background-position: center center;
 }
 
-/* line 141, ../scss/core/_layout.scss */
+/* line 142, ../scss/core/_layout.scss */
 .content__header--tall {
   height: 25em;
 }
 
-/* line 145, ../scss/core/_layout.scss */
+/* line 146, ../scss/core/_layout.scss */
 .header-video {
   height: 20em;
 }
-/* line 147, ../scss/core/_layout.scss */
+/* line 148, ../scss/core/_layout.scss */
 .header-video iframe {
   height: 20em;
   width: 100%;
 }
 
-/* line 159, ../scss/core/_layout.scss */
+/* line 160, ../scss/core/_layout.scss */
 .module {
   margin-bottom: 1.7em;
   padding: 1.5em;
 }
-/* line 162, ../scss/core/_layout.scss */
+/* line 163, ../scss/core/_layout.scss */
 .module .grid__cell:last-of-type p:last-child, .module .grid__cell:last-of-type img:last-child {
   margin: 0;
 }
-/* line 165, ../scss/core/_layout.scss */
+/* line 166, ../scss/core/_layout.scss */
 .module > p:last-child, .module ul:last-child, .module ul li:last-of-type, .module iframe:last-child {
   margin-bottom: 0;
 }
-/* line 168, ../scss/core/_layout.scss */
+/* line 169, ../scss/core/_layout.scss */
 .module:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 173, ../scss/core/_layout.scss */
+/* line 174, ../scss/core/_layout.scss */
 .module-2-3 {
   width: 63.33%;
 }
 
-/* line 180, ../scss/core/_layout.scss */
+/* line 181, ../scss/core/_layout.scss */
 .module-1-3 {
   width: 30%;
   margin: 1.5%;
 }
 
-/* line 190, ../scss/core/_layout.scss */
+/* line 191, ../scss/core/_layout.scss */
 .module-1-2 {
   width: 50%;
 }
 
-/* line 198, ../scss/core/_layout.scss */
+/* line 199, ../scss/core/_layout.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.7em 0;
   width: 100%;
 }
-/* line 204, ../scss/core/_layout.scss */
+/* line 205, ../scss/core/_layout.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
   width: 25%;
 }
-/* line 223, ../scss/core/_layout.scss */
+/* line 224, ../scss/core/_layout.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
   width: 75%;
 }
-/* line 225, ../scss/core/_layout.scss */
+/* line 226, ../scss/core/_layout.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
-/* line 228, ../scss/core/_layout.scss */
+/* line 229, ../scss/core/_layout.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 
-/* line 248, ../scss/core/_layout.scss */
+/* line 249, ../scss/core/_layout.scss */
 .search input[type='search'] {
   width: 80%;
   float: left;
 }
-/* line 255, ../scss/core/_layout.scss */
+/* line 256, ../scss/core/_layout.scss */
 .search input[type='submit'] {
   width: 20%;
   float: left;
@@ -1969,15 +1969,27 @@ img.media__img {
   position: absolute;
   height: 100%;
   width: 100%;
+  bottom: 0;
+  pointer-events: none;
 }
 
-/* line 500, ../scss/core/_modules.scss */
+/* line 502, ../scss/core/_modules.scss */
+.content__overlay--subtle {
+  height: 50%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.35)));
+  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+}
+
+/* line 507, ../scss/core/_modules.scss */
 .content__img {
   margin-top: -1.5em;
   margin-bottom: 2em;
 }
 
-/* line 513, ../scss/core/_modules.scss */
+/* line 520, ../scss/core/_modules.scss */
 .bio {
   background-color: #fafafa;
   border: 1px solid #f0f0f0;
@@ -1986,7 +1998,7 @@ img.media__img {
   overflow: auto;
   margin-bottom: 1.5em;
 }
-/* line 520, ../scss/core/_modules.scss */
+/* line 527, ../scss/core/_modules.scss */
 .bio .bio__avatar {
   float: right;
   padding-left: 1em;
@@ -1995,14 +2007,14 @@ img.media__img {
   text-align: center;
   padding-left: 0;
 }
-/* line 539, ../scss/core/_modules.scss */
+/* line 546, ../scss/core/_modules.scss */
 .bio .bio__avatar--alt {
   float: none;
   text-align: center;
   padding-left: 0;
 }
 
-/* line 549, ../scss/core/_modules.scss */
+/* line 556, ../scss/core/_modules.scss */
 .more-link:after {
   font-family: "tarva";
   content: '\e803';
@@ -2012,29 +2024,29 @@ img.media__img {
   top: .05em;
 }
 
-/* line 562, ../scss/core/_modules.scss */
+/* line 569, ../scss/core/_modules.scss */
 .listing-title {
   margin-bottom: .5em;
 }
-/* line 564, ../scss/core/_modules.scss */
+/* line 571, ../scss/core/_modules.scss */
 .listing-title a {
   font-weight: normal;
 }
 
-/* line 569, ../scss/core/_modules.scss */
+/* line 576, ../scss/core/_modules.scss */
 .listing-title, .listing-subtitle {
   text-transform: capitalize;
   font-weight: normal;
 }
 
-/* line 574, ../scss/core/_modules.scss */
+/* line 581, ../scss/core/_modules.scss */
 .listing-title--bio {
   margin: .4em 0;
   color: #ff520d;
   clear: left;
 }
 
-/* line 580, ../scss/core/_modules.scss */
+/* line 587, ../scss/core/_modules.scss */
 .ribbon {
   position: absolute;
   right: 1em;
@@ -2045,7 +2057,7 @@ img.media__img {
   border-bottom: 0.6em solid #fafafa;
   width: 0;
 }
-/* line 589, ../scss/core/_modules.scss */
+/* line 596, ../scss/core/_modules.scss */
 .ribbon h5 {
   font-size: .6em;
   padding-right: 1em;
@@ -2060,14 +2072,14 @@ img.media__img {
   margin-top: 1.7em;
 }
 
-/* line 600, ../scss/core/_modules.scss */
+/* line 607, ../scss/core/_modules.scss */
 .intro {
   overflow: auto;
   background-color: #ff520d;
   background-image: url("../img/shape-bg.svg");
   position: relative;
 }
-/* line 605, ../scss/core/_modules.scss */
+/* line 612, ../scss/core/_modules.scss */
 .intro:after {
   content: "";
   width: 0;
@@ -2082,14 +2094,14 @@ img.media__img {
   margin-left: -.75em;
 }
 
-/* line 620, ../scss/core/_modules.scss */
+/* line 627, ../scss/core/_modules.scss */
 .intro-text {
   padding: 1.5em 0;
   font-size: 1.4em;
   color: white;
   font-weight: 400;
 }
-/* line 625, ../scss/core/_modules.scss */
+/* line 632, ../scss/core/_modules.scss */
 .intro-text .intro-text__highlight {
   font-size: 1.7em;
   color: white;
@@ -2102,12 +2114,7 @@ img.media__img {
   position: relative;
 }
 
-/* line 5, ../scss/libs/_store-locator.scss */
-#wpsl-gmap {
-  height: 400px;
-}
-
-/* line 9, ../scss/libs/_store-locator.scss */
+/* line 6, ../scss/libs/_store-locator.scss */
 .wpsl-store-below #wpsl-gmap {
   float: none;
   width: 100%;
@@ -2115,7 +2122,7 @@ img.media__img {
 }
 
 /* Map reset button */
-/* line 16, ../scss/libs/_store-locator.scss */
+/* line 13, ../scss/libs/_store-locator.scss */
 #wpsl-reset-map {
   position: absolute;
   right: 15px;
@@ -2127,12 +2134,12 @@ img.media__img {
   display: none;
 }
 
-/* line 26, ../scss/libs/_store-locator.scss */
+/* line 23, ../scss/libs/_store-locator.scss */
 #wpsl-reset-map:hover {
   cursor: pointer;
 }
 
-/* line 30, ../scss/libs/_store-locator.scss */
+/* line 27, ../scss/libs/_store-locator.scss */
 #wpsl-reset-map.wpsl-right-controls {
   right: 42px;
 }
@@ -2141,7 +2148,7 @@ img.media__img {
 Some themes set a box-shadow or max-width for all image / 
 div elements, we disable it to prevent it from messing up the map
 */
-/* line 39, ../scss/libs/_store-locator.scss */
+/* line 36, ../scss/libs/_store-locator.scss */
 #wpsl-gmap div,
 #wpsl-gmap img {
   box-shadow: none;
@@ -2149,7 +2156,7 @@ div elements, we disable it to prevent it from messing up the map
   background: none;
 }
 
-/* line 45, ../scss/libs/_store-locator.scss */
+/* line 42, ../scss/libs/_store-locator.scss */
 #wpsl-wrap {
   width: 100%;
   overflow: hidden;
@@ -2158,12 +2165,12 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* Possible fix for vertical text issue in IE9? */
-/* line 53, ../scss/libs/_store-locator.scss */
+/* line 50, ../scss/libs/_store-locator.scss */
 .gm-style-cc {
   word-wrap: normal;
 }
 
-/* line 62, ../scss/libs/_store-locator.scss */
+/* line 59, ../scss/libs/_store-locator.scss */
 #wpsl-search-wrap .wpsl-input label,
 #wpsl-search-wrap .wpsl-input input,
 #wpsl-search-wrap .wpsl-select-wrap #wpsl-radius,
@@ -2172,109 +2179,64 @@ div elements, we disable it to prevent it from messing up the map
   display: inline-block;
 }
 
-/* line 66, ../scss/libs/_store-locator.scss */
+/* line 63, ../scss/libs/_store-locator.scss */
 .wpsl-input label {
   margin-bottom: 0;
   padding-bottom: .5em;
 }
 
-/* line 71, ../scss/libs/_store-locator.scss */
+/* line 68, ../scss/libs/_store-locator.scss */
 .wpsl-search {
   background: #ff520d;
   color: white;
   font-size: .8em;
-  line-height: 1.5em;
-  padding: 1em;
+  line-height: 1.7em;
+  padding: 1.5em 0;
 }
 
-/* line 79, ../scss/libs/_store-locator.scss */
+/* line 76, ../scss/libs/_store-locator.scss */
 #wpsl-search-wrap .wpsl-input input {
   border: 0;
   line-height: 1.5em;
 }
 
 /* Result list */
-/* line 88, ../scss/libs/_store-locator.scss */
+/* line 85, ../scss/libs/_store-locator.scss */
 .wpsl-back {
   display: block;
 }
 
-/* line 92, ../scss/libs/_store-locator.scss */
-#wpsl-result-list {
-  float: left;
-  width: 33%;
-  margin-right: 0.5%;
-}
-
-/* line 97, ../scss/libs/_store-locator.scss */
-.wpsl-store-below #wpsl-result-list {
-  float: none;
-  width: 100%;
-  margin: 12px 0 0 0;
-}
-
-/* line 104, ../scss/libs/_store-locator.scss */
+/* line 90, ../scss/libs/_store-locator.scss */
 #wpsl-stores,
 #wpsl-direction-details {
   overflow-y: auto;
 }
 
-/* line 107, ../scss/libs/_store-locator.scss */
+/* line 93, ../scss/libs/_store-locator.scss */
 #wpsl-direction-details {
   display: none;
 }
 
-/* line 109, ../scss/libs/_store-locator.scss */
-#wpsl-result-list p {
-  padding-left: 10px;
-}
-
-/* line 112, ../scss/libs/_store-locator.scss */
-.wpsl-store-below #wpsl-result-list p {
-  padding-left: 0;
-}
-
-/* line 116, ../scss/libs/_store-locator.scss */
-#wpsl-result-list p a {
-  margin-bottom: 10px;
-}
-
-/* line 120, ../scss/libs/_store-locator.scss */
-#wpsl-result-list a {
-  outline: none;
-}
-
-/* line 124, ../scss/libs/_store-locator.scss */
+/* line 95, ../scss/libs/_store-locator.scss */
 #wpsl-result-list li {
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   border-bottom: 1px dotted #ccc;
   margin-left: 0;
   overflow: hidden;
   list-style: none outside none !important;
 }
-/* line 130, ../scss/libs/_store-locator.scss */
+/* line 101, ../scss/libs/_store-locator.scss */
 #wpsl-result-list li:last-child {
   border-bottom: 0;
 }
 
-/* line 134, ../scss/libs/_store-locator.scss */
-.wpsl-store-below #wpsl-result-list li {
-  padding: 10px 10px 10px 0;
-}
-
-/* line 138, ../scss/libs/_store-locator.scss */
-#wpsl-result-list li p {
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-/* line 143, ../scss/libs/_store-locator.scss */
+/* line 106, ../scss/libs/_store-locator.scss */
 .wpsl-store-details.wpsl-store-listing {
   position: relative;
   padding-right: 20px;
 }
 
-/* line 148, ../scss/libs/_store-locator.scss */
+/* line 111, ../scss/libs/_store-locator.scss */
 .wpsl-store-details.wpsl-store-listing:before,
 .wpsl-store-details.wpsl-store-listing.wpsl-active-details:before {
   position: absolute;
@@ -2286,7 +2248,7 @@ div elements, we disable it to prevent it from messing up the map
   border-right: 6px solid rgba(0, 0, 0, 0);
 }
 
-/* line 158, ../scss/libs/_store-locator.scss */
+/* line 121, ../scss/libs/_store-locator.scss */
 .wpsl-store-details.wpsl-store-listing.wpsl-active-details:before {
   border-bottom: 5px solid #000000;
   border-top: none;
@@ -2294,7 +2256,7 @@ div elements, we disable it to prevent it from messing up the map
   border-right: 6px solid rgba(0, 0, 0, 0);
 }
 
-/* line 165, ../scss/libs/_store-locator.scss */
+/* line 128, ../scss/libs/_store-locator.scss */
 #wpsl-stores .wpsl-store-thumb {
   float: right;
   border-radius: 3px;
@@ -2305,33 +2267,33 @@ div elements, we disable it to prevent it from messing up the map
   border: none;
 }
 
-/* line 174, ../scss/libs/_store-locator.scss */
+/* line 137, ../scss/libs/_store-locator.scss */
 .wpsl-direction-index {
   float: left;
   width: 8%;
   margin: 0 5% 0 0;
 }
 
-/* line 179, ../scss/libs/_store-locator.scss */
+/* line 142, ../scss/libs/_store-locator.scss */
 .wpsl-direction-txt {
   float: left;
   width: 62%;
 }
 
-/* line 183, ../scss/libs/_store-locator.scss */
+/* line 146, ../scss/libs/_store-locator.scss */
 .wpsl-direction-distance {
   float: left;
   width: 20%;
   margin: 0 0 0 5%;
 }
 
-/* line 188, ../scss/libs/_store-locator.scss */
+/* line 151, ../scss/libs/_store-locator.scss */
 .wpsl-direction-txt span {
   display: block;
   margin-top: 10px;
 }
 
-/* line 195, ../scss/libs/_store-locator.scss */
+/* line 158, ../scss/libs/_store-locator.scss */
 .wpsl-street,
 .wpsl-country,
 .wpsl-directions {
@@ -2340,118 +2302,118 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* Preloader */
-/* line 201, ../scss/libs/_store-locator.scss */
+/* line 164, ../scss/libs/_store-locator.scss */
 #wpsl-result-list li.wpsl-preloader {
   border-bottom: none;
 }
 
-/* line 204, ../scss/libs/_store-locator.scss */
+/* line 167, ../scss/libs/_store-locator.scss */
 .wpsl-preloader img {
   float: left;
   box-shadow: none !important;
   border: none !important;
 }
 
-/* line 210, ../scss/libs/_store-locator.scss */
+/* line 173, ../scss/libs/_store-locator.scss */
 .wpsl-preloader span {
   float: left;
   margin: -5px 0 0 11px;
 }
 
-/* line 215, ../scss/libs/_store-locator.scss */
+/* line 178, ../scss/libs/_store-locator.scss */
 #wpsl-search-wrap .wpsl-input label {
   margin-right: 0;
   padding-bottom: .3em;
 }
 
-/* line 220, ../scss/libs/_store-locator.scss */
+/* line 183, ../scss/libs/_store-locator.scss */
 #wpsl-search-btn {
   float: right;
   line-height: 4em;
   vertical-align: middle;
 }
 
-/* line 226, ../scss/libs/_store-locator.scss */
+/* line 189, ../scss/libs/_store-locator.scss */
 #wpsl-inbtn:hover {
   cursor: pointer;
 }
 
-/* line 231, ../scss/libs/_store-locator.scss */
+/* line 194, ../scss/libs/_store-locator.scss */
 #wpsl-search-wrap select,
 #wpsl-search select {
   display: none;
 }
 
-/* line 236, ../scss/libs/_store-locator.scss */
+/* line 199, ../scss/libs/_store-locator.scss */
 #wpsl-result-list ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 241, ../scss/libs/_store-locator.scss */
+/* line 204, ../scss/libs/_store-locator.scss */
 .wpsl-direction-details {
   display: none;
 }
 
 /* Infowindow */
-/* line 246, ../scss/libs/_store-locator.scss */
+/* line 209, ../scss/libs/_store-locator.scss */
 #wpsl-gmap .wpsl-info-window {
   max-width: 225px;
 }
 
-/* line 251, ../scss/libs/_store-locator.scss */
+/* line 214, ../scss/libs/_store-locator.scss */
 .wpsl-more-info-listings span,
 .wpsl-info-window span {
   display: block;
 }
 
 /* More info details in the store listings */
-/* line 256, ../scss/libs/_store-locator.scss */
+/* line 219, ../scss/libs/_store-locator.scss */
 .wpsl-more-info-listings {
   display: none;
 }
 
 /* Fix for Google Voice breaking the phone numbers */
-/* line 261, ../scss/libs/_store-locator.scss */
+/* line 224, ../scss/libs/_store-locator.scss */
 .wpsl-info-window span span {
   display: inline !important;
 }
 
-/* line 264, ../scss/libs/_store-locator.scss */
+/* line 227, ../scss/libs/_store-locator.scss */
 .wpsl-info-window p {
   margin-bottom: 10px;
 }
 
-/* line 267, ../scss/libs/_store-locator.scss */
+/* line 230, ../scss/libs/_store-locator.scss */
 .wpsl-store-hours {
   margin-top: 10px;
 }
 
-/* line 270, ../scss/libs/_store-locator.scss */
+/* line 233, ../scss/libs/_store-locator.scss */
 .wpsl-store-hours strong {
   display: block;
 }
 
-/* line 274, ../scss/libs/_store-locator.scss */
+/* line 237, ../scss/libs/_store-locator.scss */
 .wpsl-info-actions {
   display: block;
   margin: 10px 0;
 }
 
-/* line 278, ../scss/libs/_store-locator.scss */
+/* line 241, ../scss/libs/_store-locator.scss */
 .wpsl-info-actions a {
   float: left;
   margin-right: 7px;
 }
 
-/* line 283, ../scss/libs/_store-locator.scss */
+/* line 246, ../scss/libs/_store-locator.scss */
 .wpsl-zoom-here {
   margin-right: 0;
 }
 
 /* --- EASYDROPDOWN DEFAULT THEME --- */
-/* line 291, ../scss/libs/_store-locator.scss */
+/* line 254, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown,
 .wpsl-dropdown div,
 .wpsl-dropdown li,
@@ -2462,7 +2424,7 @@ div elements, we disable it to prevent it from messing up the map
   transition: all 150ms ease-in-out;
 }
 
-/* line 299, ../scss/libs/_store-locator.scss */
+/* line 262, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .selected::after,
 .wpsl-dropdown.scrollable div::after {
   -webkit-pointer-events: none;
@@ -2472,7 +2434,7 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* WRAPPER */
-/* line 307, ../scss/libs/_store-locator.scss */
+/* line 270, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown {
   position: relative;
   width: 100%;
@@ -2484,13 +2446,13 @@ div elements, we disable it to prevent it from messing up the map
   margin-right: 0 !important;
 }
 
-/* line 319, ../scss/libs/_store-locator.scss */
+/* line 282, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.open {
   z-index: 2;
 }
 
 /* CARAT */
-/* line 324, ../scss/libs/_store-locator.scss */
+/* line 287, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .carat {
   position: absolute;
   right: 12px;
@@ -2500,20 +2462,20 @@ div elements, we disable it to prevent it from messing up the map
   border-top: 8px solid #000;
 }
 
-/* line 333, ../scss/libs/_store-locator.scss */
+/* line 296, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.open .carat {
   margin-top: -10px;
   border-top: 6px solid transparent;
   border-bottom: 8px solid #000;
 }
 
-/* line 339, ../scss/libs/_store-locator.scss */
+/* line 302, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.disabled .carat {
   border-top-color: #999;
 }
 
 /* OLD SELECT (HIDDEN) */
-/* line 344, ../scss/libs/_store-locator.scss */
+/* line 307, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .old {
   position: absolute;
   left: 0;
@@ -2523,20 +2485,20 @@ div elements, we disable it to prevent it from messing up the map
   overflow: hidden;
 }
 
-/* line 353, ../scss/libs/_store-locator.scss */
+/* line 316, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown select {
   position: absolute;
   left: 0px;
   top: 0px;
 }
 
-/* line 359, ../scss/libs/_store-locator.scss */
+/* line 322, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.touch .old {
   width: 100%;
   height: 100%;
 }
 
-/* line 364, ../scss/libs/_store-locator.scss */
+/* line 327, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.touch select {
   width: 100%;
   height: 100%;
@@ -2545,12 +2507,12 @@ div elements, we disable it to prevent it from messing up the map
 
 /* SELECTED FEEDBACK ITEM */
 /*select.wpsl-dropdown {display:none;}*/
-/* line 373, ../scss/libs/_store-locator.scss */
+/* line 336, ../scss/libs/_store-locator.scss */
 #wpsl-search-wrap .wpsl-dropdown div {
   margin-right: 0;
 }
 
-/* line 377, ../scss/libs/_store-locator.scss */
+/* line 340, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .selected,
 .wpsl-dropdown li {
   display: block;
@@ -2565,12 +2527,12 @@ div elements, we disable it to prevent it from messing up the map
   -moz-box-sizing: border-box;
 }
 
-/* line 390, ../scss/libs/_store-locator.scss */
+/* line 353, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.disabled .selected {
   color: #999;
 }
 
-/* line 394, ../scss/libs/_store-locator.scss */
+/* line 357, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown .selected::after {
   content: '';
   position: absolute;
@@ -2582,7 +2544,7 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* DROP DOWN WRAPPER */
-/* line 405, ../scss/libs/_store-locator.scss */
+/* line 368, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown div {
   position: absolute;
   height: 0;
@@ -2599,14 +2561,14 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* Height is adjusted by JS on open */
-/* line 422, ../scss/libs/_store-locator.scss */
+/* line 385, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.open div {
   opacity: 1;
   z-index: 2;
 }
 
 /* FADE OVERLAY FOR SCROLLING LISTS */
-/* line 429, ../scss/libs/_store-locator.scss */
+/* line 392, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.scrollable div::after {
   content: '';
   position: absolute;
@@ -2617,13 +2579,13 @@ div elements, we disable it to prevent it from messing up the map
   box-shadow: inset 0 -50px 30px -35px #fff;
 }
 
-/* line 439, ../scss/libs/_store-locator.scss */
+/* line 402, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.scrollable.bottom div::after {
   opacity: 0;
 }
 
 /* DROP DOWN LIST */
-/* line 445, ../scss/libs/_store-locator.scss */
+/* line 408, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown ul {
   position: absolute;
   left: 0;
@@ -2636,13 +2598,13 @@ div elements, we disable it to prevent it from messing up the map
   margin: 0;
 }
 
-/* line 457, ../scss/libs/_store-locator.scss */
+/* line 420, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown.scrollable.open ul {
   overflow-y: auto;
 }
 
 /* DROP DOWN LIST ITEMS */
-/* line 462, ../scss/libs/_store-locator.scss */
+/* line 425, ../scss/libs/_store-locator.scss */
 #wpsl-wrap .wpsl-dropdown li {
   list-style: none;
   padding: 8px 12px !important;
@@ -2650,7 +2612,7 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* .focus class is also added on hover */
-/* line 469, ../scss/libs/_store-locator.scss */
+/* line 432, ../scss/libs/_store-locator.scss */
 .wpsl-dropdown li.focus {
   background: #f8f9f8;
   position: relative;
@@ -2658,25 +2620,25 @@ div elements, we disable it to prevent it from messing up the map
   color: #000;
 }
 
-/* line 476, ../scss/libs/_store-locator.scss */
+/* line 439, ../scss/libs/_store-locator.scss */
 #wpsl-wrap .wpsl-dropdown li.active {
   font-weight: 700;
   background: none !important;
 }
 
-/* line 482, ../scss/libs/_store-locator.scss */
+/* line 445, ../scss/libs/_store-locator.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 486, ../scss/libs/_store-locator.scss */
+/* line 449, ../scss/libs/_store-locator.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 490, ../scss/libs/_store-locator.scss */
+/* line 453, ../scss/libs/_store-locator.scss */
 #wpsl-results .wpsl-dropdown {
   width: 70px;
 }

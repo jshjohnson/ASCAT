@@ -347,7 +347,7 @@ img.media__img {
 	width: 100%;
 	.heading-divide__title {
 		width: 5%;
-		@include respond-max($bp1) {
+		@include respond-max($bp2) {
 			width: 10%;
 		}
 	}
@@ -363,7 +363,7 @@ img.media__img {
 		@include box-sizing(border-box);
 		background: darken($color-background-alt, 20%);
 		margin-top: -3.2em;
-		@include respond-max($bp1) {
+		@include respond-max($bp2) {
 			width: 90%;
 		}
 	}
@@ -495,6 +495,13 @@ img.media__img {
 	position: absolute;
 	height: 100%;
 	width: 100%;
+	bottom: 0;
+	pointer-events: none;
+}
+
+.content__overlay--subtle {
+	height: 50%;
+	@include background-image(linear-gradient(transparent, rgba(black,.35)));
 }
 
 .content__img {
