@@ -35,6 +35,6 @@
 						$title = get_the_title();
 					endif; 
 				?>
-				<h1 class="page-heading"><?php echo $title; ?></h1>
+				<h1 class="page-heading page-heading--alt"><?php echo $title; ?></h1>
 			</div>
 		</header>

@@ -5,8 +5,9 @@ $show_results_filter = $this->settings['results_dropdown'];
 $results_filter_class = ( $show_results_filter ) ? '' : 'wpsl-no-results';
 
 $output .= '<div id="wpsl-wrap" class="wpsl-store-below">' . "\r\n";
-$output .= '<div class="wpsl-search clearfix ' . $results_filter_class . '">' . "\r\n";
-$output .= '<div id="wpsl-search-wrap" class="grid">' . "\r\n";
+$output .= '<div class="wpsl-search clearfix' . $results_filter_class . '">' . "\r\n";
+$output .= '<div id="wpsl-search-wrap" class="container">' . "\r\n";
+$output .= '<div class="grid">' . "\r\n";
 $output .= '<div class="wpsl-input grid__cell unit-1-2--bp2">' . "\r\n";
 $output .= '<label for="wpsl-search-input">' . esc_html_x( stripslashes( $this->settings['search_label'] ), 'wpsl' ) . '</label>' . "\r\n";
 $output .= '<input autocomplete="off" id="wpsl-search-input" type="text" value="" name="wpsl-search-input" />' . "\r\n";
@@ -32,6 +33,7 @@ $output .=      '<input id="wpsl-search-btn" type="submit" value='. esc_attr_x( 
 $output .=      '</div>' . "\r\n";
 $output .=   '</div>' . "\r\n";
 $output .= '</div>' . "\r\n";
+$output .= '</div>' . "\r\n";
     
 if ( $this->settings['reset_map'] ) { 
     
@@ -50,7 +52,7 @@ if ( $this->settings['reset_map'] ) {
     $output .= '<div id="wpsl-gmap"></div>' . "\r\n";
 }
 
-$output .= '<div id="wpsl-result-list">' . "\r\n";
+$output .= '<div id="wpsl-result-list" class="content__container container">' . "\r\n";
 $output .=      '<div id="wpsl-stores">' . "\r\n";
 $output .=          '<h3>Nearest Centres</h3><ul></ul>' . "\r\n";
 $output .=      '</div>' . "\r\n";
