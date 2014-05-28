@@ -18,9 +18,14 @@
 	bottom: 0;
 	float: right;
 	clear: both;
+	width: 75%;
 	@include respond-min($bp4) {
 		width: 80%;
 	}
+	@include respond-max($bp2) {
+		width: 100%;
+	}
+
 }
 
 .container {

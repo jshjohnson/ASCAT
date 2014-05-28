@@ -204,6 +204,13 @@ img.media__img {
 	}
 }
 
+.img-wrapper {
+	height: 7.15em;
+	@include background-size(cover);
+	background-repeat: no-repeat;
+	background-position: center 46%;
+}
+
 .nav-toggle {
 	color: white;
 	text-align: center;
@@ -369,6 +376,34 @@ img.media__img {
 	}
 }
 
+.content-block {
+	margin-bottom: $baseline;
+}
+
+.content-block__heading {
+	background-color: $color-brand;
+	color: white;
+	padding-left: .5em;
+	line-height: 1.6em;
+	margin: 0;
+	font-size: 1.2em;
+	a, a:visited {
+		color: white;
+	}
+}
+
+.content-block__heading--small {
+	padding-left: 1em;
+	font-size: 1em;
+	line-height: 2;
+}
+
+
+.content-block__text {
+	padding: 1em;
+	background-color: $color-background-alt;
+}
+
 .archive-entry {
 	margin-bottom: $baseline;
 	&:last-child {
@@ -516,6 +551,7 @@ img.media__img {
 		@extend %underline;
 	}
 }
+
 
 .bio {
 	background-color: $color-background-alt;
