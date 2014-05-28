@@ -12,6 +12,7 @@ Template Name: Treatment Archive
 			</article>
 			<?php endwhile; ?>	
 			<?php endif; ?>
+
 			<?php
 					$args = array(
 					'post_type' => 'treatment',
@@ -23,15 +24,23 @@ Template Name: Treatment Archive
 				if ( have_posts() ): ?>
 			<div class="grid">
 				<?php while ( have_posts() ) : the_post();	 ?>
-				<article class="grid__cell unit-1-2--bp3">
-					<div class="island info">
-						<h3 class="listing-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<p><?php the_excerpt(); ?></p>
-						<a class="more-link" href="<?php the_permalink(); ?>">Read more</a>
+				<article class="grid__cell unit-1-2--bp3 content-block">
+					<h2 class="content-block__heading content-block__heading--small"><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></h2>
+						<?php if(has_post_thumbnail()) { ?>
+						<div class="img-wrapper" style="background-image: url('<?php $src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'panel-thumb', false, ''); echo $src[0]; ?>');">
+						</div>
+						<?php } else { ?>
+						<div class="img-wrapper">
+						</div>
+						<?php }; ?>
+					<div class="content-block__text">
+						<?php the_excerpt(); ?>
+						<a href="<?php echo get_permalink(); ?>">More info</a>
 					</div>
 				</article>
 				<?php endwhile; ?>
 			</div>
 			<?php endif; ?>
 		</div>
+
 <?php get_footer(); ?>
