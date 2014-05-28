@@ -1807,7 +1807,7 @@ a:hover {
 @media screen and (min-width: 78em) {
   /* line 229, ../scss/core/_layout.scss */
   .module__split dd {
-    width: 65%;
+    width: 80%;
   }
   /* line 239, ../scss/core/_layout.scss */
   .module__split dd:first-of-type {
