@@ -26,15 +26,3 @@
 		<div id="inner-wrap">
 		<?php get_sidebar(); ?> 
 		<div class="content">
-		<header class="content__header content__header--tall">
-			<div id="map-canvas" class="map"></div>
-			<div class="container">
-				<?php 	
-					$title = get_field('alternative_title');
-					if($title == ''):
-						$title = get_the_title();
-					endif; 
-				?>
-				<h1 class="page-heading page-heading--alt"><?php echo $title; ?></h1>
-			</div>
-		</header>

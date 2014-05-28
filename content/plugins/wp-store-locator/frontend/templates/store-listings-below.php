@@ -2,7 +2,33 @@
 // $output = $this->get_custom_css(); 
 
 $show_results_filter = $this->settings['results_dropdown'];
-$results_filter_class = ( $show_results_filter ) ? '' : 'wpsl-no-results';
+$results_filter_class = ( $show_results_filter ) ? '' : 'wpsl-no-results';  
+    $title = get_field('alternative_title');
+    if($title == ''):
+        $title = get_the_title();
+    endif; 
+
+if ( $this->settings['reset_map'] ) { 
+    
+    /* If the control position is set to right, we need to adjust to right space to make sure it doesn't cover map controls.  */
+    if ( $this->settings['control_position'] == 'right' ) {
+        $align_class = 'class="wpsl-right-controls"';
+    } else {
+        $align_class = '';
+    }
+    
+    $output .= '<div class="wpsl-gmap-wrap">' . "\r\n";
+    $output .= '<div id="wpsl-reset-map" ' . $align_class . '>' . esc_html_x( stripslashes( $this->settings['reset_label'] ), 'wpsl' ) . '</div>' . "\r\n";
+    $output .= '<div id="wpsl-gmap"></div>' . "\r\n";
+    $output .= '</div>' . "\r\n";
+} else {
+    $output .= '<header class="content__header content__header--tall">' . "\r\n";
+    $output .= '<div id="wpsl-gmap" class="map"></div>' . "\r\n";
+    $output .= '<div class="content__overlay content__overlay--subtle">' . "\r\n";
+    $output .= '<div class="container"><h1 class="page-heading page-heading--alt">' . $title . '</h1></div>' . "\r\n";
+    $output .= '</div>' . "\r\n";
+    $output .= '</header>' . "\r\n";
+}
 
 $output .= '<div id="wpsl-wrap" class="wpsl-store-below">' . "\r\n";
 $output .= '<div class="wpsl-search clearfix' . $results_filter_class . '">' . "\r\n";
@@ -35,22 +61,6 @@ $output .=   '</div>' . "\r\n";
 $output .= '</div>' . "\r\n";
 $output .= '</div>' . "\r\n";
     
-if ( $this->settings['reset_map'] ) { 
-    
-    /* If the control position is set to right, we need to adjust to right space to make sure it doesn't cover map controls.  */
-    if ( $this->settings['control_position'] == 'right' ) {
-        $align_class = 'class="wpsl-right-controls"';
-    } else {
-        $align_class = '';
-    }
-    
-    $output .= '<div class="wpsl-gmap-wrap">' . "\r\n";
-    $output .= '<div id="wpsl-reset-map" ' . $align_class . '>' . esc_html_x( stripslashes( $this->settings['reset_label'] ), 'wpsl' ) . '</div>' . "\r\n";
-    $output .= '<div id="wpsl-gmap"></div>' . "\r\n";
-    $output .= '</div>' . "\r\n";
-} else {
-    $output .= '<div id="wpsl-gmap"></div>' . "\r\n";
-}
 
 $output .= '<div id="wpsl-result-list" class="content__container container">' . "\r\n";
 $output .=      '<div id="wpsl-stores">' . "\r\n";

@@ -64,11 +64,184 @@ function initializeGmap() {
 			mapType = google.maps.MapTypeId.ROADMAP
     }
 
+	var styles = [
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#05788a"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#02899e"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#096A79"
+            },
+            {
+                "lightness": 5
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#05788a"
+            },
+            {
+                "lightness": 5
+            },
+            {
+                "weight": 0.5
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#05788a"
+            },
+            {
+                "lightness": 5
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#05788a"
+            },
+            {
+                "lightness": 10
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#05788a"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#05788a"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 0
+            },
+            {
+                "color": "#FEFEFE"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#05788a"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#02899e"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#02899e"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    }
+]
+
+	// Create a new StyledMapType object, passing it the array of styles,
+	// as well as the name to be displayed on the map type control.
+	var styledMap = new google.maps.StyledMapType(styles,
+		{name: "Styled Map"});
+
+	// Create a map object, and include the MapTypeId to add
+	// to the map type control.
     myOptions = {
 		zoom: zoomLevel,
 		center: startLatLng,
 		mapTypeId: mapType,
 		mapTypeControl: false,
+		scrollwheel: false,
 		panControl: false,
 		streetViewControl: streetViewVisible,
 			zoomControlOptions: {
@@ -77,7 +250,11 @@ function initializeGmap() {
 			}
 	};
 
-    map = new google.maps.Map( document.getElementById( "wpsl-gmap" ), myOptions );
+    map = new google.maps.Map(document.getElementById( "wpsl-gmap" ), myOptions );
+
+	//Associate the styled map with the MapTypeId and set it to display.
+	map.mapTypes.set('map_style', styledMap);
+	map.setMapTypeId('map_style');
 
 	/* Not the most optimal solution, but we check the useragent if we should enable the easydropdown library.
 	 * We do this because several people have reported issues with it on iOS and Android devices. So on mobile
