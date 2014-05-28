@@ -1,9 +1,9 @@
-<?php get_header(); ?>
+<?php get_header(alt); ?>
 	<?php if(get_next_post_link()) : ?>
-	<div class="nav--page right"><?php next_post_link('Next treatment: <strong>%link</strong>'); ?> </div>
+	<div class="nav--page"><?php next_post_link('Next treatment: <strong>%link</strong>'); ?> </div>
 	<?php endif; ?>
 	<?php if(get_previous_post_link()) : ?>
-	<div class="nav--page left"><?php previous_post_link('Previous treatment: <strong>%link</strong>'); ?></div>
+	<div class="nav--page"><?php previous_post_link('Previous treatment: <strong>%link</strong>'); ?></div>
 	<?php endif; ?>
 	<div class="content__container container">
 		<?php if ( have_posts() ) : ?>
