@@ -2935,28 +2935,59 @@ div elements, we disable it to prevent it from messing up the map
   color: white;
   font-weight: bolder;
 }
-/* line 142, ../scss/core/_overrides.scss */
-.message .message__title {
+
+/* line 144, ../scss/core/_overrides.scss */
+.message--flipped {
+  color: white;
+  position: relative;
+  padding: 1em;
+  font-size: .75em;
+  margin-bottom: 1.7em;
+  clear: both;
+}
+/* line 151, ../scss/core/_overrides.scss */
+.message--flipped:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: .75em solid transparent;
+  border-right: .75em solid transparent;
+  position: absolute;
+  left: 1.5em;
+  top: -.73em;
+}
+/* line 161, ../scss/core/_overrides.scss */
+.message--flipped a {
+  color: white;
+  font-weight: bolder;
+}
+
+/* line 168, ../scss/core/_overrides.scss */
+.message .message__title, .message--flipped .message__title {
   color: white;
   margin-bottom: .5em;
 }
-/* line 145, ../scss/core/_overrides.scss */
-.message .message__title:after {
+/* line 171, ../scss/core/_overrides.scss */
+.message .message__title:after, .message--flipped .message__title:after {
   content: none;
 }
 
-/* line 151, ../scss/core/_overrides.scss */
+/* line 177, ../scss/core/_overrides.scss */
 .message--highlight {
   background-color: #58b83e;
 }
-/* line 153, ../scss/core/_overrides.scss */
+/* line 179, ../scss/core/_overrides.scss */
+.message--highlight:before {
+  border-bottom: 0.75em solid #58b83e;
+}
+/* line 182, ../scss/core/_overrides.scss */
 .message--highlight:after {
   border-top: 0.75em solid #58b83e;
 }
 
 /* Debuggin'
 ----------------------------------*/
-/* line 181, ../scss/core/_overrides.scss */
+/* line 210, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2971,7 +3002,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 0";
 }
-/* line 184, ../scss/core/_overrides.scss */
+/* line 213, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2986,7 +3017,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 1";
 }
-/* line 187, ../scss/core/_overrides.scss */
+/* line 216, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -3001,7 +3032,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 2";
 }
-/* line 190, ../scss/core/_overrides.scss */
+/* line 219, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -3078,14 +3109,14 @@ body.debug:before {
 /* -- Better anchor links -- */
 /* line 62, ../scss/core/_cms.scss */
 .mwm-aal-container {
-  background-color: #ff520d;
-  padding: 1em 1.5em;
+  background-color: #fafafa;
+  padding: 1.5em;
   margin-bottom: 1.5em;
-  color: white;
+  font-size: .9em;
+  color: #ff520d;
 }
-/* line 67, ../scss/core/_cms.scss */
+/* line 68, ../scss/core/_cms.scss */
 .mwm-aal-container a {
-  color: white;
   font-weight: 500;
 }
 /* line 71, ../scss/core/_cms.scss */
@@ -3094,14 +3125,16 @@ body.debug:before {
 }
 /* line 73, ../scss/core/_cms.scss */
 .mwm-aal-container ul li {
-  width: 50%;
+  width: 48%;
+  padding-right: 1%;
+  vertical-align: top;
   display: inline-block;
 }
-/* line 79, ../scss/core/_cms.scss */
+/* line 81, ../scss/core/_cms.scss */
 .mwm-aal-container ul li:before {
   font-family: "tarva";
   content: '\e803';
-  color: white;
+  color: #ff520d;
   font-size: 2em;
   position: relative;
   margin-right: .4em;
@@ -3110,9 +3143,9 @@ body.debug:before {
   margin-top: -.18em;
 }
 
-/* line 94, ../scss/core/_cms.scss */
+/* line 96, ../scss/core/_cms.scss */
 .mwm-aal-title {
-  color: white;
+  color: #ff520d;
 }
 
 /*----------------------------------------------------------------------------------------*\
