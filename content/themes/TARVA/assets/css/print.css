@@ -1638,7 +1638,6 @@ a:hover {
 /* line 121, ../scss/core/_layout.scss */
 .content {
   overflow-x: hidden;
-  min-height: 93.2vh;
   background-color: white;
 }
 @media screen and (min-width: 48em) {
@@ -1658,7 +1657,7 @@ a:hover {
   }
 }
 
-/* line 137, ../scss/core/_layout.scss */
+/* line 134, ../scss/core/_layout.scss */
 .content__header {
   position: relative;
   height: 17em;
@@ -1670,75 +1669,75 @@ a:hover {
   background-color: #02899e;
 }
 @media screen and (max-width: 48em) {
-  /* line 137, ../scss/core/_layout.scss */
+  /* line 134, ../scss/core/_layout.scss */
   .content__header {
     height: 12em;
   }
 }
 
-/* line 148, ../scss/core/_layout.scss */
+/* line 145, ../scss/core/_layout.scss */
 .content__header--tall {
   height: 25em;
 }
 
-/* line 152, ../scss/core/_layout.scss */
+/* line 149, ../scss/core/_layout.scss */
 .header-video {
   height: 20em;
 }
-/* line 154, ../scss/core/_layout.scss */
+/* line 151, ../scss/core/_layout.scss */
 .header-video iframe {
   height: 20em;
   width: 100%;
 }
 @media screen and (max-width: 30em) {
-  /* line 154, ../scss/core/_layout.scss */
+  /* line 151, ../scss/core/_layout.scss */
   .header-video iframe {
     height: 11em;
   }
 }
 @media screen and (max-width: 30em) {
-  /* line 152, ../scss/core/_layout.scss */
+  /* line 149, ../scss/core/_layout.scss */
   .header-video {
     height: 11em;
   }
 }
 
-/* line 166, ../scss/core/_layout.scss */
+/* line 163, ../scss/core/_layout.scss */
 .module {
   margin-bottom: 1.7em;
   padding: 1.5em;
 }
-/* line 169, ../scss/core/_layout.scss */
+/* line 166, ../scss/core/_layout.scss */
 .module .grid__cell:last-of-type p:last-child, .module .grid__cell:last-of-type img:last-child {
   margin: 0;
 }
-/* line 172, ../scss/core/_layout.scss */
+/* line 169, ../scss/core/_layout.scss */
 .module > p:last-child, .module ul:last-child, .module ul li:last-of-type, .module iframe:last-child {
   margin-bottom: 0;
 }
-/* line 175, ../scss/core/_layout.scss */
+/* line 172, ../scss/core/_layout.scss */
 .module:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 180, ../scss/core/_layout.scss */
+/* line 177, ../scss/core/_layout.scss */
 .module-2-3 {
   width: 63.33%;
 }
 @media screen and (max-width: 48em) {
-  /* line 180, ../scss/core/_layout.scss */
+  /* line 177, ../scss/core/_layout.scss */
   .module-2-3 {
     width: 100%;
   }
 }
 
-/* line 187, ../scss/core/_layout.scss */
+/* line 184, ../scss/core/_layout.scss */
 .module-1-3 {
   width: 30%;
   margin: 1.5%;
 }
 @media screen and (max-width: 48em) {
-  /* line 187, ../scss/core/_layout.scss */
+  /* line 184, ../scss/core/_layout.scss */
   .module-1-3 {
     width: 100%;
     margin-top: 1.7em;
@@ -1746,115 +1745,115 @@ a:hover {
   }
 }
 
-/* line 197, ../scss/core/_layout.scss */
+/* line 194, ../scss/core/_layout.scss */
 .module-1-2 {
   width: 50%;
 }
 @media screen and (max-width: 38em) {
-  /* line 197, ../scss/core/_layout.scss */
+  /* line 194, ../scss/core/_layout.scss */
   .module-1-2 {
     width: 100%;
   }
 }
 
-/* line 204, ../scss/core/_layout.scss */
+/* line 201, ../scss/core/_layout.scss */
 .module__split {
   overflow: auto;
 }
-/* line 206, ../scss/core/_layout.scss */
+/* line 203, ../scss/core/_layout.scss */
 .module__split:last-child {
   margin-bottom: 0;
 }
-/* line 209, ../scss/core/_layout.scss */
+/* line 206, ../scss/core/_layout.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.7em 0;
   width: 100%;
 }
-/* line 215, ../scss/core/_layout.scss */
+/* line 212, ../scss/core/_layout.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
 }
 @media screen and (min-width: 78em) {
-  /* line 215, ../scss/core/_layout.scss */
+  /* line 212, ../scss/core/_layout.scss */
   .module__split dt {
     width: 20%;
   }
-  /* line 222, ../scss/core/_layout.scss */
+  /* line 219, ../scss/core/_layout.scss */
   .module__split dt:first-child {
     padding-top: 0.85em;
   }
 }
 @media screen and (max-width: 78em) {
-  /* line 215, ../scss/core/_layout.scss */
+  /* line 212, ../scss/core/_layout.scss */
   .module__split dt {
     width: 25%;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 215, ../scss/core/_layout.scss */
+  /* line 212, ../scss/core/_layout.scss */
   .module__split dt {
     width: 100%;
     padding: 1.7em 0 0;
   }
 }
-/* line 234, ../scss/core/_layout.scss */
+/* line 231, ../scss/core/_layout.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
 }
-/* line 236, ../scss/core/_layout.scss */
+/* line 233, ../scss/core/_layout.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
-/* line 239, ../scss/core/_layout.scss */
+/* line 236, ../scss/core/_layout.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 @media screen and (min-width: 78em) {
-  /* line 234, ../scss/core/_layout.scss */
+  /* line 231, ../scss/core/_layout.scss */
   .module__split dd {
     width: 80%;
   }
-  /* line 244, ../scss/core/_layout.scss */
+  /* line 241, ../scss/core/_layout.scss */
   .module__split dd:first-of-type {
     padding-top: 0.85em;
   }
 }
 @media screen and (max-width: 78em) {
-  /* line 234, ../scss/core/_layout.scss */
+  /* line 231, ../scss/core/_layout.scss */
   .module__split dd {
     width: 75%;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 234, ../scss/core/_layout.scss */
+  /* line 231, ../scss/core/_layout.scss */
   .module__split dd {
     width: 100%;
     padding: 0 0 0.85em;
   }
 }
 
-/* line 259, ../scss/core/_layout.scss */
+/* line 256, ../scss/core/_layout.scss */
 .search input[type='search'] {
   width: 80%;
   float: left;
 }
 @media screen and (max-width: 48em) {
-  /* line 259, ../scss/core/_layout.scss */
+  /* line 256, ../scss/core/_layout.scss */
   .search input[type='search'] {
     width: 75%;
   }
 }
-/* line 266, ../scss/core/_layout.scss */
+/* line 263, ../scss/core/_layout.scss */
 .search input[type='submit'] {
   width: 20%;
   float: left;
 }
 @media screen and (max-width: 48em) {
-  /* line 266, ../scss/core/_layout.scss */
+  /* line 263, ../scss/core/_layout.scss */
   .search input[type='submit'] {
     width: 25%;
   }

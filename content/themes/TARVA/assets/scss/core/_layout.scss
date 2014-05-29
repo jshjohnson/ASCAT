@@ -119,11 +119,8 @@
 ----------------------------------*/
 
 .content {
-	// height: 100%;
 	overflow-x: hidden;
-	min-height: 93.2vh;
 	background-color: white;
-	// overflow: auto;
 	@include respond-min($bp2) {
 		width: 75%;
 		float: right;
