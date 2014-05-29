@@ -25,11 +25,8 @@ Template Name: Treatment Archive
 				<?php while ( have_posts() ) : the_post();	 ?>
 				<article class="grid__cell unit-1-2--bp3 content-block">
 					<h2 class="content-block__heading content-block__heading--small"><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></h2>
-						<?php if(has_post_thumbnail()) { ?>
-						<div class="img-wrapper" style="background-image: url('<?php $src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'panel-thumb', false, ''); echo $src[0]; ?>');">
-						</div>
-						<?php } else { ?>
-						<div class="img-wrapper">
+						<?php if(get_field('panel_image')) { ?>
+						<div class="img-wrapper" style="background-image: url('<?php $panel = get_field('panel_image'); echo $panel['url']; ?>');">
 						</div>
 						<?php }; ?>
 					<div class="content-block__text">
