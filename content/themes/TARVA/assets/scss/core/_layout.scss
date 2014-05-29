@@ -202,6 +202,9 @@
 
 .module__split {
 	overflow: auto;
+	&:last-child {
+		margin-bottom: 0;
+	}
 	dt,dd {
 		float: left;
 		margin: 0;

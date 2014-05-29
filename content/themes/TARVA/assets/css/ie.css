@@ -1413,39 +1413,43 @@ a:hover {
   overflow: auto;
 }
 /* line 205, ../scss/core/_layout.scss */
+.module__split:last-child {
+  margin-bottom: 0;
+}
+/* line 208, ../scss/core/_layout.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.7em 0;
   width: 100%;
 }
-/* line 211, ../scss/core/_layout.scss */
+/* line 214, ../scss/core/_layout.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
   width: 25%;
 }
-/* line 230, ../scss/core/_layout.scss */
+/* line 233, ../scss/core/_layout.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
   width: 75%;
 }
-/* line 232, ../scss/core/_layout.scss */
+/* line 235, ../scss/core/_layout.scss */
 .module__split dd:last-child {
   border-bottom: none;
 }
-/* line 235, ../scss/core/_layout.scss */
+/* line 238, ../scss/core/_layout.scss */
 .module__split dd p:last-child {
   margin-bottom: 0;
 }
 
-/* line 255, ../scss/core/_layout.scss */
+/* line 258, ../scss/core/_layout.scss */
 .search input[type='search'] {
   width: 80%;
   float: left;
 }
-/* line 262, ../scss/core/_layout.scss */
+/* line 265, ../scss/core/_layout.scss */
 .search input[type='submit'] {
   width: 20%;
   float: left;
