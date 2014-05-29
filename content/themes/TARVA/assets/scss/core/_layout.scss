@@ -139,6 +139,7 @@
 	height: 17em;
 	@include background-size(cover);
 	background-position: center center;
+	background-color: $color-brand;
 	@include respond-max($bp2) {
 		height: 12em;
 	}
