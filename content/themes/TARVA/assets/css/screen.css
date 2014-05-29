@@ -2126,7 +2126,7 @@ img.media__img {
   margin-right: .4em;
   float: left;
   line-height: 1.2;
-  margin-top: -.18em;
+  margin-top: -.2em;
 }
 @media screen and (max-width: 48em) {
   /* line 164, ../scss/core/_modules.scss */
@@ -3453,7 +3453,7 @@ div elements, we disable it to prevent it from messing up the map
   margin-top: .25em;
   margin-bottom: .25em;
   height: 1px;
-  background-color: #ccc;
+  background-color: #e3e3e3;
   display: block;
   position: absolute;
 }
@@ -3774,16 +3774,17 @@ body.debug:before {
   margin-bottom: 1.5em;
   font-size: .9em;
   color: #ff520d;
+  border: 1px solid #e3e3e3;
 }
-/* line 68, ../scss/core/_cms.scss */
+/* line 69, ../scss/core/_cms.scss */
 .mwm-aal-container a {
   font-weight: 500;
 }
-/* line 71, ../scss/core/_cms.scss */
+/* line 72, ../scss/core/_cms.scss */
 .mwm-aal-container ul {
   margin: 0;
 }
-/* line 73, ../scss/core/_cms.scss */
+/* line 74, ../scss/core/_cms.scss */
 .mwm-aal-container ul li {
   width: 48%;
   padding-right: 1%;
@@ -3791,12 +3792,12 @@ body.debug:before {
   display: inline-block;
 }
 @media screen and (max-width: 48em) {
-  /* line 73, ../scss/core/_cms.scss */
+  /* line 74, ../scss/core/_cms.scss */
   .mwm-aal-container ul li {
     width: 100%;
   }
 }
-/* line 81, ../scss/core/_cms.scss */
+/* line 82, ../scss/core/_cms.scss */
 .mwm-aal-container ul li:before {
   font-family: "tarva";
   content: '\e803';
@@ -3809,7 +3810,7 @@ body.debug:before {
   margin-top: -.18em;
 }
 
-/* line 96, ../scss/core/_cms.scss */
+/* line 97, ../scss/core/_cms.scss */
 .mwm-aal-title {
   color: #ff520d;
 }

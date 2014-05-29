@@ -27,6 +27,7 @@ $font-serif: "ff-meta-serif-web-pro", serif;
 
 // Borders
 $color-keyline: #f0f0f0;
+$color-keyline-alt: darken($color-keyline, 5%);
 
 // Layout
 $container-max-width: 68.5em;
