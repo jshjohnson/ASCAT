@@ -201,6 +201,7 @@
 }
 
 .module__split {
+	overflow: auto;
 	dt,dd {
 		float: left;
 		margin: 0;
