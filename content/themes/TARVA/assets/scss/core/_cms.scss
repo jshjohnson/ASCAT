@@ -66,12 +66,16 @@
 	color: white;
 	a {
 		color: white;
+		font-weight: 500;
 	}
 	ul { 
-		margin-bottom: 0;
+		margin: 0;
 		li {
 			width: 50%;
 			display: inline-block;
+			@include respond-max($bp1) {
+				width: 100%;
+			}
 			&:before {
 				font-family: "tarva";
 				content: '\e803';

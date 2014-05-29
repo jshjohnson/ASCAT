@@ -3702,17 +3702,24 @@ body.debug:before {
 /* line 67, ../scss/core/_cms.scss */
 .mwm-aal-container a {
   color: white;
+  font-weight: 500;
 }
-/* line 70, ../scss/core/_cms.scss */
+/* line 71, ../scss/core/_cms.scss */
 .mwm-aal-container ul {
-  margin-bottom: 0;
+  margin: 0;
 }
-/* line 72, ../scss/core/_cms.scss */
+/* line 73, ../scss/core/_cms.scss */
 .mwm-aal-container ul li {
   width: 50%;
   display: inline-block;
 }
-/* line 75, ../scss/core/_cms.scss */
+@media screen and (max-width: 30em) {
+  /* line 73, ../scss/core/_cms.scss */
+  .mwm-aal-container ul li {
+    width: 100%;
+  }
+}
+/* line 79, ../scss/core/_cms.scss */
 .mwm-aal-container ul li:before {
   font-family: "tarva";
   content: '\e803';
@@ -3725,7 +3732,7 @@ body.debug:before {
   margin-top: -.18em;
 }
 
-/* line 90, ../scss/core/_cms.scss */
+/* line 94, ../scss/core/_cms.scss */
 .mwm-aal-title {
   color: white;
 }
