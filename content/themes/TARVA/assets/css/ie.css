@@ -2910,9 +2910,53 @@ div elements, we disable it to prevent it from messing up the map
   color: #009;
 }
 
+/* line 121, ../scss/core/_overrides.scss */
+.message {
+  color: white;
+  position: relative;
+  padding: 1em;
+  font-size: .75em;
+  margin-bottom: 1.7em;
+  clear: both;
+}
+/* line 128, ../scss/core/_overrides.scss */
+.message:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: .75em solid transparent;
+  border-right: .75em solid transparent;
+  position: absolute;
+  left: 1.5em;
+  top: 100%;
+}
+/* line 138, ../scss/core/_overrides.scss */
+.message a {
+  color: white;
+  font-weight: bolder;
+}
+/* line 142, ../scss/core/_overrides.scss */
+.message .message__title {
+  color: white;
+  margin-bottom: .5em;
+}
+/* line 145, ../scss/core/_overrides.scss */
+.message .message__title:after {
+  content: none;
+}
+
+/* line 151, ../scss/core/_overrides.scss */
+.message--highlight {
+  background-color: #58b83e;
+}
+/* line 153, ../scss/core/_overrides.scss */
+.message--highlight:after {
+  border-top: 0.75em solid #58b83e;
+}
+
 /* Debuggin'
 ----------------------------------*/
-/* line 143, ../scss/core/_overrides.scss */
+/* line 181, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2927,7 +2971,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 0";
 }
-/* line 146, ../scss/core/_overrides.scss */
+/* line 184, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2942,7 +2986,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 1";
 }
-/* line 149, ../scss/core/_overrides.scss */
+/* line 187, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;
@@ -2957,7 +3001,7 @@ body.debug:before {
   font-size: .8em;
   content: "Breakpoint 2";
 }
-/* line 152, ../scss/core/_overrides.scss */
+/* line 190, ../scss/core/_overrides.scss */
 body.debug:before {
   display: inline-block;
   color: #FFF;

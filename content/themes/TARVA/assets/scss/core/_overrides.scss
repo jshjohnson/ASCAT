@@ -118,6 +118,44 @@
 
 .alert{	color:#009;}
 
+.message {
+	color: white;
+	position: relative;
+	padding: 1em;
+	font-size: .75em;
+	margin-bottom: $baseline;
+	clear: both;
+	&:after {
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: .75em solid transparent;
+		border-right: .75em solid transparent;
+		position: absolute;
+		left: 1.5em;
+		top: 100%;
+	}
+	a {
+		color: white;
+		font-weight: bolder;
+	}
+	.message__title {
+		color: white;
+		margin-bottom: .5em;
+		&:after {
+			content: none;
+		}
+	}
+}
+
+.message--highlight {
+	background-color: $color-highlight-alt;
+	&:after {
+		border-top: 0.75em solid $color-highlight-alt;
+	}
+}
+
+
 /* Debuggin'
 ----------------------------------*/
 
