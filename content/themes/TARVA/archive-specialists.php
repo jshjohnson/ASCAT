@@ -11,7 +11,7 @@ Template Name: Search Specialists
 			        'orderby' => 'title',
 			        'order' => 'ASC',
 					'paged' => $paged,
-					'posts_per_page' => -1, //Limits the amount of posts on each page
+					'posts_per_page' => -1,
 					'tax_query' => array(
 							array(
 								'taxonomy' => 'letters',
@@ -43,7 +43,7 @@ Template Name: Search Specialists
 			        }
 			        $dl .= '<dt><a href="' . get_permalink($query->post->ID) . '">' . $query->post->post_title . '</a></dt>';
 			        $dl .= '<dd>' . $query->post->post_content . '</dd>';
-			    }
+			    } 
 			    $dl .= '</dl></li>';
 
 			    $ul = '<ul class="block-letters">';
@@ -56,26 +56,20 @@ Template Name: Search Specialists
 			    }
 			    $ul .= '</ul>';
 
-			    // echo '<div id="glossary">' . $ul . '<ul class="definitions">' . $dl . '</ul></div>';
 			    echo '<div id="glossary">' . $ul . '</div>';
-			    wp_reset_query();
 			?>
-			<?php if ( have_posts() ) : ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-			<article class="content__body">
-				<?php the_content(); ?>
-			</article>	
-			<?php endwhile; ?>
-			<?php endif; ?>
-			<?php
-				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-				$args = array(
-					'post_type' => 'investigator',
-					'orderby' => 'title',
-					'order' => 'ASC',
+			<div class="heading-divide">
+				<h1 class="heading-divide__title"><?php echo $firstLetter; ?></h1>
+			</div>
+
+			<?php
+			    $args = array(
+			        'post_type' => 'investigator',
+			        'orderby' => 'title',
+			        'order' => 'ASC',
 					'paged' => $paged,
-					'posts_per_page' => -1, //Limits the amount of posts on each page
+					'posts_per_page' => -1,
 					'tax_query' => array(
 							array(
 								'taxonomy' => 'letters',
@@ -83,29 +77,26 @@ Template Name: Search Specialists
 								'terms' => $firstLetter,
 							)
 					),
-				);
-				
-				$query = new WP_Query($args);
-			?>
-				<div class="heading-divide">
-					<h1 class="heading-divide__title"><?php echo $firstLetter; ?></h1>
-				</div>
-				<?php if ( $query->have_posts() ): ?>
-				<div class="grid">
-					<?php 
-						while ( $query->have_posts() ) : $query->the_post();	
+			    );
 
-							$image = get_field('avatar');
-							$url = $image['sizes']['medium'];
-						    $alt = $image['alt'];			
-							$title = get_field('alternative_title');
-							if($title == ''):
-								$title = get_the_title();
-							endif;  
-					?>
-					<?php include("parts/user-bio.php"); ?>
-					<?php endwhile; ?>
-				</div>
-				<?php endif; ?>
+			    $query = new WP_Query($args);
+				
+				if ( $query->have_posts() ): ?>
+			<div class="grid">
+			<?php 
+				while ( $query->have_posts() ) : $query->the_post();	
+
+					$image = get_field('avatar');
+					$url = $image['sizes']['medium'];
+				    $alt = $image['alt'];			
+					$title = get_field('alternative_title');
+					if($title == ''):
+						$title = get_the_title();
+					endif;  
+			?>
+				<?php include("parts/user-bio.php"); ?>
+			<?php endwhile; ?>
+			</div>
+			<?php endif; ?>
 		</div>
 <?php get_footer(); ?>
