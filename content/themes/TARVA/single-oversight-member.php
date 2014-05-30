@@ -15,9 +15,6 @@
 				<dt>Job title:</dt>
 				<dd><?php the_field('job_title'); ?></dd>
 				<?php endif; ?>
-				<dt>Role:</dt>
-				<dd><?php the_field('job_role'); ?></dd>
-
 				<?php if (has_term('committee_types')) : ?>
 				<dt>Committee:</dt>
 				<dd>
@@ -33,55 +30,23 @@
 		            </ul>
 		        </dd>
 				<?php endif; ?>
-				<?php if(get_field('bio')) : ?>
+				<?php if(get_field('committee_role')) : ?>
+				<dt>Role:</dt>
+				<dd><?php the_field('committee_role'); ?></dd>
+				<?php endif; ?>
+				<?php if(get_field('site')) : ?>
+				<dt>Site:</dt>
+				<dd><?php the_field('site'); ?></dd>
+				<?php endif; ?>
+				<?php if(get_field('biography')) : ?>
 				<dt>Bio:</dt>
-				<dd><?php the_field('bio'); ?></dd>
-				<?php endif; ?>
-				<?php 
-				$post_object = get_field('centre');
-
-				if( $post_object ): 
-
-				// override $post
-				$post = $post_object;
-				setup_postdata( $post ); 
-
-				?>
-				<dt>Centre:</dt>
-				<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
-				
-				<?php if(get_field('address')) : ?>
-				<dt>Address:</dt>
-				<dd><?php the_field('address'); ?></dd>
-				<?php endif; ?>
-
-				<?php if(get_field('telephone')) : ?>
-				<dt>Tel:</dt>
-				<dd><?php the_field('telephone'); ?></dd>
-				<?php endif; ?>
-
-				<?php if(get_field('email')) : ?>
-				<dt>Email:</dt>
-				<dd><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></dd>
-				<?php endif; ?>
-				
+				<dd><?php the_field('biography'); ?></dd>
+				<?php endif; ?>	
 				<?php if(get_field('website')) : ?>
 				<dt>Website:</dt>
 				<dd><a href="<?php the_field('website'); ?>"><?php the_field('website'); ?></a></dd>
 				<?php endif; ?>
-				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-				<?php endif; ?>
 				
-				<?php if(get_field('appointments')) : ?>
-				<dt>Appointments:</dt>
-				<dd><?php the_field('appointments'); ?></dd>
-				<?php endif; ?>
-
-				<?php if(get_field('private_appointments')) : ?>
-				<dt>Private appointments:</dt>
-				<dd><?php the_field('private_appointments'); ?></dd>
-				<?php endif; ?>
-
 			</dl>
 			<?php endwhile; ?>
 		</article>
