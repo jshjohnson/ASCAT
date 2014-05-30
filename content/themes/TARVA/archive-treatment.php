@@ -31,7 +31,7 @@ Template Name: Treatment Archive
 						<?php }; ?>
 					<div class="content-block__text">
 						<?php the_excerpt(); ?>
-						<a href="<?php echo get_permalink(); ?>">More info</a>
+						<a class="more-link" href="<?php the_permalink(); ?>">More Info</a>
 					</div>
 				</article>
 				<?php endwhile; ?>
