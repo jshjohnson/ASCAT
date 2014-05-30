@@ -7,8 +7,13 @@
 								<?php endif; ?>
 								<div class="bio__content">
 									<h2 class="listing-title listing-title--bio"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h2>
-									<h3 class="listing-subtitle listing-subtitle--bio"><?php the_field('job_title'); ?></h3>
-									<a class="more-link" href="<?php the_permalink(); ?>">More</a>
+								<?php $jobTitle = get_field('job_title'); if($jobTitle) : ?>
+									<h3 class="listing-subtitle listing-subtitle--bio"><?php echo $jobTitle; ?></h3>
+								<?php endif; ?>
+								<?php $role = get_field('committee_role'); if($role) : ?>
+									<h3 class="listing-subtitle listing-subtitle--bio"><?php echo $role; ?></h3>
+								<?php endif; ?>
+									<p><a class="more-link" href="<?php the_permalink(); ?>">More</a></p>
 								</div>
 							</div>
 						</article>
