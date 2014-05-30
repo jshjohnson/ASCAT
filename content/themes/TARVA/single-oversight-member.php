@@ -20,18 +20,18 @@
 				<dt>Job title:</dt>
 				<dd><?php the_field('job_title'); ?></dd>
 				<?php endif; ?>
-				<?php if (has_term('committee_types')) : ?>
+				<?php if($terms = get_the_terms($post->id, "committee_types")) : ?>
 				<dt>Committee:</dt>
 				<dd>
-					<ul class="list-unset">
-						<?php $terms = get_the_terms( $post->ID , 'committee_types' ); 
-		                    foreach ( $terms as $term ) {
-		                        $term_link = get_term_link( $term, 'committee_types' );
-		                        if( is_wp_error( $term_link ) )
-		                        continue;
-		                    echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
-		                    } 
-		                ?>
+					<ul>
+					<?php  
+						 if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+						     foreach ( $terms as $term ) {
+						       echo "<li>" . $term->name . "</li>";
+						        
+						     }
+						 }
+	                ?>
 		            </ul>
 		        </dd>
 				<?php endif; ?>

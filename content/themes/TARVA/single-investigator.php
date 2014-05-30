@@ -34,18 +34,15 @@
 				<?php if($terms = get_the_terms($post->id, "committee_types")) : ?>
 				<dt>Committee:</dt>
 				<dd>
-					<ul class="list-unset">
-						<?php 
-							 
-							 if ( !empty( $terms ) && !is_wp_error( $terms ) ){
-							     echo "<ul>";
-							     foreach ( $terms as $term ) {
-							       echo "<li>" . $term->name . "</li>";
-							        
-							     }
-							     echo "</ul>";
-							 }
-		                ?>
+					<ul>
+					<?php  
+						 if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+						     foreach ( $terms as $term ) {
+						       echo "<li>" . $term->name . "</li>";
+						        
+						     }
+						 }
+	                ?>
 		            </ul>
 		        </dd>
 				<?php endif; ?>
