@@ -11,7 +11,7 @@
 							<div class="grid grid--center push-top">
 							<?php while(has_sub_field('footer_logos', 'option')): ?>
 								<?php $logo = get_sub_field('footer_logo'); ?>
-								<div class="grid__cell unit-1-4--bp3 unit-1-3--bp2 unit-1-2">
+								<div class="grid__cell unit-1-4--bp4 unit-1-3--bp2 unit-1-2">
 									<img src="<?php echo $logo['url']; ?>" alt="<?php echo $alt; ?>" class="footer__img">
 								</div>
 							<?php endwhile; ?>
