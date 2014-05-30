@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php get_header(alt); ?>
+	<p class="nav nav--page">
+	<?php if(function_exists('bcn_display')) {
+        bcn_display();
+    }?>
+    </p>
 	<div class="content__container container">
 		<?php if ( have_posts() ) : ?>
 		<article class="bio module">
@@ -17,21 +22,29 @@
 				<?php endif; ?>
 
 				<?php if(get_field('committee_role')) : ?>
-				<dt>Role:</dt>
+				<dt>Committee:</dt>
 				<dd><?php the_field('committee_role'); ?></dd>
 				<?php endif; ?>
 				
-				<?php if (has_term('committee_types')) : ?>
+				<?php if(get_field('committee_role')) : ?>
+				<dt>Committee Role:</dt>
+				<dd><?php the_field('committee_role'); ?></dd>
+				<?php endif; ?>
+				
+				<?php if($terms = get_the_terms($post->id, "committee_types")) : ?>
 				<dt>Committee:</dt>
 				<dd>
 					<ul class="list-unset">
-						<?php $terms = get_the_terms( $post->ID , 'committee_types' ); 
-		                    foreach ( $terms as $term ) {
-		                        $term_link = get_term_link( $term, 'committee_types' );
-		                        if( is_wp_error( $term_link ) )
-		                        continue;
-		                    echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
-		                    } 
+						<?php 
+							 
+							 if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+							     echo "<ul>";
+							     foreach ( $terms as $term ) {
+							       echo "<li>" . $term->name . "</li>";
+							        
+							     }
+							     echo "</ul>";
+							 }
 		                ?>
 		            </ul>
 		        </dd>
@@ -40,28 +53,12 @@
 				<dt>Bio:</dt>
 				<dd><?php the_field('biography'); ?></dd>
 				<?php endif; ?>
-				<?php 
-				$post_object = get_field('centre');
 
-				if( $post_object ): 
-
-				// override $post
-				$post = $post_object;
-				setup_postdata( $post ); 
-
-				?>
-				<dt>Centre:</dt>
-				<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+				<?php if(get_field('site')) : ?>
+				<dt>Site:</dt>
+				<dd><?php the_field('site'); ?></dd>
+				<?php endif; ?>
 				
-				<?php if(get_field('address')) : ?>
-				<dt>Address:</dt>
-				<dd><?php the_field('address'); ?></dd>
-				<?php endif; ?>
-
-				<?php if(get_field('telephone')) : ?>
-				<dt>Tel:</dt>
-				<dd><?php the_field('telephone'); ?></dd>
-				<?php endif; ?>
 
 				<?php if(get_field('email')) : ?>
 				<dt>Email:</dt>
@@ -72,8 +69,7 @@
 				<dt>Website:</dt>
 				<dd><a href="<?php the_field('website'); ?>"><?php the_field('website'); ?></a></dd>
 				<?php endif; ?>
-				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-				<?php endif; ?>
+	
 				
 				<?php if(get_field('appointments')) : ?>
 				<dt>Appointments:</dt>

@@ -4,9 +4,11 @@ Template Name: Single Committee Archive
 */
 ?>
 <?php get_header(alt); ?>
-	<?php if ( function_exists('yoast_breadcrumb') ) {
-		yoast_breadcrumb('<p class="nav nav--page">','</p>');
-	} ?>
+	<p class="nav nav--page">
+	<?php if(function_exists('bcn_display')) {
+        bcn_display();
+    }?>
+    </p>
 		<div class="content__container container">
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
