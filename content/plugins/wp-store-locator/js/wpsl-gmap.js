@@ -242,7 +242,7 @@ function initializeGmap() {
 		mapTypeId: mapType,
 		mapTypeControl: false,
 		scrollwheel: false,
-		draggable: false
+		draggable: false,
 		panControl: false,
 		streetViewControl: streetViewVisible,
 			zoomControlOptions: {
