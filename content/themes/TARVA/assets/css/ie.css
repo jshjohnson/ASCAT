@@ -3100,34 +3100,43 @@ body.debug:before {
 
 /* line 37, ../scss/core/_cms.scss */
 .page-numbers {
-  padding: .25em .6em;
-  background: #02899e;
-  color: white;
+  display: block;
+  width: 1.5em;
+  padding: .5em;
+  font-size: 1.2em;
+  width: .8em;
+  border-radius: 2em;
   font-weight: 500;
-  line-height: 1;
+  line-height: .8em;
+  color: #b3b3b3;
+  background-color: #fafafa;
+  -webkit-transition: background-color, 0.5s;
+  -moz-transition: background-color, 0.5s;
+  -o-transition: background-color, 0.5s;
+  transition: background-color, 0.5s;
 }
-/* line 43, ../scss/core/_cms.scss */
+/* line 49, ../scss/core/_cms.scss */
 .page-numbers:visited, .page-numbers:hover {
   color: white;
 }
 
-/* line 48, ../scss/core/_cms.scss */
+/* line 54, ../scss/core/_cms.scss */
 .current {
   background: #ff520d;
 }
 
-/* line 52, ../scss/core/_cms.scss */
+/* line 58, ../scss/core/_cms.scss */
 .prev, .next {
   background: none;
   color: #ff520d;
 }
-/* line 55, ../scss/core/_cms.scss */
+/* line 61, ../scss/core/_cms.scss */
 .prev:visited, .prev:hover, .next:visited, .next:hover {
   color: #ff520d;
 }
 
 /* -- Better anchor links -- */
-/* line 62, ../scss/core/_cms.scss */
+/* line 68, ../scss/core/_cms.scss */
 .mwm-aal-container {
   background-color: #fafafa;
   padding: 1.5em;
@@ -3136,22 +3145,22 @@ body.debug:before {
   color: #ff520d;
   border: 1px solid #e3e3e3;
 }
-/* line 69, ../scss/core/_cms.scss */
+/* line 75, ../scss/core/_cms.scss */
 .mwm-aal-container a {
   font-weight: 500;
 }
-/* line 72, ../scss/core/_cms.scss */
+/* line 78, ../scss/core/_cms.scss */
 .mwm-aal-container ul {
   margin: 0;
 }
-/* line 74, ../scss/core/_cms.scss */
+/* line 80, ../scss/core/_cms.scss */
 .mwm-aal-container ul li {
   width: 48%;
   padding-right: 1%;
   vertical-align: top;
   display: inline-block;
 }
-/* line 82, ../scss/core/_cms.scss */
+/* line 88, ../scss/core/_cms.scss */
 .mwm-aal-container ul li:before {
   font-family: "tarva";
   content: '\e803';
@@ -3164,7 +3173,7 @@ body.debug:before {
   margin-top: -.18em;
 }
 
-/* line 97, ../scss/core/_cms.scss */
+/* line 103, ../scss/core/_cms.scss */
 .mwm-aal-title {
   color: #ff520d;
 }

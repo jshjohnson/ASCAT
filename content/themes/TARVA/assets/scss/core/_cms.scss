@@ -35,11 +35,17 @@
 }
 
 .page-numbers {
-	padding: .25em .6em;
-	background: $color-brand;
-	color: white;
+	display: block;
+	width: 1.5em;
+	padding: .5em;
+	font-size: 1.2em;
+	width: .8em;
+	border-radius: 2em;
 	font-weight: 500;
-	line-height: 1;
+	line-height: .8em;
+	color: #b3b3b3;
+	background-color: #fafafa;
+	@include transition(background-color, 0.5s);
 	&:visited, &:hover {
 		color: white;
 	}
