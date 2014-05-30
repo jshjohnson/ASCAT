@@ -1771,12 +1771,12 @@ img.media__img {
 /* line 279, ../scss/core/_modules.scss */
 .nav--page a {
   color: white;
-  padding-right: .5em;
 }
 
-/* line 285, ../scss/core/_modules.scss */
+/* line 284, ../scss/core/_modules.scss */
 .nav--page__seperator {
-  margin-right: .5em;
+  margin-right: .25em;
+  margin-left: .5em;
 }
 
 /* line 290, ../scss/core/_modules.scss */
