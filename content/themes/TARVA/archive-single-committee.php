@@ -3,7 +3,10 @@
 Template Name: Single Committee Archive
 */
 ?>
-<?php get_header(); ?>
+<?php get_header(alt); ?>
+	<?php if ( function_exists('yoast_breadcrumb') ) {
+		yoast_breadcrumb('<p class="nav nav--page">','</p>');
+	} ?>
 		<div class="content__container container">
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
