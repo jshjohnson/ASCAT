@@ -20,7 +20,6 @@ Template Name: Single Committee Archive
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 					$args = array(
-						'post_type' => 'investigator',
 						'paged' => $paged,
 						'posts_per_page' => 6, 
 						'orderby' => 'title',
@@ -68,7 +67,6 @@ Template Name: Single Committee Archive
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 					$args = array(
-					'post_type' => 'investigator',
 					'paged' => $paged,
 					'posts_per_page' => 6,
 					'orderby' => 'title',
@@ -115,7 +113,6 @@ Template Name: Single Committee Archive
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 					$args = array(
-					'post_type' => 'investigator',
 					'paged' => $paged,
 					'posts_per_page' => 6,
 					'orderby' => 'title',
