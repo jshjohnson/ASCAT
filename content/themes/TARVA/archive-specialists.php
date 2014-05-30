@@ -49,9 +49,9 @@ Template Name: Search Specialists
 			    $ul = '<ul class="block-letters">';
 			    foreach ( array( 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ) as $letter ) {
 			    	if($letter == $firstLetter) {
-			    		$ul .= '<li><a class="is-active" href="?letter=' . $letter . '">' . $letter . '</a></li>';
+			    		$ul .= '<li class="block-letters__single"><a class="is-active" href="?letter=' . $letter . '">' . $letter . '</a></li>';
 			    	}else {
-			    		$ul .= '<li><a href="?letter=' . $letter . '">' . $letter . '</a></li>';
+			    		$ul .= '<li class="block-letters__single"><a href="?letter=' . $letter . '">' . $letter . '</a></li>';
 			    	}  
 			    }
 			    $ul .= '</ul>';

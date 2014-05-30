@@ -79,6 +79,12 @@
 	position: absolute;
 	width: 1px; }
 
+.is-active, %is-active {
+	color: white;
+	background-color: $color-brand;
+	@include transition(background-color, .5s);
+}
+
 .info, .hospital {
 	&:before {
 		font-family: $icon-font-family;

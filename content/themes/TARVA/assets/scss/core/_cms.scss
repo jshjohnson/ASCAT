@@ -35,7 +35,8 @@
 }
 
 .page-numbers {
-	display: block;
+	display: inline-block;
+	margin: 0 .25em;
 	width: 1.5em;
 	padding: .5em;
 	font-size: 1.2em;
@@ -43,16 +44,20 @@
 	border-radius: 2em;
 	font-weight: 500;
 	line-height: .8em;
-	color: #b3b3b3;
-	background-color: #fafafa;
+	color: darken($color-keyline, 20%);
+	background-color: $color-background-alt;
 	@include transition(background-color, 0.5s);
-	&:visited, &:hover {
-		color: white;
+	&:visited {
+		color: darken($color-keyline, 20%);;
+	}
+	&:hover, &.is-active {
+		@extend %is-active;
 	}
 }
 
 .current {
-	background: $color-highlight;
+	background: $color-brand;
+	color: white;
 }
 
 .prev, .next {

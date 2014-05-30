@@ -87,7 +87,7 @@ img.media__img {
 	display: inline-block;
 	margin-left: 0;
 	text-align: center;
-	li {
+	.block-letters__single {
 		display: inline-block;
 		margin: .5em;
 		color: white;
@@ -105,9 +105,7 @@ img.media__img {
 			background-color: $color-background-alt;
 			@include transition(background-color, .5s);
 			&:hover, &.is-active {
-				color: white;
-				background-color: $color-brand;
-				@include transition(background-color, .5s);
+				@extend %is-active;
 			}
 		}
 	}
