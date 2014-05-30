@@ -21,7 +21,7 @@ Template Name: Single Committee Archive
 
 					$args = array(
 						'paged' => $paged,
-						'posts_per_page' => 6, 
+						'posts_per_page' => 10, 
 						'orderby' => 'title',
 						'order' => 'ASC',
 						'committee_types' => 'data-monitoring-committee'
@@ -68,7 +68,7 @@ Template Name: Single Committee Archive
 
 					$args = array(
 					'paged' => $paged,
-					'posts_per_page' => 6,
+					'posts_per_page' => 10,
 					'orderby' => 'title',
 					'order' => 'ASC',
 					'committee_types' => 'trial-steering-committee'
@@ -114,7 +114,7 @@ Template Name: Single Committee Archive
 
 					$args = array(
 					'paged' => $paged,
-					'posts_per_page' => 6,
+					'posts_per_page' => 10,
 					'orderby' => 'title',
 					'order' => 'ASC',
 					'committee_types' => 'trial-management-group'
