@@ -12,12 +12,6 @@ Template Name: Search Specialists
 			        'order' => 'ASC',
 					'paged' => $paged,
 					'posts_per_page' => -1, //Limits the amount of posts on each page
-					'meta_query' => array(
-								array(
-									'key' => 'specialist',
-									'value' => true,
-								),
-							),
 					'tax_query' => array(
 							array(
 								'taxonomy' => 'letters',
@@ -82,12 +76,6 @@ Template Name: Search Specialists
 					'order' => 'ASC',
 					'paged' => $paged,
 					'posts_per_page' => -1, //Limits the amount of posts on each page
-					'meta_query' => array(
-								array(
-									'key' => 'specialist',
-									'value' => true,
-								),
-							),
 					'tax_query' => array(
 							array(
 								'taxonomy' => 'letters',
