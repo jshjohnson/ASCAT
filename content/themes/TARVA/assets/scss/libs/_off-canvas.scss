@@ -10,7 +10,7 @@
 }
 
 
-@include respond-max($bp2) {
+@include respond-max($bp3) {
 	#nav {
 		position: absolute;
 		@include box-sizing(border-box);
@@ -77,7 +77,7 @@
 
 }
 
-@include respond-max($bp2) {
+@include respond-max($bp3) {
 
 
 	.js-ready{

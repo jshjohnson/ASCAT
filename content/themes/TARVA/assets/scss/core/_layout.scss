@@ -22,7 +22,7 @@
 	@include respond-min($bp4) {
 		width: 80%;
 	}
-	@include respond-max($bp2) {
+	@include respond-max($bp3) {
 		width: 100%;
 	}
 
@@ -40,7 +40,6 @@
 	position: relative;
 	margin-bottom: 4em;
 	min-height: 10em;
-	// overflow: auto;
 	@include respond-max($bp2) {
 		margin-top: 10%;
 	}
@@ -82,7 +81,7 @@
 	max-width: 18em;
 	width: 75%;
 	padding: 0 1.25em;
-	@include respond-max($bp2) {
+	@include respond-max($bp3) {
 		float: left;
 		max-width: 6em;
 		padding: .75em 1.5em;
@@ -96,7 +95,7 @@
 	padding: 2em 0;
 	position: relative;
 	background-color: $color-brand;
-	@include respond-min($bp2) {
+	@include respond-min($bp3) {
 		height: 100%;
 		width: 25%;
 		left: 0;
@@ -109,7 +108,7 @@
 	@include respond-max($bp4) {
 		overflow-y: scroll;
 	}
-	@include respond-max($bp2) {
+	@include respond-max($bp3) {
 		padding: 0;
 		overflow-y: visible;
 	}
@@ -121,7 +120,7 @@
 .content {
 	overflow-x: hidden;
 	background-color: white;
-	@include respond-min($bp2) {
+	@include respond-min($bp3) {
 		width: 75%;
 		float: right;
 		@include box-sizing(border-box);

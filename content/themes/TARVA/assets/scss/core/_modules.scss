@@ -171,7 +171,7 @@ img.media__img {
 		> li {
 			font-size: .8em;
 			padding: .6em 0 .55em;
-			@include respond-max($bp2) {
+			@include respond-max($bp3) {
 				font-size: .9em;
 			}
 			a {
@@ -198,7 +198,7 @@ img.media__img {
 			}
 		}
 	}
-	@include respond-max($bp2) {
+	@include respond-max($bp3) {
 		margin: 0;
 		background-image: url('../img/shape-bg--alt.svg');
 		@include background-size(cover);
@@ -217,7 +217,7 @@ img.media__img {
 	text-align: center;
 	margin-bottom: 0;
 	display: block;
-	@include respond-min($bp2){
+	@include respond-min($bp3){
 		display:none;
 	}
 	&:visited, &:hover {
@@ -574,7 +574,7 @@ img.media__img {
 		width: 35%;
 		max-width: 15em;
 		@include respond-max($bp4) {
-			width: 70%;
+			width: 45%;
 			float: none;
 			text-align: center;
 		}
@@ -582,7 +582,7 @@ img.media__img {
 			float:left;
 		}
 		@include respond-max($bp1) {
-			width: 60%;
+			width: 45%;
 			float: none;
 			text-align: center;
 		}
@@ -606,7 +606,7 @@ img.media__img {
 	}
 	@include respond-max($bp2) {
 		float: right;
-		width: 55%;
+		width: 50%;
 	}
 	@include respond-max($bp1) {
 		float: none;
