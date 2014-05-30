@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Single committee archive
+Template Name: Single Committee Archive
 */
 ?>
 <?php get_header(); ?>
@@ -12,7 +12,8 @@ Template Name: Single committee archive
 			</article>
 			<?php endwhile; ?>	
 			<?php endif; ?>
-
+			<h4>Investigators:</h4>
+			<hr>
 			<?php if(get_field('committee_select') == 9) : ?>
 
 				<?php
