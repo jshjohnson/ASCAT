@@ -15,9 +15,12 @@
 				<dt>Job title:</dt>
 				<dd><?php the_field('job_title'); ?></dd>
 				<?php endif; ?>
-				<dt>Role:</dt>
-				<dd><?php the_field('job_role'); ?></dd>
 
+				<?php if(get_field('committee_role')) : ?>
+				<dt>Role:</dt>
+				<dd><?php the_field('committee_role'); ?></dd>
+				<?php endif; ?>
+				
 				<?php if (has_term('committee_types')) : ?>
 				<dt>Committee:</dt>
 				<dd>
@@ -33,9 +36,9 @@
 		            </ul>
 		        </dd>
 				<?php endif; ?>
-				<?php if(get_field('bio')) : ?>
+				<?php if(get_field('biography')) : ?>
 				<dt>Bio:</dt>
-				<dd><?php the_field('bio'); ?></dd>
+				<dd><?php the_field('biography'); ?></dd>
 				<?php endif; ?>
 				<?php 
 				$post_object = get_field('centre');

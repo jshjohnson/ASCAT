@@ -2958,7 +2958,7 @@ div elements, we disable it to prevent it from messing up the map
   border-right: .75em solid transparent;
   position: absolute;
   left: 1.5em;
-  top: -.7em;
+  top: -.65em;
 }
 /* line 161, ../scss/core/_overrides.scss */
 .message--flipped a {
