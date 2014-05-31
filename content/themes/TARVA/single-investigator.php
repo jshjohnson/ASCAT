@@ -14,20 +14,14 @@
 			    $alt = $image['alt'];	
 			?>
 			<dl class="module__split">
-				<dt>Name:</dt>
-				<dd><?php the_title(); ?></dd>
 				<?php if(get_field('job_title')) : ?>
 				<dt>Job title:</dt>
 				<dd><?php the_field('job_title'); ?></dd>
 				<?php endif; ?>
 
-				<?php if(get_field('committee_role')) : ?>
-				<dt>Committee:</dt>
-				<dd><?php the_field('committee_role'); ?></dd>
-				<?php endif; ?>
 				
 				<?php if(get_field('committee_role')) : ?>
-				<dt>Committee Role:</dt>
+				<dt>Role:</dt>
 				<dd><?php the_field('committee_role'); ?></dd>
 				<?php endif; ?>
 				
@@ -71,11 +65,6 @@
 				<?php if(get_field('appointments')) : ?>
 				<dt>Appointments:</dt>
 				<dd><?php the_field('appointments'); ?></dd>
-				<?php endif; ?>
-
-				<?php if(get_field('private_appointments')) : ?>
-				<dt>Private appointments:</dt>
-				<dd><?php the_field('private_appointments'); ?></dd>
 				<?php endif; ?>
 
 			</dl>
