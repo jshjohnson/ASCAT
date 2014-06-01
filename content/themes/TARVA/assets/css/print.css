@@ -672,37 +672,37 @@ blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child {
 
 /* -- Headings -- */
 /* line 97, ../scss/core/_base.scss */
-h1 {
+h1, .as-h1 {
   line-height: 1.333;
   font-size: 2em;
 }
 
 /* line 98, ../scss/core/_base.scss */
-h2, .mwm-aal-title {
+h2, .mwm-aal-title, .as-h2 {
   line-height: 1.4;
   font-size: 1.5em;
 }
 
 /* line 99, ../scss/core/_base.scss */
-h3 {
+h3, .as-h3 {
   line-height: 1.5;
   font-size: 1.35em;
 }
 
 /* line 100, ../scss/core/_base.scss */
-h4, .module__split dt {
+h4, .module__split dt, .as-h4 {
   line-height: 1.5;
   font-size: 1.125em;
 }
 
 /* line 101, ../scss/core/_base.scss */
-h5 {
+h5, .as-h5 {
   line-height: 1.5;
   font-size: 1em;
 }
 
 /* line 102, ../scss/core/_base.scss */
-h6 {
+h6, .as-h6 {
   line-height: 1.5;
   font-size: 0.875em;
 }
@@ -2694,24 +2694,30 @@ img.media__img {
   clear: right;
 }
 
+/* line 649, ../scss/core/_modules.scss */
+.listing-subtitle {
+  font-family: "proxima-nova", "Proxima Nova", sans-serif;
+}
+
 @media screen and (min-width: 62em) {
-  /* line 649, ../scss/core/_modules.scss */
+  /* line 653, ../scss/core/_modules.scss */
   .listing-subtitle--bio {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
-/* line 655, ../scss/core/_modules.scss */
+/* line 659, ../scss/core/_modules.scss */
 .listing-subtitle--block {
   background: #02899e;
   display: inline-block;
-  padding: .5em 1em;
+  padding: .6em 1em .5em;
   color: white;
   text-transform: uppercase;
   font-size: .95em;
+  line-height: 1.5;
 }
 
-/* line 664, ../scss/core/_modules.scss */
+/* line 669, ../scss/core/_modules.scss */
 .ribbon {
   position: absolute;
   right: 1em;
@@ -2722,7 +2728,7 @@ img.media__img {
   border-bottom: 0.6em solid #fafafa;
   width: 0;
 }
-/* line 673, ../scss/core/_modules.scss */
+/* line 678, ../scss/core/_modules.scss */
 .ribbon h5 {
   font-size: .6em;
   padding-right: 1em;
@@ -2737,14 +2743,14 @@ img.media__img {
   margin-top: 1.7em;
 }
 
-/* line 684, ../scss/core/_modules.scss */
+/* line 689, ../scss/core/_modules.scss */
 .intro {
   overflow: auto;
   background-color: #ff520d;
   background-image: url("../img/shape-bg.svg");
   position: relative;
 }
-/* line 689, ../scss/core/_modules.scss */
+/* line 694, ../scss/core/_modules.scss */
 .intro:after {
   content: "";
   width: 0;
@@ -2759,27 +2765,27 @@ img.media__img {
   margin-left: -.75em;
 }
 
-/* line 704, ../scss/core/_modules.scss */
+/* line 709, ../scss/core/_modules.scss */
 .intro-text {
   padding: 1.5em 0;
   font-size: 1.4em;
   color: white;
   font-weight: 400;
 }
-/* line 709, ../scss/core/_modules.scss */
+/* line 714, ../scss/core/_modules.scss */
 .intro-text .intro-text__highlight {
   font-size: 1.7em;
   color: white;
   font-weight: bolder;
 }
 @media screen and (max-width: 48em) {
-  /* line 709, ../scss/core/_modules.scss */
+  /* line 714, ../scss/core/_modules.scss */
   .intro-text .intro-text__highlight {
     font-size: 1.55em;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 704, ../scss/core/_modules.scss */
+  /* line 709, ../scss/core/_modules.scss */
   .intro-text {
     font-size: 1.25em;
   }

@@ -646,19 +646,24 @@ img.media__img {
 	clear: right;
 }
 
+.listing-subtitle {
+	font-family: $font-sans;
+}
+
 .listing-subtitle--bio {
 	@include respond-min($bp3) {
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 }
 
 .listing-subtitle--block {
 	background: $color-brand;
 	display: inline-block;
-	padding: .5em 1em;
+	padding: .6em 1em .5em;
 	color: white;
 	text-transform: uppercase;
 	font-size: .95em;
+	line-height: 1.5;
 }
 
 .ribbon {

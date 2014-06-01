@@ -94,12 +94,12 @@ hr { border-top: 1px solid $color-keyline; }
 blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child { margin-bottom: 0; }
 
 /* -- Headings -- */
-h1, %h1 { line-height: 1.333; font-size: 2em;  }	
-h2, %h2 { line-height: 1.4; font-size: 1.5em;}
-h3, %h3 { line-height: 1.5; font-size: 1.35em; }
-h4, %h4 { line-height: 1.5; font-size: 1.125em; }	
-h5, %h5 { line-height: 1.5; font-size: 1em; }
-h6, %h6 { line-height: 1.5; font-size: 0.875em; }
+h1, %h1, .as-h1 { line-height: 1.333; font-size: 2em;  }	
+h2, %h2, .as-h2 { line-height: 1.4; font-size: 1.5em;}
+h3, %h3, .as-h3 { line-height: 1.5; font-size: 1.35em; }
+h4, %h4, .as-h4 { line-height: 1.5; font-size: 1.125em; }	
+h5, %h5, .as-h5 { line-height: 1.5; font-size: 1em; }
+h6, %h6, .as-h6 { line-height: 1.5; font-size: 0.875em; }
 	
 /* -- Lists -- */
 ul, ol { margin-left: 2em; padding-left: 0; }
