@@ -21,7 +21,7 @@
 				
 				<?php if(get_field('committee_role')) : ?>
 				<dt><h3 class="as-h5">Role:</h3></dt>
-				<dd><?php the_field('committee_role'); ?></dd>
+				<dd><p class="block-title"><?php the_field('committee_role'); ?></p></dd>
 				<?php endif; ?>
 				
 				<?php if($terms = get_the_terms($post->id, "committee_types")) : ?>
@@ -38,6 +38,7 @@
 		            </ul>
 		        </dd>
 				<?php endif; ?>
+
 				<?php if(get_field('biography')) : ?>
 				<dt><h3 class="as-h5">Bio:</h3></dt>
 				<dd><?php the_field('biography'); ?></dd>

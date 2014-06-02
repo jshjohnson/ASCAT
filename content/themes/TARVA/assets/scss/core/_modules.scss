@@ -111,6 +111,23 @@ img.media__img {
 	}
 }
 
+.block-title {
+	background-color: $color-brand;
+	height: 2.5em;
+	padding: 0 1.5em;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	@include border-radius(10em);
+	line-height: 2.5em;
+	h5 {
+		@include vertical-align;
+	}
+	a {
+		color: white;
+	}
+}
+
 
 /* Nav Objects - http://goo.gl/QjtO6
 ----------------------------------*/
@@ -305,26 +322,6 @@ img.media__img {
 
 .fade-in {
 	opacity: 0; // fade in container on load with jQuery
-}
-
-.block-link {
-	background-color: $color-brand;
-	height: 10em;
-	padding: 0 1.5em;
-	color: white;
-	text-align: center;
-	h5 {
-		@include vertical-align;
-	}
-	a {
-		color: white;
-	}
-	@include respond-max($bp2) {
-		height: 8em;
-	}
-	@include respond-max($bp1) {
-		height: 6em;
-	}
 }
 
 .page-heading {
@@ -656,7 +653,7 @@ img.media__img {
 	}
 }
 
-.listing-subtitle--block {
+.title-block {
 	background: $color-brand;
 	display: inline-block;
 	padding: .6em 1em .5em;
