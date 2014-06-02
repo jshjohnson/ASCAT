@@ -10,8 +10,10 @@
 		<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" class="content__img">
 		<article class="bio module hospital">
 			<dl class="module__split">
-				<dt>Name:</dt>
-				<dd><?php the_title(); ?></dd>
+				<?php if(get_field('email')) : ?>
+				<dt><h3 class="as-h5">Name:</h3></dt>
+				<dd><?php the_field('centre_name'); ?></dd>
+				<?php endif; ?>
 				<?php 
 				$post_object = get_field('primary_investigator');
 
@@ -22,7 +24,7 @@
 				setup_postdata( $post ); 
 
 				?>
-				<dt>Primary Investigator:</dt>
+				<dt><h3 class="as-h5">Primary Investigator:</h3></dt>
 				<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
 				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
@@ -31,7 +33,7 @@
 				$post_objects = get_field('co-investigators');
  
 				if( $post_objects ): ?>
-				    <dt>Co-Investigators:</dt>
+				    <dt><h3 class="as-h5">Co-Investigators:</h3></dt>
 				    <dd>
 				    	<ul class="list-unset">
 				    <?php foreach( $post_objects as $post_object): ?>
@@ -44,23 +46,28 @@
 				<?php endif; ?>
 
 				<?php if(get_field('coordinator')) : ?>
-				<dt>Research Coordinator:</dt>
+				<dt><h3 class="as-h5">Research Coordinator:</h3></dt>
 				<dd><?php the_field('coordinator'); ?></dd>
 				<?php endif; ?>
 
 				<?php if(get_field('telephone')) : ?>
-				<dt>Tel:</dt>
+				<dt><h3 class="as-h5">Tel:</h3></dt>
 				<dd><?php the_field('telephone'); ?></dd>
 				<?php endif; ?>
 
 				<?php if(get_field('email')) : ?>
-				<dt>Email:</dt>
+				<dt><h3 class="as-h5">Email:</h3></dt>
 				<dd><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></dd>
 				<?php endif; ?>
 				
 				<?php if(get_field('website')) : ?>
-				<dt>Website:</dt>
-				<dd><a href="<?php the_field('website'); ?>"><?php the_field('website'); ?></a></dd>
+				<dt><h3 class="as-h5">Website:</h3></dt>
+				<dd><a href="<?php the_field('website'); ?>"><?php $url = get_field('website'); $str = preg_replace('#^https?://#', '', $url); echo $str;  ?></a></dd>
+				<?php endif; ?>
+
+				<?php if(get_field('address')) : ?>
+				<dt><h3 class="as-h5">Address:</h3></dt>
+				<dd><?php the_field('address'); ?> <small><a href="/centres/">Find your nearest centre</a></small></dd>
 				<?php endif; ?>
 			</dl>
 			<?php endwhile; ?>

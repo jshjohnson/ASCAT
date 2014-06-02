@@ -15,18 +15,18 @@
 			?>
 			<dl class="module__split">
 				<?php if(get_field('job_title')) : ?>
-				<dt>Job title:</dt>
+				<dt><h3 class="as-h5">Job title:</h3></dt>
 				<dd><?php the_field('job_title'); ?></dd>
 				<?php endif; ?>
 
 				
 				<?php if(get_field('committee_role')) : ?>
-				<dt>Role:</dt>
+				<dt><h3 class="as-h5">Role:</h3></dt>
 				<dd><?php the_field('committee_role'); ?></dd>
 				<?php endif; ?>
 				
 				<?php if($terms = get_the_terms($post->id, "committee_types")) : ?>
-				<dt>Committee:</dt>
+				<dt><h3 class="as-h5">Committee:</h3></dt>
 				<dd>
 					<ul>
 					<?php  
@@ -41,29 +41,29 @@
 		        </dd>
 				<?php endif; ?>
 				<?php if(get_field('biography')) : ?>
-				<dt>Bio:</dt>
+				<dt><h3 class="as-h5">Bio:</h3></dt>
 				<dd><?php the_field('biography'); ?></dd>
 				<?php endif; ?>
 
 				<?php if(get_field('site')) : ?>
-				<dt>Site:</dt>
+				<dt><h3 class="as-h5">Site:</h3></dt>
 				<dd><?php the_field('site'); ?></dd>
 				<?php endif; ?>
 				
 
 				<?php if(get_field('email')) : ?>
-				<dt>Email:</dt>
+				<dt><h3 class="as-h5">Email:</h3></dt>
 				<dd><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></dd>
 				<?php endif; ?>
 				
 				<?php if(get_field('website')) : ?>
-				<dt>Website:</dt>
-				<dd><a href="<?php the_field('website'); ?>"><?php the_field('website'); ?></a></dd>
+				<dt><h3 class="as-h5">Website:</h3></dt>
+				<dd><a href="<?php the_field('website'); ?>"><?php $url = get_field('website'); $str = preg_replace('#^https?://#', '', $url); echo $str;  ?></a></dd>
 				<?php endif; ?>
 	
 				
 				<?php if(get_field('appointments')) : ?>
-				<dt>Appointments:</dt>
+				<dt><h3 class="as-h5">Appointments:</h3></dt>
 				<dd><?php the_field('appointments'); ?></dd>
 				<?php endif; ?>
 

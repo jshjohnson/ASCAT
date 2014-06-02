@@ -41,7 +41,7 @@ Template Name: Search Specialists
 			            $glossary_letter = $term_letter;
 			            $active_letters[] = $term_letter;
 			        }
-			        $dl .= '<dt><a href="' . get_permalink($query->post->ID) . '">' . $query->post->post_title . '</a></dt>';
+			        $dl .= '<dt><h3 class="as-h5"><a href="' . get_permalink($query->post->ID) . '">' . $query->post->post_title . '</a></h3></dt>';
 			        $dl .= '<dd>' . $query->post->post_content . '</dd>';
 			    } 
 			    $dl .= '</dl></li>';
