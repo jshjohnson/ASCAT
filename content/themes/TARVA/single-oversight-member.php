@@ -27,9 +27,8 @@
 					<?php  
 						 if ( !empty( $terms ) && !is_wp_error( $terms ) ){
 						     foreach ( $terms as $term ) {
-						       echo "<li>" . $term->name . "</li>";
-						        
-						     }
+						    	echo "<li><a href='/trial-oversight/" . $term->slug . "'>" . $term->name . "</a></li>";	        
+						    }
 						 }
 	                ?>
 		            </ul>
@@ -51,7 +50,6 @@
 				<dt><h3 class="as-h5">Website:</h3></dt>
 				<dd><a href="<?php the_field('website'); ?>"><?php $url = get_field('website'); $str = preg_replace('#^https?://#', '', $url); echo $str;  ?></a></dd>
 				<?php endif; ?>
-				
 			</dl>
 			<?php endwhile; ?>
 		</article>

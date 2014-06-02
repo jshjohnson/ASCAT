@@ -31,8 +31,7 @@
 					<?php  
 						 if ( !empty( $terms ) && !is_wp_error( $terms ) ){
 						     foreach ( $terms as $term ) {
-						       echo "<li><a href='/trial-oversight/" . $term->slug . "'>" . $term->name . "</a></li>";
-						        
+						       echo "<li><a href='/trial-oversight/" . $term->slug . "'>" . $term->name . "</a></li>"; 
 						     }
 						 }
 	                ?>
