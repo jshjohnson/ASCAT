@@ -2026,16 +2026,14 @@ img.media__img {
   line-height: 2.5em;
 }
 /* line 123, ../scss/core/_modules.scss */
-.block-title h5 {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-/* line 126, ../scss/core/_modules.scss */
 .block-title a {
   color: white;
+}
+@media screen and (max-width: 62em) {
+  /* line 114, ../scss/core/_modules.scss */
+  .block-title {
+    font-size: 1em;
+  }
 }
 
 /* line 131, ../scss/core/_modules.scss */

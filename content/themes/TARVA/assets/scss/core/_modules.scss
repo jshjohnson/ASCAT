@@ -120,11 +120,11 @@ img.media__img {
 	display: inline-block;
 	@include border-radius(10em);
 	line-height: 2.5em;
-	h5 {
-		@include vertical-align;
-	}
 	a {
 		color: white;
+	}
+	@include respond-max($bp3) {
+		font-size: 1em;
 	}
 }
 
