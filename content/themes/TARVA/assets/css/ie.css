@@ -635,7 +635,7 @@ body {
 
 /* -- Vertical Rhythm -- */
 /* line 90, ../scss/core/_base.scss */
-h1, h2, h3, h4, h5, h6, .mwm-aal-title, .module__split dt {
+h1, h2, h3, h4, h5, h6, .mwm-aal-title {
   margin-bottom: .65em;
   margin-top: 0;
   text-transform: uppercase;
@@ -683,7 +683,7 @@ h3, .as-h3 {
 }
 
 /* line 100, ../scss/core/_base.scss */
-h4, .module__split dt, .as-h4 {
+h4, .as-h4 {
   line-height: 1.5;
   font-size: 1.125em;
 }
@@ -1432,35 +1432,43 @@ a:hover {
   margin-right: 5%;
   width: 30%;
 }
-/* line 233, ../scss/core/_layout.scss */
+/* line 217, ../scss/core/_layout.scss */
+.module__split dt * {
+  margin-bottom: 0;
+}
+/* line 235, ../scss/core/_layout.scss */
 .module__split dt:first-child {
   padding-top: 0;
 }
-/* line 237, ../scss/core/_layout.scss */
+/* line 238, ../scss/core/_layout.scss */
+.module__split dt:last-of-type {
+  padding-bottom: 0;
+}
+/* line 242, ../scss/core/_layout.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
   width: 65%;
 }
-/* line 239, ../scss/core/_layout.scss */
+/* line 244, ../scss/core/_layout.scss */
 .module__split dd:first-of-type {
   padding-top: 0;
 }
-/* line 242, ../scss/core/_layout.scss */
+/* line 247, ../scss/core/_layout.scss */
 .module__split dd:last-child {
   border-bottom: none;
   padding-bottom: 0;
 }
-/* line 246, ../scss/core/_layout.scss */
+/* line 251, ../scss/core/_layout.scss */
 .module__split dd *:last-child {
   margin-bottom: 0;
 }
 
-/* line 263, ../scss/core/_layout.scss */
+/* line 268, ../scss/core/_layout.scss */
 .search input[type='search'] {
   width: 80%;
   float: left;
 }
-/* line 270, ../scss/core/_layout.scss */
+/* line 275, ../scss/core/_layout.scss */
 .search input[type='submit'] {
   width: 20%;
   float: left;

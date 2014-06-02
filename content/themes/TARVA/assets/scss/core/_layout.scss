@@ -210,11 +210,13 @@
 		width: 100%;
 	}
 	dt {
-		@extend %h4;
 		font-weight: 600;
 		font-size: 1em;
 		clear: left;
-		margin-right: 5%;	
+		margin-right: 5%;
+		* {
+			margin-bottom: 0;
+		}
 		@include respond-min($bp4) {
 			width: 25%;
 			
@@ -232,6 +234,9 @@
 		}
 		&:first-child {
 			padding-top: 0;
+		}
+		&:last-of-type {
+			padding-bottom: 0;
 		}
 	}
 	dd {
