@@ -11,7 +11,7 @@
 									<h3 class="listing-subtitle listing-subtitle--bio"><?php echo $jobTitle; ?></h3>
 								<?php endif; ?>
 								<?php $role = get_field('committee_role'); if($role) : ?>
-									<h3 class="listing-subtitle listing-subtitle--bio title-block"><?php echo $role; ?></h3>
+									<h3 class="listing-subtitle listing-subtitle--bio block-title"><?php echo $role; ?></h3>
 								<?php endif; ?>
 									<p><a class="more-link" href="<?php the_permalink(); ?>">More</a></p>
 								</div>
