@@ -128,6 +128,26 @@ img.media__img {
 	}
 }
 
+.block-link {
+	background-color: $color-brand;
+	height: 10em;
+	padding: 0 1.5em;
+	color: white;
+	text-align: center;
+	h5 {
+		@include vertical-align;
+	}
+	a {
+		color: white;
+	}
+	@include respond-max($bp2) {
+		height: 8em;
+	}
+	@include respond-max($bp1) {
+		height: 6em;
+	}
+}
+
 
 /* Nav Objects - http://goo.gl/QjtO6
 ----------------------------------*/
@@ -651,16 +671,6 @@ img.media__img {
 	@include respond-min($bp3) {
 		font-size: 1em;
 	}
-}
-
-.title-block {
-	background: $color-brand;
-	display: inline-block;
-	padding: .6em 1em .5em;
-	color: white;
-	text-transform: uppercase;
-	font-size: .95em;
-	line-height: 1.5;
 }
 
 .ribbon {
