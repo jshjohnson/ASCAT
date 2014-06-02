@@ -26,7 +26,7 @@
 				?>
 				<dt><h3 class="as-h5">Primary Investigator:</h3></dt>
 				<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
-				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 
 				<?php
