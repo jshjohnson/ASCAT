@@ -1759,101 +1759,109 @@ a:hover {
 /* line 200, ../scss/core/_layout.scss */
 .module__split {
   overflow: auto;
+  padding: 1em 0;
 }
-/* line 202, ../scss/core/_layout.scss */
+/* line 203, ../scss/core/_layout.scss */
 .module__split:last-child {
   margin-bottom: 0;
 }
-/* line 205, ../scss/core/_layout.scss */
+/* line 206, ../scss/core/_layout.scss */
 .module__split dt, .module__split dd {
   float: left;
   margin: 0;
   padding: 1.7em 0;
   width: 100%;
 }
-/* line 211, ../scss/core/_layout.scss */
+/* line 212, ../scss/core/_layout.scss */
 .module__split dt {
   font-weight: 600;
   font-size: 1em;
   clear: left;
+  margin-right: 5%;
 }
 @media screen and (min-width: 78em) {
-  /* line 211, ../scss/core/_layout.scss */
+  /* line 212, ../scss/core/_layout.scss */
   .module__split dt {
-    width: 20%;
+    width: 25%;
   }
-  /* line 218, ../scss/core/_layout.scss */
+  /* line 221, ../scss/core/_layout.scss */
   .module__split dt:first-child {
     padding-top: 0.85em;
   }
 }
 @media screen and (max-width: 78em) {
-  /* line 211, ../scss/core/_layout.scss */
+  /* line 212, ../scss/core/_layout.scss */
   .module__split dt {
-    width: 25%;
+    width: 30%;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 211, ../scss/core/_layout.scss */
+  /* line 212, ../scss/core/_layout.scss */
   .module__split dt {
     width: 100%;
+    margin-right: 0;
     padding: 1.7em 0 0;
   }
 }
-/* line 230, ../scss/core/_layout.scss */
+/* line 233, ../scss/core/_layout.scss */
+.module__split dt:first-child {
+  padding-top: 0;
+}
+/* line 237, ../scss/core/_layout.scss */
 .module__split dd {
   border-bottom: 1px dashed #e1e1e1;
 }
-/* line 232, ../scss/core/_layout.scss */
+/* line 239, ../scss/core/_layout.scss */
+.module__split dd:first-of-type {
+  padding-top: 0;
+}
+/* line 242, ../scss/core/_layout.scss */
 .module__split dd:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
-/* line 235, ../scss/core/_layout.scss */
-.module__split dd p:last-child {
+/* line 246, ../scss/core/_layout.scss */
+.module__split dd *:last-child {
   margin-bottom: 0;
 }
 @media screen and (min-width: 78em) {
-  /* line 230, ../scss/core/_layout.scss */
+  /* line 237, ../scss/core/_layout.scss */
   .module__split dd {
-    width: 80%;
-  }
-  /* line 240, ../scss/core/_layout.scss */
-  .module__split dd:first-of-type {
-    padding-top: 0.85em;
+    width: 70%;
   }
 }
 @media screen and (max-width: 78em) {
-  /* line 230, ../scss/core/_layout.scss */
+  /* line 237, ../scss/core/_layout.scss */
   .module__split dd {
-    width: 75%;
+    width: 65%;
   }
 }
 @media screen and (max-width: 48em) {
-  /* line 230, ../scss/core/_layout.scss */
+  /* line 237, ../scss/core/_layout.scss */
   .module__split dd {
     width: 100%;
     padding: 0 0 0.85em;
   }
 }
 
-/* line 255, ../scss/core/_layout.scss */
+/* line 263, ../scss/core/_layout.scss */
 .search input[type='search'] {
   width: 80%;
   float: left;
 }
 @media screen and (max-width: 48em) {
-  /* line 255, ../scss/core/_layout.scss */
+  /* line 263, ../scss/core/_layout.scss */
   .search input[type='search'] {
     width: 75%;
   }
 }
-/* line 262, ../scss/core/_layout.scss */
+/* line 270, ../scss/core/_layout.scss */
 .search input[type='submit'] {
   width: 20%;
   float: left;
 }
 @media screen and (max-width: 48em) {
-  /* line 262, ../scss/core/_layout.scss */
+  /* line 270, ../scss/core/_layout.scss */
   .search input[type='submit'] {
     width: 25%;
   }
