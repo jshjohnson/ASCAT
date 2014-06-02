@@ -1,4 +1,4 @@
-<?php get_header(alt); ?>
+<?php get_header('alt'); ?>
 	<?php if(get_next_post_link()) : ?>
 	<nav class="nav nav--page"><?php next_post_link('Next treatment: <strong>%link</strong>'); ?> </nav>
 	<?php endif; ?>

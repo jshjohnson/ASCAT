@@ -1,4 +1,4 @@
-<?php get_header(alt); ?>
+<?php get_header('alt'); ?>
 	<p class="nav nav--page">
 	<?php if(function_exists('bcn_display')) {
         bcn_display();
