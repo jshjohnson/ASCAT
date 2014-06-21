@@ -270,8 +270,8 @@ img.media__img {
 
 .nav-toggle--open {
 	font-size: 1.5em;
-	float: right;
-	background-color: #066372;
+	float: left;
+	background-color: darken($color-brand, 2.5%);
 	padding: .75em 1.25em;
 	margin: 0;
 }
