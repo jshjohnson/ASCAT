@@ -20,9 +20,9 @@
 						</div>
 					</div>
 				</footer>
-			</div>
-			<div class="footer--credit credit">
-				&copy; <?php echo date( 'Y' ) ?> <?php bloginfo( 'name' ); ?> | <?php wp_nav_menu( array( 'theme_location' => 'tertiary' , 'items_wrap' => '<ul class="nav-tertiary nav--inline">%3$s</ul>' ) ); ?> Website by <a href="http://joshuajohnson.co.uk">Josh Johnson</a>
+				<footer class="footer--credit credit">
+					&copy; <?php echo date( 'Y' ) ?> <?php bloginfo( 'name' ); ?> | <?php wp_nav_menu( array( 'theme_location' => 'tertiary' , 'items_wrap' => '<ul class="nav-tertiary nav--inline">%3$s</ul>' ) ); ?> Website by <a href="http://joshuajohnson.co.uk">Josh Johnson</a>
+				</footer>
 			</div>
 		</div>
 	</div>
