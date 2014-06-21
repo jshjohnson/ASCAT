@@ -628,7 +628,7 @@ body {
   overflow-x: hidden;
   font-family: "proxima-nova", "Proxima Nova", sans-serif;
   line-height: 1.7;
-  color: #02899e;
+  color: #023550;
   word-break: break-word;
   background-color: #066372;
 }
@@ -1777,8 +1777,8 @@ img.media__img {
 /* line 271, ../scss/core/_modules.scss */
 .nav-toggle--open {
   font-size: 1.5em;
-  float: right;
-  background-color: #066372;
+  float: left;
+  background-color: #027e91;
   padding: .75em 1.25em;
   margin: 0;
 }
