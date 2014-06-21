@@ -18,14 +18,7 @@
 	bottom: 0;
 	float: right;
 	clear: both;
-	width: 75%;
-	@include respond-min($bp4) {
-		width: 80%;
-	}
-	@include respond-max($bp3) {
-		width: 100%;
-	}
-
+	width: 100%;
 }
 
 .container {
@@ -120,6 +113,7 @@
 .content {
 	overflow-x: hidden;
 	background-color: white;
+	height: 100%;
 	@include respond-min($bp3) {
 		width: 75%;
 		float: right;

@@ -510,9 +510,14 @@ img.media__img {
 		margin-bottom: 0;
 	}
 	.blog-header__date {
-		float: right;
-		margin-top: .5em;
-		text-align: right;
+		@include respond-min($bp3) {
+			float: right;
+			margin-top: .5em;
+			text-align: right;
+			margin-bottom: 0;
+		}
+		display: block;
+		margin-bottom: .5em;
 	}
 	.blog-header__date--mobile {
 		display: none;
