@@ -25,6 +25,7 @@
 	margin: 0 auto;
 	width: 85%;
 	min-width: 15em;
+	max-width: 960px;
 	max-width: $container-max-width;
 }
 
@@ -71,7 +72,7 @@
 ----------------------------------*/
 
 .logo {
-	max-width: 18em;
+	max-width: 15em;
 	width: 75%;
 	padding: 0 1.25em;
 	@include respond-max($bp3) {

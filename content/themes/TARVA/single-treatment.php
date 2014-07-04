@@ -14,7 +14,7 @@
 			<?php endwhile; ?>
 			<?php $recommendation = get_field('recommendation'); if($recommendation) : ?>
 			<div class="message--highlight message--flipped">
-				<h2 class="message__title">Recommendation</h2>
+				<h3 class="message__title">Recommendation</h3>
 				<?php echo $recommendation; ?>
 			</div>
 			<?php endif;?>
