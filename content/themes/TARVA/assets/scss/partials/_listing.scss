@@ -1,0 +1,27 @@
+.listing-title {
+	margin-bottom: .5em; 
+	a {
+		font-weight: normal;
+	}
+}
+
+.listing-title, .listing-subtitle {
+	text-transform: capitalize;
+	font-weight: normal;
+}
+
+.listing-title--bio {
+	margin: .4em 0;
+	color: $color-highlight;
+	clear: right;
+}
+
+.listing-subtitle {
+	font-family: $font-sans;
+}
+
+.listing-subtitle--bio {
+	@include respond-min($bp3) {
+		font-size: 1em;
+	}
+}

@@ -1,0 +1,65 @@
+.block-letters {
+	list-style-type: none;
+	display: inline-block;
+	margin-left: 0;
+	text-align: center;
+	.block-letters__single {
+		display: inline-block;
+		margin: .5em;
+		color: white;
+		text-align: center;
+		a {
+			display: block;
+			width: 1.5em;
+			padding: .5em;
+			font-size: 1.2em;
+			width: .8em;
+			border-radius: 2em;
+			font-weight: 500;
+			line-height: .8em;
+			color: darken(white, 30%);
+			background-color: $color-background-alt;
+			@include transition(background-color, .5s);
+			&:hover, &.is-active {
+				@extend %is-active;
+			}
+		}
+	}
+}
+
+.block-title {
+	background-color: $color-brand;
+	height: 2.5em;
+	padding: 0 1.5em;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	@include border-radius(10em);
+	line-height: 2.5em;
+	a {
+		color: white;
+	}
+	@include respond-max($bp3) {
+		font-size: 1em;
+	}
+}
+
+.block-link {
+	background-color: $color-brand;
+	height: 10em;
+	padding: 0 1.5em;
+	color: white;
+	text-align: center;
+	h5 {
+		@include vertical-align;
+	}
+	a {
+		color: white;
+	}
+	@include respond-max($bp2) {
+		height: 8em;
+	}
+	@include respond-max($bp1) {
+		height: 6em;
+	}
+}

@@ -25,7 +25,23 @@
 /*----------------------------------------------------------------------------------------*\
  $.MODULES
 \*----------------------------------------------------------------------------------------*/
-@import "core/_modules";
+@import "partials/bio";
+@import "partials/block";
+@import "partials/blog";
+@import "partials/contact-form";
+@import "partials/content-block";
+@import "partials/content";
+@import "partials/credit";
+@import "partials/download";
+@import "partials/footer";
+@import "partials/heading";
+@import "partials/intro";
+@import "partials/island";
+@import "partials/listing";
+@import "partials/media";
+@import "partials/nav";
+@import "partials/page-heading";
+@import "partials/ribbon";
 
 /*----------------------------------------------------------------------------------------*\
  $.OVERRIDES

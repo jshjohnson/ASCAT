@@ -1,0 +1,19 @@
+.ribbon {
+	position: absolute;
+	right: 1em;
+	top: -1px;
+	background-color: $color-brand;
+	border-left: .8em solid transparent;
+	border-right: .8em solid transparent;
+	border-bottom: .6em solid $color-background-alt;
+	width: 0;
+	h5 {
+		font-size: .6em;
+		padding-right: 1em;
+		color: white;
+		padding-bottom: 1em;
+		@include transform(rotate(-90deg));
+		text-transform: uppercase;
+		margin-top: $baseline;
+	}
+}

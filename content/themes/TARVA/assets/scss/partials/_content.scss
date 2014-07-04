@@ -1,0 +1,33 @@
+.content__bg {
+	background-image: url("../img/shape.svg");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: -7em;
+}
+
+.content__overlay {
+ 	@include background-image(linear-gradient(transparent, rgba(black,.6)));
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+	pointer-events: none;
+}
+
+.content__overlay--subtle {
+	height: 50%;
+	@include background-image(linear-gradient(transparent, rgba(black,.35)));
+}
+
+.content__img {
+	@include respond-min($bp1) {
+		margin-top: -1.5em;	
+	}
+	margin-bottom: 2em;	
+}
+
+.content__body {
+	h2 {
+		@extend %underline;
+	}
+}

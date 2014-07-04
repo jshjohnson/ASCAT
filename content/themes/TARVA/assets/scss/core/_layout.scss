@@ -275,3 +275,10 @@
 		}
 	}
 }
+
+.img-wrapper {
+	height: 7.15em;
+	@include background-size(cover);
+	background-repeat: no-repeat;
+	background-position: center 46%;
+}

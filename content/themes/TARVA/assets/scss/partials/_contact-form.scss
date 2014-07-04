@@ -1,0 +1,50 @@
+
+.contact-form {
+	font-family: $font-sans;
+	label {
+		display: block;
+		float: left;
+		width: 10%;
+		margin-right: 10%;
+		font-size: 1em;
+		font-weight: 400;
+		text-align: left;
+		@include respond-max($bp4) {
+		    width: 100%;
+		} 
+	}
+	input:not([type=submit]), textarea {
+		width: 80%;
+		font-size: .9em;
+		padding: .6em;
+		border: 1px solid rgba($color-keyline, .8);
+		margin-bottom: 10px;
+		vertical-align: text-top;
+		@include appearance(none);
+		@include border-radius(0);
+		outline: none;	
+		@include respond-max($bp4) {
+		    width: 100%;
+		} 
+	}
+
+	textarea {
+		min-height: 10em;
+		height: auto;
+		vertical-align: top;
+		@include transition(height 0.2s);
+		resize: vertical;
+		text-indent: 0;
+	}
+
+	@include respond-max($bp4) {
+	    width: 100%;
+	    overflow: hidden;
+	}
+	input[type="submit"] {
+		@include respond-min($bp4) {
+			float: left;
+			margin-left: 20%;
+		}
+	}
+}
