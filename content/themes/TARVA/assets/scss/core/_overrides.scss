@@ -49,19 +49,15 @@
 .highlight { font-size: 1.5em; color: $color-highlight;}
 
 .underline, %underline {
-	margin-bottom: 1em;
+	margin-bottom: .65em;
 	&:after {
 		content: "";
-		width: 110%;
-		margin-top: .25em;
+		width: 100%;
+		margin-top: .5em;
 		margin-bottom: .25em;
 		height: 1px;
-		background-color: $color-keyline-alt;
+		background-color: #e3e3e3;
 		display: block;
-		position: absolute;
-		@include respond-max($bp2) {
-			position: relative;
-		}
 	}
 }
 

@@ -23,8 +23,14 @@
 	}
 }
 
-
 .content-block__text {
 	padding: 1em;
 	background-color: $color-background-alt;
+}
+
+.content-block__img {
+	height: 7.15em;
+	@include background-size(cover);
+	background-repeat: no-repeat;
+	background-position: center 46%;
 }

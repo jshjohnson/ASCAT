@@ -29,6 +29,9 @@
 			a {
 				color: white;
 				font-weight: normal;
+				&:hover {
+				text-decoration: underline;
+				}
 			}
 			&.is-current, &.is-root-parent {
 				margin-left: -4.5em;

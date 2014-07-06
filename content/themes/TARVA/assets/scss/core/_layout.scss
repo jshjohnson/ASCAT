@@ -1,6 +1,10 @@
 /* Container / Inner
 ----------------------------------*/
 
+.fade-in {
+	opacity: 0; // fade in container on load with jQuery
+}
+
 .outer {
 	display: flex;
 	min-height: 100vh;
@@ -82,7 +86,7 @@
 	width: 75%;
 	padding: 0 1.25em;
 	@include respond-max($bp3) {
-		float: left;
+		float: right;
 		max-width: 6em;
 		padding: .75em 1.5em;
 	}
@@ -282,9 +286,9 @@
 	}
 }
 
-.img-wrapper {
-	height: 7.15em;
-	@include background-size(cover);
-	background-repeat: no-repeat;
-	background-position: center 46%;
+.archive-entry {
+	margin-bottom: $baseline;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
