@@ -26,7 +26,7 @@ Template Name: Treatment Archive
 				<article class="grid__cell unit-1-2--bp3 content-block">
 					<h2 class="content-block__heading content-block__heading--small"><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></h2>
 						<?php if(get_field('panel_image')) { ?>
-						<div class="img-wrapper" style="background-image: url('<?php $panel = get_field('panel_image'); echo $panel['sizes']['panel-thumb']; ?>');">
+						<div class="content-block__img" style="background-image: url('<?php $panel = get_field('panel_image'); echo $panel['sizes']['panel-thumb']; ?>');">
 						</div>
 						<?php }; ?>
 					<div class="content-block__text">

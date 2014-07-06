@@ -1,39 +1,24 @@
 .blog-header {
-	.blog-header__date, .blog-header__title {
-		display: inline-block;
-		margin-bottom: 0;
-	}
-	.blog-header__date {
-		@include respond-min($bp3) {
-			float: right;
-			margin-top: .5em;
-			text-align: right;
-			margin-bottom: 0;
-		}
-		display: block;
-		margin-bottom: .5em;
-	}
-	.blog-header__date--mobile {
-		display: none;
-		@include respond-max($bp2) {
-			display: inline-block;
-		}
-		@include respond-max($bp1) {
-			display: none;
-		}
-	}
-	.blog-header__date--desktop {
-		@include respond-max($bp2) {
-			display: none;
-		}
-	}
-	.blog-header__title {
-		color: $color-brand;
-		a {
-			color: $color-brand;
-		}
-	}
 	@extend %underline;
+}
+
+.blog-header__date, .blog-header__title {
+	display: block;
+	@include respond-min($bp1) {
+		display: inline;
+	}
+}
+
+.blog-header__title {
+	color: $color-brand;
+	a {
+		color: $color-brand;
+	}
+}
+
+.blog-header__date {
+	color: #ccc;
+	margin-right: .5em;
 }
 
 .blog__category {
