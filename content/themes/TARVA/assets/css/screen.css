@@ -1,15 +1,5 @@
 @charset "UTF-8";
 /*----------------------------------------------------------------------------------------*\
- * Mixd CSS Framework
- *
- * Author	: Mixd
- * Website	: http://mixd.co.uk
- * GitHub	: http://github.com/Mixd/Mixd-CSS-Framework
- *
- * This work is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License
- * Please leave this comment in for attribution. Be nice!
-\*----------------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------------*\
  $.BASE
 \*----------------------------------------------------------------------------------------*/
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
@@ -2935,27 +2925,27 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* line 21, ../scss/partials/_intro.scss */
-.intro-text {
+.intro__text {
   padding: 1.5em 0;
   font-size: 1.4em;
   color: white;
   font-weight: 400;
 }
 /* line 26, ../scss/partials/_intro.scss */
-.intro-text .intro-text__highlight {
+.intro__text .intro__text--highlight {
   font-size: 1.7em;
   color: white;
   font-weight: bolder;
 }
 @media screen and (max-width: 48em) {
   /* line 26, ../scss/partials/_intro.scss */
-  .intro-text .intro-text__highlight {
+  .intro__text .intro__text--highlight {
     font-size: 1.55em;
   }
 }
 @media screen and (max-width: 48em) {
   /* line 21, ../scss/partials/_intro.scss */
-  .intro-text {
+  .intro__text {
     font-size: 1.25em;
   }
 }
