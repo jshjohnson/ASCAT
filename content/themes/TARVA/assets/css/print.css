@@ -2750,8 +2750,14 @@ div elements, we disable it to prevent it from messing up the map
   min-height: 100vh;
   position: relative;
 }
+@media screen and (max-width: 30em) {
+  /* line 1, ../scss/partials/_content.scss */
+  .content {
+    min-height: 0;
+  }
+}
 
-/* line 7, ../scss/partials/_content.scss */
+/* line 10, ../scss/partials/_content.scss */
 .content__bg {
   background-image: url("../img/shape.svg");
   background-repeat: no-repeat;
@@ -2759,7 +2765,7 @@ div elements, we disable it to prevent it from messing up the map
   background-position: -7em;
 }
 
-/* line 14, ../scss/partials/_content.scss */
+/* line 17, ../scss/partials/_content.scss */
 .content__overlay {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.6)));
   background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.6));
@@ -2773,7 +2779,7 @@ div elements, we disable it to prevent it from messing up the map
   pointer-events: none;
 }
 
-/* line 23, ../scss/partials/_content.scss */
+/* line 26, ../scss/partials/_content.scss */
 .content__overlay--subtle {
   height: 50%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.35)));
@@ -2783,12 +2789,12 @@ div elements, we disable it to prevent it from messing up the map
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
 }
 
-/* line 28, ../scss/partials/_content.scss */
+/* line 31, ../scss/partials/_content.scss */
 .content__img {
   margin-bottom: 2em;
 }
 @media screen and (min-width: 30em) {
-  /* line 28, ../scss/partials/_content.scss */
+  /* line 31, ../scss/partials/_content.scss */
   .content__img {
     margin-top: -1.5em;
   }
