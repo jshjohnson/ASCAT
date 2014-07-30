@@ -35,3 +35,10 @@
 		font-size: 1.25em;
 	}
 }
+
+.intro__text--large {
+	@include respond-min($bp1) {
+		padding: 3em 0;
+		font-size: 175%;
+	}
+}
