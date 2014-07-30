@@ -2418,17 +2418,18 @@ div elements, we disable it to prevent it from messing up the map
   color: white;
   font-weight: 400;
 }
-/* line 26, ../scss/partials/_intro.scss */
-.intro__text .intro__text--highlight {
-  font-size: 1.7em;
-  color: white;
-  font-weight: bolder;
-}
 
-/* line 39, ../scss/partials/_intro.scss */
+/* line 31, ../scss/partials/_intro.scss */
 .intro__text--large {
   padding: 3em 0;
   font-size: 175%;
+}
+
+/* line 38, ../scss/partials/_intro.scss */
+.intro__highlight {
+  font-size: 1.7em;
+  color: white;
+  font-weight: bolder;
 }
 
 /* line 1, ../scss/partials/_island.scss */
