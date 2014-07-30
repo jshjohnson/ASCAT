@@ -58,7 +58,6 @@ jQuery(document).ready( function() {
 	var submit_new_title = function( id ) {
 		var data = {
 			'action': 'wpseo_save_title',
-			'_ajax_nonce' : wpseo_bulk_editor_nonce,
 			'wpseo_post_id': id,
 			'new_title' : jQuery( new_title_id + id ).val(),
 			'existing_title' : jQuery( existing_title_id + id ).html()
@@ -79,7 +78,6 @@ jQuery(document).ready( function() {
 	var submit_new_metadesc = function( id ) {
 		var data = {
 			'action': 'wpseo_save_desc',
-			'_ajax_nonce' : wpseo_bulk_editor_nonce,
 			'wpseo_post_id': id,
 			'new_metadesc' : jQuery( new_metadesc_id + id ).val(),
 			'existing_metadesc' : jQuery( existing_metadesc_id + id ).html()
@@ -118,8 +116,7 @@ jQuery(document).ready( function() {
 		var save_all_titles = function() {
 
 			var data = {
-				'action': 'wpseo_save_all_titles',
-				'_ajax_nonce' : wpseo_bulk_editor_nonce
+				'action': 'wpseo_save_all_titles'
 			};
 
 			data.send = false;
@@ -151,8 +148,7 @@ jQuery(document).ready( function() {
 		var save_all_metadescs = function() {
 
 			var data = {
-				'action': 'wpseo_save_all_descs',
-				'_ajax_nonce' : wpseo_bulk_editor_nonce
+				'action': 'wpseo_save_all_descs'
 			};
 
 			data.send = false;

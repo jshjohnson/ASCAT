@@ -10,8 +10,8 @@
 	-webkit-box-shadow: inset 0 1px 0 #fff;
 	box-shadow: inset 0 1px 0 #fff;
 
-	/*-webkit-border-radius: 2px;
-	border-radius: 2px;*/
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 }
 
 /**
@@ -19,19 +19,31 @@
  */
 
 .ws_item_head {
-	padding: 3px;
+	padding: 0;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 
 	background-color: #d9d9d9;
+	background-image: -o-linear-gradient(top, #efefef, #d9d9d9);
+	background-image: -o-linear-gradient(top, #e9e9e9, #d9d9d9);
 	background-image: -ms-linear-gradient(top, #e9e9e9, #d9d9d9);
 	background-image: -moz-linear-gradient(top, #e9e9e9, #d9d9d9);
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#e9e9e9), to(#d9d9d9));
 	background-image: -webkit-linear-gradient(top, #e9e9e9, #d9d9d9);
-	background-image: linear-gradient(to bottom, #e9e9e9, #d9d9d9);
+	background-image: linear-gradient(top, #e9e9e9, #d9d9d9);
+	/*background-color: #c7c7c7;*/
 }
 
 .ws_item_title {
+	padding: 6px 5px;
+
+	/*font-weight: bold;*/
 	color: #222;
-	text-shadow: #FFFFFF 0 1px 0;
+	text-shadow: #FFFFFF 0px 1px 0px;
+}
+
+.ws_flag_container {
+	padding-top: 6px;
 }
 
 /**
@@ -39,7 +51,10 @@
  */
 
 .ws_edit_link {
-	background: transparent url(../images/arrows.png) no-repeat center 3px;
+	width: 30px;
+	height: 30px;
+
+	background: transparent url(../images/arrows.png) no-repeat center 5px;
 	overflow: hidden;
 	text-indent:-999em;
 }
@@ -49,7 +64,7 @@ a.ws_edit_link:hover {
 }
 
 .ws_edit_link:active {
-	background-image: url(../images/arrows-dark.png);
+	background: transparent url(../images/arrows-dark.png) no-repeat center 5px;
 }
 
 .ws_edit_link_expanded {
@@ -77,17 +92,17 @@ a.ws_edit_link:hover {
 }
 
 .ws_menu_separator .ws_item_head {
-	min-height: 22px;
+	height: 29px;
+	border-radius: 3px;
 	background: #F9F9F9 url("../images/menu-arrows.png") no-repeat 4px 8px;
+}
+
+.ws_menu_separator .ws_item_title {
+	display: none;
 }
 
 .ws_menu_separator.ws_active .ws_item_head {
 	background: #999 url("../images/menu-arrows.png") no-repeat 4px 8px;
-}
-
-/* Offset the separator image in actor view to prevent it from overlapping the checkbox.  */
-.ws_is_actor_view  .ws_menu_separator .ws_item_head {
-	background-position: 25px 8px;
 }
 
 /**
@@ -109,33 +124,6 @@ a.ws_edit_link:hover {
 	border-top-color: #808080;
 	border-bottom-color: #6d6d6d;
 }
-
-/**
- * Hidden items.
- */
-.ws_is_actor_view .ws_container.ws_is_hidden_for_actor .ws_item_head {
-	background: #F9F9F9 linear-gradient(to top, #F3F3F3, #FFFFFF);
-}
-
-/* selected hidden items */
-.ws_is_actor_view .ws_is_hidden_for_actor.ws_active .ws_item_head {
-	background: #dedede linear-gradient(to top, #8f8f8f, #a2a2a2);
-}
-.ws_is_actor_view .ws_is_hidden_for_actor.ws_active .ws_item_title {
-	color: #fff;
-	text-shadow: none;
-}
-
-/* hidden separators */
-.ws_is_actor_view .ws_menu_separator.ws_is_hidden_for_actor .ws_item_head {
-	/* Override gradient with the separator image. */
-	background: url("../images/menu-arrows.png") no-repeat 25px 8px;
-}
-/* selected hidden separators */
-.ws_menu_separator.ws_is_hidden_for_actor.ws_active .ws_item_head {
-	background: #aaa url("../images/menu-arrows.png") no-repeat 25px 8px;
-}
-
 
 /**
  * Dropping menus on other menus.
@@ -202,44 +190,22 @@ a.ws_button:hover {
 .ui-dialog {
 	background: white;
 	border: 1px solid #c0c0c0;
-
-	border-radius: 0;
 }
 
 .ui-dialog-titlebar {
-	background-color: #fcfcfc;;
-	border-bottom-color: #dfdfdf;
+	background-color: #86A7E3;
 }
 
 .ui-dialog-title {
-	color: #444444;
+	color: white;
 }
 
 .ui-dialog-titlebar-close {
-	background-color: transparent;
-	border-style: none;
-
-	color: #666;
-	cursor: pointer;
-	padding: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 36px;
-	height: 30px;
-	text-align: center;
-}
-
-.ui-dialog-titlebar-close::before {
-	font: normal 20px/30px 'dashicons';
-	content: '\f158';
-
-	vertical-align: top;
-	width: 36px;
-	height: 30px;
+	background: #86A7E3 url(../images/x.png) no-repeat center;
+	color: white;
 }
 
 .ui-dialog-titlebar-close:hover {
-	background: transparent none;
-	color: #2ea2cc;
+	/*background-image: url(../images/x-light.png);*/
+	background-color: #a6c2f5;
 }

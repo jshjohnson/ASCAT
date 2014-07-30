@@ -8,9 +8,6 @@
  * currently registered hooks and the presence of specific files in admin/plugin folders.
  */
 abstract class ameMenuItem {
-	const unclickableTemplateId = '>special:none';
-	const unclickableTemplateClass = 'ame-unclickable-menu-item';
-
 	/**
 	 * @var array A partial list of files in /wp-admin/. Correct as of WP 3.8-RC1, 2013.12.04.
 	 * When trying to determine if a menu links to one of the default WP admin pages, it's faster
@@ -37,15 +34,14 @@ abstract class ameMenuItem {
 	 */
 	public static function fromWpItem($item, $position = 0, $parent = '') {
 		static $separator_count = 0;
-		$default_css_class = empty($parent) ? 'menu-top' : '';
 		$item = array(
 			'menu_title'   => $item[0],
 			'access_level' => $item[1], //= required capability
 			'file'         => $item[2],
 			'page_title'   => (isset($item[3]) ? $item[3] : ''),
-			'css_class'    => (isset($item[4]) ? $item[4] : $default_css_class),
+			'css_class'    => (isset($item[4]) ? $item[4] : 'menu-top'),
 			'hookname'     => (isset($item[5]) ? $item[5] : ''), //Used as the ID attr. of the generated HTML tag.
-			'icon_url'     => (isset($item[6]) ? $item[6] : 'dashicons-admin-generic'),
+			'icon_url'     => (isset($item[6]) ? $item[6] : 'images/generic.png'),
 			'position'     => $position,
 			'parent'       => $parent,
 		);
@@ -98,7 +94,7 @@ abstract class ameMenuItem {
 	        //Fields that apply only to top level menus.
 	        'css_class' => 'menu-top',
 	        'hookname' => '',
-	        'icon_url' => 'dashicons-admin-generic',
+	        'icon_url' => 'images/generic.png',
 	        'separator' => false,
 			'colors' => false,
 
@@ -141,11 +137,10 @@ abstract class ameMenuItem {
 		return array(
 			'menu_title' => 'Custom Menu',
 			'access_level' => 'read',
-			'extra_capability' => '',
 			'page_title' => '',
 			'css_class' => 'menu-top',
 			'hookname' => '',
-			'icon_url' => 'dashicons-admin-generic',
+			'icon_url' => 'images/generic.png',
 			'open_in' => 'same_window',
 			'is_plugin_page' => false,
 			'page_heading' => '',

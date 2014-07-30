@@ -249,8 +249,7 @@ if( ! class_exists( 'Yoast_License_Manager', false ) ) {
 			$api_params = array(
 				'edd_action' => $action . '_license',
 				'license'    => $this->get_license_key(),
-				'item_name'  => urlencode( trim( $this->product->get_item_name() ) ),
-				'url' => home_url()
+				'item_name'  => urlencode( trim( $this->product->get_item_name() ) )
 			);
 
 			// create api request url

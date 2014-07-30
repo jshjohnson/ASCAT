@@ -51,14 +51,6 @@ jQuery(function($) {
 		currentUri.path = currentUri.path + 'index.php';
 	}
 
-	//Special case: if post_type is not specified for edit.php and post-new.php,
-	//WordPress assumes it is "post". Here we make this explicit.
-	if ( (currentUri.file === 'edit.php') || (currentUri.file === 'post-new.php') ) {
-		if ( !currentUri.queryKey.hasOwnProperty('post_type') ) {
-			currentUri.queryKey['post_type'] = 'post';
-		}
-	}
-
     var adminMenu = $('#adminmenu');
 	adminMenu.find('li > a').each(function(index, link) {
 		var $link = $(link);
@@ -71,7 +63,8 @@ jQuery(function($) {
 
 		var uri = parseUri(link.href);
 
-		//Same as above - use "post" as the default post type.
+		//Special case: if post_type is not specified for edit.php and post-new.php,
+		//WordPress assumes it is "post". Here we make this explicit.
 		if ( (uri.file === 'edit.php') || (uri.file === 'post-new.php') ) {
 			if ( !uri.queryKey.hasOwnProperty('post_type') ) {
 				uri.queryKey['post_type'] = 'post';
