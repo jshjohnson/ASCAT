@@ -4,14 +4,14 @@ Plugin Name: Custom Post Type UI
 Plugin URI: http://webdevstudios.com/plugin/custom-post-type-ui/
 Description: Admin panel for creating custom post types and custom taxonomies in WordPress
 Author: WebDevStudios.com
-Version: 0.8.2
+Version: 0.8.3
 Author URI: http://webdevstudios.com/
 Text Domain: cpt-plugin
 License: GPLv2
 */
 
 // Define current version constant
-define( 'CPT_VERSION', '0.8.2' );
+define( 'CPT_VERSION', '0.8.3' );
 
 // Define current WordPress version constant
 define( 'CPTUI_WP_VERSION', get_bloginfo( 'version' ) );
@@ -99,7 +99,7 @@ function cpt_create_custom_post_types() {
 			$cpt_rewrite_slug       = ( !empty( $cpt_post_type["rewrite_slug"] ) ) ? esc_html( $cpt_post_type["rewrite_slug"] ) : esc_html( $cpt_post_type["name"] );
 			$cpt_rewrite_withfront  = ( !empty( $cpt_post_type["rewrite_withfront"] ) ) ? true : get_disp_boolean( $cpt_post_type["rewrite_withfront"] ); //reversed because false is empty
 			$cpt_menu_position      = ( !empty( $cpt_post_type["menu_position"] ) ) ? intval( $cpt_post_type["menu_position"] ) : null; //must be null
-			$cpt_menu_icon          = ( !empty( $cpt_post_type["menu_icon"] ) ) ? esc_url( $cpt_post_type["menu_icon"] ) : null; //must be null
+			$cpt_menu_icon          = ( !empty( $cpt_post_type["menu_icon"] ) ) ? esc_attr( $cpt_post_type["menu_icon"] ) : null; //must be null
 			$cpt_taxonomies         = ( !empty( $cpt_post_type[1] ) ) ? $cpt_post_type[1] : array();
 			$cpt_supports           = ( !empty( $cpt_post_type[0] ) ) ? $cpt_post_type[0] : array();
 
@@ -671,7 +671,7 @@ if ( isset($_GET['cpt_msg'] ) && $_GET['cpt_msg'] == 'del' ) { ?>
 						$cpt_singular = ( empty( $cpt_post_type["singular_label"] ) ) ? $cpt_label : esc_html($cpt_post_type["singular_label"]);
 						$cpt_rewrite_slug = ( empty( $cpt_post_type["rewrite_slug"] ) ) ? esc_html($cpt_post_type["name"]) : esc_html($cpt_post_type["rewrite_slug"]);
 						$cpt_menu_position = ( empty( $cpt_post_type["menu_position"] ) ) ? null : intval($cpt_post_type["menu_position"]);
-						$cpt_menu_icon = ( !empty( $cpt_post_type["menu_icon"] ) ) ? esc_url($cpt_post_type["menu_icon"]) : null;
+						$cpt_menu_icon = ( !empty( $cpt_post_type["menu_icon"] ) ) ? esc_attr($cpt_post_type["menu_icon"]) : null;
 
 						if ( true == $cpt_post_type["show_ui"] ) {
 							$cpt_show_in_menu = ( $cpt_post_type["show_in_menu"] == 1 ) ? 1 : 0;
