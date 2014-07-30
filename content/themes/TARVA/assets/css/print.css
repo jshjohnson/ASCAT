@@ -390,6 +390,7 @@ table {
 /* line 5, ../scss/core/_base.scss */
 html {
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
 }
 
 /* -- Selections -- */
@@ -2744,6 +2745,13 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 /* line 1, ../scss/partials/_content.scss */
+.content {
+  min-height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* line 7, ../scss/partials/_content.scss */
 .content__bg {
   background-image: url("../img/shape.svg");
   background-repeat: no-repeat;
@@ -2751,7 +2759,7 @@ div elements, we disable it to prevent it from messing up the map
   background-position: -7em;
 }
 
-/* line 8, ../scss/partials/_content.scss */
+/* line 14, ../scss/partials/_content.scss */
 .content__overlay {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.6)));
   background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.6));
@@ -2765,7 +2773,7 @@ div elements, we disable it to prevent it from messing up the map
   pointer-events: none;
 }
 
-/* line 17, ../scss/partials/_content.scss */
+/* line 23, ../scss/partials/_content.scss */
 .content__overlay--subtle {
   height: 50%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.35)));
@@ -2775,12 +2783,12 @@ div elements, we disable it to prevent it from messing up the map
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
 }
 
-/* line 22, ../scss/partials/_content.scss */
+/* line 28, ../scss/partials/_content.scss */
 .content__img {
   margin-bottom: 2em;
 }
 @media screen and (min-width: 30em) {
-  /* line 22, ../scss/partials/_content.scss */
+  /* line 28, ../scss/partials/_content.scss */
   .content__img {
     margin-top: -1.5em;
   }
@@ -2789,9 +2797,11 @@ div elements, we disable it to prevent it from messing up the map
 /* line 1, ../scss/partials/_credit.scss */
 .credit {
   padding: 1em 4em .8em;
-  border: 1px solid #f0f0f0;
+  border-top: 1px solid #f0f0f0;
   background-color: #fafafa;
   text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 @media screen and (max-width: 48em) {
   /* line 1, ../scss/partials/_credit.scss */
@@ -2801,7 +2811,7 @@ div elements, we disable it to prevent it from messing up the map
 }
 
 @media screen and (min-width: 48em) {
-  /* line 11, ../scss/partials/_credit.scss */
+  /* line 13, ../scss/partials/_credit.scss */
   .credit--fixed {
     position: fixed;
     bottom: 0;
@@ -2845,9 +2855,11 @@ div elements, we disable it to prevent it from messing up the map
 .footer {
   background: white;
   padding-bottom: 1.7em;
+  margin-bottom: 1.7em;
+  position: relative;
 }
 
-/* line 6, ../scss/partials/_footer.scss */
+/* line 8, ../scss/partials/_footer.scss */
 .footer__img {
   max-height: 3.5em;
   margin-top: 1.25em;
@@ -2937,6 +2949,14 @@ div elements, we disable it to prevent it from messing up the map
   /* line 21, ../scss/partials/_intro.scss */
   .intro__text {
     font-size: 1.25em;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  /* line 39, ../scss/partials/_intro.scss */
+  .intro__text--large {
+    padding: 3em 0;
+    font-size: 175%;
   }
 }
 
