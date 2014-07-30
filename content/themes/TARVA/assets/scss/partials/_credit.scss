@@ -1,8 +1,10 @@
 .credit {
 	padding: 1em 4em .8em;
-	border: 1px solid darken($color-background-alt, 4%);
+	border-top: 1px solid darken($color-background-alt, 4%);
 	background-color: $color-background-alt;
 	text-align:center;
+	position: absolute;
+	bottom: 0;
 	@include respond-max($bp2) {
 		padding: 1em 3em .8em;
 	}
