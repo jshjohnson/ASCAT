@@ -32,18 +32,19 @@
 
 .block-title {
 	background-color: $color-brand;
-	height: 2.5em;
 	padding: 0 1.5em;
 	color: white;
 	text-align: center;
 	display: inline-block;
 	@include border-radius(10em);
-	line-height: 2.5em;
+	line-height: 2.25em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: auto;
+	max-width: 75%;
 	a {
 		color: white;
-	}
-	@include respond-max($bp3) {
-		font-size: 1em;
 	}
 }
 

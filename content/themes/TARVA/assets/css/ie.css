@@ -2094,7 +2094,6 @@ div elements, we disable it to prevent it from messing up the map
 /* line 33, ../scss/partials/_block.scss */
 .block-title {
   background-color: #02899e;
-  height: 2.5em;
   padding: 0 1.5em;
   color: white;
   text-align: center;
@@ -2104,14 +2103,19 @@ div elements, we disable it to prevent it from messing up the map
   -ms-border-radius: 10em;
   -o-border-radius: 10em;
   border-radius: 10em;
-  line-height: 2.5em;
+  line-height: 2.25em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: auto;
+  max-width: 75%;
 }
-/* line 42, ../scss/partials/_block.scss */
+/* line 46, ../scss/partials/_block.scss */
 .block-title a {
   color: white;
 }
 
-/* line 50, ../scss/partials/_block.scss */
+/* line 51, ../scss/partials/_block.scss */
 .block-link {
   background-color: #02899e;
   height: 10em;
@@ -2119,7 +2123,7 @@ div elements, we disable it to prevent it from messing up the map
   color: white;
   text-align: center;
 }
-/* line 56, ../scss/partials/_block.scss */
+/* line 57, ../scss/partials/_block.scss */
 .block-link h5 {
   position: relative;
   top: 50%;
@@ -2127,7 +2131,7 @@ div elements, we disable it to prevent it from messing up the map
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 59, ../scss/partials/_block.scss */
+/* line 60, ../scss/partials/_block.scss */
 .block-link a {
   color: white;
 }

@@ -11,7 +11,7 @@
 									<h3 class="listing__subtitle listing__subtitle--bio"><?php echo $jobTitle; ?></h3>
 								<?php endif; ?>
 								<?php $role = get_field('committee_role'); if($role) : ?>
-									<h3 class="listing__subtitle listing__subtitle--bio block-title"><?php echo $role; ?></h3>
+									<h3 class="listing__subtitle listing__subtitle--bio block-title as-h5"><?php echo $role; ?></h3>
 								<?php endif; ?>
 								</div>
 							</div>
