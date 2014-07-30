@@ -2,7 +2,7 @@
 /*----------------------------------------------------------------------------------------*\
   $.General Defaults
 \*----------------------------------------------------------------------------------------*/
-html { -webkit-font-smoothing: antialiased; }
+html { -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none }
 
 /* -- Selections -- */
 ::-moz-selection { background: rgba(102,102,102,.5); color: #FFF; text-shadow: none; }
