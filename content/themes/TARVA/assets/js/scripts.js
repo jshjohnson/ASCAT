@@ -1,4 +1,6 @@
-// @codekit-prepend "plugins.js"
+$(document).ready(function() { 
+    $(".content__body").fitVids();
+});
 
 (function($, window, document, undefined) {
 
