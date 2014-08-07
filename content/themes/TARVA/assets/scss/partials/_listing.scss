@@ -21,7 +21,5 @@
 }
 
 .listing__subtitle--bio {
-	@include respond-min($bp3) {
-		font-size: 1em;
-	}
+	font-size: 1em;
 }
