@@ -22,6 +22,7 @@
 			@include transition(background-color, .5s);
 			&:hover, &.is-active {
 				@extend %is-active;
+				text-decoration: none;
 			}
 		}
 	}

@@ -21,11 +21,8 @@
 		margin-left: 0;
 		list-style-type: none;
 		> li {
-			font-size: .8em;
 			padding: .6em 0 .55em;
-			@include respond-max($bp3) {
-				font-size: .9em;
-			}
+			font-size: .9em;
 			a {
 				color: white;
 				font-weight: normal;
@@ -48,7 +45,7 @@
 					margin-right: .4em;
 					float: left;
 					line-height: 1.2;
-					margin-top: -.2em;
+					margin-top: -1px;
 				}
 			}
 		}
@@ -109,7 +106,7 @@
 .nav--page, .credit {
 	color: #848484;
 	padding: 1em 7.5% .8em;
-	font-size: .7em;
+	font-size: .75em;
 	line-height: 1.7;
 	@include box-sizing(border-box);
 	a {

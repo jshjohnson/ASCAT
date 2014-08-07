@@ -34,7 +34,6 @@
 
 .bio__content {
 	width: 55%;
-	font-size: .9em;
 	float: right;
 	@include respond-max($bp4) {
 		float: none;
