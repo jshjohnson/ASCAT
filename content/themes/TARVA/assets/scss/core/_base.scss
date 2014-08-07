@@ -160,8 +160,6 @@ blockquote p + .source { margin-top: -$baseline; }
 .source { display: block; @include font-sans; font-size: 1em; font-weight: bold; font-style: normal; }
 .source:before { content:"\2013\0020"; }
 
-a:active, a:focus { position: relative; top: 1px; }
-
 /* Links
 ----------------------------------*/
 
@@ -179,7 +177,9 @@ a:visited {
 
 /* -- hovers -- */
 a:hover {
-	color: $color-link-hover; }
+	color: $color-link-hover;
+	text-decoration: underline;
+}
 
 %reset-hover {
 	@include hover-reset; }
