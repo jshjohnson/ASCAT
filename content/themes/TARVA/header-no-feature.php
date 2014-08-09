@@ -15,7 +15,7 @@
 	<!--[if gt IE 8]><!-->
 	    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/screen.css">
 	<!--<![endif]-->
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/modernizr-2.5.3.min.js"></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/modernizr-custom.min.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/kwu8vfx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<?php wp_head(); ?>
