@@ -26,7 +26,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACDnzNTtrrrmVodkeqsgWROfyzc5xrMRA&sensor=true"></script>
 	<?php wp_footer(); ?>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/scripts.min.js"></script>
 </body>
