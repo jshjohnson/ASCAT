@@ -1,5 +1,8 @@
 $(document).ready(function() { 
     $(".content__body").fitVids();
+    $("p:empty").remove();
+    $(".wp-caption").removeAttr("style");
+    $(".wp-content img, .wp-post-image, .wp-post-thumb").removeAttr("width").removeAttr("height");
 });
 
 (function($, window, document, undefined) {
@@ -15,7 +18,6 @@ $(document).ready(function() {
                 return;
             }
 
-            app.sanitiseWP.init();
             app.modernizrSVG.init();
 
         };
@@ -23,21 +25,6 @@ $(document).ready(function() {
         return app;
     })();
 })(jQuery, window, window.document);
-
-// Sanitise WP content
-(function($, window, document, app, undefined) {
-    app.sanitiseWP = (function() {
-        var module = {};
-
-        module.init = function() {
-        	$("p:empty").remove();
-        	$(".wp-caption").removeAttr("style");
-        	$(".wp-content img, .wp-post-image, .wp-post-thumb").removeAttr("width").removeAttr("height");
-        };
-
-        return module;
-    })();
-})(jQuery, window, window.document, window.App);
 
 // Modernizr SVG image polyfill
 (function($, window, document, app, undefined) {
