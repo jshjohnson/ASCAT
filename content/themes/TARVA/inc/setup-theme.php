@@ -103,15 +103,13 @@ $FixWpCaption = new FixWpCaption();
 function my_jquery_include() {
     wp_deregister_script( 'jquery' );
     
-    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js','','',true );
-    wp_register_script( 'js-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), '', true );
+    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js','','',true );
     wp_register_script( 'comment-reply','','','', true );
     
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'js-scripts' );
 }     
  
 add_action('wp_enqueue_scripts', 'my_jquery_include');
