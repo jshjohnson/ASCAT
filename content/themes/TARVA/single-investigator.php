@@ -43,10 +43,18 @@
 				<dt><h3 class="as-h5">Bio:</h3></dt>
 				<dd><?php the_field('biography'); ?></dd>
 				<?php endif; ?>
+				
+				<?php $centre = get_field('centre_name');
 
-				<?php if(get_field('site')) : ?>
+				if( $centre ): 
+
+					// override $post
+					$post = $centre;
+					setup_postdata( $post )
+				?>
 				<dt><h3 class="as-h5">Centre:</h3></dt>
-				<dd><?php the_field('site'); ?></dd>
+				<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 				
 				<?php if(get_field('email')) : ?>
