@@ -45,7 +45,7 @@
 				<?php endif; ?>
 
 				<?php if(get_field('site')) : ?>
-				<dt><h3 class="as-h5">Site:</h3></dt>
+				<dt><h3 class="as-h5">Centre:</h3></dt>
 				<dd><?php the_field('site'); ?></dd>
 				<?php endif; ?>
 				
