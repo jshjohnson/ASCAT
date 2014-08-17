@@ -7,7 +7,7 @@ $mqs-up-to: 65em;
 \*----------------------------------------------------------------------------------------*/
 .lt-ie9 {
 	.content {
-		overflow-y: scroll;
+		overflow-y: auto;
 	}
 	.ribbon {
 		display: none;
@@ -19,5 +19,10 @@ $mqs-up-to: 65em;
 				line-height: 2.5;
 			}
 		}
+	}
+
+	.grid__cell {
+		zoom: 1;
+		*display: inline;
 	}
 }
