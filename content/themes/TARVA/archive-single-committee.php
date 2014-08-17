@@ -17,7 +17,7 @@ Template Name: Single Committee Archive
 			</article>
 			<?php endwhile; ?>	
 			<?php endif; ?>
-			<h4>Investigators:</h4>
+			<h4>Members:</h4>
 			<hr>
 			<?php if(get_field('committee_select') == 9) : ?>
 
