@@ -6,6 +6,10 @@
 	border-top: 1px solid $color-keyline;
 }
 
+.footer--no-border {
+	border-top: 0;
+}
+
 .footer__img {
 	max-height: 3.5em;
 	margin-top: 1.25em;
