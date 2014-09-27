@@ -150,13 +150,13 @@
 }
 
 .header-video {
-	height: 20em;
+	height: 26em;
 	iframe {
-		height: 20em;
+		position: absolute;
+		top: -20em;
+		right: 0;
 		width: 100%;
-		@include respond-max($bp1) {
-			height: 11em;
-		}
+		height: 100%;
 	}
 	@include respond-max($bp1) {
 		height: 11em;

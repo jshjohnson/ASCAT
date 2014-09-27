@@ -6,7 +6,7 @@ Template Name: Home
 <?php get_header(); ?>	
 				<?php if ( have_posts() ) : ?>
 				<div class="header-video">
-					<iframe width="560" height="315" src="//www.youtube.com/embed/VTzOS5dRhm4?&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="//www.youtube.com/embed/VTzOS5dRhm4?&controls=0&showinfo=0&rel=0&vq=hd1080” " frameborder="0" allowfullscreen></iframe>
 				</div>
 				<section class="intro">
 					<div class="container">
