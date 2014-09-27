@@ -11,10 +11,11 @@
 		border-right: .75em solid transparent;
 		border-bottom: 0.75em solid white;
 		position: absolute;
-		bottom: 0;
+		bottom: -1px;
 		margin: auto;
 		left: 50%;
 		margin-left: -.75em;
+		z-index: 9999;
 	}
 }
 

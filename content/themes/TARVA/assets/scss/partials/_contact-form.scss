@@ -20,8 +20,8 @@
 		border: 1px solid rgba($color-keyline, .8);
 		margin-bottom: 10px;
 		vertical-align: text-top;
-		@include appearance(none);
-		@include border-radius(0);
+		appearance: none;
+		border-radius: 0;
 		outline: none;	
 		@include respond-max($bp4) {
 		    width: 100%;
@@ -32,7 +32,7 @@
 		min-height: 10em;
 		height: auto;
 		vertical-align: top;
-		@include transition(height 0.2s);
+		transition: height 0.2s;
 		resize: vertical;
 		text-indent: 0;
 	}

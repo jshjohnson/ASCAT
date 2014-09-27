@@ -16,7 +16,7 @@
 		position: relative;
 		text-align: right;
 		padding-left: .5em;
-		@include box-sizing(border-box);
+		box-sizing: border-box;
 		background: $color-keyline;
 		margin-top: -3.2em;
 		@include respond-max($bp2) {

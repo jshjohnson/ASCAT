@@ -19,7 +19,7 @@
 			line-height: .8em;
 			color: darken(white, 30%);
 			background-color: $color-background-alt;
-			@include transition(background-color, .5s);
+			transition: background-color .5s;
 			&:hover, &.is-active {
 				@extend %is-active;
 				text-decoration: none;
@@ -37,7 +37,7 @@
 	color: white;
 	text-align: center;
 	display: inline-block;
-	@include border-radius(10em);
+	border-radius: 10em;
 	line-height: 2.25em;
 	white-space: nowrap;
 	overflow: hidden;

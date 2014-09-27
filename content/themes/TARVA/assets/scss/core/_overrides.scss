@@ -78,7 +78,7 @@
 .is-active, %is-active {
 	color: white;
 	background-color: $color-brand;
-	@include transition(background-color, .5s);
+	transition: background-color .5s;
 }
 
 .info, .hospital {
