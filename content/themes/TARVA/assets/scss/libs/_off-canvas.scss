@@ -12,7 +12,7 @@
 @include respond-max($bp3) {
 	#nav {
 		position: absolute;
-		@include box-sizing(border-box);
+		box-sizing: border-box;
 		top: 0;
 		display:none;
 
@@ -50,15 +50,15 @@
 		#nav {
 			width:$ofc-width-small;
 			left: 0;
-			@include translate3d(-100%, 0, 0);
-			@include backface-visibility(hidden);
+			transform: translate3d(-100%, 0, 0);
+			backface-visibility: hidden;
 		}
 
 		#inner-wrap {
 			left: 0 !important;
-			@include translate3d(0, 0, 0);
-			@include backface-visibility(hidden);
-			@include transition(transform 500ms ease);
+			transform: translate3d(0, 0, 0);
+			backface-visibility: hidden;
+			transition: transform 500ms ease;
 
 		}
 	}
@@ -66,10 +66,10 @@
 
 	.csstransforms3d.csstransitions.js-nav{
 		#nav {
-			@include translate3d(-100%, 0, 0);
+			transform: translate3d(-100%, 0, 0);
 		}
 		#inner-wrap {
-			@include transform(translate3d($ofc-width-small, 0, 0));
+			transform: translate3d($ofc-width-small, 0, 0);
 		}
 
 	}
@@ -108,7 +108,7 @@
 	.csstransforms3d.csstransitions.js-nav{
 
 		#inner-wrap {
-			@include transform(translate3d($ofc-width-small, 0, 0));
+			transform: translate3d($ofc-width-small, 0, 0);
 		}
 
 	}
@@ -148,7 +148,7 @@
 	.csstransforms3d.csstransitions.js-nav{
 
 		#inner-wrap {
-			@include transform(translate3d($ofc-width-large, 0, 0));
+			transform: translate3d($ofc-width-large, 0, 0);
 		}
 
 	}

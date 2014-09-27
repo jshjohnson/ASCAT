@@ -1,7 +1,6 @@
 				<footer class="footer cf footer--push">
 					<div class="container">
 						<?php if(!is_front_page()) : ?>
-						<hr>
 						<div class="center grid">
 						<?php else : ?>
 						<div class="center grid push-top">

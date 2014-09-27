@@ -30,7 +30,7 @@
 
 .content-block__img {
 	height: 10em;
-	@include background-size(cover);
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center 46%;
 }

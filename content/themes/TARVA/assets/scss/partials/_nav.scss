@@ -53,7 +53,7 @@
 	@include respond-max($bp3) {
 		margin: 0;
 		background-image: url('../img/shape-bg--alt.svg');
-		@include background-size(cover);
+		background-size: cover;
 	}
 }
 
@@ -108,7 +108,7 @@
 	padding: 1em 7.5% .8em;
 	font-size: .75em;
 	line-height: 1.7;
-	@include box-sizing(border-box);
+	box-sizing: border-box;
 	a {
 		color: #848484;
 		font-weight: 600;

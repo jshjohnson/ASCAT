@@ -12,7 +12,7 @@
 		padding-right: 1em;
 		color: white;
 		padding-bottom: 1em;
-		@include transform(rotate(-90deg));
+		transform: rotate(-90deg);
 		text-transform: uppercase;
 		margin-top: $baseline;
 	}

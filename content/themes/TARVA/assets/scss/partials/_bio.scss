@@ -9,6 +9,7 @@
 		float: left;
 		width: 35%;
 		max-width: 15em;
+		border: 0;
 		@include respond-max($bp4) {
 			width: 45%;
 			float: none;

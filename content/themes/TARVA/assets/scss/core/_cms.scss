@@ -46,7 +46,7 @@
 	line-height: .8em;
 	color: darken($color-keyline, 20%);
 	background-color: $color-background-alt;
-	@include transition(background-color, 0.5s);
+	transition: background-color, 0.5s;
 	&:visited {
 		color: darken($color-keyline, 20%);;
 	}

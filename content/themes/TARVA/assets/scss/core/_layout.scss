@@ -85,6 +85,7 @@
 	max-width: 15em;
 	width: 75%;
 	padding: 0 1.25em;
+	border: 0;
 	@include respond-max($bp3) {
 		float: right;
 		max-width: 6em;
@@ -103,7 +104,7 @@
 		height: 100%;
 		width: 25%;
 		left: 0;
-		@include box-sizing(border-box);
+		box-sizing: border-box;
 		position: fixed;
 	}
 	@include respond-min($bp4) {
@@ -127,7 +128,7 @@
 	@include respond-min($bp3) {
 		width: 75%;
 		float: right;
-		@include box-sizing(border-box);
+		box-sizing: border-box;
 	}
 	@include respond-min($bp4) {
 		width: 80%;
@@ -137,7 +138,7 @@
 .content__header {
 	position: relative;
 	height: 17em;
-	@include background-size(cover);
+	background-size: cover;
 	background-position: center center;
 	background-color: $color-brand;
 	@include respond-max($bp2) {
