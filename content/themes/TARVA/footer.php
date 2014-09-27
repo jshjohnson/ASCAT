@@ -1,4 +1,4 @@
-				<footer class="footer cf footer--push">
+				<footer class="footer cf footer--push <?php if(is_front_page()) :?>footer--no-border<?php endif; ?>">
 					<div class="container">
 						<?php if(!is_front_page()) : ?>
 						<div class="center grid">
