@@ -124,7 +124,6 @@
 
 .content {
 	background-color: white;
-	height: 100%;
 	@include respond-min($bp3) {
 		width: 75%;
 		float: right;
