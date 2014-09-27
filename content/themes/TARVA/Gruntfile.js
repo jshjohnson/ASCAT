@@ -52,7 +52,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'assets/css',
           src: '**/*.css',
-          dest: 'css'
+          dest: 'assets/css'
         }]
       }
     },
