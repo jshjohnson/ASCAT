@@ -1,13 +1,8 @@
-				<footer class="footer cf footer--push <?php if(is_front_page()) :?>footer--no-border<?php endif; ?>">
+				<footer class="footer cf footer--push <?php if(is_front_page()) :?>footer--arrow footer--no-border<?php endif; ?>">
 					<div class="container">
-						<?php if(!is_front_page()) : ?>
 						<div class="center grid">
-						<?php else : ?>
-						<div class="center grid push-top">
-						<?php endif; ?>
-
 						<?php if(get_field('footer_logos', 'option')): ?>
-							<div class="grid grid--center push-top">
+							<div class="grid grid--center">
 							<?php while(has_sub_field('footer_logos', 'option')): ?>
 								<?php $logo = get_sub_field('footer_logo'); ?>
 								<div class="grid__cell unit-1-4--bp4 unit-1-3--bp2 unit-1-2">

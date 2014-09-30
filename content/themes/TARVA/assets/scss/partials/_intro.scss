@@ -3,20 +3,6 @@
 	background-color: #ff520d;
 	background-image: url('../img/shape-bg.svg');
 	position: relative;
-	&:after {
-		content: "";
-		width: 0;
-		height: 0;
-		border-left: .75em solid transparent;
-		border-right: .75em solid transparent;
-		border-bottom: 0.75em solid white;
-		position: absolute;
-		bottom: -1px;
-		margin: auto;
-		left: 50%;
-		margin-left: -.75em;
-		z-index: 9999;
-	}
 }
 
 .intro__text {
