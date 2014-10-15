@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     uglify: {
       prod: {
         files: {
-          'js/scripts.min.js': ['js/scripts.js', 'js/plugins.js'],
+          'assets/js/scripts.min.js': ['assets/js/scripts.js', 'assets/js/plugins.js'],
         }
       }
     },
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-        files: ['assets/js/*.js'],
+        files: ['assets/**/*.js'],
         tasks: ['uglify'],
         options: {
           spawn: false,
