@@ -2,20 +2,17 @@
 Contributors: Bueltge, inpsyde
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RHWH8VG798CSC
 Tags: database, mysql, search, replace, admin, security
-Requires at least: 1.5
-Tested up to: 3.5-RC2
-Stable tag: 2.6.5
+Requires at least: 3.0
+Tested up to: 4.0
+Stable tag: trunk
+License: GPLv2+
 
 A simple search for find strings in your database and replace the string.
 
 == Description ==
-A simple search for find strings in your database and replace the string. You can search in ID, post-content, GUID, titel, excerpt, meta-data, comments, comment-author, comment-e-mail, comment-url, tags/categories and categories-description. It is possible to replace the user-ID in all tables and the user-login for more security in the WordPress-Application ( [more Informations](http://wordpress-buch.bueltge.de/wordpress-sicherer-machen/30/ "about Security in WordPress") ).
+A simple search for find strings in your database and replace the string. You can search in ID, post-content, GUID, titel, excerpt, meta-data, comments, comment-author, comment-e-mail, comment-url, tags/categories and categories-description. It is possible to replace the user-ID in all tables and the user-login.
 
-"Search and Replace" Originalplugin ist von [Mark Cunningham](http://thedeadone.net/ "Mark Cunningham") and was advanced (comments and comment-author) by [Gonahkar](http://www.gonahkar.com/ "Gonahkar"). More increments by my, Frank Bültge.
-
-**Made by [Inpsyde](http://inpsyde.com) &middot; We love WordPress**
-
-Have a look at the premium plugins in our [market](http://marketpress.com).
+"Search and Replace" Originalplugin ist von [Mark Cunningham](http://thedeadone.net/ "Mark Cunningham") and was advanced (comments and comment-author) by [Gonahkar](http://www.gonahkar.com/ "Gonahkar"). Much more enhanced and maintained by [Frank Bültge](http://bueltge.de) and current version is also maintained by Ron Guerin <ron@vnetworx.net>.
 
 == Installation ==
 = Requirements =
@@ -23,7 +20,7 @@ Have a look at the premium plugins in our [market](http://marketpress.com).
 
 = Installation =
 1. Unpack the download-package
-1. Upload all files to the `/wp-content/plugins/` directory, with folder
+1. Upload search-and-replace folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Got to Tools -> Search/Replace
 
@@ -33,28 +30,28 @@ Have a look at the premium plugins in our [market](http://marketpress.com).
 
 == Other Notes ==
 = Acknowledgements =
-* French translation by [Valentin Guenichon (fr-FR)](http://guenichon.com/ "Valentin Guenichon") and [Fr&eacute;d&eacute;ric Bourgeon (searchandreplace-fr_FR)](http://maxbourgeon.free.fr/blog/ "Fr&eacute;d&eacute;ric Bourgeon")
-* Russion translation by [levati](http://levati.name/ "levati")
-* Polish translation by [Bartosz Sobczyk](http://www.brt12.eu "Bartosz Sobczyk")
-* Persian translation by [Mostafa Soufi](http://iran98.org "iran98.org")
-* Danish translation by [GeorgWP](http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=265 "wordpress.blogos.dk")
-* Spanish translation by [myhosting.com Team](http://myhosting.com/)
-* Belarussian language by [Alexander Ovsov](http://webhostinggeeks.com/science/)
-* Thanks to [Brian Flores](http://www.inmotionhosting.com/) for serbian translation
-* Thanks to [Martien van de Griendt](http://www.vandegriendtwebsites.nl) for dutch translation
-* Romanian language files, thanks to [Alexander Ovsov](http://webhostinggeeks.com/)
-* Belarusian laguage files, thanks to [Alexander Ovsov](http://webhostinggeeks.com/)
-* Lithuanian translation files by [Vincent G](http://www.host1plus.com)
-* Branco, Slovak translation by [WebHostingGeeks](http://webhostinggeeks.com/blog/)
+All existing translation files need to be updated for Search and Replace 2.6.6, please feel free to send me your translation file.
 
 = License =
 Good news, this plugin is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, you can thank me and leave a [small donation](http://bueltge.de/wunschliste/ "Wishliste and Donate") for the time I've spent writing and supporting this plugin. And I really don't want to know how many hours of my life this plugin has already eaten ;)
 
 = Translations =
-The plugin comes with various translations, please refer to the [WordPress Codex](http://codex.wordpress.org/Installing_WordPress_in_Your_Language "Installing WordPress in Your Language") for more information about activating the translation. If you want to help to translate the plugin to your language, please have a look at the .pot file which contains all defintions and may be used with a [gettext](http://www.gnu.org/software/gettext/) editor like [Poedit](http://www.poedit.net/) (Windows) or plugin for WordPress [Localization](http://wordpress.org/extend/plugins/codestyling-localization/).
+The plugin comes with various translations, please refer to the [WordPress Codex](http://codex.wordpress.org/Installing_WordPress_in_Your_Language "Installing WordPress in Your Language") for more information about activating the translation. If you want to help to translate the plugin to your language, please have a look at the .pot file which contains all definitions and may be used with a [gettext](http://www.gnu.org/software/gettext/) editor like [Poedit](http://www.poedit.net/) (Windows) or plugin for WordPress [Localization](http://wordpress.org/extend/plugins/codestyling-localization/).
 
 
 == Changelog ==
+= v2.7.0 (2014-09-14) =
+* Exclude serialized data from replace function (maybe we reduce the support)
+* Add hint, if is serialized data on the result table
+* Fix to see also the result case sensitive
+
+= v2.6.6 (09/05/2014) =
+* *Thanks to [Ron Guerin](http://wordpress.org/support/profile/rong) for help to maintain the plugin*
+* Fix to use $wpdb object for all database access
+* Fix inability to search and replace quoted strings
+* Output changes to clarify when searching vs. searching and replacing
+* Some changes to English strings and string identifiers
+
 = v2.6.5 =
 * Fix for change User-ID, add table `comments`
 

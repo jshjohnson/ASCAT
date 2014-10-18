@@ -1,5 +1,8 @@
 @charset "UTF-8";
-@import "config/includes";
+
+@import "config/utils";
+@import "config/vars";
+@import "config/mixins";
 
 @import "libs/normalize";
 /*----------------------------------------------------------------------------------------*\

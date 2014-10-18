@@ -22,7 +22,6 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 style: 'compressed',
-                debugInfo: true,
                 sourcemap: 'none'
             },
             dist: {
@@ -80,9 +79,11 @@ module.exports = function(grunt) {
 
         svg2png: {
             dist: {
-                files: [
-                    { cwd: 'assets/img/', src: ['**/*.svg'], dest: 'assets/img/' }
-                ]
+                files: [{
+                    cwd: 'assets/img/',
+                    src: ['**/*.svg'],
+                    dest: 'assets/img/'
+                }]
             }
         },
 
@@ -99,13 +100,13 @@ module.exports = function(grunt) {
 
             sass: {
                 files: 'assets/**/*.scss',
-                tasks: ['sass', 'autoprefixer:prod'],
+                tasks: ['sass', 'autoprefixer:dist'],
                 options: {
                     livereload: true
                 }
             },
 
-            images:  {
+            images: {
                 files: 'assets/img/**/*',
                 tasks: ['svgmin', 'svg2png', 'imagemin'],
             }

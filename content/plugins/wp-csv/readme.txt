@@ -3,8 +3,8 @@ Contributors: cpkwebsolutions
 Donate link: http://cpkwebsolutions.com/donate
 Tags: csv, import, export, bulk, easy, all, importer, exporter, posts, pages, tags, custom, images
 Requires at least: 3.5
-Tested up to: 3.9
-Stable tag: 1.5.9
+Tested up to: 4.0
+Stable tag: 1.6.3
 
 A powerful, yet simple, CSV importer and exporter for Wordpress posts, pages, and custom post types. 
 
@@ -42,6 +42,14 @@ Refer to the <a href='http://cpkwebsolutions.com/wp-csv/quick-start-guide'>Quick
 No screenshots available.
 
 == Changelog ==
+= 1.6.3 =
+* Export should now work for those who have specified a db port in wp-config.php
+= 1.6.2 =
+* Empty exports will hopefully no longer happen.  Bug affecting users with more recent versions of PHP.
+= 1.6.1 =
+* Improved logic for finding/creating a usable CSV folder, and also now provide better feedback when there are problems.
+= 1.6.0 =
+* Added fix for security vulnerability
 = 1.5.9 =
 * Added post status filter (sponsored feature addition)
 * Fixed an incompatibility bug reported for WP 3.9
@@ -122,8 +130,6 @@ No screenshots available.
 
 == Upgrade Notice ==
 
-1.5.9:
+1.6.3:
 
-* Sponsored Enhancement: Added post status filter for export.
-* Minor bugfix based on report from end-user regarding WP 3.9 compatibility.
-* Protocol independent urls for users running the WP backend over HTTPS
+* Export should now work for those who have specified a db port in wp-config.php

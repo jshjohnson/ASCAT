@@ -80,11 +80,19 @@ body {
 	line-height: 1.7;
 	color: $color-text;
 	word-break: break-word;
-	background-color: $color-background; }
+	background-color: $color-background; 
+}
 
 /* -- Vertical Rhythm -- */
-h1, h2, h3, h4, h5, h6, %h1, %h2, %h3, %h4, %h5, %h6  { margin-bottom: .65em; margin-top: 0; text-transform: uppercase; font-family: $font-heading; color: $color-brand-alt;}
-h1, blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
+h1, h2, h3, h4, h5, h6 { 
+	margin-bottom: .65em; 
+	margin-top: 0; 
+	text-transform: uppercase; 
+	font-family: $font-heading; 
+	color: $color-brand-alt;
+}
+
+blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
 p, ul, ol, dl, hr, form, table, blockquote, pre, address { margin-bottom: $baseline; }
 hr { border-top: 1px solid $color-keyline; }
 blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child { margin-bottom: 0; }

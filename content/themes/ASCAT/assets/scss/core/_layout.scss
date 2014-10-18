@@ -51,31 +51,29 @@
 ----------------------------------*/
 @import "../libs/_griddle";
 
-
-/* Grids (Griddle - http://goo.gl/P1JKB)
-----------------------------------*/
-@import "../libs/_centre-locator";
-
-
-/* Off canvas
-----------------------------------*/
-@import "../libs/_off-canvas";
-
 // Create 2, 3, 6 and 12 column grids
 @include griddle-build(2);
 
 @include respond-min($bp1) {
-	@include griddle-build(2 3, "--bp1");
+    @include griddle-build(2 3, "--bp1");
 }
 @include respond-min($bp2) {
-	@include griddle-build(2 3 4, "--bp2");
-}	
+    @include griddle-build(2 3 4, "--bp2");
+}   
 @include respond-min($bp3) {
-	@include griddle-build(2 3 4 5 6 12, "--bp3");
-}	
+    @include griddle-build(2 3 4 5 6 12, "--bp3");
+}   
 @include respond-min($bp4) {
-	@include griddle-build(2 3 4 5 6 12, "--bp4");
+    @include griddle-build(2 3 4 5 6 12, "--bp4");
 }
+
+/* Centre locator
+----------------------------------*/
+@import "../libs/_centre-locator";
+
+/* Off canvas
+----------------------------------*/
+@import "../libs/_off-canvas";
 
 
 /* Logo

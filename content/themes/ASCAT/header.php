@@ -16,8 +16,8 @@
 	    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/screen.css">
 	<!--<![endif]-->
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/modernizr-custom.min.js"></script>
-	<script type="text/javascript" src="//use.typekit.net/kwu8vfx.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="//use.typekit.net/kwu8vfx.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 	<?php wp_head(); ?>
 </head>
 <body>
