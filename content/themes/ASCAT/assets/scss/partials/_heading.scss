@@ -1,0 +1,26 @@
+.heading-divide {
+	position: relative;
+	width: 100%;
+	.heading-divide__title {
+		width: 5%;
+		@include respond-max($bp2) {
+			width: 10%;
+		}
+	}
+	&:after {
+		top: .6em;
+		content: "";
+		height: 1px;
+		width: 95%;
+		float: right;
+		position: relative;
+		text-align: right;
+		padding-left: .5em;
+		box-sizing: border-box;
+		background: $color-keyline;
+		margin-top: -3.2em;
+		@include respond-max($bp2) {
+			width: 90%;
+		}
+	}
+}

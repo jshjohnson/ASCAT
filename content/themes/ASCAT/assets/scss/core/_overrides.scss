@@ -1,0 +1,185 @@
+/* Helper classes
+----------------------------------*/
+
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
+
+.push-top 		{ margin-top: $baseline; }
+.push-bottom 	{ margin-bottom: $baseline; }
+
+.zero-top 		{ margin-top: 0 !important; }
+.zero-bottom 	{ margin-bottom: 0 !important; }
+
+.weight-light      { font-weight:300 !important; }
+.weight-normal     { font-weight:400 !important; }
+.weight-semibold   { font-weight:600 !important; }
+
+.list-unset 	{ list-style: none !important; margin-left: 0 !important; }
+.list-numbers 	{ list-style: decimal !important; }
+.list-bullets 	{ list-style: disc !important; }
+
+.block {display: block;}
+
+/* Theme Classes */
+
+.brand-text {
+	color: $color-brand; }
+	
+.brand-bg {
+	background-color: $color-brand; } 	
+
+/* Micro Clearfix - http://goo.gl/5Fvrh */
+
+.cf {
+	zoom : 1;
+	
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear : both; }
+}	
+
+.gm-style {
+	font-family: $font-sans;
+}
+
+/* Specific text styles
+----------------------------------*/
+.capitalise { text-transform: capitalize; }
+.headline { border-bottom: 1px solid $color-keyline; padding-bottom: .45em; }
+.highlight { font-size: 1.5em; color: $color-highlight;}
+
+.underline, %underline {
+	margin-bottom: .65em;
+	&:after {
+		content: "";
+		width: 100%;
+		margin-top: .5em;
+		margin-bottom: .25em;
+		height: 1px;
+		background-color: #e3e3e3;
+		display: block;
+	}
+}
+
+
+/* Style trumps (error states etc.)
+----------------------------------*/
+.is-hidden { display: none; visibility: hidden; }
+.is-vhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px; }
+
+.is-active, %is-active {
+	color: white;
+	background-color: $color-brand;
+	transition: background-color .5s;
+}
+
+.info, .hospital {
+	&:before {
+		font-family: $icon-font-family;
+		color: darken($color-background-alt, 10%);
+		float: right;
+		margin-bottom: .1em;
+		margin-left: .2em;
+		position: relative;
+	}
+}
+
+.info {
+	&:before {
+		content: '\e800';
+		font-size: 1.6em;
+		float: right;
+		margin-right: 0;
+		margin-top: -.5em;
+		@include respond-max($bp1) {
+			position: absolute;
+			right: 0;
+			margin-right: .7em;
+		}
+	}
+}
+
+.hospital {
+	&:before {
+		content: '\e801';
+		font-size: 1.8em;
+		margin-right: -.2em;
+		margin-top: -.4em;
+	}
+}
+
+.warning{color:#900;}
+
+.alert{	color:#009;}
+
+.message {
+	color: white;
+	position: relative;
+	padding: 1em;
+	margin-bottom: $baseline;
+	clear: both;
+	&:after {
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: .75em solid transparent;
+		border-right: .75em solid transparent;
+		position: absolute;
+		left: 1.5em;
+		top: 100%;
+	}
+	a {
+		color: white;
+		font-weight: bolder;
+	}
+}
+
+.message--flipped {
+	color: white;
+	position: relative;
+	padding: 1em;
+	margin-bottom: $baseline;
+	clear: both;
+	&:before {
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: .75em solid transparent;
+		border-right: .75em solid transparent;
+		position: absolute;
+		left: 1.5em;
+		top: -.65em;
+	}
+	a {
+		color: white;
+		font-weight: bolder;
+	}
+}
+
+.message, .message--flipped {
+	.message__title {
+		color: white;
+		margin-bottom: .5em;
+		&:after {
+			content: none;
+		}
+	}
+}
+
+.message--highlight {
+	background-color: $color-highlight-alt;
+	&:before {
+		border-bottom: 0.75em solid $color-highlight-alt;
+	}
+	&:after {
+		border-top: 0.75em solid $color-highlight-alt;
+	}
+}

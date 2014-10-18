@@ -1,0 +1,32 @@
+.intro {
+	overflow: auto;
+	background-color: #ff520d;
+	background-image: url('../img/shape-bg.svg');
+	position: relative;
+}
+
+.intro__text {
+	padding: 1.5em 0;
+	font-size: 1.4em;
+	color: white;
+	font-weight: 400;
+	@include respond-max($bp2) {
+		font-size: 1.25em;
+	}
+}
+
+.intro__text--large {
+	@include respond-min($bp1) {
+		padding: 3em 0;
+		font-size: 175%;
+	}
+}
+
+.intro__highlight {
+	font-size: 1.7em;
+	color: white;
+	font-weight: bolder;
+	@include respond-max($bp2) {
+		font-size: 1.55em;
+	}
+}

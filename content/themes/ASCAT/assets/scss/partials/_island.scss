@@ -1,0 +1,12 @@
+.island, %island {
+	padding: $island-padding/1.2;
+	background-color: white;
+	margin-bottom: $baseline;
+	border: 1px solid darken($color-background-alt, 4%);
+
+	> :last-child {
+		margin-bottom: 0; }
+}
+
+.islet {
+	padding: $islet-padding; }
