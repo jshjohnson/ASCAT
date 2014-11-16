@@ -31,7 +31,7 @@ set(:user) { "joshuajohnson.co.uk" }
 # Setup Git
 ############################################
 
-set :repository, "git@github.com:jshjohnson/TARVA.git"
+set :repository, "git@github.com:jshjohnson/ASCAT.git"
 set :scm, :git
 set(:git_enable_submodules, true)
 set :deploy_via, :remote_cache
@@ -44,9 +44,9 @@ set :copy_exclude, [".git", ".DS_Store", ".gitignore", ".gitmodules", "capfile",
 set :use_sudo, false
 ssh_options[:forward_agent] = true
 
-# Path stuff, make sure to symlink html to ./current
+# Path stuff, make sure to symlink html to ./html
 set(:deploy_to) { "/home/#{site}/domains/#{application}" }
-set :current_dir, "current"
+set :current_dir, "html"
 
 ### WordPress
 

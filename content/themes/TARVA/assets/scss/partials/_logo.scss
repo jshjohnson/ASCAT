@@ -1,0 +1,15 @@
+/* Logo
+----------------------------------*/
+
+.logo {
+	max-width: 15em;
+	border: 0;
+	height: 4.75em;
+	text-align: left;
+	margin: 0;
+	border: 0;
+	@include respond-max($bp3) {
+		float: right;
+		padding: .75em 1.5em 1em;
+	}
+}

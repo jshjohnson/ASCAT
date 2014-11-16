@@ -1,0 +1,147 @@
+/* 
+* Base name: Button
+* Notes: N/A
+-------------------------------------------------------------- */
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-right: .5em;
+	margin-bottom: .5em;
+	text-transform: capitalize;
+	background-image: none;
+	font-size: 1em;
+	font-weight: 500;
+	// Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: .15em solid transparent;
+	white-space: nowrap;
+	border-radius: 5em;
+	padding: .5em 1.5em;
+	line-height: 1.25;
+	user-select: none;
+	&,
+	&:active,
+	&.active {
+		&:focus {
+			box-shadow: none;
+			outline: 0;
+		}
+	}
+	&:hover,
+	&:visited,
+	&:focus {
+		color: white;
+		text-decoration: none;
+	}
+	&:active,
+	&.active {
+		outline: 0;
+		background-image: none;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+
+	.lt-ie8 & {
+	    padding: .25em;
+	}
+}
+
+// Alternate buttons (colour, background, border)
+// --------------------------------------------------
+
+.btn--inverse {
+	color: white;
+	border: .15em solid white;
+	transition: background .25s, color .25s;
+	&:hover {
+		background-color: white;
+		color: $color-primary;
+		transition: background .25s, color .25s;
+	}
+}
+
+.btn--default {
+	// @include button-variant($btn-default-color, $btn-default-bg, $btn-default-bg);
+}
+
+// Success appears as green
+.btn--success {
+	// @include button-variant($btn-success-color, $btn-success-bg, $btn-success-bg);
+}
+
+// Info appears as blue-green
+.btn--info {
+	// @include button-variant($btn-info-color, $btn-info-bg, $btn-info-bg);
+}
+
+// Warning appears as orange
+.btn--warning {
+	// @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-bg);
+}
+
+// Danger and error appear as red
+.btn--danger {
+	// @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-bg);
+}
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn--link {
+	font-weight: normal;
+	cursor: pointer;
+	&,
+	&:active,
+	&[disabled],
+	fieldset[disabled] & {
+		background-color: transparent;
+	}
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: transparent;
+	}
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		background-color: transparent;
+	}
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+}
+
+// Block button
+// --------------------------------------------------
+
+.btn--block {
+	display: block;
+	width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn--block + .btn--block {
+	margin-top: 5px;
+}
+
+// Specificity overrides
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	&.btn--block {
+		width: 100%;
+	}
+}

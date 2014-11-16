@@ -1,0 +1,18 @@
+.credit {
+	padding: 1em 4em .8em;
+	background-color: white;
+	position: relative;
+	text-align: center;
+	bottom: 0;
+	@include respond-max($bp2) {
+		padding: 1em 3em .8em;
+	}
+}
+
+.credit--fixed {
+	@include respond-min($bp2) {
+		position: fixed;
+		bottom: 0;
+		width: 80%;
+	}
+}

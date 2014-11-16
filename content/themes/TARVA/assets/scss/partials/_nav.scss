@@ -1,0 +1,186 @@
+.nav{
+	@extend .list-unset;
+	@extend .cf;
+ 	a {
+		color: white;
+	}
+}
+
+.nav--inline { @include nav-inline; }
+.nav--divided { @include nav-divided; }
+.nav--stacked { @include nav-stacked; }
+	
+// create blocked links
+.nav--blocked a {
+	display: block;
+	padding: .5em;
+	background-color: #F5F5F5; 
+}
+
+.nav-container {
+	margin: .5em 0;
+	padding: 0 2em;
+	overflow-x: hidden;
+	@include respond-max($bp3) {
+		margin: 0;
+		background-image: url('../img/shape-bg--alt.svg');
+		background-size: cover;
+	}
+}
+
+.nav-container--home {
+	@include respond-min($bp3) {
+		padding: 0 2em 0 6em;
+	}
+}
+
+.nav--primary {
+	margin-left: 0;
+	list-style-type: none;
+	> li {
+		padding: .6em 0 .55em;
+		font-size: .9em;
+		a {
+			color: white;
+			font-weight: normal;
+			&:hover {
+			text-decoration: underline;
+			}
+		}
+		&.is-current {
+			margin-left: -4.5em;
+			background-color: lighten($color-primary, 2.5%);
+			width: 30em;
+			padding-left: 4.5em;
+		}
+	}
+}
+
+.nav--home {
+	@include respond-min($bp3) {
+		margin-bottom: 0;
+		li,
+		a {
+			display: inline-block;
+			*display:inline;
+			margin-right: 1em;
+			margin-bottom: 0;
+	        zoom:1; 
+	        &:last-child {
+	        	margin-right: 0;
+	        }
+	    }
+	}
+	@include respond-max($bp3) {
+	    margin-left: 0;
+	    list-style-type: none;
+	    > li {
+	    	padding: .6em 0 .55em;
+	    	font-size: .9em;
+	    	a {
+	    		color: white;
+	    		font-weight: normal;
+	    		&:hover {
+	    		text-decoration: underline;
+	    		}
+	    	}
+	    	&.is-current {
+	    		margin-left: -4.5em;
+	    		background-color: lighten($color-primary, 2.5%);
+	    		width: 150%;
+	    		padding-left: 4.5em;
+	    	}
+	    }
+	}
+}
+
+.nav-toggle {
+	color: white;
+	text-align: center;
+	margin-bottom: 0;
+	display: block;
+	@include respond-min($bp3){
+		display:none;
+	}
+	&:visited, &:hover {
+		color: white;
+	}
+	&:active {
+		top: 0;
+	}
+}
+
+.nav-toggle--close {
+	text-align: left; 
+	padding: 1em 0;
+}
+
+.nav-toggle--open {
+	font-size: 1.5em;
+	float: left;
+	background-color: darken($color-primary, 2.5%);
+	line-height: 3em;
+	padding: 0 1em;
+	margin: 0;
+}
+
+/* Tertiary Nav
+----------------------------------*/
+
+.nav-tertiary {
+	display: inline;
+	margin: 0;
+	line-height: 1;
+	li {
+		&:after {
+			content: " | ";
+		}
+	}
+}
+
+/* Misc
+----------------------------------*/
+
+.nav--page, .credit {
+	color: #848484;
+	padding: 1em 7.5% .8em;
+	font-size: .75em;
+	line-height: 1.7;
+	box-sizing: border-box;
+	a {
+		color: #848484;
+		font-weight: 600;
+	}
+	@include respond-max($bp2) {
+		line-height: 2;
+	}
+}
+
+.nav--page {
+	color: white;
+	background-color: #ff520d;
+	a {
+		color: white;
+	}
+}
+
+.nav--page__seperator {
+	margin-right: .25em;
+	margin-left: .5em;
+}
+
+.more-link {
+	&:after {
+		font-family: $icon-font-family;
+		content: '\e803';
+		display: inline-block;
+		text-decoration: none;
+		font-size: 1em;
+		position: relative;
+		margin-left: .4em;
+		top: .05em;
+		@include respond-max($bp2) {
+			top: .1em;
+		}
+	}
+}

@@ -1,0 +1,96 @@
+.intro {
+	color: white;
+	background-color: $color-primary;
+	background-image: linear-gradient(to bottom, $color-primary 0%, lighten($color-primary, 10%) 100%);
+	position: relative;
+	@include respond-min($bp3) {
+		padding: 1.5em 0;
+	}
+}
+
+.intro__logo {
+	@include respond-min($bp3) {
+		border: 0;
+		height: 5em;
+		text-align: left;
+		margin: 0;
+		float: left;
+		margin-right: .5em;
+		> img {
+			border: 0;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+}
+
+.intro__header {
+	@include respond-min($bp3) {
+		margin: 0 auto;
+		width: 85%;
+		min-width: 15em;
+		max-width: 960px;
+		max-width: $container-max-width;
+
+		overflow: hidden;
+		padding-bottom: .5em;
+		line-height: 2;
+	}
+	@include respond-max($bp3) {
+		height: 4.5em;
+		position: relative;
+	}
+	&:after {
+		content: "";
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		background-color: rgba(white, .15);
+		display: block;
+		left: 0;
+		margin-top: 1em;
+		@include respond-max($bp3) {
+			bottom: 0;
+		}
+	}
+}
+
+.intro__nav {
+	@include respond-min($bp3) {
+		line-height: 2.5;
+	}
+	margin-bottom: 0;
+}
+
+.intro__body {
+	padding: 3em 0;
+	clear: both;
+	@include respond-min($bp1) {
+		padding: 5em 0;
+	}
+}
+
+.intro__text {
+	font-size: 1.4em;
+	color: white;
+	font-weight: 400;
+	font-family: $font-heading;
+	@include respond-max($bp2) {
+		font-size: 1.25em;
+	}
+}
+
+.intro__text--large {
+	@include respond-min($bp1) {
+		font-size: 175%;
+	}
+}
+
+.intro__highlight {
+	font-size: 1.7em;
+	color: white;
+	font-weight: bolder;
+	@include respond-max($bp2) {
+		font-size: 1.55em;
+	}
+}
