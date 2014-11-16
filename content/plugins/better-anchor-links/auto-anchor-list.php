@@ -4,7 +4,7 @@ Plugin Name: Better Anchor Links
 Plugin URI: http://ludek.org/bal/index.html
 Description: Automatically creates and displays anchor links.
 Author: Luděk Melichar
-Version: 1.7
+Version: 1.7.4
 Author URI: http://ludek.org
 */
 
@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 if (!class_exists('mwm_aalLoader')) {
 	class mwm_aalLoader{
 		
-		var $version     = '1.7';
+		var $version     = '1.7.4';
 		var $options     = '';
 		var $links = array();
 	
@@ -39,7 +39,7 @@ if (!class_exists('mwm_aalLoader')) {
 			$this->define_constants();
 			$this->load_dependencies();
 			register_activation_hook( plugin_basename( dirname(__FILE__)).'/auto-anchor-list.php', array(&$this, 'activate') );
-			wp_register_sidebar_widget(idbal16,'Better Anchor Links', array(&$this, 'widget'));
+			wp_register_sidebar_widget('idbal16','Better Anchor Links', array(&$this, 'widget'));
 		}
 		
 		function upgra_options(){
@@ -86,6 +86,12 @@ if (!class_exists('mwm_aalLoader')) {
 				{
 					$lm_bal_options=$options ;
 					$lm_bal_options['backlink_char'] = "*";
+					update_option('lm_bal_options', $lm_bal_options); 
+				}
+				if (!array_key_exists('is_backlinkfront', $options))
+				{
+					$lm_bal_options=$options ;
+					$lm_bal_options['is_backlinkfront'] = false;
 					update_option('lm_bal_options', $lm_bal_options); 
 				}
 			}
@@ -140,6 +146,7 @@ if (!class_exists('mwm_aalLoader')) {
 			$lm_bal_options['is_headLo'] = 6;
             $lm_bal_options['is_backlink'] = false;
 			$lm_bal_options['backlink_char'] = "*";
+			$lm_bal_options['is_backlinkfront'] = false;
 			
 			update_option('lm_bal_options', $lm_bal_options);
 			}

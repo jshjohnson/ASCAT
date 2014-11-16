@@ -63,7 +63,7 @@ namespace :wp do
         run "mkdir -p #{shared_path}/uploads"
         run "touch #{shared_path}/.htaccess-master"
         secret_keys = capture("curl -s -k https://api.wordpress.org/secret-key/1.1/salt")
-        wp_siteurl = Capistrano::CLI.ui.ask("#{stage} site URL: ")
+        wp_siteurl = Capistrano::CLI.ui.ask("#{stage} site URL (no trailing slash): ")
         database = YAML::load_file('config/database.yml')[stage.to_s]
 
         db_config = ERB.new(File.read('./config/templates/wp-config.php.erb')).result(binding)

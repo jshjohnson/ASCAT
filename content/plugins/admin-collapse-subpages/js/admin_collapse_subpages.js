@@ -5,7 +5,7 @@
 jQuery().ready(function($){
 
 
-	var links ='<li class="expand_all_link"> | <a href="javascript:void(0);">Expand All</a></li><li class="collapse_all_link"> | <a href="javascript:void(0);">Collapse All</a></li>';
+	var links ='<li class="expand_all_link"> | <a href="javascript:void(0);">'+acs_l10n_vars.lexpandall+'</a></li><li class="collapse_all_link"> | <a href="javascript:void(0);">'+acs_l10n_vars.lcollapseall+'</a></li>';
 	/*
 	 * Add Expand/Collapse ALL Links to DOM (has to be first for listeners)
 	 */

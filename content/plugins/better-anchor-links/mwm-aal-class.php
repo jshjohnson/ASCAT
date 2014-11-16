@@ -45,7 +45,6 @@ if (!class_exists('mwm_aal')) {
 				$content= $this->add_backlinks_to_content($content);
 			}
 
-			
 			if($this->options['autoDisplayInContent'] and !$this->isTagUsed){
 				if ((is_home()		and $this->options['is_home']) or
 				    (is_single()	and $this->options['is_single']) or
@@ -55,9 +54,9 @@ if (!class_exists('mwm_aal')) {
 				    (is_date()		and $this->options['is_date']) or
 					(is_author()	and $this->options['is_author']) or
 				    (is_search()	and $this->options['is_search'])) {
-				  
-					$content = $this->auto_output_content_links($content);
 
+					$content= $this->add_backlinks_to_content($content);
+					$content = $this->auto_output_content_links($content);
 				}
 			}
 	
@@ -89,11 +88,20 @@ if (!class_exists('mwm_aal')) {
 		}
 		
 		function add_backlinks_to_content($content){
-		$linkback = '<a title="'.$this->options['backlink_text'].'" href="#Content-bal-title"> '.$this->options['backlink_char'].'</a>';
+		if (!$this->options['is_backlinkfront']){
+			$linkback = '<a title="'.$this->options['backlink_text'].'" href="#Content-bal-title"> '.$this->options['backlink_char'].'</a>';
+		} else {
+			$linkback = '<a title="'.$this->options['backlink_text'].'" href="#Content-bal-title">'.$this->options['backlink_char'].' </a>';
+		}
 			if(count($this->links) >= 1){
 				foreach ($this->links as $val) {
 					$delka = (strlen($val[0])-5);
-					$posend = strpos($content, $val[0])+$delka;
+					$posstart = ((strpos($val[0], ">"))+1);
+					if (!$this->options['is_backlinkfront']){
+						$posend = strpos($content, $val[0])+$delka;
+					} else {
+						$posend = strpos($content, $val[0])+$posstart;
+					}
 					$content = substr_replace($content, $linkback, $posend, 0);
 				}
 			}

@@ -3,8 +3,8 @@ Contributors: Luděk Melichar
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=48CZMVXER28PE&lc=CZ&item_name=Plugin%20development&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: anchor, anchor links, content links, content, sidebar, links, widget, better anchor links, bal, lm-bal, anchor list, auto anchor list
 Requires at least: 3.0
-Tested up to: 3.9
-Stable tag: 1.7
+Tested up to: 4.0
+Stable tag: 1.7.4
 
 Creates anchor links to heading tags in the content and displays automatically at the top of the content, or allows for custom placement with tags.
 
@@ -22,7 +22,7 @@ Features:
 * Clears all traces from any excerpts displayed
 * Selection between numerically ordered and bulleted list 
 * Auto Links indentation
-* qTranslate support
+* qTranslate/mqTranslate support
 * Show "back to content" link next to heading
 
 == Installation ==
@@ -62,8 +62,8 @@ The content display and side bar are wrapped with a `<div>` with an assigned css
 Free edit css/mwm-aal.css for any changes. You can remove all lines above and under the links by deteting section:
 	`border-top:1px solid #ccc; border-bottom: 1px solid #ccc;` 
 
-= How To qTranslate support? =
-Put qTranslate string to List Output Title for example for EN and CZ language:
+= How To qTranslate/mqTranslate support? =
+Put qTranslate/mqTranslate string to List Output Title for example for EN and CZ language:
 	`<!--:cs-->Obsah<!--:--><!--:en-->Contents<!--:-->`
 
 == Screenshots ==
@@ -72,6 +72,16 @@ Put qTranslate string to List Output Title for example for EN and CZ language:
 3. Auto indent
 
 == Changelog ==
+= 1.7.4 =
+* Small fixes
+
+= 1.7.3 =
+* Fixed sidebar register
+
+= 1.7.2 =
+* Fixed adding backlink to PHP Template
+* Added option for backlink location
+
 = 1.7 =
 * Added margin when navbar is used (height can be set in CSS)
 

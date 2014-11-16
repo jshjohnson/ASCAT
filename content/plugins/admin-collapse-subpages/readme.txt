@@ -3,7 +3,7 @@ Contributors: lupka , bravokeyl
 Donate link: http://alexchalupka.com/donate
 Tags: page, post, links,pages, admin , link ,plugin, random, posts, widget, categories, date, date range, timeframe, excerpt, randomize, sidebar, category
 Requires at least: 3.0
-Tested up to: 3.8.1
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,6 +17,21 @@ Simple plugin that allows you to collapse subpages in the Pages admin list also 
 This is loosely based on Collapse Sub-Pages by Dan Dietz, which broke with the 3.0 upgrade due to UI changes and hasn't been updated. I've had to rewrite the jQuery to make it work with 3.x versions. 
 
 Because this is a jQuery, it's possible that they could make additional changes that would break it. I'll do my best to stay on top of it, but let me know if it stops working.
+
+
+<h3>Plugin in your Language</h3>
+From version 2.3 our plugin supports internationalization, which means you can have plugin in your specified language.
+
+It's currently available in US English ,UK Englih, Chinese, Telugu , Serbian.
+
+<h3>Support us by Translating</h3>
+Want this plugin in your language , just translate the following two words and send us a mail.
+
+1) Expand All
+2) Collapse All
+
+<h3>Special Thanks</h3>
+We specially thank <a href="http://www.webhostinghub.com/" target="_blank">Borisa Djuraskovic</a> for translating this plugin in Serbian Language.
 
 What's new in Version 2.0 ?
 
@@ -65,3 +80,5 @@ I'd recommend not using Quick Edit to change parent/child pages at all. It often
 * Added support custom post types which are hieararchial
 = 2.1 =
 * Added support custom post types which are hieararchial
+= 2.3 =
+* Internationalizing the plugin
