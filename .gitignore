@@ -34,5 +34,5 @@ _assets
 
 ai-cache/*
 .DS_Store
-
+content/themes/*/node_modules
 content/themes/*/.sass-cache
