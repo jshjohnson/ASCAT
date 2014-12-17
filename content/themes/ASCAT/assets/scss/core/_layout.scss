@@ -89,7 +89,6 @@
 		left: 0;
 		box-sizing: border-box;
 		position: fixed;
-		background-image: linear-gradient(to bottom, $color-primary 0%, lighten($color-primary, 10%) 100%);
 	}
 	@include respond-min($bp4) {
 		width: 20%;

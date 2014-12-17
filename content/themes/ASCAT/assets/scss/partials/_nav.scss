@@ -49,7 +49,7 @@
 		}
 		&.is-current {
 			margin-left: -4.5em;
-			background-color: lighten($color-primary, 2.5%);
+			background-color: darken($color-primary, 7.5%);
 			width: 30em;
 			padding-left: 4.5em;
 		}

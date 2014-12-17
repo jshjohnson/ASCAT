@@ -70,7 +70,7 @@ function initializeGmap() {
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#05788a"
+                "color": "#2c9fd5"
             },
             {
                 "lightness": 0
@@ -82,7 +82,7 @@ function initializeGmap() {
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#02899e"
+                "color": "#1b84b7"
             },
             {
                 "lightness": 0
@@ -94,7 +94,7 @@ function initializeGmap() {
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#096A79"
+                "color": "#106b97"
             },
             {
                 "lightness": 5
@@ -106,7 +106,7 @@ function initializeGmap() {
         "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": "#05788a"
+                "color": "#106b97"
             },
             {
                 "lightness": 5
@@ -121,7 +121,7 @@ function initializeGmap() {
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#05788a"
+                "color": "#106b97"
             },
             {
                 "lightness": 5
@@ -133,7 +133,7 @@ function initializeGmap() {
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#05788a"
+                "color": "#106b97"
             },
             {
                 "lightness": 10
@@ -145,7 +145,7 @@ function initializeGmap() {
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#05788a"
+                "color": "#106b97"
             },
             {
                 "lightness": 0
@@ -159,7 +159,7 @@ function initializeGmap() {
                 "visibility": "on"
             },
             {
-                "color": "#05788a"
+                "color": "#106b97"
             },
             {
                 "lightness": 0

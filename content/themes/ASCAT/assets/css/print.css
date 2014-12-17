@@ -1495,6 +1495,9 @@ div elements, we disable it to prevent it from messing up the map
   line-height: 3.3em;
   vertical-align: middle;
   font-size: 1em;
+  background-color: transparent;
+  color: white;
+  border: 0;
 }
 
 #wpsl-inbtn:hover {
@@ -1892,9 +1895,6 @@ div elements, we disable it to prevent it from messing up the map
        -moz-box-sizing: border-box;
             box-sizing: border-box;
     position: fixed;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#36a9e0), to(#62bce7));
-    background-image: -webkit-linear-gradient(top, #36a9e0 0%, #62bce7 100%);
-    background-image: linear-gradient(to bottom, #36a9e0 0%, #62bce7 100%);
   }
 }
 @media screen and (min-width: 78em) {
@@ -2459,8 +2459,7 @@ input[type="button"].btn--block {
 
 .content-block__img {
   height: 10em;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center 46%;
 }
@@ -2538,8 +2537,7 @@ input[type="button"].btn--block {
 .content__header {
   position: relative;
   height: 17em;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   background-position: center center;
   background-color: #36a9e0;
 }
@@ -2918,8 +2916,7 @@ img.media__img {
   .nav-container {
     margin: 0;
     background-image: url("../img/shape-bg--alt.svg");
-    -webkit-background-size: cover;
-            background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -2946,7 +2943,7 @@ img.media__img {
 }
 .nav--primary > li.is-current {
   margin-left: -4.5em;
-  background-color: #41aee2;
+  background-color: #2097d0;
   width: 30em;
   padding-left: 4.5em;
 }
